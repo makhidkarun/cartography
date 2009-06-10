@@ -1,0 +1,23 @@
+<?xml version = '1.0' encoding = 'windows-1252'?>
+<project name="cartographer" default="init" basedir=".">
+
+    <property name="java.home" value="${%JAVA_HOME%}" />
+
+    <path id="classpath">
+        <pathelement location="deploy/stellar.jar"/>
+        <pathelement location="deploy/jibx-run.jar" />
+        <pathelement location="deploy/bcel.jar" />
+        
+    </path>
+
+   <target name="init">
+      <tstamp/>
+   </target>
+
+    <target name="run">
+       <java classname="stellar.Cartrographer" fork="yes">
+            <classpath refid="classpath" />
+       </java>
+    </target>
+
+</project>

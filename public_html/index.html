@@ -1,0 +1,325 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"><html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=windows-1252"><title>Traveller Stellar Cartography Project Homepage</title></head>
+   <body>
+    <h2>Traveller Stellar Cartography</h2>
+    This page serves as the home page for Stellar Cartrograpy project, a free
+    project to build a star mapping utility using Java as the programming engine
+    and XML as the database and data storage system. 
+    <br><br>
+    The itch to scratch for doing this project is two fold. The first is as a
+    learning experience for Java, XML, and their interaction. I've discovered 
+    my programming skillset becoming out of date recently and needing a way to 
+    update it. The second is I wanted to write an article for Traveller describing
+    using the T20 System generation (Natural resources and Trade Balance) for a
+    economic system similar to GT:Far Trader. I'm not sure it would be any simpler,
+    but it would be more available. In order to make sure the rules work, I needed
+    to generate the trade maps. But none of the existing Traveller mapping
+    programs (Galactic, Heaven &amp; Earth, Astrogator, Universe) will let me enter,
+    queuy, and map the data as I need it. So on to Traveller Stellar Cartography. 
+    <br><br>
+    This page contains the links to various part of the project, latest versions
+    of code and data required to run the system, source code (as available), 
+    discussion of development decisions, and links to other software used in the 
+    project that may be of interest to others.
+    <br><br>
+    <a href="mailto:tjoneslo;at;together.net">Feedback</a>, critques of 
+    development methods and help with any part of the project are welocomed. 
+    <br><br>
+    <h2 align="center"><a href="features.html">Features List</a></h2>
+    <table width="90%" align="center" border="1">
+    <caption><h2>Design documents and source code</h2></caption>
+        <tbody><tr><td>
+        <table width="100%" align="center" cellspacing="0">
+        <tbody>
+            <tr>
+                <th>subject</th>
+                <th width="15%">Last update</th>
+            </tr>
+            <tr>
+                <td colspan="2"><hr size="1"></td>
+            </tr>
+            <tr>
+                <td> <a href="http://www.together.net/%7Etjoneslo/SC/AstroML.xsd">XML database schema</a> version 0.7<br>
+                    The XML database format in 
+                    <a href="http://http://www.w3.org/TR/xmlschema-0/">XML 
+                    Schema</a>. I used XMLSchema rather than a standard DTD
+                    because I found the schema easier and faster to write than 
+                    a DTD. This is based upon the AstrolML xsd by Mark A. Preston.
+                </td>
+                <td>5 March 2004</td>
+            </tr>
+            <tr bgcolor="#ccccff">
+                <td><a href="http://www.together.net/%7Etjoneslo/SC/AstroML.xml">SC base data set</a><br>
+                A base set of canon Traveller data, built in XML. 
+                </td>
+                <td>5 March 2004</td></tr><tr><td><a href="http://www.together.net/%7Etjoneslo/SC/regina.xml">Regina subsector</a><br>
+                An example file for the XML database, showing the 
+                Regina subsector, Spinward Marches sector. Includes the expanded
+                generation data for the Regina system. Includes the CSS below.
+                </td>
+                <td>11 November 2003</td>
+            </tr>
+            <tr bgcolor="#ccccff">
+                <td><a href="http://www.together.net/%7Etjoneslo/SC/AstroML.css">Cascading Style Sheet</a><br>
+                An example CSS sheet for the XML datasheets. Makes the data look
+                like the GENII sector format. Which may seem like a step backward,
+                but gives an example of what can be done with the XML. 
+                </td>
+                <td>28 October 2003</td>
+            </tr>
+            <tr>
+                <td><a href="httd://www.together.net/%7Etjoneslo/SC/AstroBind.xml">JiBX Binding File</a><br>
+                The JiBX Binding file used to load the AstroML.xsd compliant data
+                into a set of Java classes. This also desribes the system of writing
+                the data from the java classes to the XML file. They don't match 
+                (the input and output files) but they are functionally equivelent. 
+                </td>
+                <td>5 March 2004</td>
+            </tr>
+        </tbody>                    
+        </table>
+        </td></tr></tbody>
+    </table>
+    <br><br>
+    <table width="90%" align="center" border="1">
+    <caption><h2>Design Notes</h2></caption>
+        <tbody><tr><td>
+        <table width="100%" align="center" cellspacing="0">
+        <tbody>
+            <tr>
+                <th>subject</th>
+                <th>Musing</th>
+            </tr>
+            <tr>
+                <td colspan="2"><hr size="1"></td>
+            </tr>
+            <tr>
+                <td valign="top">XML database</td>
+                <td>Why use an XML file as the database document? Lets look at 
+                    the alteratives:
+                    <ul>
+                        <li>Flat file database: A structured text file. Easy to
+                            write, easy for people to read, a total pain to have
+                            a computer read. There are about a dozen variations
+                            on the GENII Traveller sector format, plus the
+                            additional data which can be generated by the
+                            extended system generation systems in MT, TNE, T4, 
+                            GT, and so on. Each person defining their own format
+                            is a nightmare. 
+                        </li>
+                        <li>Proprieratry program format: See above, and loose
+                            (probably) the ability for human reading. Ugh. A step
+                            backwards.
+                        </li>
+                        <li>Access Database: Since we are dealing with data and
+                            a moderate volume of the stuff, a simple database
+                            like Access would be a suggestion. I hate Microsoft
+                            tools and refuse to use them if at all possible. 
+                            There are some other limitations on Access' ability
+                            to handle data properly. 
+                        </li>
+                        <li>SQL Database: This is a step up from Access. There
+                            are some good free ones (MySQL, Interbase, Postgres). 
+                            Advantage of a database like this is you can now have
+                            several people (like a PBEM group) all access the 
+                            same stellar map data, add comments and generaly use
+                            it like a computer map system. Another advantage, 
+                            you can hide the data storage from the user(s) and 
+                            still have human readable access to the data. 
+                        </li>
+                        <li>XML file: A human readable, computer parseable 
+                            formatted text file. In some ways not much better than
+                            the Proprierary or flat text file, but multiple tools
+                            exist for making the computer readable part much simpler
+                            (I hate writing text parsers). Plus, using XSL can 
+                            output the file in any format (like HTML) a simple 
+                            process. 
+                        </li>
+                    </ul>
+                    As can plainly be seen, the two I like best are a SQL database
+                    and XML. Well, I like SQL database because I'm an Oracle Guru
+                    and XML because this is one goal of the project: When all 
+                    you have is a hammer....<br><br>
+                    I don't like the SQL Database because for a project of this
+                    size because it is overkill. My estimate of the project would be three
+                    to 10 tables and 15,000 rows of data total. This is the size
+                    for which Access was originally designed (but never worked
+                    for properly). Here I think the XML file can do everything
+                    the Access system would, minus the problems inherent in the
+                    product. This becomes a design goal: Do everything a user
+                    might need using Access but provided via the XML tools.<br><br>
+                    I'm discovering more cool things you can do with XML. Example:
+                    the CSS posted above. Users can (in theory) see the the XML
+                    data in a format they are expecting without any special tools
+                    or extra parsing of data. <br><br>
+                    Discussion of the estimate of data needed for the traveller 
+                    universe has placed the data rows at 10x to 50x my estimate. 
+                    But that applies only if you have a full system generation 
+                    for every system in the known 66 sectors of charted space. 
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2"><hr size="1"></td>
+            </tr>
+            <tr>
+                <td valign="top">Database access</td>
+                <td>
+                    Now we have a database to store our data, we need a way to 
+                    get the data into the application so the user can mainpuate
+                    it and save it. Since we're using XML as the database, here
+                    we discuss XML database access tecnology. 
+                    <dl><dt><a href="http://www.w3.org/TR/DOM-Level-2-HTML/">Document Object Model</a></dt><dd>DOM is a generic way of reading an XML document. It
+                            uses a generic "element" class which contains the list
+                            of attributes and nested elements. All data is kept
+                            as String. <br><br>
+                            I dislike this method because either I 
+                            have to work through the generic tree structure or
+                            end up copying the data into better structured objects.
+                        </dd><dt><a href="http://www.saxproject.org/">Simple API for XML</a></dt><dd>SAX is an alternative method of access XML document.
+                            It utilizes a event based model, so rather than 
+                            loading the entire document into memory, it reads
+                            through the document, and the program recieves notification
+                            (via the Java event model) that various tags or elements
+                            have been found. <br><br>
+                            This does not meet our needs because SAX does not 
+                            support making changes to data, at least not easily.
+                        </dd><dd>
+                        <br>
+</dd><dt><a href="http://java.sun.com/xml/jaxb/">Java Architecture for XML Binding</a></dt><dd>JAXB represents a method of addressing the issues of 
+                            DOM access. The JAXB parser reads through the XML 
+                            Schema document you provide and JAXB generates a set
+                            of Java classes to read, hold, manipulate and write
+                            the data. <br><br>
+                            While this gets closer to what we need, the control
+                            freak programmer in me does not like system generating
+                            code (and API) I need to access. I may end up using
+                            this at some point to see what kind of code it generates,
+                            but not now. <br><br>
+                            JAXB also assumes that the XML format of the data is
+                            what you want for the internal format (and layout) 
+                            for access and manipulation. In many cases this is
+                            correct. In other it isn't.<br>
+                            See also:
+                            <a href="http://jaxme.sourceforge.net/docs/site/index.html">JaxME</a>
+                        </dd><dt><a href="http://jibx.sourceforge.net/">JiBX: XML binding to Java</a></dt><dd>JiBX is a alternative method data access to JAXB and
+                            DOM. In this I write the classes defining the internal
+                            access to the data, and write a "mapping" document
+                            (in XML) which defines the mapping between the XML
+                            elements and the classes. When run the JiBX parser 
+                            manages the process of transforming the XML to classes
+                            and back again. <br><br>
+                            This is the method I'll be using. For two reasons, 
+                            first it satisfies the CFP. Second, I'd like to
+                            experiment with the Java classes for internal data
+                            to see what gives best performance. Which I know won't
+                            match the XML data file layout. The downside of JiBX
+                            is now I need to maintain two document: the AstroML.xsd
+                            and the AstroBind.xml mapping document. 
+                        </dd></dl>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2"><hr size="1"></td>
+            </tr>
+            <tr>
+                <td valign="top">Mapping the Stars</td>
+                <td>There are a few way to create a database map of a group of 
+                    elements like stars. Here are the various ways to represent
+                    them. I hope, someday, to have the XML and Program to support
+                    all of these methods:
+                    <ul>
+                        <li>Hex Map: the Traveller standard. A grid with
+                            positive values in quadrant II, and an offset scheme.
+                            The grid allows using integers for location IDs. The
+                            positive in quatrant II means that the 0,0 point is
+                            in the upper left corner with increasing values of x
+                            going to the right and increasing values of y going
+                            down. The offset scheme to support hexes (rather than
+                            squares) make an extra half step in calculating
+                            distances. <br><br>
+                            Getting a hex map to do 3D is a pain, there are several
+                            options, none of them are as useful as going to a real
+                            3D system. 
+                        </li>
+                        <li>Cartesian Map: A usual standard, and easy to support
+                            in 2D or 3D (xy or xyz). Can use either integers 
+                            or reals for coordinates depending upon realism required
+                            by the user. 
+                        </li>
+                        <li>Polar Coordiantes: Not a usual standard. All objects
+                            are located by a pair of angles (theta, rho) and a 
+                            distance (radius) from a central point and vector. A
+                            mapping for this would be our sun and a vector to 
+                            the galactic center. 
+                        </li>
+                     </ul>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2"><hr size="1"></td>
+            </tr>
+            <tr>
+                <td valign="top">Groups of Stars</td>
+                <td>Traveller defines four levels of grouping: Domain, Sector, 
+                    Quadrant, Subsector. Quadrants are from T20, Domains are 
+                    only rarely used. Adding to this mess is if we are adding 
+                    other methods of mapping, we need to adjust the definitions
+                    of the groupings so that they continue to make sense. <br><br>
+                    The original Traveller had a correct idea in making a base
+                    mapping group the subsector. It defines between 20 and 40 
+                    star systems, which is sufficient for an entire campaign. 
+                    Individuals may vary, but it is a good starting point. So
+                    our group definitions for the groups:
+                    <ul>
+                        <li>Hex Map: subsector is 8 x 10 hexes. Quadrant is 4
+                            subsectors(2x2). Sector is four quadrants (2x2) or 
+                            16 subsectors (4x4). Domain is 4 sectors (2x2). 
+                        </li>
+                        <li>Cartesian Map 1: use squares or cubes; a subsector 
+                            is 10x10(x10) units, sector is 2x2(x2) subsectors 
+                            and domain is 2x2x2 sectors. 
+                        </li>
+                        <li>Cartesian Map 2: use a rhombic dodecahedron for a 
+                            subsector 10 units across. Subsectors are joined
+                            in cuboctahedron (12 subsectors). 
+                        </li>
+                    </ul>
+
+                    Next point: Does the group define the location of the star,
+                    or are the system mapped independently of the groups and the 
+                    groups overlaid? Traveller usually uses either the sector or
+                    subsector as a base group, with the hex id within the group. <br><br>
+                    For a strictly hierarchal mapping system, this begins to
+                    fall apart when you have mulitple groups, say the 30 
+                    semi-canon traveller sectors. I feel it would be easier to 
+                    keep all the systems in a group independent mapping system, 
+                    and add the groups (as needed). <br><br>
+                    Given the number of queries which may be limited to a group,
+                    it is easy to denormalize the group inclusion into the system
+                    data. <br><br>
+                    The upshot of this is each system has a location of x, y, 
+                    and (optional) z. Groups would be defined by starting location
+                    within the general location corrdinates, and all systems would
+                    have group names within them. <br><br>
+                    Because this is based upon the Traveller model, the database
+                    will store Sector and Subsector as base groups. I'll add a 
+                    "Group" tag to be able to define addtional groups based upon
+                    the sector or subsector, which should satify for now. 
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2"><hr size="1"></td>
+            </tr>
+            <tr>
+                <td valign="top">Output</td>
+                <td>
+                  <P>Given the myriad of output options for maps and the like, the cartrogpher will be outputting data only in PDF. Why? because PDF is portable, allowing the user to transport (i.e. give) the files to others without having to worry about if they recipient can read it or not. It's rich enough to support the level of graphic detail needed for a good map, printed or viewed on the screen. To support this end, I have found the iText Java to PDF library. It looks rich enought to support all the things need for generating good looking maps, even using the basic PDF files as templates, so the user maps can look official. Output is a much later stage in the project, but knowing it should be straight forward makes me less worried about this part of the project.</P>
+                  <P>This has been changed. Due to a request from a user, I've added the ability to output the maps in JPEG format. A one line addition. No fancy output, just a dump of the map. </P>
+                </td>
+            
+        </tr></tbody>                    
+        </table>
+        </td></tr></tbody>
+    </table>
+   <br>
+</body></html>

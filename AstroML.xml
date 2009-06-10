@@ -1,0 +1,634 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<astrogation xmlns:xsi="http://www.w3.org/2001/XMLSchema" xmlns="http://www.farfuture.net/">
+    <reference>
+        <provider id="canon" desc="Standard (canon) data for all systems" name="Canon"/>
+        <provider id="ct" desc="Original game version (the &quot;Little Black Books&quot;)" name="Classic Traveller"/>
+        <provider id="mt" desc="Second edition of Traveller" name="Mega-Traveller"/>
+        <provider id="tne" desc="The era following the end of the Third Imperium" name="The New Era"/>
+        <provider id="t4" desc="Fourth edition of Traveller" name="Traveller (4th Edition)"/>
+        <provider id="gt" desc="CT alternate history using GURPS rules by Steve Jackon Games" link="http://www.sjgames.com/traveller/" name="GURPS Traveller"/>
+        <provider id="t20" desc="Traveller for D20 set in 990 and Gateway domain" link="http://www.travellerrpg.com/" name="Traveller D20"/>
+        <provider id="tml" desc="Data provided by contributors to the Internet-based discussion group." email="tml@travellerrpg.com" name="Traveller Mailing List"/>
+        <provider id="gal" desc="Galactic 2.4 by Jim Vassilakos" name="Galactic 2.4"/>
+        <provider id="hiwg" desc="HIWG author contributions" name="History of the Imperium Working Group"/>
+        <provider id="wbd" desc="World Builder Deluxe files" name="World Builder Deluxe"/>
+        <provider id="he" desc="Heaven and Earth version 1.0" link="http://www.downport.com/wbd/HEAVEN_&amp;_EARTH.htm" name="Heaven and Earth"/>
+        <provider id="user" desc="independent user modifications" name="User Data"/>
+        <table id="canon.ports" desc="Canon starports/spaceports" provider="canon">
+            <record id="ports.100" desc="Excellent" provider="canon" color="0xFF66FF66" code="A"></record>
+            <record id="ports.101" desc="Good" provider="canon" color="0xFF66FF33" code="B"></record>
+            <record id="ports.102" desc="Routine" provider="canon" color="0xFF99FF66" code="C"></record>
+            <record id="ports.103" desc="Poor" provider="canon" color="0xFFFFFF66" code="D"></record>
+            <record id="ports.104" desc="Frontier" provider="canon" color="0xFFFFFF00" code="E"></record>
+            <record id="ports.105" desc="None" provider="canon" color="0xFFFF0000" code="X"></record>
+            <record id="ports.106" desc="Good spaceport" provider="canon" color="0xFF33CCFF" code="F"></record>
+            <record id="ports.107" desc="Poor spaceport" provider="canon" color="0xFF99FFFF" code="G"></record>
+            <record id="ports.108" desc="Primitive spaceport" provider="canon" color="0xFFCCFFFF" code="H"></record>
+            <record id="ports.109" desc="No spaceport" provider="canon" color="0xFFFF0000" code="Y"></record>
+        </table>
+        <table id="canon.size" desc="Canon world size" provider="canon">
+            <record id="size.00" desc="Asteriod or Planetoid belt" provider="canon" code="0"></record>
+            <record id="size.01" desc="1,000 mi diameter" provider="canon" code="1"></record>
+            <record id="size.02" desc="2,000 mi diameter" provider="canon" code="2"></record>
+            <record id="size.03" desc="3,000 mi diameter" provider="canon" code="3"></record>
+            <record id="size.04" desc="4,000 mi diameter" provider="canon" code="4"></record>
+            <record id="size.05" desc="5,000 mi diameter" provider="canon" code="5"></record>
+            <record id="size.06" desc="6,000 mi diameter" provider="canon" code="6"></record>
+            <record id="size.07" desc="7,000 mi diameter" provider="canon" code="7"></record>
+            <record id="size.08" desc="8,000 mi diameter" provider="canon" code="8"></record>
+            <record id="size.09" desc="9,000 mi diameter" provider="canon" code="9"></record>
+            <record id="size.10" desc="10,000 mi diameter" provider="canon" code="A"></record>
+            <record id="size.11" desc="Ring system" provider="canon" code="R"></record>
+            <record id="size.12" desc="Very Small" provider="canon" code="S"></record>
+        </table>
+        <table id="canon.atmosphere" desc="Canon planetary atmospheres" provider="canon">
+            <record id="atmosphere.00" desc="Vacuum" provider="canon" color="0xFFFF0000" code="0"></record>
+            <record id="atmosphere.01" desc="Trace" provider="canon" color="0xFFFF0000" code="1"></record>
+            <record id="atmosphere.02" desc="Very Thin Tainted" provider="canon" color="0xFFFFFF00" code="2"></record>
+            <record id="atmosphere.03" desc="Very Thin" provider="canon" color="0xFFFFFF00" code="3"></record>
+            <record id="atmosphere.04" desc="Thin Tainted" provider="canon" color="0xFFFFFF00" code="4"></record>
+            <record id="atmosphere.05" desc="Thin" provider="canon" color="0xFF00FF00" code="5"></record>
+            <record id="atmosphere.06" desc="Standard" provider="canon" color="0xFF00FF00" code="6"></record>
+            <record id="atmosphere.07" desc="Standard Tainted" provider="canon" color="0xFFFFFF00" code="7"></record>
+            <record id="atmosphere.08" desc="Dense" provider="canon" color="0xFF00FF00" code="8"></record>
+            <record id="atmosphere.09" desc="Dense Tainted" provider="canon" color="0xFFFFFF00" code="9"></record>
+            <record id="atmosphere.10" desc="Exotic" provider="canon" color="0xFFFF0000" code="A"></record>
+            <record id="atmosphere.11" desc="Corrosive" provider="canon" color="0xFFFF0000" code="B"></record>
+            <record id="atmosphere.12" desc="Insidious" provider="canon" color="0xFFFF0000" code="C"></record>
+            <record id="atmosphere.13" desc="Dense, High" provider="canon" color="0xFFFFC800" code="D"></record>
+            <record id="atmosphere.14" desc="Ellipsoid" provider="canon" color="0xFFFFC800" code="E"></record>
+            <record id="atmosphere.15" desc="Thin, Low" provider="canon" color="0xFFFFC800" code="F"></record>
+        </table>
+        <table id="canon.hydrograph" desc="Canon hydrographic percentage" provider="canon">
+            <record id="hydrograph.00" desc="0% free water, desert world" provider="canon" color="0xFF000000" code="0"></record>
+            <record id="hydrograph.01" desc="10% free water, dry world" provider="canon" color="0xFFFFC800" code="1"></record>
+            <record id="hydrograph.02" desc="20% free water, dry world" provider="canon" color="0xFFFFC800" code="2"></record>
+            <record id="hydrograph.03" desc="30% free water, wet world" provider="canon" color="0xFFAFAFFF" code="3"></record>
+            <record id="hydrograph.04" desc="40% free water, wet world" provider="canon" color="0xFFAFAFFF" code="4"></record>
+            <record id="hydrograph.05" desc="50% free water, wet world" provider="canon" color="0xFFAFAFFF" code="5"></record>
+            <record id="hydrograph.06" desc="60% free water, wet world" provider="canon" color="0xFFAFAFFF" code="6"></record>
+            <record id="hydrograph.07" desc="70% free water, wet world" provider="canon" color="0xFFAFAFFF" code="7"></record>
+            <record id="hydrograph.08" desc="80% free water, wet world" provider="canon" color="0xFFAFAFFF" code="8"></record>
+            <record id="hydrograph.09" desc="90% free water, wet world" provider="canon" color="0xFFAFAFFF" code="9"></record>
+            <record id="hydrograph.10" desc="100% free water, water world" provider="canon" color="0xFF0000FF" code="A"></record>
+        </table>
+        <table id="canon.population" desc="Canon population" provider="canon">
+            <record id="population.00" desc="No inhabitants" provider="canon" code="0"></record>
+            <record id="population.01" desc="Tens of inhabitants" provider="canon" code="1"></record>
+            <record id="population.02" desc="Hundreds of inhabitants" provider="canon" code="2"></record>
+            <record id="population.03" desc="Thousands of inhabitants" provider="canon" code="3"></record>
+            <record id="population.04" desc="Tens of thousands of inhabitants" provider="canon" code="4"></record>
+            <record id="population.05" desc="Hundreds of thousands of inhabitants" provider="canon" code="5"></record>
+            <record id="population.06" desc="Millions of inhabitants" provider="canon" code="6"></record>
+            <record id="population.07" desc="Tens of millions of inhabitants" provider="canon" code="7"></record>
+            <record id="population.08" desc="Hundreds of millions of inhabitants" provider="canon" code="8"></record>
+            <record id="population.09" desc="Billions of inhabitants" provider="canon" code="9"></record>
+            <record id="population.10" desc="Tens of billions of inhabitants" provider="canon" code="A"></record>
+            <record id="population.11" desc="Hundreds of billions of inhabitatns" provider="canon" code="B"></record>
+        </table>
+        <table id="canon.government" desc="Canon government types" provider="canon">
+            <record id="government.00" desc="No government strcuture" provider="canon" code="0"></record>
+            <record id="government.01" desc="Company or corporate owned" provider="canon" code="1"></record>
+            <record id="government.02" desc="Participating Democracy" provider="canon" code="2"></record>
+            <record id="government.03" desc="Self-perpetuation oligarchy" provider="canon" code="3"></record>
+            <record id="government.04" desc="Representative democracy" provider="canon" code="4"></record>
+            <record id="government.05" desc="Feudal technocracy" provider="canon" code="5"></record>
+            <record id="government.06" desc="Captive government or colony" provider="canon" code="6"></record>
+            <record id="government.07" desc="Balkanized" provider="canon" code="7"></record>
+            <record id="government.08" desc="Civil service bureacracy" provider="canon" code="8"></record>
+            <record id="government.09" desc="Impersonal bureacracy" provider="canon" code="9"></record>
+            <record id="government.10" desc="Charismatic dictator" provider="canon" code="A"></record>
+            <record id="government.11" desc="Non-charismatic dictator" provider="canon" code="B"></record>
+            <record id="government.12" desc="Charismatic oligarchy" provider="canon" code="C"></record>
+            <record id="government.13" desc="Religious dictatorship" provider="canon" code="D"></record>
+            <record id="government.14" desc="Religious autocracy" provider="canon" code="E"></record>
+            <record id="government.15" desc="Totalitarian oligarchy" provider="canon" code="F"></record>
+            <record id="government.16" desc="Aslan station or facility" provider="canon" code="G"></record>
+            <record id="government.17" desc="Aslan split control" provider="canon" code="H"></record>
+            <record id="government.18" desc="Aslan single-world clan controled" provider="canon" code="J"></record>
+            <record id="government.19" desc="Aslan multi-world clan controled" provider="canon" code="K"></record>
+            <record id="government.20" desc="Aslan major clan controlled" provider="canon" code="L"></record>
+            <record id="government.21" desc="Aslan vassal clan controlled" provider="canon" code="M"></record>
+            <record id="government.22" desc="Aslan major vassal clan controlled" provider="canon" code="N"></record>
+            <record id="government.23" desc="K'kree station or facility" provider="canon" code="P"></record>
+            <record id="government.24" desc="K'kree krurruna controlled" provider="canon" code="Q"></record>
+            <record id="government.25" desc="K'kree steppelord controlled" provider="canon" code="R"></record>
+            <record id="government.26" desc="Hiver sept." provider="canon" code="S"></record>
+            <record id="government.27" desc="Hiver unsupervised anarchy" provider="canon" code="T"></record>
+            <record id="government.28" desc="Hiver supervised anarchy" provider="canon" code="U"></record>
+            <record id="government.29" desc="Hiver committee controlled" provider="canon" code="W"></record>
+            <record id="government.30" desc="Dryone hierarchy" provider="canon" code="X"></record>
+        </table>
+        <table id="canon.lawlevel" desc="Canon Law level values" provider="canon">
+            <record id="lawlevel.00" desc="No Laws" provider="canon" code="0"></record>
+            <record id="lawlevel.01" desc="Low" provider="canon" code="1"></record>
+            <record id="lawlevel.02" desc="Low" provider="canon" code="2"></record>
+            <record id="lawlevel.03" desc="Low" provider="canon" code="3"></record>
+            <record id="lawlevel.04" desc="Moderate" provider="canon" code="4"></record>
+            <record id="lawlevel.05" desc="Moderate" provider="canon" code="5"></record>
+            <record id="lawlevel.06" desc="Moderate" provider="canon" code="6"></record>
+            <record id="lawlevel.07" desc="Moderate: Firearms prohibited" provider="canon" code="7"></record>
+            <record id="lawlevel.08" desc="High" provider="canon" code="8"></record>
+            <record id="lawlevel.09" desc="High" provider="canon" code="9"></record>
+            <record id="lawlevel.10" desc="Extreme: All weapons prohibited" provider="canon" code="A"></record>
+            <record id="lawlevel.11" desc="Extreme: Rigid control of civilian movement" provider="canon" code="B"></record>
+            <record id="lawlevel.12" desc="Extreme: Unrestricted invasion of privacy" provider="canon" code="C"></record>
+            <record id="lawlevel.13" desc="Extreme: Paramilitary law enforcement" provider="canon" code="D"></record>
+            <record id="lawlevel.14" desc="Extreme: Full police state" provider="canon" code="E"></record>
+            <record id="lawlevel.15" desc="Extreme: All facets of daily life rigidly controlled" provider="canon" code="F"></record>
+            <record id="lawlevel.16" desc="Extreme: Severe punishments for petty infractions" provider="canon" code="G"></record>
+            <record id="lawlevel.17" desc="Extreme: Legaized oppressive practices" provider="canon" code="H"></record>
+            <record id="lawlevel.18" desc="Extreme: Routinely oppressive and restrictive" provider="canon" code="J"></record>
+            <record id="lawlevel.19" desc="Extreme: Excessivly oppressive and restrictive" provider="canon" code="K"></record>
+            <record id="lawlevel.20" desc="Extreme: Totally oppressive and restrictive" provider="canon" code="L"></record>
+        </table>
+        <table id="canon.technology" desc="Canon Technology level" provider="canon">
+            <record id="technology.00" desc="Pre-Industrial: Stone age, primitive" provider="canon" code="0"></record>
+            <record id="technology.01" desc="Pre-Industrial: Bronze age to Middle ages" provider="canon" code="1"></record>
+            <record id="technology.02" desc="Pre-Industrial: circa 1400AD to 1700AD" provider="canon" code="2"></record>
+            <record id="technology.03" desc="Pre-Industrial: circa 1700AD to 1860AD" provider="canon" code="3"></record>
+            <record id="technology.04" desc="Industrial: circa 1860AD to 1900AD" provider="canon" code="4"></record>
+            <record id="technology.05" desc="Industrial: circa 1900AD to 1940AD" provider="canon" code="5"></record>
+            <record id="technology.06" desc="Pre-stellar: circa 1940AD to 1969AD" provider="canon" code="6"></record>
+            <record id="technology.07" desc="Pre-stellar: circa 1970AD to 1990AD" provider="canon" code="7"></record>
+            <record id="technology.08" desc="Pre-stellar: circa 1990AD to 2100AD" provider="canon" code="8"></record>
+            <record id="technology.09" desc="Early stellar: circa 2100AD+" provider="canon" code="9"></record>
+            <record id="technology.10" desc="Early interstellar" provider="canon" code="A"></record>
+            <record id="technology.11" desc="Average interstellar" provider="canon" code="B"></record>
+            <record id="technology.12" desc="Average interstallar" provider="canon" code="C"></record>
+            <record id="technology.13" desc="Above average interstallar" provider="canon" code="D"></record>
+            <record id="technology.14" desc="Above average interstellar" provider="canon" code="E"></record>
+            <record id="technology.15" desc="High interstellar" provider="canon" code="F"></record>
+            <record id="technology.16" desc="High interstellar" provider="canon" code="G"></record>
+            <record id="technology.17" desc="Extreme interstellar" provider="canon" code="H"></record>
+            <record id="technology.18" desc="Extreme interstellar" provider="canon" code="J"></record>
+            <record id="technology.19" desc="Extreme interstellar" provider="canon" code="K"></record>
+        </table>
+        <table id="canon.zone" desc="Canon TAS travel zones" provider="canon">
+            <record id="zone.001" desc="TAS Red Zone" provider="canon" color="0xFFFF0000" code="R">Restricted or dangerous destination. Travellers should avoid this area and enter at their own risk."</record>
+            <record id="zone.002" desc="TAS Amber Zone" provider="canon" color="0xFFFFFF00" code="A">Possible dangers or other internal restrictions may place visitors at risk. Travellers should avoid this area."</record>
+            <record id="zone.003" desc="TAS Green Zone" provider="canon" color="0xFFAFFFAF" code="G">No know dangers or travel restrictions</record>
+        </table>
+        <table id="canon.trade" desc="Canon trade classifications" provider="canon">
+            <record id="trade.901" desc="Agricultural" provider="canon" code="Ag">Atm: 4-9, Hdr: 4-8, Pop: 5-7</record>
+            <record id="trade.902" desc="Asteroid belt" provider="canon" code="As">Size: 0, Atm: 0, Hdr: 0</record>
+            <record id="trade.903" desc="Barren world" provider="canon" code="Ba">Pop: 0, Gov: 0, LL: 0</record>
+            <record id="trade.904" desc="Desert world" provider="canon" code="De">Atm: 2+, Hdr: 0</record>
+            <record id="trade.905" desc="Fluid (non-water) hydrographics" provider="canon" code="Fl">Atm: A+, Hdr: 1+</record>
+            <record id="trade.906" desc="Ice capped or iceworld" provider="canon" code="Iw">Atm: 1-, Hdr: 1+</record>
+            <record id="trade.907" desc="Non agricultural" provider="canon" code="Na">Atm: 3-, Hdr: 3-, Pop: 6+</record>
+            <record id="trade.908" desc="Industrial" provider="canon" code="In">Atm: 2-,4,7,9, Pop: 8+</record>
+            <record id="trade.909" desc="Non industrial" provider="canon" code="Ni">Pop: 6-</record>
+            <record id="trade.910" desc="High population" provider="canon" code="Hi">Pop: 9+</record>
+            <record id="trade.911" desc="Low population" provider="canon" code="Lo">Pop: 3-</record>
+            <record id="trade.912" desc="Rich" provider="canon" code="Ri">Atm: 6,8, Pop: 6-8, Gov: 4-9</record>
+            <record id="trade.913" desc="Poor" provider="canon" code="Po">Atm: 2-5, Hdr: 3- </record>
+            <record id="trade.914" desc="Vacuum world" provider="canon" code="Va">Atm: 0</record>
+            <record id="trade.915" desc="Water world" provider="canon" code="Wa">Hdr: A</record>
+        </table>
+        <table id="canon.bases" desc="Canon base installations" provider="canon">
+            <record id="bases.1000" desc="Imperium (or Solomani) Naval and Scout" provider="canon" code="A"></record>
+            <record id="bases.1001" desc="Sword Worlds Naval and Marine" provider="canon" code="B"></record>
+            <record id="bases.1002" desc="Vargr Corsair" provider="canon" code="C"></record>
+            <record id="bases.1003" desc="Darrian Confederation Naval with Marine contingent" provider="canon" code="D"></record>
+            <record id="bases.1004" desc="Hiver Embassy Centre" provider="canon" code="E"></record>
+            <record id="bases.1005" desc="Hiver Federation Naval and Military" provider="canon" code="F"></record>
+            <record id="bases.1006" desc="Vargr Naval" provider="canon" code="G"></record>
+            <record id="bases.1007" desc="Vargr Naval and Corsair" provider="canon" code="H"></record>
+            <record id="bases.1008" desc="Interface World" provider="canon" code="I"></record>
+            <record id="bases.1009" desc="Independant world Naval" provider="canon" code="J"></record>
+            <record id="bases.1010" desc="K'kree Naval" provider="canon" code="K"></record>
+            <record id="bases.1011" desc="Hiver Federation Naval" provider="canon" code="L"></record>
+            <record id="bases.1012" desc="Independant world Naval, Marine and Army" provider="canon" code="M"></record>
+            <record id="bases.1013" desc="Imperium (or Solomani) Naval" provider="canon" code="N"></record>
+            <record id="bases.1014" desc="K'kree Naval Outpost" provider="canon" code="O"></record>
+            <record id="bases.1015" desc="Droyne Naval" provider="canon" code="P"></record>
+            <record id="bases.1016" desc="Droyne Garrison" provider="canon" code="Q"></record>
+            <record id="bases.1017" desc="Aslan Clan Naval" provider="canon" code="R"></record>
+            <record id="bases.1018" desc="Imperium (or Solomani) Scout" provider="canon" code="S"></record>
+            <record id="bases.1019" desc="Aslan Tlaukhu Naval" provider="canon" code="T"></record>
+            <record id="bases.1020" desc="Aslan Tlaukhu Naval and Clan Naval" provider="canon" code="U"></record>
+            <record id="bases.1021" desc="Imperium Scout Way Station" provider="canon" code="W"></record>
+            <record id="bases.1022" desc="Zhodani Relay Station" provider="canon" code="X"></record>
+            <record id="bases.1023" desc="Zhodani Depot" provider="canon" code="Y"></record>
+            <record id="bases.1024" desc="Zhodani Consulate Naval and Marine (Army units may be present)" provider="canon" code="Z"></record>
+        </table>
+        <table id="canon.remarks" desc="Canon UWP system remark codes" provider="canon">
+            <record id="remarks.1101" desc="Ancient Site" provider="canon" code="An"></record>
+            <record id="remarks.1102" desc="Chirper population: 1-9%" provider="canon" code="C0"></record>
+            <record id="remarks.1103" desc="Chirper population: 10-19%" provider="canon" code="C1"></record>
+            <record id="remarks.1104" desc="Chirper populaiton: 20-29%" provider="canon" code="C2"></record>
+            <record id="remarks.1105" desc="Chirper population: 30-39%" provider="canon" code="C3"></record>
+            <record id="remarks.1106" desc="Chirper population: 40-49%" provider="canon" code="C4"></record>
+            <record id="remarks.1107" desc="Chirper population: 50-59%" provider="canon" code="C5"></record>
+            <record id="remarks.1108" desc="Frontier capital" provider="canon" code="Cf"></record>
+            <record id="remarks.1109" desc="Subsector capital" provider="canon" code="Cp"></record>
+            <record id="remarks.1110" desc="Sector or regional capital" provider="canon" code="Cx"></record>
+            <record id="remarks.1111" desc="Dryone population: 1-9%" provider="canon" code="D0"></record>
+            <record id="remarks.1112" desc="Dryone population: 10-19%" provider="canon" code="D1"></record>
+            <record id="remarks.1113" desc="Dryone population: 20-29%" provider="canon" code="D2"></record>
+            <record id="remarks.1114" desc="Dryone population: 30-39%" provider="canon" code="D3"></record>
+            <record id="remarks.1115" desc="Dryone population: 40-49%" provider="canon" code="D4"></record>
+            <record id="remarks.1116" desc="Dryone population: 50-59%" provider="canon" code="D5"></record>
+            <record id="remarks.1117" desc="Exile World" provider="canon" code="Ex"></record>
+            <record id="remarks.1118" desc="Military Ruled world" provider="canon" code="Mr"></record>
+            <record id="remarks.1119" desc="Owned by world at hex location: xxxx" provider="canon" code="O:"></record>
+            <record id="remarks.1120" desc="Prison camp" provider="canon" code="Pr"></record>
+            <record id="remarks.1121" desc="Reserve world" provider="canon" code="Re"></record>
+            <record id="remarks.1122" desc="Research Station" provider="canon" code="Rs"></record>
+            <record id="remarks.1123" desc="Xboat station" provider="canon" code="Xb"></record>
+        </table>
+        <table id="gal.life" desc="Galactic 2.4 planetary life code" provider="gal">
+            <record id="life.2000" desc="Sterile" provider="gal" code="0"></record>
+            <record id="life.2001" desc="proto-cellular" provider="gal" code="1"></record>
+            <record id="life.2002" desc="Single-cellular" provider="gal" code="2"></record>
+            <record id="life.2003" desc="Multi-cellular" provider="gal" code="3"></record>
+            <record id="life.2004" desc="Complex microscopic" provider="gal" code="4"></record>
+            <record id="life.2005" desc="Macroscopic" provider="gal" code="5"></record>
+            <record id="life.2006" desc="Primitive ecosystem" provider="gal" code="6"></record>
+            <record id="life.2007" desc="Teeming ecosystem" provider="gal" code="7"></record>
+            <record id="life.2008" desc="Proto-sentient" provider="gal" code="8"></record>
+            <record id="life.2009" desc="Sentient" provider="gal" code="9"></record>
+            <record id="life.2010" desc="Non-spacefaring" provider="gal" code="A"></record>
+            <record id="life.2011" desc="Early Spacefaring" provider="gal" code="B"></record>
+            <record id="life.2012" desc="Cataclysm" provider="gal" code="C"></record>
+            <record id="life.2013" desc="Green Hell" provider="gal" code="D"></record>
+        </table>
+        <table id="gal.resource" desc="Galactic 2.4 planetary resource code" provider="gal">
+            <record id="resource.2100" desc="Barren" provider="gal" code="0"></record>
+            <record id="resource.2101" desc="Poor" provider="gal" code="1"></record>
+            <record id="resource.2102" desc="Poor" provider="gal" code="2"></record>
+            <record id="resource.2103" desc="Poor" provider="gal" code="3"></record>
+            <record id="resource.2104" desc="Poor" provider="gal" code="4"></record>
+            <record id="resource.2105" desc="Moderate" provider="gal" code="5"></record>
+            <record id="resource.2106" desc="Moderate" provider="gal" code="6"></record>
+            <record id="resource.2107" desc="Moderate" provider="gal" code="7"></record>
+            <record id="resource.2108" desc="Moderate" provider="gal" code="8"></record>
+            <record id="resource.2109" desc="Rich" provider="gal" code="9"></record>
+            <record id="resource.2110" desc="Rich" provider="gal" code="A"></record>
+            <record id="resource.2111" desc="Rich" provider="gal" code="B"></record>
+            <record id="resource.2112" desc="Rich" provider="gal" code="C"></record>
+            <record id="resource.2113" desc="Extreme" provider="gal" code="D"></record>
+            <record id="resource.2114" desc="Extreme" provider="gal" code="E"></record>
+            <record id="resource.2115" desc="Extreme" provider="gal" code="F"></record>
+        </table>
+        <table id="gal.export" desc="Galactic 2.4 planetary export code" provider="gal">
+            <record id="export.2200" desc="None" provider="gal" code="0"></record>
+            <record id="export.2201" desc="Textiles" provider="gal" code="1"></record>
+            <record id="export.2202" desc="Wood Products" provider="gal" code="2"></record>
+            <record id="export.2203" desc="Livestock" provider="gal" code="3"></record>
+            <record id="export.2204" desc="Agro-Consumables" provider="gal" code="4"></record>
+            <record id="export.2205" desc="Pharaceuticals" provider="gal" code="5"></record>
+            <record id="export.2206" desc="Petrochemicals" provider="gal" code="6"></record>
+            <record id="export.2207" desc="Biologicals" provider="gal" code="7"></record>
+            <record id="export.2210" desc="Antimatter" provider="gal" code="A"></record>
+            <record id="export.2211" desc="Bio-engineering" provider="gal" code="B"></record>
+            <record id="export.2212" desc="Computers" provider="gal" code="C"></record>
+            <record id="export.2213" desc="Industrial Crystals" provider="gal" code="D"></record>
+            <record id="export.2214" desc="Electronics" provider="gal" code="E"></record>
+            <record id="export.2215" desc="Farm Machinery" provider="gal" code="F"></record>
+            <record id="export.2216" desc="Gemstones" provider="gal" code="G"></record>
+            <record id="export.2217" desc="Heavy Metals" provider="gal" code="H"></record>
+            <record id="export.2218" desc="Industrial Machinery" provider="gal" code="I"></record>
+            <record id="export.2219" desc="Synthetic Fabric" provider="gal" code="J"></record>
+            <record id="export.2220" desc="Synthetic Foods" provider="gal" code="K"></record>
+            <record id="export.2221" desc="Industrial Chemicals" provider="gal" code="L"></record>
+            <record id="export.2222" desc="Rare Minerals" provider="gal" code="M"></record>
+            <record id="export.2223" desc="Weapons/Armor" provider="gal" code="N"></record>
+            <record id="export.2224" desc="Radioactives" provider="gal" code="O"></record>
+            <record id="export.2225" desc="Polymers" provider="gal" code="P"></record>
+            <record id="export.2226" desc="Cybernetics" provider="gal" code="Q"></record>
+            <record id="export.2227" desc="Robots" provider="gal" code="R"></record>
+            <record id="export.2228" desc="Starships" provider="gal" code="S"></record>
+            <record id="export.2229" desc="Tools" provider="gal" code="T"></record>
+            <record id="export.2230" desc="Underwater Equpment" provider="gal" code="U"></record>
+            <record id="export.2231" desc="Vehicles/Gravitics" provider="gal" code="V"></record>
+            <record id="export.2232" desc="Banking/Insurance" provider="gal" code="W"></record>
+            <record id="export.2233" desc="Entertainment" provider="gal" code="X"></record>
+            <record id="export.2234" desc="Art/Publishing/News" provider="gal" code="Y"></record>
+            <record id="export.2235" desc="Information/Research" provider="gal" code="Z"></record>
+        </table>
+        <table id="gal.color" desc="Galactic's color map for links and others" provider="gal">
+            <record id="color.00" desc="Black" provider="user" code="0xFF000000" color="0xFF000000"></record>
+            <record id="color.01" desc="Blue" provider="user" code="0xFF0000FF" color="0xFF0000FF"></record>
+            <record id="color.02" desc="Green" provider="user" code="0xFF00FF00" color="0xFF00FF00"></record>
+            <record id="color.03" desc="Cyan" provider="user" code="0xFF00FFFF" color="0xFF00FFFF"></record>
+            <record id="color.04" desc="Red" provider="user" code="0xFFFF0000" color="0xFFFF0000"></record>
+            <record id="color.05" desc="Magenta" provider="user" code="0xFFFF00FF" color="0xFFFF00FF"></record>
+            <record id="color.06" desc="Brown" provider="user" code="0xFFFFC800" color="0xFFFFC800"></record>
+            <record id="color.07" desc="White" provider="user" code="0xFFE6E6E6" color="0xFFE6E6E6"></record>
+            <record id="color.08" desc="Dark Grey" provider="user" code="0xFF404040" color="0xFF404040"></record>
+            <record id="color.09" desc="Light Blue" provider="user" code="0xFFAFAFFF" color="0xFFAFAFFF"></record>
+            <record id="color.10" desc="Light Green" provider="user" code="0xFFAFFFAF" color="0xFFAFFFAF"></record>
+            <record id="color.11" desc="Light Cyan" provider="user" code="0xFFAFFFFF" color="0xFFAFFFFF"></record>
+            <record id="color.12" desc="Light Red" provider="user" code="0xFFFFAFAF" color="0xFFFFAFAF"></record>
+            <record id="color.13" desc="Light Magenta" provider="user" code="0xFFFFAFFF" color="0xFFFFAFFF"></record>
+            <record id="color.14" desc="Light Yellow" provider="user" code="0xFFFFFF00" color="0xFFFFFF00"></record>
+            <record id="color.15" desc="Bright White" provider="user" code="0xFFFFFFFF" color="0xFFFFFFFF"></record>
+        </table>
+        <table id="gal.planets" desc="Galactic's planet descriptions for SystemGenerate" provider="gal">
+            <record id="planets.01" desc="Solar Companion" provider="gal" color="0xFFFFFF00" code="A">1,1,1,2d6</record>
+            <record id="planets.02" desc="DI: Brown Dwarf" provider="gal" color="0xFFFFAFAF" code="B">-,-,-,2d6</record>
+            <record id="planets.03" desc="Gas Giant" provider="gal" color="0xFFFFAFAF" code="C">1,1,10,2d6</record>
+            <record id="planets.04" desc="Magma Ball" provider="gal" color="0xFFFF0000" code="D">6,0,0,1d2-1</record>
+            <record id="planets.04" desc="Primordial" provider="gal" color="0xFFFF0000" code="E">3,2,-,1d4-1</record>
+            <record id="planets.04" desc="Asteriod Belt" provider="gal" color="0xFF404040" code="F">2,3,4,0</record>
+            <record id="planets.04" desc="Planetoid" provider="gal" color="0xFF404040" code="G">2,2,2,0</record>
+            <record id="planets.04" desc="Vacuum Ball" provider="gal" color="0xFFE6E6E6" code="H">2,2,2,1d4-1</record>
+            <record id="planets.04" desc="Snow Ball" provider="gal" color="0xFFE6E6E6" code="I">-,-,2,1d3-1</record>
+            <record id="planets.04" desc="Ice Planet" provider="gal" color="0xFFE6E6E6" code="J">-,-,2,1d4-1</record>
+            <record id="planets.04" desc="Shallow World" provider="gal" color="0xFFFF0000" code="K">2,2,2,1d4-1</record>
+            <record id="planets.04" desc="Barren World" provider="gal" color="0xFFFFC800" code="L">-,2,2,1d4-1</record>
+            <record id="planets.04" desc="Garden World" provider="gal" color="0xFFAFFFFF" code="M">-,3,-,1d4-1</record>
+            <record id="planets.04" desc="Water World" provider="gal" color="0xFFAFAFFF" code="N">-,2,-,1d4-1</record>
+            <record id="planets.04" desc="Desert World" provider="gal" color="0xFFFFC800" code="O">-,2,-,1d4-1</record>
+            <record id="planets.04" desc="Marginal World" provider="gal" color="0xFFFFC800" code="P">-,2,-,1d4-1</record>
+            <record id="planets.04" desc="Belch Ball" provider="gal" color="0xFF00FF00" code="Q">2,2,2,1d4-1</record>
+            <record id="planets.04" desc="Greenhouse" provider="gal" color="0xFFAFFFAF" code="R">3,2,-,1d4-1</record>
+            <record id="planets.04" desc="Exotic" provider="gal" color="0xFFFFAFFF" code="S">-,2,-,1d4-1</record>
+            <record id="planets.04" desc="Liquid World" provider="gal" color="0xFFFFAFFF" code="T">-,2,1,1d4-1</record>
+            <record id="planets.04" desc="Gas Core" provider="gal" color="0xFFE6E6E6" code="U">-,-,-,2d6</record>
+            <record id="planets.04" desc="Special" provider="gal" color="0xFFFFAFFF" code="Z">-,1,-,1d4-1</record>
+            <record id="planets.04" desc="Empty" provider="gal" color="0xFF000000" code="0">4,6,8,0</record>
+        </table>
+        <table id="tml.spectrum" desc="Spectral code classifications" provider="tml">
+            <record id="spectrum.101" desc="Blue: 7,500 to 11,000 Kelvin. Hydrogen lines at max. for A0." provider="tml" code="A"></record>
+            <record id="spectrum.102" desc="Blue: 11,000 to 25,000 Kelvin. Neutral helium lines in absorption." provider="tml" code="B"></record>
+            <record id="spectrum.103" desc="&quot;Carbon&quot; stars - group class for Asymptotic Giant Branch (AGB) stars. Superceded class." provider="tml" code="C"></record>
+            <record id="spectrum.104" desc="Blue-White: 6,000 to 7,500 Kelvin. Metallic lines in record." provider="tml" code="F"></record>
+            <record id="spectrum.105" desc="Yellow-White: 5,000 to 6,000 Kelvin. Solar-type record (netral metallic atoms and ions)." provider="tml" code="G"></record>
+            <record id="spectrum.106" desc="Red-Orange: 3,500 to 5,000 Kelvin. Weak blue continuum, metallic lines dominate." provider="tml" code="K"></record>
+            <record id="spectrum.107" desc="Red: 3,500 (or less) Kelvin. Molecular bands of titanium oxide noticable." provider="tml" code="M"></record>
+            <record id="spectrum.108" desc="Asymptotic Giant Branch (AGB) type M &quot;carbon&quot; star." provider="tml" code="N"></record>
+            <record id="spectrum.109" desc="Blue: 25,000 (or more) Kelvin. Singly ionised helium lines in emission and absorption. Strong ultraviolet continuum." provider="tml" code="O"></record>
+            <record id="spectrum.110" desc="Asymptotic Giant Branch (AGB) type K &quot;carbon&quot; star." provider="tml" code="R"></record>
+            <record id="spectrum.111" desc="Asymptotic Giant Branch (AGB) type M &quot;iron&quot; star." provider="tml" code="S"></record>
+            <record id="spectrum.112" desc="Tauri stars. Bright, irregular, variable stars within interstellar clouds (normally)." provider="tml" code="T"></record>
+            <record id="spectrum.113" desc="Wolf-Rayet stars (type O) with broad emission lines for hydrogen and ionised helium, carbon, nitrogen and oxygen (very few absorption lines)." provider="tml" code="W"></record>
+        </table>
+        <table id="tml.peculiar" desc="Spectral peculiarity codes" provider="tml">
+            <record id="peculiar.214" desc="Composite spectrum - unresolved binary star." provider="tml" code="comp"></record>
+            <record id="peculiar.215" desc="Emission lines (usually hydrogen) present." provider="tml" code="e"></record>
+            <record id="peculiar.216" desc="Abnormally strong metallic lines (not hydrogen or helium) for given spectral type." provider="tml" code="m"></record>
+            <record id="peculiar.217" desc="Broad (nebulous) absorption lines due to fast rotation." provider="tml" code="n"></record>
+            <record id="peculiar.218" desc="Very broad absorption lines due to very fast rotation." provider="tml" code="nn"></record>
+            <record id="peculiar.219" desc="Nebula spectrum merged with the star's spectrum." provider="tml" code="neb"></record>
+            <record id="peculiar.220" desc="Unspecified peculiarity (except with type A, where it denotes extremely strong metal lines)." provider="tml" code="p"></record>
+            <record id="peculiar.221" desc="Very narrow (sharp) lines in emission or absorption." provider="tml" code="s"></record>
+            <record id="peculiar.222" desc="Shell star (B to F main sequence with emission lines from a shell of gas)." provider="tml" code="sh"></record>
+            <record id="peculiar.223" desc="Varying spectral type." provider="tml" code="var"></record>
+            <record id="peculiar.224" desc="Weak lines, suggesting an ancient &quot;metal-poor&quot; star." provider="tml" code="wl"></record>
+        </table>
+        <table id="tml.luminosity" desc="Luminosity codes" provider="tml">
+            <record id="luminosity.325" desc="Strongly luminous (bright) supergiants." provider="tml" code="Ia"></record>
+            <record id="luminosity.326" desc="Less luminous (normal) supergiants." provider="tml" code="Ib"></record>
+            <record id="luminosity.327" desc="Luminous giants." provider="tml" code="II"></record>
+            <record id="luminosity.328" desc="Normal giants." provider="tml" code="III"></record>
+            <record id="luminosity.329" desc="Subgiants." provider="tml" code="IV"></record>
+            <record id="luminosity.330" desc="Main sequence stars (dwarfs)." provider="tml" code="V"></record>
+            <record id="luminosity.331" desc="Dwarfs" provider="tml" code="VI"></record>
+            <record id="luminosity.332" desc="White dwarfs" provider="tml" code="VII"></record>
+            <record id="luminosity.333" desc="Dwarf star" provider="tml" code="D"></record>
+        </table>
+        <table id="canon.polities" desc="Canon interstellar political entities" provider="canon">
+            <record id="polities.1201" desc="Aslam Heirate" provider="canon" code="As"></record>
+            <record id="polities.1202" desc="Imperial Client State" provider="canon" code="Cs"></record>
+            <record id="polities.1203" desc="Hiver Federation" provider="canon" code="Hv"></record>
+            <record id="polities.1204" desc="Third Imperium" provider="canon" code="Im"></record>
+            <record id="polities.1205" desc="The Two Thousand Worlds (K'kree)" provider="canon" code="Kk"></record>
+            <record id="polities.1206" desc="Independant non-aligned world" provider="canon" code="Na"></record>
+            <record id="polities.1207" desc="Solomani Confederation" provider="canon" code="So"></record>
+            <record id="polities.1208" desc="Vargr" provider="canon" code="Va"></record>
+            <record id="polities.1209" desc="Zhodani Consulate (or Zhodani controlled)" provider="canon" code="Zh"></record>
+            <record id="polities.1220" desc="Border Worlds" provider="canon" code="Bw">The Spinward Marches</record>
+            <record id="polities.1221" desc="Darrian Confederation" provider="canon" code="Da">The Spinward Marches</record>
+            <record id="polities.1222" desc="Droyne" provider="canon" code="Dr">The Spinward Marches</record>
+            <record id="polities.1223" desc="Federation of Arden" provider="canon" code="Fa">The Spinward Marches</record>
+            <record id="polities.1224" desc="Sword Worlds Confederation member world" provider="canon" code="Sw">The Spinward Marches</record>
+            <record id="polities.1225" desc="Sword Worlds Union" provider="canon" code="SW">The Spinward Marches</record>
+            <record id="polities.1231" desc="Anubian Trade Coalition" provider="canon" code="Ac">Hinterworlds</record>
+            <record id="polities.1232" desc="Cytrialin Unity" provider="canon" code="Cu">(Hinterworlds)</record>
+            <record id="polities.1233" desc="Gniivi" provider="canon" code="Gi">(Hinterworlds)</record>
+            <record id="polities.1234" desc="Council of Leh Perash" provider="canon" code="Lp">(Hinterworlds)</record>
+            <record id="polities.1235" desc="Outcasts of the Whispering Sky" provider="canon" code="Ow">Hinterworlds</record>
+            <record id="polities.1235" desc="Ral Ranta" provider="canon" code="Ra">Hinterworlds</record>
+            <record id="polities.1241" desc="Amondiage" provider="canon" code="Am">Reft</record>
+            <record id="polities.1242" desc="Belgardian Sojourn" provider="canon" code="Bs">Trojan Reach</record>
+            <record id="polities.1243" desc="Union of Chapet" provider="canon" code="Ch">The Old Expanses</record>
+            <record id="polities.1244" desc="En Liverech" provider="canon" code="En">The Old Expanses</record>
+            <record id="polities.1245" desc="Esperanza" provider="canon" code="Es">Reft</record>
+            <record id="polities.1246" desc="Florian League" provider="canon" code="Fl">Trojan Reach/The Beyond</record>
+            <record id="polities.1247" desc="Glimmerdrift Spread" provider="canon" code="Gf">Glimmerdrift Reaches</record>
+            <record id="polities.1248" desc="Glorious Empire" provider="canon" code="Gl">Trojan Reach</record>
+            <record id="polities.1249" desc="Gerontacrcy of Ormine/Gyj-nuah 'Oew" provider="canon" code="Go">Dark Nebula</record>
+            <record id="polities.1250" desc="Gazala Cooperative/Colony" provider="canon" code="Gr">Glimmerdrift Reaches</record>
+            <record id="polities.1251" desc="Hegemony of Lorean" provider="canon" code="Hl">Empty Quarter</record>
+            <record id="polities.1252" desc="Islaiat Dominate" provider="canon" code="Id">Reaver's Deep</record>
+            <record id="polities.1253" desc="Joyeuse" provider="canon" code="Jo">Reft</record>
+            <record id="polities.1254" desc="Julian Protectorate" provider="canon" code="Jr">(Amdukan)</record>
+            <record id="polities.1255" desc="League of Antares " provider="canon" code="La">Antares</record>
+            <record id="polities.1256" desc="Neubayern" provider="canon" code="Nb">Reft</record>
+            <record id="polities.1257" desc="New Colchis" provider="canon" code="Nc">Reft</record>
+            <record id="polities.1258" desc="New Home" provider="canon" code="Nh">Reft</record>
+            <record id="polities.1259" desc="Portine League" provider="canon" code="Po">The Old Expanses</record>
+            <record id="polities.1260" desc="Ral Ranta" provider="canon" code="Ra">Hinterworlds</record>
+            <record id="polities.1261" desc="Sansterre" provider="canon" code="Sa">Reft</record>
+            <record id="polities.1262" desc="Saul Empire" provider="canon" code="Sa">Glimmerdrift Reaches</record>
+            <record id="polities.1263" desc="Serendip Belt" provider="canon" code="Sb">Reft</record>
+            <record id="polities.1264" desc="Senlis Foederate" provider="canon" code="Sf">Trojan Reach</record>
+            <record id="polities.1265" desc="Slovenian Protectorate" provider="canon" code="Sl">Glimmerdrift Reaches</record>
+            <record id="polities.1266" desc="Sylean Federation" provider="canon" code="Sy">Core</record>
+            <record id="polities.1267" desc="Ulane Hierate (Union of Harmony)" provider="canon" code="Uh">(Reaver's Deep/Dark Nebula)</record>
+            <record id="polities.1268" desc="Vegan Autonomous District" provider="canon" code="Ve">Solomani Rim</record>
+            <record id="polities.1269" desc="Pa'an (Zhodani Client)" provider="canon" code="Zl">Trojan Reach</record>
+        </table>
+        <table id="aslan.polities" desc="Canon Aslan political entities" provider="canon">
+            <record id="aslan.1201" desc="Yerlyaruiwo Tlaukhu Bloc" provider="canon" code="A0"></record>
+            <record id="aslan.1202" desc="Khaukeairl Tlaukhu Bloc" provider="canon" code="A1"></record>
+            <record id="aslan.1203" desc="Syoisuis Tlaukhu Bloc" provider="canon" code="A2"></record>
+            <record id="aslan.1204" desc="Tralyeaeawi Tlaukhu Bloc" provider="canon" code="A3"></record>
+            <record id="aslan.1205" desc="Eakhtiyho Tlaukhu Bloc" provider="canon" code="A4"></record>
+            <record id="aslan.1206" desc="Hlyueawi/Isoitiyro Tlaukhu Bloc" provider="canon" code="A5"></record>
+            <record id="aslan.1207" desc="Uiktawa Tlaukhu Bloc" provider="canon" code="A6"></record>
+            <record id="aslan.1208" desc="Ikhtealyo Tlaukhu Bloc" provider="canon" code="A7"></record>
+            <record id="aslan.1209" desc="Seieakh Tlaukhu Bloc" provider="canon" code="A8"></record>
+            <record id="aslan.1210" desc="Aokhalte Tlaukhu Bloc" provider="canon" code="A9"></record>
+            <record id="aslan.1211" desc="Auftei Ktaih" provider="canon" code="Ak">Hanstone</record>
+            <record id="aslan.1212" desc="Aslan Hierate" provider="canon" code="As"></record>
+            <record id="aslan.1213" desc="Yehaso Clan (Aslan)" provider="canon" code="Aw">Reaver's Deep</record>
+            <record id="aslan.1214" desc="Etra" provider="canon" code="Et">Hfiywitir</record>
+            <record id="aslan.1215" desc="Fteiheiel Oih" provider="canon" code="Fo">Hanstone</record>
+            <record id="aslan.1216" desc="Hreahiyouea" provider="canon" code="Hy">Fahreahluis</record>
+            <record id="aslan.1217" desc="Islaiat Dominate" provider="canon" code="Id">Reaver's Deep</record>
+            <record id="aslan.1218" desc="Khosarliyh" provider="canon" code="Ko">Hfiywitir</record>
+            <record id="aslan.1219" desc="Ktouho'as" provider="canon" code="Kt">Fahreahluis</record>
+            <record id="aslan.1220" desc="Steaakh Hlaia" provider="canon" code="Sh">Ahkiweahi</record>
+            <record id="aslan.1221" desc="Sea'ai'teluarliyh" provider="canon" code="Sa">Fahreahluis</record>
+            <record id="aslan.1222" desc="Steaak'heafera" provider="canon" code="Se">(Irlaftalea/Hfiywitir)</record>
+            <record id="aslan.1223" desc="Steaakh Yeasaol" provider="canon" code="Sy">Hfiywitir</record>
+        </table>
+        <table id="vargr.polities" desc="Canon vargr political entities" provider="canon">
+            <record id="vargr.1201" desc="Vargr (Non-Aligned)" provider="canon" code="Va"></record>
+            <record id="vargr.1202" desc="Bakne Alliance" provider="canon" code="Vb">(Dhuerorrg/Tuglikki)</record>
+            <record id="vargr.1203" desc="Anti-Rukh Coalition" provider="canon" code="Vc">Gvurrdon</record>
+            <record id="vargr.1204" desc="Democracy of Greats" provider="canon" code="Vd">(!Knoellighz!/Dhuerorrg)</record>
+            <record id="vargr.1205" desc="Empire of Varroerth" provider="canon" code="Ve">(Ngathksirz)</record>
+            <record id="vargr.1206" desc="Dzarrgh Federate" provider="canon" code="Vf">(Provence)</record>
+            <record id="vargr.1207" desc="Glory of Taarskoerzn" provider="canon" code="Vg">(Provence)</record>
+            <record id="vargr.1208" desc="Irrgh Manifest" provider="canon" code="Vh">(Provence/Corridor)</record>
+            <record id="vargr.1209" desc="Llaeghskath Interacterate" provider="canon" code="Vi">Provence</record>
+            <record id="vargr.1210" desc="Jihad of Faarzgaen" provider="canon" code="Vj">Provence</record>
+            <record id="vargr.1211" desc="Commonality of Kedzudh" provider="canon" code="Vk">(Gvurrdon/The Spinward Marches)</record>
+            <record id="vargr.1212" desc="Lair Protectorate" provider="canon" code="Vl">(Provence/Ngathksirz)</record>
+            <record id="vargr.1213" desc="Members of Knaeleng" provider="canon" code="Vm">Dhuerorrg</record>
+            <record id="vargr.1214" desc="Ngath Confederation" provider="canon" code="Vn">(Windhorn/Vland)</record>
+            <record id="vargr.1215" desc="Opposition Alliance" provider="canon" code="Vo">(!Knoellighz!/Gvurrdon|Meshan)</record>
+            <record id="vargr.1216" desc="Thirz Empire" provider="canon" code="Vp">(Usingou/Gvurrdon)</record>
+            <record id="vargr.1217" desc="Society of Equals" provider="canon" code="Vq">Gvurrdon</record>
+            <record id="vargr.1218" desc="Worlds of Leader Rukh" provider="canon" code="Vr">Gvurrdon</record>
+            <record id="vargr.1219" desc="Saeknoth Dependency" provider="canon" code="Vs">Gvurrdon</record>
+            <record id="vargr.1220" desc="Thoengling Empire" provider="canon" code="Vt">(Gvurrdon/Tuglikki)</record>
+            <record id="vargr.1221" desc="United Followers of Augurgh" provider="canon" code="Vu">(Tuglikki/Deneb)</record>
+            <record id="vargr.1222" desc="Voekhaeb Society" provider="canon" code="Vv">(Meshan/Lishun)</record>
+            <record id="vargr.1223" desc="People of Wanz" provider="canon" code="Vw">Tuglikki</record>
+            <record id="vargr.1224" desc="Antares Pact" provider="canon" code="Vx">(Antares|!Knoellighz!/Gvurrdon)</record>
+            <record id="vargr.1225" desc="Yfagg Congress" provider="canon" code="Vy"></record>
+            <record id="vargr.1225" desc="Worlds of Master Zer" provider="canon" code="Vz"></record>
+            <record id="vargr.1227" desc="First Fleet of Dzo" provider="canon" code="V1">(Lishun/Meshan)</record>
+            <record id="vargr.1228" desc="Windhorn Pact of Two" provider="canon" code="V2">Tuglikki</record>
+            <record id="vargr.1229" desc="Third Empire of Gashikan" provider="canon" code="V3">(Gashikan)</record>
+            <record id="vargr.1230" desc="40th Sqaudron" provider="canon" code="V4">(Gvurrdon/The Spinward Marches)</record>
+            <record id="vargr.1231" desc="Ruler of Five" provider="canon" code="V5">(Gzaekfueg/Meshan)</record>
+            <record id="vargr.1232" desc="Assemblage of 1116" provider="canon" code="V6">Tuglikki</record>
+            <record id="vargr.1233" desc="17th Disjuncture" provider="canon" code="V7">(Windhorn)</record>
+            <record id="vargr.1234" desc="Council of the Four-Pair" provider="canon" code="V8">Lishun</record>
+            <record id="vargr.1235" desc="Infinity League" provider="canon" code="V9">!Knoellighz!</record>
+            <record id="vargr.1236" desc="Akhorgh Seperate" provider="canon" code="V0">Fa Dzaets</record>
+            <record id="vargr.1237" desc="Alliance of Tju" provider="canon" code="VA">Kharrthon/Knaeleng)</record>
+            <record id="vargr.1238" desc="Brzeh Council" provider="canon" code="VB">Ghoeknael</record>
+            <record id="vargr.1239" desc="Hezeraek Connective" provider="canon" code="VC">(Ogadogorz/Ogzuekhfos)</record>
+            <record id="vargr.1240" desc="Delegation of Targhae" provider="canon" code="VD">Kharrthon</record>
+            <record id="vargr.1241" desc="Agents of Eloeghoe" provider="canon" code="VE">Listanaya</record>
+            <record id="vargr.1242" desc="Far Stars Unanimity" provider="canon" code="VF">Zao Kfeng Ig Grilokh</record>
+            <record id="vargr.1243" desc="Glorious Sons of Raek" provider="canon" code="VG">(Kharrthon/Gzaekfueg)</record>
+            <record id="vargr.1244" desc="Tyryk Hegemony" provider="canon" code="VH"></record>
+            <record id="vargr.1245" desc="Authority of Joekghr" provider="canon" code="VJ">Kfazz Ghik</record>
+            <record id="vargr.1246" desc="Koenotz Empire" provider="canon" code="VK">(Knaeleng/Zao Kfeng Ig Grilokh)</record>
+            <record id="vargr.1247" desc="League Alliance" provider="canon" code="VL">Listanaya</record>
+            <record id="vargr.1248" desc="Mazaroegh Dominion" provider="canon" code="VM">Ogadogorz</record>
+            <record id="vargr.1249" desc="Drr'lana Network" provider="canon" code="VN">(Gashikan/Gazekfueg)</record>
+            <record id="vargr.1250" desc="Kechk Pact" provider="canon" code="VP">Ksinanirz</record>
+            <record id="vargr.1251" desc="Union of Yoetyqq" provider="canon" code="VQ">Gashikan</record>
+            <record id="vargr.1252" desc="Kechk Reversion" provider="canon" code="VR">Ksinanirz</record>
+            <record id="vargr.1253" desc="Jarrgh Subjugate" provider="canon" code="VS">Zao Kfeng Ig Grilokh</record>
+            <record id="vargr.1254" desc="Trae Aggregation" provider="canon" code="VT">Trenchans</record>
+            <record id="vargr.1255" desc="Union of Seekers" provider="canon" code="VU">Rzakki</record>
+            <record id="vargr.1256" desc="Vaoekghirkhr Exchange" provider="canon" code="VX">(Oeghz Vaerrghr)</record>
+            <record id="vargr.1257" desc="Ruzz Confederation" provider="canon" code="VZ">Rzakki</record>
+        </table>
+        <table id="mt.polities" desc="interstellar political enties of the MT Era" provider="mt">
+            <record id="mt.1201" desc="Domain of Deneb" provider="mt" code="Dd">Deneb</record>
+            <record id="mt.1202" desc="Federation of Daibei" provider="mt" code="Fd">(Daibei)</record>
+            <record id="mt.1203" desc="Federation of Ilelish" provider="mt" code="Fi">(Ilelish)</record>
+            <record id="mt.1204" desc="League of Antares" provider="mt" code="La">(Antares)</record>
+            <record id="mt.1205" desc="Lucan's Imperium" provider="mt" code="Li"></record>
+            <record id="mt.1206" desc="Margaret's Stronghold" provider="mt" code="Ma">(Delphi)</record>
+            <record id="mt.1207" desc="Restored Ziru Sirka" provider="mt" code="Rv"></record>
+            <record id="mt.1208" desc="Strephon's Imperium" provider="mt" code="St"></record>
+        </table>
+        <table id="tne.polities" desc="interstellar political entities of the TNE Era" provider="tne">
+            <record id="tne.1201" desc="Khavle Accordment" provider="tne" code="Ac">Diaspora</record>
+            <record id="tne.1202" desc="Backman Cluster" provider="tne" code="Bc">Diaspora</record>
+            <record id="tne.1203" desc="Alurzan Cartel" provider="tne" code="Ca">Diaspora</record>
+            <record id="tne.1204" desc="Duchy of Pendang" provider="tne" code="Dp">Reaver's Deep</record>
+            <record id="tne.1205" desc="Duwamish League" provider="tne" code="Du">Diaspora</record>
+            <record id="tne.1206" desc="Ecclesiasty of Narquel" provider="tne" code="Ec">Diaspora</record>
+            <record id="tne.1207" desc="Federation of Arden" provider="tne" code="Fa">The Spinward Marches</record>
+            <record id="tne.1208" desc="Federation of Daibei" provider="tne" code="Fd">(Daibei)</record>
+            <record id="tne.1209" desc="Frontier" provider="tne" code="Fr"></record>
+            <record id="tne.1210" desc="Grendal" provider="tne" code="Gr">Reaver's Deep</record>
+            <record id="tne.1211" desc="Gralyn Union" provider="tne" code="Gu">Reaver's Deep</record>
+            <record id="tne.1212" desc="Hub Worlds" provider="tne" code="Hb">Massilia</record>
+            <record id="tne.1213" desc="Hewes Dyad" provider="tne" code="Hd">Diaspora</record>
+            <record id="tne.1214" desc="Hive Federation" provider="tne" code="Hv"></record>
+            <record id="tne.1215" desc="Iltharan Empire" provider="tne" code="Ie">Reaver's Deep</record>
+            <record id="tne.1216" desc="Vassalry Judiciate" provider="tne" code="JV">Diaspora</record>
+            <record id="tne.1217" desc="New Order Vigilance Alliance" provider="tne" code="No">Diaspora</record>
+            <record id="tne.1218" desc="Non-aligned" provider="tne" code="Na"></record>
+            <record id="tne.1219" desc="Outlands" provider="tne" code="Ou"></record>
+            <record id="tne.1220" desc="Unity of Promise" provider="tne" code="Pr">Diaspora</record>
+            <record id="tne.1221" desc="Reformation Coalition" provider="tne" code="RC">(The Old Expanses)</record>
+            <record id="tne.1222" desc="Regency of Deneb" provider="tne" code="Re">Deneb</record>
+            <record id="tne.1223" desc="Rintarna Economic Sphere" provider="tne" code="Rs">Reaver's Deep</record>
+            <record id="tne.1224" desc="Bootean Federation" provider="tne" code="SB">Solomani Rim</record>
+            <record id="tne.1225" desc="Solomani Confederation" provider="tne" code="So"></record>
+            <record id="tne.1226" desc="Covenant of Sufren" provider="tne" code="Su">Diaspora</record>
+            <record id="tne.1227" desc="Union of Sufren" provider="tne" code="Un">Diaspora</record>
+            <record id="tne.1228" desc="Wilds" provider="tne" code="Wi"></record>
+        </table>
+        <table id="hiwg.polities" desc="interstellar political entities described by HIWG" provider="hiwg">
+            <record id="hiwg.1201" desc="Akigura Union" provider="hiwg" code="AU">Yiklerzdanzh</record>
+            <record id="hiwg.1202" desc="Carillon Harmonies" provider="hiwg" code="CA">Yiklerzdanzh</record>
+            <record id="hiwg.1203" desc="Carillon Client State" provider="hiwg" code="Cc">Yiklerzdanzh</record>
+            <record id="hiwg.1204" desc="Glenauran Signatorate" provider="hiwg" code="Gs">Yiklerzdanzh</record>
+            <record id="hiwg.1205" desc="Izrats Kriezhlas Unity Client State" provider="hiwg" code="Ic">Yiklerzdanzh</record>
+            <record id="hiwg.1206" desc="Izrats Kriezhlas Unity" provider="hiwg" code="Iz">Yiklerzdanzh</record>
+            <record id="hiwg.1207" desc="Meichntid Ibl Client State" provider="hiwg" code="Mc">Yiklerzdanzh</record>
+            <record id="hiwg.1208" desc="Meichntid Ibl" provider="hiwg" code="Mi">Yiklerzdanzh</record>
+            <record id="hiwg.1209" desc="S'raak Empire" provider="hiwg" code="Sr">Yiklerzdanzh</record>
+            <record id="hiwg.1210" desc="Talpaku Communality" provider="hiwg" code="TL">Yiklerzdanzh</record>
+            <record id="hiwg.1211" desc="Talpaku Communality Client State" provider="hiwg" code="TC">Yiklerzdanzh</record>
+            <record id="hiwg.1221" desc="Confederation of Bammesuka" provider="hiwg" code="Ba">Mendan</record>
+            <record id="hiwg.1222" desc="Third Imperium of Gashikan" provider="hiwg" code="Ga">(Gashikan)</record>
+            <record id="hiwg.1223" desc="Hegemony of Lorean" provider="hiwg" code="Hl">(Mendan)</record>
+            <record id="hiwg.1224" desc="Julian Protectorate (J.)" provider="hiwg" code="J-">(Amdukan)</record>
+            <record id="hiwg.1225" desc="Asimikigir Confederation" provider="hiwg" code="Ja">(Mendan)</record>
+            <record id="hiwg.1226" desc="Constellation of Koekhon" provider="hiwg" code="Jc">Amdukan</record>
+            <record id="hiwg.1227" desc="Hhkar Sphere" provider="hiwg" code="Jh">Amdukan</record>
+            <record id="hiwg.1228" desc="Lumda Dower" provider="hiwg" code="Jl">Amdukan</record>
+            <record id="hiwg.1229" desc="Commonwealth of Mendan" provider="hiwg" code="Jm">(Mendan)</record>
+            <record id="hiwg.1230" desc="Alliance of Ozuvon" provider="hiwg" code="Jo">Amdukan</record>
+            <record id="hiwg.1231" desc="Pirbarish Starlane" provider="hiwg" code="Jp">Mendan</record>
+            <record id="hiwg.1232" desc="Rukadukaz Republic" provider="hiwg" code="Jr">(Amdukan)</record>
+            <record id="hiwg.1233" desc="Ukhanzi Coordinate" provider="hiwg" code="Ju">Mendan</record>
+            <record id="hiwg.1234" desc="Vugurar Dominion" provider="hiwg" code="Jv">Mendan</record>
+            <record id="hiwg.1235" desc="Zuugabish Tripartite (see Zu)" provider="hiwg" code="Jz">ARCHAIC Amdukan</record>
+            <record id="hiwg.1236" desc="Sarkan Constellation" provider="hiwg" code="Sc">Mendan</record>
+            <record id="hiwg.1237" desc="Rar Errall (The Wolves Warren)" provider="hiwg" code="Vw">Amdukan</record>
+            <record id="hiwg.1238" desc="Antares Pact" provider="hiwg" code="Vx">(Mendan)</record>
+            <record id="hiwg.1239" desc="Zuugabish Tripartite" provider="hiwg" code="Zu">Mendan</record>
+            <record id="hiwg.1251" desc="Thirz Empire" provider="hiwg" code="Vb">(Usingou/Gvurrdon)</record>
+            <record id="hiwg.1252" desc="Dzen Aeng Kho (Society of Equals)" provider="hiwg" code="Vc">Gvurrdon</record>
+            <record id="hiwg.1253" desc="Noerrgh Confederate" provider="hiwg" code="Vd">Gvurrdon</record>
+            <record id="hiwg.1254" desc="Thoengling Raghz (Thoengling Empire)" provider="hiwg" code="Ve">Gvurrdon</record>
+            <record id="hiwg.1255" desc="Ongue Republic" provider="hiwg" code="Vf">Gvurrdon</record>
+            <record id="hiwg.1256" desc="Allez" provider="hiwg" code="Vg">Gvurrdon</record>
+            <record id="hiwg.1257" desc="Gvaeknoks Trade Union" provider="hiwg" code="Vh">Gvurrdon</record>
+            <record id="hiwg.1258" desc="Rroerz Uerra" provider="hiwg" code="Vl">Gvurrdon</record>
+            <record id="hiwg.1259" desc="Rueks Legacy" provider="hiwg" code="Vm">Gvurrdon</record>
+            <record id="hiwg.1260" desc="Ve Ekhlle Ksafi (40th Sqaudron)" provider="hiwg" code="Vn">Gvurrdon</record>
+            <record id="hiwg.1261" desc="Kedzudh Aeng (Commonality of Kedzudh)" provider="hiwg" code="Vp">(Gvurrdon/The Spinward Marches)</record>
+            <record id="hiwg.1262" desc="The Freedom League (Corsair's Den)" provider="hiwg" code="Vq">Gvurrdon</record>
+            <record id="hiwg.1271" desc="Amalgamation Union (Gold Union)" provider="hiwg" code="Au">(Crucis Margin)</record>
+            <record id="hiwg.1272" desc="Union of Chapet" provider="hiwg" code="Ch">The Old Expanses</record>
+            <record id="hiwg.1273" desc="Corona Regnum (Imperial Cs)" provider="hiwg" code="Cr">(Kaa G!'kul)</record>
+            <record id="hiwg.1274" desc="Gazala Cooperative/Colony" provider="hiwg" code="Gr">Glimmerdrift Reaches</record>
+            <record id="hiwg.1275" desc="Hive FDA Uplift/Observation Site" provider="hiwg" code="Hf"></record>
+            <record id="hiwg.1276" desc="Lishun Suuguki (Vilani Nomads/Hiver Cs)" provider="hiwg" code="Hs">(Gzirr!k'l)</record>
+            <record id="hiwg.1277" desc="Ithklur Aexzz (People's Empire)" provider="hiwg" code="Ia">(Centrax)</record>
+            <record id="hiwg.1278" desc="Kidunal Abeyance" provider="hiwg" code="Ka">Kidunal</record>
+            <record id="hiwg.1279" desc="Krotan Primacy" provider="hiwg" code="Kr">(Gzirr!k'l)</record>
+            <record id="hiwg.1280" desc="Losan Xkeerikulookree" provider="hiwg" code="Lx">Kaa G!'kul</record>
+            <record id="hiwg.1281" desc="Munsonian Principality" provider="hiwg" code="Mp">(Kaa G!'kul)</record>
+            <record id="hiwg.1282" desc="Ozymic Heliad" provider="hiwg" code="Oz">Crucis Margin</record>
+            <record id="hiwg.1283" desc="Portine League" provider="hiwg" code="Po">The Old Expanses</record>
+            <record id="hiwg.1284" desc="The Platonic Republic" provider="hiwg" code="Rp">Centrax</record>
+            <record id="hiwg.1285" desc="Saul Empire" provider="hiwg" code="Sa">Glimmerdrift Reaches</record>
+            <record id="hiwg.1286" desc="Slovenian Protectorate" provider="hiwg" code="Sl">Glimmerdrift Reaches</record>
+            <record id="hiwg.1287" desc="United Pact" provider="hiwg" code="Up">Kaa G!'kul</record>
+            <record id="hiwg.1288" desc="Hive FDA extra-Federation operation" provider="hiwg" code="Xh">FEDERATION</record>
+            <record id="hiwg.1289" desc="Yeskoth Corporate" provider="hiwg" code="Yc">Kaa G!'kul</record>
+        </table>
+    </reference>
+    <mapping></mapping>
+</astrogation>

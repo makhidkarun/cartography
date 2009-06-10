@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='windows-1252'?>
+<astrogation 
+     xmlns="http://www.farfuture.net/"
+     xmlns:xsi="http://www.w3.org/2000/10/XMLSchema-instance" 
+     xsi:SchemaLocation="file:/AstroML.xsd">
+     <reference>
+     	<provider id="canon" desc="Standard (canon) data for all systems" name="Canon"/>
+		<provider id="ct" desc='Original game version (the "Little Black Books")' name="Classic Traveller"/>
+		<provider id="mt" desc="Second edition of Traveller" name="Mega-Traveller"/>
+		<provider id="tne" desc="The era following the end of the Third Imperium" name="The New Era"/>
+		<provider id="t4" desc="Fourth edition of Traveller" name="Traveller (4th Edition)"/>
+        <provider id="gt" desc="CT alternate history using GURPS rules by Steve Jackon Games" name="GURPS Traveller" link="http://www.sjgames.com/traveller/"/>
+        <provider id="t20" desc="Traveller for D20 set in 990 and Gateway domain" name="Traveller D20" link="http://www.travellerrpg.com/"/>
+		<provider id="tml" desc="Data provided by contributors to the Internet-based discussion group." name="Traveller Mailing List" email="tml@travellerrpg.com"/>
+        <provider id="hiwg" desc="HIWG author contributions" name="History of the Imperium Working Group" />
+        <provider id="user" desc="independent user modifications" name="User Data" />
+
+        <table provider="canon" id="canon.ports" desc="Canon Starports/spaceports" />
+        <table provider="canon" id="canon.size" desc="Canon world size" />
+        <table provider="canon" id="canon.atmosphere" desc="Canon planetary atmospheres" />
+        <table provider="canon" id="canon.hydrograph" desc="Canon hydrographic percentage" />
+        <table provider="canon" id="canon.population" desc="Canon population" />
+        <table provider="canon" id="canon.government" desc="Canon government types"/>
+        <table provider="canon" id="canon.lawlevel" desc="Canon Law level values" />
+        <table provider="canon" id="canon.technology" desc="Canon Technology level" />
+
+		<table provider="canon" id="canon.zone" desc="Canon TAS travel zones"/>
+		<table provider="canon" id="canon.trade" desc="Canon trade classifications"/>
+		<table provider="canon" id="canon.bases" desc="Canon base installations"/>
+        <table provider="canon" id="canon.remarks" desc="Canon UWP system remark codes" />
+
+		<table provider="canon" id="canon.polities" desc="Canon interstellar political entities"/>
+        <table provider="mt" id="mt.polities" desc="interstellar political enties of the MT Era" />
+        <table provider="tne" id="tne.polities" desc="interstellar political entities of the TNE Era" />
+        <table provider="hiwg" id="hiwg.polities" desc="interstellar political entities described by HIWG" />
+
+		<table provider="tml" id="tml.spectrum" desc="Spectral code classifications"/>
+		<table provider="tml" id="tml.peculiar" desc="Spectral peculiarity codes"/>
+		<table provider="tml" id="tml.luminosity" desc="Luminosity codes"/>
+
+     </reference>
+     <mapping/>
+</astrogation>

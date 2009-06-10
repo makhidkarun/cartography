@@ -1,0 +1,143 @@
+<!-- highguardshipclass.dtd	 -->
+<!-- class is the root of the document  -->
+<!ELEMENT class (properties+, accomodation+, fuel+, bridge, vehicles)>
+<!ATTLIST class
+	name CDATA #IMPLIED
+	techlevel (1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | A | B | C | D | E | F) #REQUIRED
+	cost CDATA #REQUIRED
+	authorized CDATA #IMPLIED
+	built CDATA #IMPLIED
+>
+<!ELEMENT properties (type?, tonnage?, configuration?, jump?, maneuver?, powerplant?, computer?, people?, hullarmor?, sandcasters?, mesonscreens?, nucleardampers?, blackglobe?, lasers?, energyweapons?, paws?, mesonguns?, missiles?, fighters)>
+<!ELEMENT type EMPTY>
+<!ELEMENT tonnage EMPTY>
+<!ATTLIST tonnage
+	code (1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | A | B | C | D | E | F | G | H | J | K | L | M | N | P | Q | R | S | T | U | V | W | X | Y | Z) #REQUIRED
+	value CDATA #REQUIRED
+	cargo CDATA #IMPLIED
+>
+<!ELEMENT configuration EMPTY>
+<!ATTLIST configuration
+	code (1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9) #REQUIRED
+	streamlined (true | false) #REQUIRED
+>
+<!ELEMENT jump EMPTY>
+<!ATTLIST jump
+	code (1 | 2 | 3 | 4 | 5 | 6) #REQUIRED
+>
+<!ELEMENT maneuver EMPTY>
+<!ELEMENT powerplant EMPTY>
+<!ATTLIST powerplant
+	code (1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | A | B | C | D | E | F | G | H | J | K | L | M | N | P | Q | R | S | T | U | V | W | X | Y | Z) #REQUIRED
+	ep CDATA #REQUIRED
+>
+<!ELEMENT computer EMPTY>
+<!ATTLIST computer
+	code (1 | A | R | 2 | B | S | 3 | C | 4 | D | 5 | E | 6 | F | 7 | G | 8 | H | 9 | J) #REQUIRED
+>
+<!ELEMENT people EMPTY>
+<!ATTLIST people
+	code (0 | 1 | 2 | 3 | 4 | 5) #REQUIRED
+	crew CDATA #REQUIRED
+	marines CDATA #IMPLIED
+	frozen CDATA #IMPLIED
+	passengers CDATA #IMPLIED
+>
+<!ELEMENT hullarmor EMPTY>
+<!ATTLIST hullarmor
+	code (0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | A | B | C | D | E | F | G | H | J | K | L | M | N | P | Q | R | S | T | U | V | W | X | Y | Z) #REQUIRED
+>
+<!ELEMENT sandcasters (turrets*, batteries*)>
+<!ATTLIST sandcasters
+	code (0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9) #REQUIRED
+>
+<!ELEMENT mesonscreens EMPTY>
+<!ATTLIST mesonscreens
+	code (0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9) #REQUIRED
+>
+<!ATTLIST sandcasters
+	code (0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9) #REQUIRED
+>
+<!ELEMENT nucleardampers EMPTY>
+<!ATTLIST nucleardampers
+	code (0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9) #REQUIRED
+>
+<!ELEMENT blackglobe EMPTY>
+<!ATTLIST blackglobe
+	code (0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9) #REQUIRED
+>
+<!ELEMENT lasers (turrets*, batteries*)>
+<!ATTLIST lasers
+	code (0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9) #REQUIRED
+>
+<!ATTLIST maneuver
+	code (0 | 1 | 2 | 3 | 4 | 5 | 6) #REQUIRED
+>
+<!ELEMENT energyweapons (turrets*, batteries*)>
+<!ATTLIST energyweapons
+	code (0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9) #REQUIRED
+>
+<!ELEMENT paws (turrets*, batteries*)>
+<!ATTLIST paws
+	code (0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9) #REQUIRED
+>
+<!ELEMENT mesonguns (turrets*, batteries*)>
+<!ATTLIST mesonguns
+	code (0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9) #REQUIRED
+>
+<!ELEMENT missiles (turrets*, batteries*)>
+<!ATTLIST missiles
+	code (0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9) #REQUIRED
+>
+<!ELEMENT fighters EMPTY>
+<!ATTLIST fighters
+	code CDATA #REQUIRED
+>
+<!ELEMENT turrets EMPTY>
+<!ATTLIST turrets
+	number CDATA #REQUIRED
+	weapons CDATA #REQUIRED
+>
+<!ELEMENT batteries EMPTY>
+<!ATTLIST batteries
+	number CDATA #REQUIRED
+	bearing CDATA #REQUIRED
+	turrets CDATA #REQUIRED
+>
+<!ELEMENT accomodation (singlerooms?, doublerooms?, lowberths?)>
+<!ELEMENT singlerooms EMPTY>
+<!ATTLIST singlerooms
+	number CDATA #REQUIRED
+>
+<!ELEMENT doublerooms EMPTY>
+<!ATTLIST doublerooms
+	number CDATA #REQUIRED
+>
+<!ELEMENT lowberths EMPTY>
+<!ATTLIST lowberths
+	number CDATA #REQUIRED
+>
+<!ELEMENT fuel EMPTY>
+<!ATTLIST fuel
+	total CDATA #REQUIRED
+	internal CDATA #REQUIRED
+	external CDATA #REQUIRED
+	scoops (true | false) #IMPLIED
+	purifier (true | false) #IMPLIED
+>
+<!ELEMENT bridge EMPTY>
+<!ATTLIST bridge
+	present (true | false) #REQUIRED
+>
+<!ELEMENT vehicles (vehicle*)>
+<!ELEMENT vehicle EMPTY>
+<!ATTLIST vehicle
+	class CDATA #REQUIRED
+	number CDATA #REQUIRED
+	classref CDATA #REQUIRED
+>
+<!ATTLIST type
+	code CDATA #REQUIRED
+	description CDATA #REQUIRED
+>
+

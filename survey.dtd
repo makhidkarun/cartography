@@ -1,0 +1,77 @@
+<!-- survey.dtd	 -->
+<!-- survey is the root of the document  -->
+<!ELEMENT survey (textdetails, sector*)>
+<!ATTLIST survey
+	name CDATA #IMPLIED
+>
+<!ELEMENT sector (textdetails, subsectors?)>
+<!ATTLIST sector
+	name CDATA #IMPLIED
+	xpos (0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | A | B | C | D | E | F) #REQUIRED
+	ypos (0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8) #REQUIRED
+>
+<!ELEMENT textdetails (name, description*, history*)>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT description (#PCDATA)>
+<!ELEMENT history (#PCDATA)>
+<!ELEMENT subsector (textdetails, subsectorCapital?, system*)>
+<!ATTLIST subsector
+	position (0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | A | B | C | D | E | F) #REQUIRED
+>
+<!-- The subsectors element contains the 16 subsectors of the sector  -->
+<!ELEMENT subsectors (subsector, subsector, subsector, subsector, subsector, subsector, subsector, subsector, subsector, subsector, subsector, subsector, subsector, subsector, subsector, subsector)>
+<!ELEMENT subsectorCapital (#PCDATA)>
+<!ELEMENT system (textdetails, star+)>
+<!ATTLIST system
+	hex (0101 | 0101 | 0102 | 0103 | 0104 | 0105 | 0106 | 0107 | 0108 | 0109 | 0110 | 0201 | 0201 | 0202 | 0203 | 0204 | 0205 | 0206 | 0207 | 0208 | 0209 | 0210 | 0301 | 0301 | 0302 | 0303 | 0304 | 0305 | 0306 | 0307 | 0308 | 0309 | 0310 | 0401 | 0401 | 0402 | 0403 | 0404 | 0405 | 0406 | 0407 | 0408 | 0409 | 0410 | 0501 | 0501 | 0502 | 0503 | 0504 | 0505 | 0506 | 0507 | 0508 | 0509 | 0510 | 0601 | 0601 | 0602 | 0603 | 0604 | 0605 | 0606 | 0607 | 0608 | 0609 | 0610 | 0701 | 0701 | 0702 | 0703 | 0704 | 0705 | 0706 | 0707 | 0708 | 0709 | 0710 | 0801 | 0801 | 0802 | 0803 | 0804 | 0805 | 0806 | 0807 | 0808 | 0809 | 0810) #REQUIRED
+>
+<!ELEMENT star (textdetails?, satellites?)>
+<!ATTLIST star
+	type (O5 | O6 | O7 | O8 | O9 | B0 | B1 | B2 | B3 | B4 | B5 | B6 | B7 | B8 | B9 | A0 | A1 | A2 | A3 | A4 | A5 | A6 | A7 | A8 | A9 | F0 | F1 | F2 | F3 | F4 | F5 | F6 | F7 | F8 | F9 | G0 | G1 | G2 | G3 | G4 | G5 | G6 | G7 | G8 | G9 | K0 | K1 | K2 | K3 | K4 | K5 | K6 | K7 | K8 | K9 | M0 | M1 | M2 | M3 | M4 | M5 | M6 | M7 | M8 | M9) #REQUIRED
+	size (Ia | Ib | II | III | IV | V | VI | D) #REQUIRED
+	mass CDATA #IMPLIED
+	luminosity CDATA #IMPLIED
+	orbit (0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15) #IMPLIED
+	year CDATA #IMPLIED
+>
+<!ELEMENT satellites (satellite*, ring*, belt*, smallGasGiant*, largeGasGiant*, star*)*>
+<!ATTLIST satellite
+	orbit (0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15) #REQUIRED
+	year CDATA #IMPLIED
+>
+<!ELEMENT satellite (textdetails?, profile, satellites?)>
+<!ATTLIST ring
+	orbit (0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15) #REQUIRED
+>
+<!ELEMENT ring (textdetails?, profile)>
+<!ATTLIST belt
+	orbit (0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15) #REQUIRED
+>
+<!ELEMENT belt (textdetails?, profile)>
+<!ATTLIST smallGasGiant
+	orbit (0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15) #REQUIRED
+	year CDATA #REQUIRED
+>
+<!ELEMENT smallGasGiant (textdetails?, profile, satellites?)>
+<!ATTLIST largeGasGiant
+	orbit (0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15) #REQUIRED
+	year CDATA #REQUIRED
+>
+<!ELEMENT largeGasGiant (textdetails?, profile, satellites?)>
+<!ELEMENT profile (base*)>
+<!ATTLIST profile
+	port (A | B | C | D | E | F | G | H | Y | X) "Y"
+	size (0 | R | S | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | A | B | C | D | E | F) "0"
+	atmosphere (0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | A | B | C | D | E | F) "0"
+	hydrographics (0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | A) "0"
+	population (0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | A) "0"
+	government (0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | A | B | C | D) "0"
+	lawlevel (0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | A) "0"
+	techlevel (0 | R | S | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | A | B | C | D | E | F | G | H | I | J | K | L) "0"
+	tradeClass (None | Agricultural | Non-Agricutural | Industrial | Non-industrial | Poor | Rich) "None"
+	TASClassification (None | Green | Amber | Red) "None"
+>
+<!ELEMENT base EMPTY>
+<!ATTLIST base
+	type (Naval | Scout | WayStation) #REQUIRED
+>

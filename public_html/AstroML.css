@@ -1,0 +1,45 @@
+reference {display: none}
+* {font-family: monospace}
+comment {display: none}
+
+mapping {display:table}
+sector    {display:table-caption; caption-side:top}
+subsector {display:table-row}
+subsector > name {display:table-cell}
+subsector > name:before {content: "Subsector: "}
+/* subsector > name:after  {content: "+---------+---------+---------+---------+---------"} */
+system  {display:table-row}
+
+system > name {display:table-cell; width:11em}
+hex {display:table-cell; width:3em}
+UWP {display:table-cell; width:10.2em}
+/*
+port       {display:table-cell; width:0.7em}
+size       {display:table-cell; width:0.7em}
+atmosphere {display:table-cell; width:0.7em}
+hydrograph {display:table-cell; width:0.7em}
+population {display:table-cell; width:0.7em}
+government {display:table-cell; width:0.7em}
+lawlevel   {display:table-cell; width:0.7em}
+technology {display:table-cell; width:1.6em}
+*/
+technology:before {content:"-"}
+bases      {display:table-cell; width:1.2em}
+tradeCodes {display:table-cell; width:8em}
+remarks    {display:table-cell; width:4em}
+zone       {display:table-cell; width:1em}
+PBG        {display:table-cell; width:3.5em}
+polity     {display:table-cell; width:2.1em}
+primary    {display:table-cell; width:4.5em}
+companion  {display:table-cell; width:4.5em}
+/*tertiary   {display:table-cell; width:4.5em}*/
+
+primary > name {display:none}
+primary > orbit {display:none}
+primary > luminosity:before {content: " "}
+companion > name {display:none}
+companion > orbit {display:none}
+companion > luminosity:before {content: " "}
+tertiary > name {display:none}
+tertiary > orbit {display:none}
+tertiary > luminosity:before {content: " "}

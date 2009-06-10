@@ -1,0 +1,267 @@
+package Stellar;
+import stellar.data.Astrogation;
+import stellar.data.HexID;
+import stellar.data.StarSystem;
+import javax.swing.* ;
+import javax.swing.border.*;
+import javax.swing.event.*;
+import java.awt.*;
+import java.awt.event.*;
+import java.awt.image.*;
+import java.util.*;
+import java.beans.*;
+import java.lang.System;
+
+import org.jibx.runtime.*;
+import org.jibx.extras.*;
+import org.xmlpull.v1.*;
+
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.FileReader;
+import java.io.FileNotFoundException;
+
+
+public class HexMap extends JPanel 
+{
+    private JScrollPane pane = new JScrollPane();
+    private JPanel board = new JPanel();
+    private BorderLayout borderLayout1 = new BorderLayout();
+    private BufferedImage offscreenImage;
+    
+    Astrogation mapData;
+
+    // size of each hex
+    private int xsize;
+    private int ysize;
+    // size of map (in hexes)
+    int mapRows;
+    int mapCols;
+    // size of overall map (in pixels)
+    int mapWidth;
+    int mapHeight;
+    // two arrays of points used to draw each hex
+    private int xpoints[];
+    private int ypoints[];
+
+    // draw a hex at the given pixel point, size determed by x/ysize;
+    private void drawHex (Point center, Graphics g)
+    {
+        xpoints[0] = center.x - xsize; ypoints[0] = center.y - ysize;
+        xpoints[1] = center.x + xsize; ypoints[1] = ypoints[0];
+        xpoints[2] = center.x + 2 * xsize; ypoints[2] = center.y;
+        xpoints[3] = center.x + xsize; ypoints[3] = center.y + ysize;
+        xpoints[4] = center.x - xsize; ypoints[4] = center.y + ysize;
+        xpoints[5] = center.x - 2 * xsize; ypoints[5] = center.y;
+
+        g.drawPolygon (xpoints, ypoints, 6);
+    }
+
+    // write a hex id into the top of each hex
+    private void fillHexID (int startx, int starty, Point center, Graphics g)
+    {
+        int fontHeight = g.getFontMetrics().getHeight();
+        HexID xy = new HexID (startx, starty);
+        g.drawString(xy.toString(), center.x - xsize, center.y - ysize + fontHeight);
+        
+    }
+    
+    private void drawAllHexes()
+    {
+        int lastx, lasty;
+        int startx, starty;
+        int addx, addy;
+        int x, y; 
+        StarSystem s;
+        HexID l;
+        if (offscreenImage == null) 
+        {
+            offscreenImage = new BufferedImage (mapWidth, mapHeight, BufferedImage.TYPE_INT_RGB);
+        }
+        Graphics g = offscreenImage.getGraphics();
+        g.setColor (Color.white);
+        g.fillRect(0,0,mapWidth, mapHeight);
+        g.setColor(Color.gray); 
+        for (y = 0; y < mapRows; y++)
+        {
+            for (x = 0; x < mapCols; x++)
+            {
+                drawHex(hexCenter(x,y),g);
+                //fillHexID(x+1, y+1, hexCenter(x,y), g);
+            }
+        }
+        if (mapData != null)
+        {
+            for (Iterator i = mapData.getSystems(); i.hasNext();)
+            {
+                s = (StarSystem)i.next();
+                l = s.getLocation();
+                l.convertHextoID();
+                fillHexID (l.x+1, l.y+1, hexCenter(l),g);
+            }
+        }
+    }
+    // Translate the hexID center (row/colum) into graphical x,y point
+    private Point hexCenter (int row, int column)
+    {
+        Point gPoint = new Point();
+        gPoint.x = (2 * xsize) + (row * 3 * xsize);
+        gPoint.y = ((column * 2) + (row%2 == 1 ? 2 : 1)) * ysize;
+        return gPoint;
+    }
+
+    private Point hexCenter (HexID hex)
+    {
+        return hexCenter (hex.x, hex.y);
+    }
+
+    // Caclulate the size of the map (in pixels) given the number 
+    // of hex rows and columns. Save this data
+    private void calcMapSize (int rows, int cols)
+    {
+        mapWidth = ((cols * 3) + 1) * xsize;
+        mapHeight = ((rows * 2)+ 1) * ysize;
+        mapRows = rows;
+        mapCols = cols;
+    }
+    
+    public HexMap()
+    {
+        super(true);
+
+        xpoints = new int [6];
+        ypoints = new int [6];
+        xsize = 12; ysize = 20;
+        calcMapSize (10, 8);
+        
+        try
+        {
+            jbInit();
+        }
+        catch(Exception e)
+        {
+            e.printStackTrace();
+        }
+    }
+
+    public void paint (Graphics g)
+    {
+        Graphics2D g2 = (Graphics2D) g;
+        g2.drawImage (offscreenImage,0, 0, board);
+    }
+/*
+    void redraw ()
+    {
+        Graphics g = board.getGraphics();
+        g.drawImage(offscreenImage, 0, 0, board);
+    }
+*/
+    public void redrawMap()
+    {
+        if (board != null)
+        {
+            drawAllHexes();
+        }
+    }
+
+    public void clearMap()
+    {
+        Graphics g = offscreenImage.getGraphics();
+        g.setColor(Color.white);
+        g.fillRect(0, 0, mapWidth, mapHeight);
+    }
+    
+    public void zoomIn ()
+    {
+        int width, height;
+        if (xsize >= 6)
+        {
+            xsize -=3;
+            ysize -=5;
+            calcMapSize(mapRows, mapCols);
+            offscreenImage = new BufferedImage (mapWidth, mapHeight, BufferedImage.TYPE_INT_RGB);
+            drawAllHexes();
+            board.setPreferredSize(new Dimension(mapWidth, mapHeight));
+            board.revalidate();
+        }
+    }
+
+    public void zoomOut()
+    {
+        int width, height;
+        xsize += 3;
+        ysize += 5;
+        calcMapSize (mapRows, mapCols);
+        offscreenImage = new BufferedImage (mapWidth, mapHeight, BufferedImage.TYPE_INT_RGB);
+        drawAllHexes();
+        board.setPreferredSize(new Dimension(mapWidth, mapHeight));
+        board.revalidate();
+    }
+
+    public static void main (String[] args) 
+        throws org.jibx.runtime.JiBXException, java.io.FileNotFoundException,
+            XmlPullParserException
+    {
+        boolean filesMatch;
+        try {
+        UIManager.setLookAndFeel("com.sun.java.swing.plaf.windows.WindowsLookAndFeel");
+        }
+        catch (Exception ex)
+         { System.out.println ("Unsupported"); }
+        HexMap map = new HexMap();
+        JFrame frame = new JFrame ("Traveller Stellar Cartographer");
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setContentPane(map);
+        
+        frame.pack();
+        frame.setVisible(true);
+        map.drawAllHexes();
+        //map.redraw();
+
+        //References ref_tables = new References ("AstroML.xml");
+/*
+        IBindingFactory bfact = BindingDirectory.getFactory(Astrogation.class);
+        IUnmarshallingContext uctx = bfact.createUnmarshallingContext();
+        map.mapData = (Astrogation) uctx.unmarshalDocument (new FileInputStream("C:\\thom\\projects\\cartography\\AstroML.xml"), null);
+*/
+/*
+        IMarshallingContext mctx = bfact.createMarshallingContext();
+        mctx.setIndent(4);
+        mctx.marshalDocument(map.mapData, "UTF-8", null,
+        new FileOutputStream("c:\\thom\\projects\\cartography\\regina_copy.xml"));
+*/        
+/*
+        DocumentComparator cmp = new DocumentComparator (java.lang.System.out);
+        filesMatch = cmp.compare(new FileReader("C:\\thom\\projects\\cartography\\regina.xml"), 
+            new FileReader ("c:\\thom\\projects\\cartography\\regina_copy.xml"));
+*/
+
+    }
+
+    private void jbInit() throws Exception
+    {
+        this.setLayout(borderLayout1);
+        this.setPreferredSize(new Dimension(mapWidth+20, mapHeight+20));
+        this.addComponentListener(new ComponentAdapter()
+            {
+                public void componentResized(ComponentEvent e)
+                {
+                    this_componentResized(e);
+                }
+            });
+
+        board.setBackground (Color.green);
+        board.setSize (new Dimension(mapWidth, mapHeight));
+        
+        pane.getViewport().add(board);
+        pane.setViewportBorder(new LineBorder(Color.black, 5));
+
+        this.add(pane, BorderLayout.CENTER);
+    }
+
+    private void this_componentResized(ComponentEvent e)
+    {
+        board.revalidate();
+    }
+
+}

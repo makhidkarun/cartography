@@ -1,0 +1,173 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<binding xmlns:xsi="http://www.w3.org/2001/XMLSchema" 
+xmlns:noNamespaceSchemaLocation="file://C:/Java/Jibx/docs/binding.xsd">
+        
+    <namespace uri="http://www.w3.org/2001/XMLSchema" prefix="xsi" />
+    <namespace uri="http://www.farfuture.net/" default="elements" />
+    <!--<format type="char" label="code" /> -->
+    <format type="char" serializer="org.jibx.runtime.Utility.serializeCharString" deserializer="org.jibx.runtime.Utility.deserializeCharString"/>
+
+    <mapping class="javax.swing.text.html.HTMLDocument" name="comment"
+        marshaller="stellar.data.HTMLListMapper"
+        unmarshaller="stellar.data.HTMLListMapper"/>
+
+    <mapping name="astrogation" class="stellar.data.Astrogation" post-set="postRead">
+        <structure name="reference" field="references" post-set="postRead">
+            <collection field="providers" item-type="stellar.data.ProviderRecord" />
+            <collection field="tables" item-type="stellar.data.TableRecord" usage="optional" />
+        </structure>
+        <structure name="mapping">
+            <collection field="groupList" item-type="stellar.data.GroupRecord" usage="optional"
+                store-method="add" size-method="size" load-method="get"/>
+            <collection field="links" item-type="stellar.data.Links" usage="optional"/>
+            <collection field="systems" item-type="stellar.data.StarSystem" usage="optional"/>
+        </structure>
+    </mapping>
+
+    <mapping class="stellar.data.Record" abstract="true" value-style="attribute">
+        <value name="id" field="key" />
+        <value name="desc" field="value" />
+        <value name="provider" field="providerKey" usage="optional"/>
+        <value name="color" field="color" usage="optional"/>
+    </mapping>
+
+    <mapping name="provider" class="stellar.data.ProviderRecord" extends="stellar.data.Record" >
+        <structure map-as="stellar.data.Record"/>
+        <value name="link" field="link" usage="optional" style="attribute"/>
+        <value name="email" field="email" usage="optional" style="attribute"/>
+        <value name="name" field="name" usage="optional" style="attribute"/>
+    </mapping>
+
+    <mapping name="table" class="stellar.data.TableRecord" extends="stellar.data.Record"
+        post-set="postSet">
+        <collection value-style="element" field="values" item-type="stellar.data.TableRowRecord" />
+        <structure map-as="stellar.data.Record" />
+    </mapping>
+
+    <mapping name="record" class="stellar.data.TableRowRecord" extends="stellar.data.Record">
+        <structure map-as="stellar.data.Record" />
+        <value style="attribute" name="code" field="code" />
+        <value style="text" field="comment" usage="optional" />
+    </mapping>
+    
+    <mapping name="group" class="stellar.data.GroupRecord" extends="stellar.data.Record">
+        <structure map-as="stellar.data.Record" />
+        <value style="attribute" name="parent" field="parentName" usage="optional"/>
+        <value style="attribute" name="type" field="type" />
+        <value style="element" name="name" field="name"/>
+        <structure field="location" name="location"/>
+        <structure field="comment" usage="optional" />
+        <structure value-style="element" name="extent" usage="optional">
+            <value style="attribute" name="x" field="extentX" />
+            <value style="attribute" name="y" field="extentY" />
+            <value style="attribute" name="z" field="extentZ" usage="optional" />
+        </structure>
+    </mapping>
+
+    <mapping name="link" class="stellar.data.Links" extends="stellar.data.Record">
+        <structure map-as="stellar.data.Record" />
+        <collection field="hexes">
+            <structure type="stellar.data.HexID" name="location"/>
+        </collection>
+        <value style="attribute" name="linkType" field="linkTypeName" usage="optional"/>
+    </mapping>
+
+    <mapping class="stellar.data.HexID" post-set="convertHextoID" abstract="true">
+        <value style="attribute" name="type" field="hexType" />
+        <value style="attribute" name="group" field="hexGroup" />
+        <value style="attribute" name="x" field="x" />
+        <value style="attribute" name="y" field="y" />
+        <value style="attribute" name="z" field="z" usage="optional" />
+        <value style="attribute" name="date" field="date" usage="optional" />
+        <value style="text" field="hex" />
+    </mapping> 
+
+    <!-- Star system map  -->
+    <mapping name="system" class="stellar.data.StarSystem" post-set="update">
+        <value style="attribute" name="id" field="key" />
+        <value style="attribute" name="provider" field="providerName" usage="optional" />
+        <value name="name" field="name" />
+        <structure field="location" name="location"/>
+        
+        <structure field="planet" name="UWP" />
+
+        <value name="bases" field="base" 
+            deserializer="stellar.data.StarSystem.deserializeMaybeEmptyZone"
+            serializer="stellar.data.StarSystem.serializeMaybeEmptyZone"/>
+        <value name="tradeCodes" field="tradeCodes" usage="optional"/>
+        <value name="remarks" field="remarks" usage="optional"/>
+        <value name="zone" field="zone" 
+            deserializer="stellar.data.StarSystem.deserializeMaybeEmptyZone"
+            serializer="stellar.data.StarSystem.serializeMaybeEmptyZone"/>
+        <structure name="PBG">
+            <value name="multiplier" field="multiplier" />
+            <value name="belts" field="belts" />
+            <value name="giants" field="giants" />
+        </structure>
+        <value name="polity" field="polity" />
+        <collection field="stars" usage="optional">
+            <structure map-as="stellar.data.Star"/>
+        </collection>
+        <structure field="comment" usage="optional"/>
+    </mapping>
+<!--
+    <mapping class="stellar.data.Star" abstract="true">
+        <value name="name" field="name" usage="optional"/>
+        <value name="spectrum" field="spectrum" />
+        <value name="modifier" field="modifier" />
+        <value name="luminosity" field="luminosity" />
+        <structure>
+            <collection field="orbits" item-type="stellar.data.Orbit" usage="optional" />
+        </structure>
+    </mapping>
+-->
+    <mapping name="star" class="stellar.data.Star"> 
+        <value name="name" field="name" usage="optional"/>
+        <value name="spectrum" field="spectrum" />
+        <value name="modifier" field="modifier" />
+        <value name="luminosity" field="luminosity" />
+        <value name="age" field="age" usage="optional"/>
+        <structure>
+            <collection field="orbits" item-type="stellar.data.Orbit" usage="optional" />
+        </structure>
+    </mapping>
+
+    <mapping name="orbit" class="stellar.data.Orbit">
+        <value style="attribute" name="orbitNo" field="orbitNumber" />
+        <value style="attribute" name="type" field="type" />
+        <value name="zone" field="zone" usage="optional" />
+        <value name="distance" field="distance" usage="optional" />
+        <value name="eccentricity" field="eccentricity" usage="optional" />
+        <structure field="details" usage="optional"/>
+        <structure field="companion"/>
+    </mapping>
+
+    <mapping name="planet" class="stellar.data.Planet">
+        <value name="name" field="name"/>
+        <structure name="UWP" field="profile" usage="optional">
+        </structure>
+        <collection field="moons" />
+    </mapping>
+
+    <mapping name="moon" class="stellar.data.MoonOrbit">
+        <value style="attribute" name="orbit" field="orbitNumber" />
+        <value name="name" field="name" />
+        <structure name="UWP" field="planet" usage="optional">
+        </structure>
+    </mapping>
+    
+
+    
+    <mapping class="stellar.data.UWP" abstract="true">    
+        <structure value-style="element">
+            <value name="port" field="port" />
+            <value name="size" field="size" />
+            <value name="atmosphere" field="atmosphere" />
+            <value name="hydrograph" field="hydrograph" />
+            <value name="population" field="population" />
+            <value name="government" field="government" />
+            <value name="lawlevel"   field="lawlevel" />
+            <value name="technology" field="technology" />
+        </structure>
+    </mapping>
+</binding>

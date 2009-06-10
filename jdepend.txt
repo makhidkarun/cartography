@@ -1,0 +1,700 @@
+Buildfile: build.xml
+
+jdepend:
+
+     [java] --------------------------------------------------
+     [java] - Package: com.lowagie.text
+     [java] --------------------------------------------------
+     [java] No stats available: package referenced, but not analyzed.
+
+     [java] --------------------------------------------------
+     [java] - Package: com.lowagie.text.pdf
+     [java] --------------------------------------------------
+     [java] No stats available: package referenced, but not analyzed.
+
+     [java] --------------------------------------------------
+     [java] - Package: com.softstart.VectorImage
+     [java] --------------------------------------------------
+     [java] No stats available: package referenced, but not analyzed.
+
+     [java] --------------------------------------------------
+     [java] - Package: com.softstart.stellar
+     [java] --------------------------------------------------
+
+     [java] Stats:
+     [java]     Total Classes: 9
+     [java]     Concrete Classes: 9
+     [java]     Abstract Classes: 0
+
+     [java]     Ca: 0
+     [java]     Ce: 16
+
+     [java]     A: 0
+     [java]     I: 1
+     [java]     D: 0
+
+     [java] Abstract Classes:
+
+     [java] Concrete Classes:
+     [java]     stellar.Cartrographer
+     [java]     com.softstart.stellar.Cartrographer$1
+     [java]     stellar.Map
+     [java]     com.softstart.stellar.Map$1
+     [java]     com.softstart.stellar.Map$2
+     [java]     com.softstart.stellar.Map$3
+     [java]     stellar.MapCommands
+     [java]     stellar.MapMenu
+     [java]     stellar.MapToolbar
+
+     [java] Depends Upon:
+     [java]     com.lowagie.text
+     [java]     com.softstart.stellar.data
+     [java]     com.softstart.stellar.dialog
+     [java]     com.softstart.stellar.io
+     [java]     com.softstart.stellar.io.filter
+     [java]     com.softstart.stellar.map
+     [java]     com.softstart.stellar.swing
+     [java]     java.awt
+     [java]     java.awt.event
+     [java]     java.beans
+     [java]     java.io
+     [java]     java.lang
+     [java]     javax.swing
+     [java]     javax.swing.border
+     [java]     javax.swing.event
+     [java]     org.jibx.runtime
+
+     [java] Used By:
+     [java]     Not used by any packages.
+
+     [java] --------------------------------------------------
+     [java] - Package: com.softstart.stellar.data
+     [java] --------------------------------------------------
+
+     [java] Stats:
+     [java]     Total Classes: 33
+     [java]     Concrete Classes: 32
+     [java]     Abstract Classes: 1
+
+     [java]     Ca: 6
+     [java]     Ce: 12
+
+     [java]     A: 0.03
+     [java]     I: 0.67
+     [java]     D: 0.3
+
+     [java] Abstract Classes:
+     [java]     com.softstart.stellar.data.JiBX_MungeAdapter
+
+     [java] Concrete Classes:
+     [java]     stellar.data.Astrogation
+     [java]     stellar.data.GroupRecord
+     [java]     stellar.data.HTMLListMapper
+     [java]     stellar.data.HexID
+     [java]     com.softstart.stellar.data.JiBX_AstroBindAstrogation_access
+     [java]     com.softstart.stellar.data.JiBX_AstroBindFactory
+     [java]     com.softstart.stellar.data.JiBX_AstroBindGroupRecord_access
+     [java]     com.softstart.stellar.data.JiBX_AstroBindHTMLListMapper_1
+     [java]     com.softstart.stellar.data.JiBX_AstroBindLinks_access
+     [java]     com.softstart.stellar.data.JiBX_AstroBindMoonOrbit_access
+     [java]     com.softstart.stellar.data.JiBX_AstroBindOrbit_access
+     [java]     com.softstart.stellar.data.JiBX_AstroBindPlanet_access
+     [java]     com.softstart.stellar.data.JiBX_AstroBindProviderRecord_access
+     [java]     com.softstart.stellar.data.JiBX_AstroBindRecord_access
+     [java]     com.softstart.stellar.data.JiBX_AstroBindStarSystem_access
+     [java]     com.softstart.stellar.data.JiBX_AstroBindStar_access
+     [java]     com.softstart.stellar.data.JiBX_AstroBindTableRecord_access
+     [java]     com.softstart.stellar.data.JiBX_AstroBindTableRowRecord_access
+     [java]     stellar.data.LinkLine
+     [java]     stellar.data.LinkStyle
+     [java]     stellar.data.Links
+     [java]     stellar.data.MoonOrbit
+     [java]     stellar.data.Orbit
+     [java]     stellar.data.Planet
+     [java]     stellar.data.ProviderRecord
+     [java]     stellar.data.Record
+     [java]     stellar.data.References
+     [java]     stellar.data.Star
+     [java]     stellar.data.StarSystem
+     [java]     stellar.data.TableRecord
+     [java]     stellar.data.TableRowRecord
+     [java]     stellar.data.UWP
+
+     [java] Depends Upon:
+     [java]     com.softstart.stellar.dialog
+     [java]     com.softstart.stellar.io
+     [java]     java.awt
+     [java]     java.awt.geom
+     [java]     java.io
+     [java]     java.lang
+     [java]     java.util
+     [java]     javax.swing.text
+     [java]     javax.swing.text.html
+     [java]     javax.swing.tree
+     [java]     org.jibx.runtime
+     [java]     org.jibx.runtime.impl
+
+     [java] Used By:
+     [java]     com.softstart.stellar
+     [java]     com.softstart.stellar.dialog
+     [java]     com.softstart.stellar.generator
+     [java]     com.softstart.stellar.io
+     [java]     com.softstart.stellar.map
+     [java]     com.softstart.stellar.swing
+
+     [java] --------------------------------------------------
+     [java] - Package: com.softstart.stellar.dialog
+     [java] --------------------------------------------------
+
+     [java] Stats:
+     [java]     Total Classes: 61
+     [java]     Concrete Classes: 61
+     [java]     Abstract Classes: 0
+
+     [java]     Ca: 4
+     [java]     Ce: 17
+
+     [java]     A: 0
+     [java]     I: 0.81
+     [java]     D: 0.19
+
+     [java] Abstract Classes:
+
+     [java] Concrete Classes:
+     [java]     stellar.dialog.ButtonPanel
+     [java]     stellar.dialog.CopyTableData
+     [java]     com.softstart.stellar.dialog.CopyTableData$1
+     [java]     com.softstart.stellar.dialog.CopyTableData$CancelActionListener
+     [java]     com.softstart.stellar.dialog.CopyTableData$OKActionListener
+     [java]     stellar.dialog.EditGroups
+     [java]     com.softstart.stellar.dialog.EditGroups$1
+     [java]     com.softstart.stellar.dialog.EditGroups$2
+     [java]     com.softstart.stellar.dialog.EditGroups$CancelActionListener
+     [java]     com.softstart.stellar.dialog.EditGroups$OKActionListener
+     [java]     stellar.dialog.EditLink
+     [java]     com.softstart.stellar.dialog.EditLink$1
+     [java]     com.softstart.stellar.dialog.EditLink$CancelActionListener
+     [java]     com.softstart.stellar.dialog.EditLink$OKActionListener
+     [java]     com.softstart.stellar.dialog.EditLink$SelectionListener
+     [java]     stellar.dialog.EditOptions
+     [java]     com.softstart.stellar.dialog.EditOptions$1
+     [java]     com.softstart.stellar.dialog.EditOptions$2
+     [java]     com.softstart.stellar.dialog.EditOptions$3
+     [java]     com.softstart.stellar.dialog.EditOptions$CancelActionListener
+     [java]     com.softstart.stellar.dialog.EditOptions$OKActionListener
+     [java]     com.softstart.stellar.dialog.EditOptions$Scale1ActionListener
+     [java]     com.softstart.stellar.dialog.EditOptions$Scale2ActionListener
+     [java]     com.softstart.stellar.dialog.EditOptions$Scale3ActionListener
+     [java]     com.softstart.stellar.dialog.EditOptions$Scale4ActionListener
+     [java]     com.softstart.stellar.dialog.EditOptions$Scale5ActionListener
+     [java]     stellar.dialog.EditSystem
+     [java]     com.softstart.stellar.dialog.EditSystem$1
+     [java]     com.softstart.stellar.dialog.EditSystem$2
+     [java]     com.softstart.stellar.dialog.EditSystem$3
+     [java]     com.softstart.stellar.dialog.EditSystem$CancelActionListener
+     [java]     com.softstart.stellar.dialog.EditSystem$DuplicateActionListener
+     [java]     com.softstart.stellar.dialog.EditSystem$OKActionListener
+     [java]     com.softstart.stellar.dialog.EditSystem$UWPActionListener
+     [java]     stellar.dialog.EditViewOptions
+     [java]     com.softstart.stellar.dialog.EditViewOptions$1
+     [java]     com.softstart.stellar.dialog.EditViewOptions$2
+     [java]     com.softstart.stellar.dialog.EditViewOptions$3
+     [java]     stellar.dialog.FontSelectorDialog
+     [java]     com.softstart.stellar.dialog.FontSelectorDialog$1
+     [java]     com.softstart.stellar.dialog.FontSelectorDialog$2
+     [java]     stellar.dialog.GenerateOptionsPanel
+     [java]     stellar.dialog.GenerateOptionsPanel2
+     [java]     stellar.dialog.GroupLayoutPanel
+     [java]     stellar.dialog.HexLinePanel
+     [java]     stellar.dialog.HexOptionPanel
+     [java]     com.softstart.stellar.dialog.HexOptionPanel$1
+     [java]     com.softstart.stellar.dialog.HexOptionPanel$2
+     [java]     stellar.dialog.Map_AboutBoxPanel1
+     [java]     stellar.dialog.PropertiesDialog
+     [java]     com.softstart.stellar.dialog.PropertiesDialog$1
+     [java]     stellar.dialog.ViewTableData
+     [java]     com.softstart.stellar.dialog.ViewTableData$1
+     [java]     com.softstart.stellar.dialog.ViewTableData$2
+     [java]     com.softstart.stellar.dialog.ViewTableData$3
+     [java]     com.softstart.stellar.dialog.ViewTableData$4
+     [java]     com.softstart.stellar.dialog.ViewTableData$5
+     [java]     com.softstart.stellar.dialog.ViewTableData$6
+     [java]     com.softstart.stellar.dialog.ViewTableData$7
+     [java]     com.softstart.stellar.dialog.ViewTableData$CancelActionListener
+     [java]     com.softstart.stellar.dialog.ViewTableData$OKActionListener
+
+     [java] Depends Upon:
+     [java]     com.softstart.stellar.data
+     [java]     com.softstart.stellar.io
+     [java]     com.softstart.stellar.map
+     [java]     com.softstart.stellar.swing
+     [java]     java.awt
+     [java]     java.awt.event
+     [java]     java.beans
+     [java]     java.io
+     [java]     java.lang
+     [java]     java.util
+     [java]     java.util.prefs
+     [java]     javax.swing
+     [java]     javax.swing.border
+     [java]     javax.swing.event
+     [java]     javax.swing.text.html
+     [java]     javax.swing.tree
+     [java]     org.jibx.runtime
+
+     [java] Used By:
+     [java]     com.softstart.stellar
+     [java]     com.softstart.stellar.data
+     [java]     com.softstart.stellar.io
+     [java]     com.softstart.stellar.map
+
+     [java] --------------------------------------------------
+     [java] - Package: com.softstart.stellar.generator
+     [java] --------------------------------------------------
+
+     [java] Stats:
+     [java]     Total Classes: 3
+     [java]     Concrete Classes: 2
+     [java]     Abstract Classes: 1
+
+     [java]     Ca: 0
+     [java]     Ce: 3
+
+     [java]     A: 0.33
+     [java]     I: 1
+     [java]     D: 0.33
+
+     [java] Abstract Classes:
+     [java]     stellar.generator.StarSystemGenerate
+
+     [java] Concrete Classes:
+     [java]     stellar.generator.Book3Generate
+     [java]     stellar.generator.DiceRoller
+
+     [java] Depends Upon:
+     [java]     com.softstart.stellar.data
+     [java]     java.lang
+     [java]     java.util
+
+     [java] Used By:
+     [java]     Not used by any packages.
+
+     [java] --------------------------------------------------
+     [java] - Package: com.softstart.stellar.io
+     [java] --------------------------------------------------
+
+     [java] Stats:
+     [java]     Total Classes: 12
+     [java]     Concrete Classes: 10
+     [java]     Abstract Classes: 2
+
+     [java]     Ca: 5
+     [java]     Ce: 17
+
+     [java]     A: 0.17
+     [java]     I: 0.77
+     [java]     D: 0.06
+
+     [java] Abstract Classes:
+     [java]     stellar.io.AstrogationFileReader
+     [java]     stellar.io.SectorTextReader
+
+     [java] Concrete Classes:
+     [java]     stellar.io.AccessXMLFile
+     [java]     stellar.io.AppDefaults
+     [java]     stellar.io.CCFileWriter
+     [java]     stellar.io.GalDATReader
+     [java]     stellar.io.GalSARReader
+     [java]     stellar.io.PDFFileWriter
+     [java]     stellar.io.Resources
+     [java]     stellar.io.SECFileReader
+     [java]     stellar.io.SECFileStateMachineException
+     [java]     stellar.io.WBSReader
+
+     [java] Depends Upon:
+     [java]     com.lowagie.text
+     [java]     com.lowagie.text.pdf
+     [java]     com.softstart.VectorImage
+     [java]     com.softstart.stellar.data
+     [java]     com.softstart.stellar.dialog
+     [java]     com.softstart.stellar.map
+     [java]     java.awt
+     [java]     java.awt.geom
+     [java]     java.io
+     [java]     java.lang
+     [java]     java.net
+     [java]     java.util
+     [java]     java.util.zip
+     [java]     javax.swing
+     [java]     javax.swing.text
+     [java]     javax.swing.text.html
+     [java]     org.jibx.runtime
+
+     [java] Used By:
+     [java]     com.softstart.stellar
+     [java]     com.softstart.stellar.data
+     [java]     com.softstart.stellar.dialog
+     [java]     com.softstart.stellar.io.filter
+     [java]     com.softstart.stellar.swing
+
+     [java] --------------------------------------------------
+     [java] - Package: com.softstart.stellar.io.filter
+     [java] --------------------------------------------------
+
+     [java] Stats:
+     [java]     Total Classes: 10
+     [java]     Concrete Classes: 10
+     [java]     Abstract Classes: 0
+
+     [java]     Ca: 1
+     [java]     Ce: 4
+
+     [java]     A: 0
+     [java]     I: 0.8
+     [java]     D: 0.2
+
+     [java] Abstract Classes:
+
+     [java] Concrete Classes:
+     [java]     stellar.io.filter.CXMLFileFilter
+     [java]     stellar.io.filter.FileFilter
+     [java]     stellar.io.filter.GIFFileFilter
+     [java]     stellar.io.filter.HESFileFilter
+     [java]     stellar.io.filter.JPEGFileFilter
+     [java]     stellar.io.filter.PDFFileFilter
+     [java]     stellar.io.filter.SARFileFilter
+     [java]     stellar.io.filter.SECFileFilter
+     [java]     stellar.io.filter.WBSFileFilter
+     [java]     stellar.io.filter.XMLFileFilter
+
+     [java] Depends Upon:
+     [java]     com.softstart.stellar.io
+     [java]     java.io
+     [java]     java.lang
+     [java]     javax.swing.filechooser
+
+     [java] Used By:
+     [java]     com.softstart.stellar
+
+     [java] --------------------------------------------------
+     [java] - Package: com.softstart.stellar.map
+     [java] --------------------------------------------------
+
+     [java] Stats:
+     [java]     Total Classes: 13
+     [java]     Concrete Classes: 10
+     [java]     Abstract Classes: 3
+
+     [java]     Ca: 3
+     [java]     Ce: 15
+
+     [java]     A: 0.23
+     [java]     I: 0.83
+     [java]     D: 0.06
+
+     [java] Abstract Classes:
+     [java]     stellar.map.DisplayOptions
+     [java]     stellar.map.HexIcon
+     [java]     stellar.map.MapIcon
+
+     [java] Concrete Classes:
+     [java]     stellar.map.HexBorders
+     [java]     stellar.map.HexIcons
+     [java]     stellar.map.DrawHexLayout
+     [java]     stellar.map.HexLegend
+     [java]     stellar.map.HexagonHexIcons
+     [java]     stellar.map.ItemMarkerVectorImage
+     [java]     stellar.map.MapLabel
+     [java]     stellar.map.MarkerVectorImage
+     [java]     stellar.map.SquareIcons
+     [java]     stellar.map.ZoneVectorImage
+
+     [java] Depends Upon:
+     [java]     com.softstart.VectorImage
+     [java]     com.softstart.stellar.data
+     [java]     com.softstart.stellar.dialog
+     [java]     com.softstart.stellar.swing
+     [java]     java.awt
+     [java]     java.awt.event
+     [java]     java.awt.geom
+     [java]     java.awt.image
+     [java]     java.beans
+     [java]     java.io
+     [java]     java.lang
+     [java]     java.util
+     [java]     javax.imageio
+     [java]     javax.swing
+     [java]     javax.swing.event
+
+     [java] Used By:
+     [java]     com.softstart.stellar
+     [java]     com.softstart.stellar.dialog
+     [java]     com.softstart.stellar.io
+
+     [java] --------------------------------------------------
+     [java] - Package: com.softstart.stellar.swing
+     [java] --------------------------------------------------
+
+     [java] Stats:
+     [java]     Total Classes: 13
+     [java]     Concrete Classes: 12
+     [java]     Abstract Classes: 1
+
+     [java]     Ca: 3
+     [java]     Ce: 14
+
+     [java]     A: 0.08
+     [java]     I: 0.82
+     [java]     D: 0.1
+
+     [java] Abstract Classes:
+     [java]     stellar.swing.AstrogationChangeListener
+
+     [java] Concrete Classes:
+     [java]     stellar.swing.AstrogationChangeEvent
+     [java]     stellar.swing.ColorTableCellRenderer
+     [java]     stellar.swing.Command
+     [java]     stellar.swing.HTMLEditPanel
+     [java]     stellar.swing.HTMLFormatToolbar
+     [java]     stellar.swing.JButtonNoFocus
+     [java]     stellar.swing.JComboBoxNoFocus
+     [java]     stellar.swing.JComboTable
+     [java]     stellar.swing.JToggleButtonNoFocus
+     [java]     stellar.swing.LinksTableModel
+     [java]     stellar.swing.ReferenceDataTableModel
+     [java]     stellar.swing.StarTableModel
+
+     [java] Depends Upon:
+     [java]     com.softstart.VectorImage
+     [java]     com.softstart.stellar.data
+     [java]     com.softstart.stellar.io
+     [java]     java.awt
+     [java]     java.awt.event
+     [java]     java.io
+     [java]     java.lang
+     [java]     java.lang.reflect
+     [java]     java.util
+     [java]     javax.swing
+     [java]     javax.swing.event
+     [java]     javax.swing.table
+     [java]     javax.swing.text
+     [java]     javax.swing.text.html
+
+     [java] Used By:
+     [java]     com.softstart.stellar
+     [java]     com.softstart.stellar.dialog
+     [java]     com.softstart.stellar.map
+
+     [java] --------------------------------------------------
+     [java] - Package: java.awt
+     [java] --------------------------------------------------
+     [java] No stats available: package referenced, but not analyzed.
+
+     [java] --------------------------------------------------
+     [java] - Package: java.awt.event
+     [java] --------------------------------------------------
+     [java] No stats available: package referenced, but not analyzed.
+
+     [java] --------------------------------------------------
+     [java] - Package: java.awt.geom
+     [java] --------------------------------------------------
+     [java] No stats available: package referenced, but not analyzed.
+
+     [java] --------------------------------------------------
+     [java] - Package: java.awt.image
+     [java] --------------------------------------------------
+     [java] No stats available: package referenced, but not analyzed.
+
+     [java] --------------------------------------------------
+     [java] - Package: java.beans
+     [java] --------------------------------------------------
+     [java] No stats available: package referenced, but not analyzed.
+
+     [java] --------------------------------------------------
+     [java] - Package: java.io
+     [java] --------------------------------------------------
+     [java] No stats available: package referenced, but not analyzed.
+
+     [java] --------------------------------------------------
+     [java] - Package: java.lang
+     [java] --------------------------------------------------
+     [java] No stats available: package referenced, but not analyzed.
+
+     [java] --------------------------------------------------
+     [java] - Package: java.lang.reflect
+     [java] --------------------------------------------------
+     [java] No stats available: package referenced, but not analyzed.
+
+     [java] --------------------------------------------------
+     [java] - Package: java.net
+     [java] --------------------------------------------------
+     [java] No stats available: package referenced, but not analyzed.
+
+     [java] --------------------------------------------------
+     [java] - Package: java.util
+     [java] --------------------------------------------------
+     [java] No stats available: package referenced, but not analyzed.
+
+     [java] --------------------------------------------------
+     [java] - Package: java.util.prefs
+     [java] --------------------------------------------------
+     [java] No stats available: package referenced, but not analyzed.
+
+     [java] --------------------------------------------------
+     [java] - Package: java.util.zip
+     [java] --------------------------------------------------
+     [java] No stats available: package referenced, but not analyzed.
+
+     [java] --------------------------------------------------
+     [java] - Package: javax.imageio
+     [java] --------------------------------------------------
+     [java] No stats available: package referenced, but not analyzed.
+
+     [java] --------------------------------------------------
+     [java] - Package: javax.swing
+     [java] --------------------------------------------------
+     [java] No stats available: package referenced, but not analyzed.
+
+     [java] --------------------------------------------------
+     [java] - Package: javax.swing.border
+     [java] --------------------------------------------------
+     [java] No stats available: package referenced, but not analyzed.
+
+     [java] --------------------------------------------------
+     [java] - Package: javax.swing.event
+     [java] --------------------------------------------------
+     [java] No stats available: package referenced, but not analyzed.
+
+     [java] --------------------------------------------------
+     [java] - Package: javax.swing.filechooser
+     [java] --------------------------------------------------
+     [java] No stats available: package referenced, but not analyzed.
+
+     [java] --------------------------------------------------
+     [java] - Package: javax.swing.table
+     [java] --------------------------------------------------
+     [java] No stats available: package referenced, but not analyzed.
+
+     [java] --------------------------------------------------
+     [java] - Package: javax.swing.text
+     [java] --------------------------------------------------
+     [java] No stats available: package referenced, but not analyzed.
+
+     [java] --------------------------------------------------
+     [java] - Package: javax.swing.text.html
+     [java] --------------------------------------------------
+     [java] No stats available: package referenced, but not analyzed.
+
+     [java] --------------------------------------------------
+     [java] - Package: javax.swing.tree
+     [java] --------------------------------------------------
+     [java] No stats available: package referenced, but not analyzed.
+
+     [java] --------------------------------------------------
+     [java] - Package: org.jibx.runtime
+     [java] --------------------------------------------------
+     [java] No stats available: package referenced, but not analyzed.
+
+     [java] --------------------------------------------------
+     [java] - Package: org.jibx.runtime.impl
+     [java] --------------------------------------------------
+     [java] No stats available: package referenced, but not analyzed.
+
+
+     [java] --------------------------------------------------
+     [java] - Package Dependency Cycles:
+     [java] --------------------------------------------------
+
+     [java] com.softstart.stellar
+     [java]     |
+     [java]     |   com.softstart.stellar.dialog
+     [java]     |   com.softstart.stellar.map
+     [java]     |-> com.softstart.stellar.data
+     [java]     |   com.softstart.stellar.io
+     [java]     |-> com.softstart.stellar.data
+
+     [java] com.softstart.stellar.data
+     [java]     |
+     [java]     |   com.softstart.stellar.io
+     [java]     |-> com.softstart.stellar.data
+
+     [java] com.softstart.stellar.dialog
+     [java]     |
+     [java]     |   com.softstart.stellar.map
+     [java]     |-> com.softstart.stellar.data
+     [java]     |   com.softstart.stellar.io
+     [java]     |-> com.softstart.stellar.data
+
+     [java] com.softstart.stellar.generator
+     [java]     |
+     [java]     |-> com.softstart.stellar.data
+     [java]     |   com.softstart.stellar.io
+     [java]     |-> com.softstart.stellar.data
+
+     [java] com.softstart.stellar.io
+     [java]     |
+     [java]     |   com.softstart.stellar.data
+     [java]     |-> com.softstart.stellar.io
+
+     [java] com.softstart.stellar.io.filter
+     [java]     |
+     [java]     |-> com.softstart.stellar.io
+     [java]     |   com.softstart.stellar.data
+     [java]     |-> com.softstart.stellar.io
+
+     [java] com.softstart.stellar.map
+     [java]     |
+     [java]     |-> com.softstart.stellar.data
+     [java]     |   com.softstart.stellar.io
+     [java]     |-> com.softstart.stellar.data
+
+     [java] com.softstart.stellar.swing
+     [java]     |
+     [java]     |-> com.softstart.stellar.io
+     [java]     |   com.softstart.stellar.data
+     [java]     |-> com.softstart.stellar.io
+
+
+     [java] --------------------------------------------------
+     [java] - Summary:
+     [java] --------------------------------------------------
+
+     [java] Name, Class Count, Abstract Class Count, Ca, Ce, A, I, D, V:
+
+     [java] com.lowagie.text,0,0,2,0,0,0,1,1
+     [java] com.lowagie.text.pdf,0,0,1,0,0,0,1,1
+     [java] com.softstart.VectorImage,0,0,3,0,0,0,1,1
+     [java] com.softstart.stellar,9,0,0,16,0,1,0,1
+     [java] com.softstart.stellar.data,33,1,6,12,0.03,0.67,0.3,1
+     [java] com.softstart.stellar.dialog,61,0,4,17,0,0.81,0.19,1
+     [java] com.softstart.stellar.generator,3,1,0,3,0.33,1,0.33,1
+     [java] com.softstart.stellar.io,12,2,5,17,0.17,0.77,0.06,1
+     [java] com.softstart.stellar.io.filter,10,0,1,4,0,0.8,0.2,1
+     [java] com.softstart.stellar.map,13,3,3,15,0.23,0.83,0.06,1
+     [java] com.softstart.stellar.swing,13,1,3,14,0.08,0.82,0.1,1
+     [java] java.awt,0,0,6,0,0,0,1,1
+     [java] java.awt.event,0,0,4,0,0,0,1,1
+     [java] java.awt.geom,0,0,3,0,0,0,1,1
+     [java] java.awt.image,0,0,1,0,0,0,1,1
+     [java] java.beans,0,0,3,0,0,0,1,1
+     [java] java.io,0,0,7,0,0,0,1,1
+     [java] java.lang,0,0,8,0,0,0,1,1
+     [java] java.lang.reflect,0,0,1,0,0,0,1,1
+     [java] java.net,0,0,1,0,0,0,1,1
+     [java] java.util,0,0,6,0,0,0,1,1
+     [java] java.util.prefs,0,0,1,0,0,0,1,1
+     [java] java.util.zip,0,0,1,0,0,0,1,1
+     [java] javax.imageio,0,0,1,0,0,0,1,1
+     [java] javax.swing,0,0,5,0,0,0,1,1
+     [java] javax.swing.border,0,0,2,0,0,0,1,1
+     [java] javax.swing.event,0,0,4,0,0,0,1,1
+     [java] javax.swing.filechooser,0,0,1,0,0,0,1,1
+     [java] javax.swing.table,0,0,1,0,0,0,1,1
+     [java] javax.swing.text,0,0,3,0,0,0,1,1
+     [java] javax.swing.text.html,0,0,4,0,0,0,1,1
+     [java] javax.swing.tree,0,0,2,0,0,0,1,1
+     [java] org.jibx.runtime,0,0,4,0,0,0,1,1
+     [java] org.jibx.runtime.impl,0,0,1,0,0,0,1,1
+
+BUILD SUCCESSFUL
+Total time: 5 seconds

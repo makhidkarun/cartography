@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE preferences SYSTEM 'http://java.sun.com/dtd/preferences.dtd'>
+
+<preferences EXTERNAL_XML_VERSION="1.0">
+  <root type="user">
+    <map />
+    <node name="com">
+      <map />
+      <node name="softstart">
+        <map />
+        <node name="stellar">
+          <map />
+          <node name="dialog">
+            <map>
+              <entry key="importExternalRefs" value="true" />
+              <entry key="referenceFile" value="AstroML.xml" />
+              <entry key="workingDir" value="" />
+              <entry key="width" value="605" />
+              <entry key="height" value="900" />
+              <entry key="xPos" value="0" />
+              <entry key="yPos" value="0" />
+            </map>
+            <node name="layout">
+              <map />
+              <node name="scale1">
+                <map>
+                  <entry key="hexIDOption" value="0" />
+                  <entry key="jumpRoutes" value="false" />
+                  <entry key="showBorder" value="false" />
+                  <entry key="reverse" value="false" />
+                  <entry key="travelZone" value="false" />
+                  <entry key="borderColor" value="-16777216" />
+                </map>
+                <node name="line1">
+                  <map>
+                    <entry key="isLong" value="false" />
+                    <entry key="longOption" value="0" />
+                    <entry key="shortOption1" value="0" />
+                    <entry key="shortOption2" value="1" />
+                    <entry key="shortOption3" value="0" />
+                  </map>
+                </node>
+              </node>
+              <node name="scale2">
+                <map>
+                  <entry key="hexIDOption" value="0" />
+                  <entry key="jumpRoutes" value="false" />
+                  <entry key="showBorder" value="false" />
+                  <entry key="reverse" value="false" />
+                  <entry key="travelZone" value="false" />
+                  <entry key="borderColor" value="-16777216" />
+                </map>
+                <node name="line1">
+                  <map>
+                    <entry key="isLong" value="false" />
+                    <entry key="longOption" value="3" />
+                    <entry key="shortOption1" value="0" />
+                    <entry key="shortOption2" value="6" />
+                    <entry key="shortOption3" value="0" />
+                  </map>
+                </node>
+                <node name="line2">
+                  <map>
+                    <entry key="isLong" value="false" />
+                    <entry key="longOption" value="1" />
+                    <entry key="shortOption1" value="0" />
+                    <entry key="shortOption2" value="2" />
+                    <entry key="shortOption3" value="0" />
+                  </map>
+                </node>
+              </node>
+              <node name="scale3">
+                <map>
+                  <entry key="hexIDOption" value="2" />
+                  <entry key="jumpRoutes" value="false" />
+                  <entry key="showBorder" value="true" />
+                  <entry key="reverse" value="true" />
+                  <entry key="travelZone" value="true" />
+                  <entry key="borderColor" value="-205" />
+                </map>
+                <node name="line1">
+                  <map>
+                    <entry key="isLong" value="true" />
+                    <entry key="longOption" value="0" />
+                    <entry key="shortOption1" value="0" />
+                    <entry key="shortOption2" value="11" />
+                    <entry key="shortOption3" value="0" />
+                  </map>
+                </node>
+                <node name="line2">
+                  <map>
+                    <entry key="isLong" value="false" />
+                    <entry key="longOption" value="1" />
+                    <entry key="shortOption1" value="6" />
+                    <entry key="shortOption2" value="1" />
+                    <entry key="shortOption3" value="4" />
+                  </map>
+                </node>
+                <node name="line3">
+                  <map>
+                    <entry key="isLong" value="false" />
+                    <entry key="longOption" value="0" />
+                    <entry key="shortOption1" value="5" />
+                    <entry key="shortOption2" value="0" />
+                    <entry key="shortOption3" value="0" />
+                  </map>
+                </node>
+              </node>
+              <node name="scale4">
+                <map>
+                  <entry key="hexIDOption" value="2" />
+                  <entry key="jumpRoutes" value="true" />
+                  <entry key="showBorder" value="true" />
+                  <entry key="reverse" value="false" />
+                  <entry key="travelZone" value="true" />
+                  <entry key="borderColor" value="-16750900" />
+                </map>
+                <node name="line1">
+                  <map>
+                    <entry key="isLong" value="false" />
+                    <entry key="longOption" value="0" />
+                    <entry key="shortOption1" value="0" />
+                    <entry key="shortOption2" value="0" />
+                    <entry key="shortOption3" value="0" />
+                  </map>
+                </node>
+                <node name="line2">
+                  <map>
+                    <entry key="isLong" value="false" />
+                    <entry key="longOption" value="1" />
+                    <entry key="shortOption1" value="8" />
+                    <entry key="shortOption2" value="2" />
+                    <entry key="shortOption3" value="4" />
+                  </map>
+                </node>
+                <node name="line3">
+                  <map>
+                    <entry key="isLong" value="true" />
+                    <entry key="longOption" value="1" />
+                    <entry key="shortOption1" value="0" />
+                    <entry key="shortOption2" value="0" />
+                    <entry key="shortOption3" value="0" />
+                  </map>
+                </node>
+                <node name="line4">
+                  <map>
+                    <entry key="isLong" value="false" />
+                    <entry key="longOption" value="2" />
+                    <entry key="shortOption1" value="0" />
+                    <entry key="shortOption2" value="5" />
+                    <entry key="shortOption3" value="0" />
+                  </map>
+                </node>
+              </node>
+              <node name="scale5">
+                <map>
+                  <entry key="hexIDOption" value="2" />
+                  <entry key="jumpRoutes" value="true" />
+                  <entry key="showBorder" value="true" />
+                  <entry key="reverse" value="false" />
+                  <entry key="travelZone" value="false" />
+                  <entry key="borderColor" value="-65536" />
+                </map>
+                <node name="line1">
+                  <map>
+                    <entry key="isLong" value="true" />
+                    <entry key="longOption" value="0" />
+                    <entry key="shortOption1" value="0" />
+                    <entry key="shortOption2" value="0" />
+                    <entry key="shortOption3" value="0" />
+                  </map>
+                </node>
+                <node name="line2">
+                  <map>
+                    <entry key="isLong" value="true" />
+                    <entry key="longOption" value="1" />
+                    <entry key="shortOption1" value="0" />
+                    <entry key="shortOption2" value="0" />
+                    <entry key="shortOption3" value="0" />
+                  </map>
+                </node>
+                <node name="line3">
+                  <map>
+                    <entry key="isLong" value="false" />
+                    <entry key="longOption" value="0" />
+                    <entry key="shortOption1" value="0" />
+                    <entry key="shortOption2" value="2" />
+                    <entry key="shortOption3" value="4" />
+                  </map>
+                </node>
+                <node name="line4">
+                  <map>
+                    <entry key="isLong" value="true" />
+                    <entry key="longOption" value="3" />
+                    <entry key="shortOption1" value="0" />
+                    <entry key="shortOption2" value="0" />
+                    <entry key="shortOption3" value="0" />
+                  </map>
+                </node>
+                <node name="line5">
+                  <map>
+                    <entry key="isLong" value="false" />
+                    <entry key="longOption" value="0" />
+                    <entry key="shortOption1" value="5" />
+                    <entry key="shortOption2" value="6" />
+                    <entry key="shortOption3" value="0" />
+                  </map>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+  </root>
+</preferences>
+

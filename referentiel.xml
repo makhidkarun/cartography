@@ -1,0 +1,3148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TTABLE>
+   <HEAD>
+      <BASE-LOCALE>US en</BASE-LOCALE>
+      <TARGET-LOCALE>FR fr</TARGET-LOCALE>
+      <REVISION>1.0</REVISION>
+      <DATE FMT="y.m.d">2001.6.26</DATE>
+      <AUTHOR>Borland Integrated Translation Environment</AUTHOR>
+   </HEAD>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>" (DELETING)"</ORIGINAL>
+         <TRANSLATION>" (EFFACEMENT)"</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'%s already exists. Overwrite?'</ORIGINAL>
+         <TRANSLATION>'%s existe déjà. Voulez-vous l''écraser ?'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>"%s is not a valid map file."</ORIGINAL>
+         <TRANSLATION>"%s n''est pas un fichier de carte valide."</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>"%s is not a valid symbol file."</ORIGINAL>
+         <TRANSLATION>"%s n'est pas un fichier de symboles valide."</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>"%s was saved with an incompatible version of AutoREALM."</ORIGINAL>
+         <TRANSLATION>"%s a été enregistré par une version incompatible d'AutoREALM"</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'&amp;About'</ORIGINAL>
+         <TRANSLATION>'&amp;A propos de...'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'&amp;Add Group'</ORIGINAL>
+         <TRANSLATION>'&amp;Ajouter un groupe'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'&amp;Align...'</ORIGINAL>
+         <TRANSLATION>'&amp;Aligner...'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'&amp;Angle ='</ORIGINAL>
+         <TRANSLATION>'&amp;Angle ='</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'&amp;Asymmetric Scaling:'</ORIGINAL>
+         <TRANSLATION>'Echelle &amp;Asymétrique:'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'&amp;Automatically select new objects'</ORIGINAL>
+         <TRANSLATION>'Sélectionner &amp;automatiquement les nouveaux objets'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'&amp;Blue'</ORIGINAL>
+         <TRANSLATION>'&amp;Bleu'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'&amp;Cancel'</ORIGINAL>
+         <TRANSLATION>'Ann&amp;uler'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'&amp;Cartesian'</ORIGINAL>
+         <TRANSLATION>'&amp;Cartésien'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'&amp;Color'</ORIGINAL>
+         <TRANSLATION>'&amp;Couleur'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'&amp;Color Coded'</ORIGINAL>
+         <TRANSLATION>'&amp;Codes couleur'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'&amp;Comments'</ORIGINAL>
+         <TRANSLATION>'&amp;Commentaires'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'&amp;Contents'</ORIGINAL>
+         <TRANSLATION>'&amp;Contenus'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'&amp;Copy'</ORIGINAL>
+         <TRANSLATION>'Co&amp;pier'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'&amp;Create Array...'</ORIGINAL>
+         <TRANSLATION>'&amp;Créer une série...'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'&amp;Crop rosette after placement'</ORIGINAL>
+         <TRANSLATION>'&amp;Découper la rosette après la pose'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'&amp;Define'</ORIGINAL>
+         <TRANSLATION>'&amp;Définir'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'&amp;Define Selection as New Symbol'</ORIGINAL>
+         <TRANSLATION>'&amp;Enregistrer la sélection comme nouveau symbole'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'&amp;Delete'</ORIGINAL>
+         <TRANSLATION>'&amp;Effacer'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'&amp;Delete View...'</ORIGINAL>
+         <TRANSLATION>'E&amp;ffacer la vue...'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'&amp;Display design grid'</ORIGINAL>
+         <TRANSLATION>'&amp;Afficher la Grille magnétique'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'&amp;Distance ='</ORIGINAL>
+         <TRANSLATION>'&amp;Distance ='</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'&amp;Draw Grid on Top of Objects'</ORIGINAL>
+         <TRANSLATION>'&amp;Dessiner la grille par dessus les Objets'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'&amp;Drawing'</ORIGINAL>
+         <TRANSLATION>'&amp;Dessiner'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'&amp;Edit'</ORIGINAL>
+         <TRANSLATION>'&amp;Edition'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>"&amp;Edit Properties"</ORIGINAL>
+         <TRANSLATION>"&amp;Modifier les Propriétés"</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'&amp;Editing'</ORIGINAL>
+         <TRANSLATION>'&amp;Edition'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'&amp;Entire Map'</ORIGINAL>
+         <TRANSLATION>'&amp;Carte entière'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'&amp;Extend lines to crop rectangle'</ORIGINAL>
+         <TRANSLATION>'&amp;Etendre les lignes pour remplir le rectangle'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'&amp;File'</ORIGINAL>
+         <TRANSLATION>'&amp;Fichier'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'&amp;Flip...'</ORIGINAL>
+         <TRANSLATION>'&amp;Retourner...'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'&amp;Fractal'</ORIGINAL>
+         <TRANSLATION>'&amp;Fractale'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'&amp;Freeze properties of selected objects'</ORIGINAL>
+         <TRANSLATION>'&amp;Figer les propriétés des objets sélectionnés'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'&amp;General'</ORIGINAL>
+         <TRANSLATION>'&amp;Générale'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'&amp;Getting Started'</ORIGINAL>
+         <TRANSLATION>'&amp;Premiers pas'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'&amp;Gravity Snap'</ORIGINAL>
+         <TRANSLATION>'&amp;Aimanter les Objets'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'&amp;Gravity-snap to existing points'</ORIGINAL>
+         <TRANSLATION>'&amp;Aimanter les objets'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'&amp;Green'</ORIGINAL>
+         <TRANSLATION>'&amp;Vert'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'&amp;Group'</ORIGINAL>
+         <TRANSLATION>'&amp;Grouper'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'&amp;Height'</ORIGINAL>
+         <TRANSLATION>'&amp;Hauteur'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'&amp;Help'</ORIGINAL>
+         <TRANSLATION>'&amp;Aide'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'&amp;Horizontal'</ORIGINAL>
+         <TRANSLATION>'&amp;Horizontal'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'&amp;Horizontal Skew'</ORIGINAL>
+         <TRANSLATION>'Inclinaison &amp;Horizontale'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'&amp;How Do I ... ?'</ORIGINAL>
+         <TRANSLATION>'&amp;Comment faire... ?'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'&amp;Icon'</ORIGINAL>
+         <TRANSLATION>'&amp;Icône'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'&amp;Icons'</ORIGINAL>
+         <TRANSLATION>'&amp;Icônes'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'&amp;Insert...'</ORIGINAL>
+         <TRANSLATION>'&amp;Insérer...'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'&amp;Line Style'</ORIGINAL>
+         <TRANSLATION>'Style de &amp;Ligne'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'&amp;Make backup files'</ORIGINAL>
+         <TRANSLATION>'&amp;Créer des fichiers de Sauvegarde'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'&amp;Move...'</ORIGINAL>
+         <TRANSLATION>'&amp;Déplacer...'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'&amp;Name'</ORIGINAL>
+         <TRANSLATION>'&amp;Nom'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'&amp;New'</ORIGINAL>
+         <TRANSLATION>'&amp;Nouveau'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'&amp;Number vertices to skip'</ORIGINAL>
+         <TRANSLATION>'&amp;Nombre de sommets à éviter'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'&amp;Open...'</ORIGINAL>
+         <TRANSLATION>'&amp;Ouvrir...'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'&amp;Options'</ORIGINAL>
+         <TRANSLATION>'&amp;Options'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'&amp;Other'</ORIGINAL>
+         <TRANSLATION>'&amp;Autre'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'&amp;Overlay'</ORIGINAL>
+         <TRANSLATION>'&amp;Calque'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'&amp;Pages'</ORIGINAL>
+         <TRANSLATION>'&amp;Pages'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'&amp;Paste'</ORIGINAL>
+         <TRANSLATION>'Co&amp;ller'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'&amp;Polar'</ORIGINAL>
+         <TRANSLATION>'&amp;Polaire'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'&amp;Print...'</ORIGINAL>
+         <TRANSLATION>'&amp;Imprimer...'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'&amp;Properties'</ORIGINAL>
+         <TRANSLATION>'&amp;Propriétés'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'&amp;Push Pins'</ORIGINAL>
+         <TRANSLATION>'&amp;Punaises'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'&amp;Red'</ORIGINAL>
+         <TRANSLATION>'&amp;Rouge'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'&amp;Redo'</ORIGINAL>
+         <TRANSLATION>'&amp;Rétablir'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>"&amp;Redo %s"</ORIGINAL>
+         <TRANSLATION>"&amp;Rétablir %s"</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'&amp;Reload All'</ORIGINAL>
+         <TRANSLATION>'&amp;Recharger tout'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'&amp;Restore default toolbars'</ORIGINAL>
+         <TRANSLATION>'&amp;Restaurer les barres d''outils par défaut'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'&amp;Right-click prompts to close shape'</ORIGINAL>
+         <TRANSLATION>'&amp;Clic droit pour fermer une Forme'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'&amp;Rotate...'</ORIGINAL>
+         <TRANSLATION>'&amp;Rotation...'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'&amp;Save'</ORIGINAL>
+         <TRANSLATION>'&amp;Enregister'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'&amp;Save All'</ORIGINAL>
+         <TRANSLATION>'&amp;Enregistrer tout'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'&amp;Save Current View...'</ORIGINAL>
+         <TRANSLATION>'&amp;Enregistrer la vue en cours...'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'&amp;Scale...'</ORIGINAL>
+         <TRANSLATION>'&amp;Echelle...'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'&amp;Search Help'</ORIGINAL>
+         <TRANSLATION>'&amp;Chercher dans l''Aide'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'&amp;Selected Region'</ORIGINAL>
+         <TRANSLATION>'&amp;Région sélectionnée'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'&amp;Settings'</ORIGINAL>
+         <TRANSLATION>'&amp;Préférences'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'&amp;Skew...'</ORIGINAL>
+         <TRANSLATION>'&amp;Incliner...'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'&amp;Snap to design grid'</ORIGINAL>
+         <TRANSLATION>'&amp;Aimanter la Grille'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'&amp;Snap to Grid'</ORIGINAL>
+         <TRANSLATION>'&amp;Aimanter la Grille'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'&amp;Text'</ORIGINAL>
+         <TRANSLATION>'&amp;Texte'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'&amp;Tile multiple pages'</ORIGINAL>
+         <TRANSLATION>'Carreler sur plusieurs &amp;pages'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'&amp;Transform'</ORIGINAL>
+         <TRANSLATION>'&amp;Transformer'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'&amp;Undo'</ORIGINAL>
+         <TRANSLATION>'&amp;Annuler'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>"&amp;Undo %s"</ORIGINAL>
+         <TRANSLATION>"&amp;Annuler %s"</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'&amp;Uniform Scaling'</ORIGINAL>
+         <TRANSLATION>'&amp;Echelle uniforme'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'&amp;Units'</ORIGINAL>
+         <TRANSLATION>'&amp;Unités'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'&amp;Vertical Skew'</ORIGINAL>
+         <TRANSLATION>'Inclinaison &amp;Verticale'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'&amp;View'</ORIGINAL>
+         <TRANSLATION>'&amp;Vue'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'&amp;Yellow'</ORIGINAL>
+         <TRANSLATION>'&amp;Jaune'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>"(View when map was last saved)"</ORIGINAL>
+         <TRANSLATION>"(Voir la date du dernier enregistrement)"</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>"* Background color"</ORIGINAL>
+         <TRANSLATION>"* la Couleur de fond à changée"</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>"* Comments"</ORIGINAL>
+         <TRANSLATION>"* les Commentaires ont été modifiés"</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>"* Grid attributes"</ORIGINAL>
+         <TRANSLATION>"* les paramètres de la Grille ont changé"</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>"* Map scale"</ORIGINAL>
+         <TRANSLATION>"* l'Echelle de la carte a été modifiée"</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>"* Map settings"</ORIGINAL>
+         <TRANSLATION>"* les réglages de la Carte ont été modifiés"</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>"* Objects were added"</ORIGINAL>
+         <TRANSLATION>"* des Objets ont été ajoutés"</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>"* Objects were changed"</ORIGINAL>
+         <TRANSLATION>"* des Objets ont été modifiés"</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>"* Objects were deleted"</ORIGINAL>
+         <TRANSLATION>"* des Objets ont été effacés"</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>"* Overlays were changed"</ORIGINAL>
+         <TRANSLATION>"* des Calques ont été changés"</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>"* Page orientation (i.e. Portrait/Landscape)"</ORIGINAL>
+         <TRANSLATION>"* l'orientation de la Page (Portrait/Paysage) a changée"</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>"* Symbols were added"</ORIGINAL>
+         <TRANSLATION>"* des Symboles ont été modifiés"</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>"* Units of measurement"</ORIGINAL>
+         <TRANSLATION>"* les Unités de mesure ont été modifiées"</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>"* Viewport (i.e. window was zoomed and/or panned)"</ORIGINAL>
+         <TRANSLATION>"* la fenêtre a été déplacée"</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>"* Views were added, deleted, or changed"</ORIGINAL>
+         <TRANSLATION>"* des Vues ont été ajoutées, effacées, ou modifiées"</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>"* Visible or frozen overlays have changed"</ORIGINAL>
+         <TRANSLATION>"* les Calques visibles ou figés ont été changés"</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>"*RESTORE*"</ORIGINAL>
+         <TRANSLATION>"*RETABLIR*"</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>"A symbol cannot be defined without any groups. Please create some groups in the symbol library and try again."</ORIGINAL>
+         <TRANSLATION>"Un symbole ne peut pas être défini sans groupe. Créez des groupes dans la bibliothèque de symboles et essayez à nouveau"</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'A&amp;utogroup complex objects when created'</ORIGINAL>
+         <TRANSLATION>'Gouper &amp;automatiquement les objets complexes à la création'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'About AutoREALM'</ORIGINAL>
+         <TRANSLATION>'A propos d''AutoREALM'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'Active Overlay'</ORIGINAL>
+         <TRANSLATION>'Calque actif'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>"Add Circle"</ORIGINAL>
+         <TRANSLATION>"Ajouter un cercle"</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>"Add Curve"</ORIGINAL>
+         <TRANSLATION>"Ajouter une courbe"</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>"Add Curved Text"</ORIGINAL>
+         <TRANSLATION>"Ajouter un texte incurvé"</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>"Add Fractal Curve"</ORIGINAL>
+         <TRANSLATION>"Ajouter une courbe fractale"</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>"Add Fractal Freehand Line"</ORIGINAL>
+         <TRANSLATION>"Ajouter une ligne à main levée fractale"</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>"Add Fractal Line"</ORIGINAL>
+         <TRANSLATION>"Ajouter une ligne fractale"</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>"Add Fractal PolyCurve"</ORIGINAL>
+         <TRANSLATION>"Ajouter une courbe fractale brisée"</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>"Add Fractal PolyLine"</ORIGINAL>
+         <TRANSLATION>"Ajouter une ligne fractale brisée"</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>"Add Freehand Line"</ORIGINAL>
+         <TRANSLATION>"Ajouter une ligne à main levée"</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>"Add Line"</ORIGINAL>
+         <TRANSLATION>"Ajouter une ligne"</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>"Add Multiple Symbols"</ORIGINAL>
+         <TRANSLATION>"Ajouter plusieurs symboles"</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>"Add Overlay"</ORIGINAL>
+         <TRANSLATION>"Nouveau calque"</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>"Add Poly Curve"</ORIGINAL>
+         <TRANSLATION>"Ajouter une courbe brisée"</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>"Add Polygon"</ORIGINAL>
+         <TRANSLATION>"Ajouter un polygone"</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>"Add PolyLine"</ORIGINAL>
+         <TRANSLATION>"Ajouter une ligne brisée"</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>"Add Rectangle"</ORIGINAL>
+         <TRANSLATION>"Ajouter un rectangle"</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>"Add Rosette Grid"</ORIGINAL>
+         <TRANSLATION>"Ajouter une rosace"</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>"Add Symbol"</ORIGINAL>
+         <TRANSLATION>"Ajouter un symbole"</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'Add Symbol Group'</ORIGINAL>
+         <TRANSLATION>'Ajouter un groupe de symboles'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>"Add Text"</ORIGINAL>
+         <TRANSLATION>"Ajouter un texte"</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'Alignment'</ORIGINAL>
+         <TRANSLATION>'Alignement'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>"Are you sure?"</ORIGINAL>
+         <TRANSLATION>"Êtes-vous sûr ?"</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>"AU"</ORIGINAL>
+         <TRANSLATION>"Unités Astronomiques"</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'Auto&amp;NAME...'</ORIGINAL>
+         <TRANSLATION>'Auto&amp;NAME...'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'AutoREALM - EDITING SYMBOL %s'</ORIGINAL>
+         <TRANSLATION>'AutoREALM - MODIFICATION DU SYMBOLE %s'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>"AutoREALM : New file"</ORIGINAL>
+         <TRANSLATION>"AutoREALM : Nouveau fichier"</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>"Autorlm.hlp"</ORIGINAL>
+         <TRANSLATION>"Autorlm_fr.hlp"</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'Average'</ORIGINAL>
+         <TRANSLATION>'Moyenne'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'Background Color'</ORIGINAL>
+         <TRANSLATION>'Couleur du fond'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'Between'</ORIGINAL>
+         <TRANSLATION>'Entre'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'Bold'</ORIGINAL>
+         <TRANSLATION>'Gras'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'Bring to &amp;Front'</ORIGINAL>
+         <TRANSLATION>'Premier &amp;plan'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>"Bring To Front"</ORIGINAL>
+         <TRANSLATION>"Premier plan"</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'C&amp;ollate'</ORIGINAL>
+         <TRANSLATION>'C&amp;opies assemblées'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'C&amp;urrent View'</ORIGINAL>
+         <TRANSLATION>'V&amp;ue en cours'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'Cancel'</ORIGINAL>
+         <TRANSLATION>'Annuler'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>"Cannot insert %s"</ORIGINAL>
+         <TRANSLATION>"Impossible d'insérer %s"</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>"Cannot open rule file %s!"</ORIGINAL>
+         <TRANSLATION>"Impossible d'ouvrir le fichier %s"</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'Center'</ORIGINAL>
+         <TRANSLATION>'Centré'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>"Centimeters"</ORIGINAL>
+         <TRANSLATION>"Centimètres"</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>"Chains"</ORIGINAL>
+         <TRANSLATION>"Chaînes"</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>"Change Background Color"</ORIGINAL>
+         <TRANSLATION>"Changer la couleur de fond"</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>"Change Bold Grid"</ORIGINAL>
+         <TRANSLATION>"Changer la grille hiérarchique"</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>"Change Color"</ORIGINAL>
+         <TRANSLATION>"Changer la couleur"</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>"Change Comments"</ORIGINAL>
+         <TRANSLATION>"Modification des Commentaires"</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>"Change Fill Color"</ORIGINAL>
+         <TRANSLATION>"Changer la couleur de remplissage"</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>"Change Grid Color"</ORIGINAL>
+         <TRANSLATION>"Changer la couleur de la grille"</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>"Change Outline Color"</ORIGINAL>
+         <TRANSLATION>"Changer la couleur du pourtour"</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>"Change Overlay"</ORIGINAL>
+         <TRANSLATION>"Changer le calque"</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>"Change Primary Grid Style"</ORIGINAL>
+         <TRANSLATION>"Changer le style de la grille principale"</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>"Change Roughness"</ORIGINAL>
+         <TRANSLATION>"Changer la rugosité"</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>"Change Secondary Grid Style"</ORIGINAL>
+         <TRANSLATION>"Changer le style de la grille secondaire"</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>"Change Seed"</ORIGINAL>
+         <TRANSLATION>"Changer la génératrice"</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>"Change Style"</ORIGINAL>
+         <TRANSLATION>"Changer le style"</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'Change Units'</ORIGINAL>
+         <TRANSLATION>'Changer les Unités'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'Circle'</ORIGINAL>
+         <TRANSLATION>'Cercle'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>"Close Figures"</ORIGINAL>
+         <TRANSLATION>"Fermer les figures"</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'Close Selected Fi&amp;gures'</ORIGINAL>
+         <TRANSLATION>'Fermer les Fi&amp;gures sélectionnées'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'Close symbol library window'</ORIGINAL>
+         <TRANSLATION>'Fermer la bibliothèque de symboles'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'Colors'</ORIGINAL>
+         <TRANSLATION>'Couleurs'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>"Combine operation failed"</ORIGINAL>
+         <TRANSLATION>"Echec de l''opération de combinaison"</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'Comment'</ORIGINAL>
+         <TRANSLATION>'Commentaire'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'Comments'</ORIGINAL>
+         <TRANSLATION>'Commentaires'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'Comments for selected symbol.'</ORIGINAL>
+         <TRANSLATION>'Commentaires sur le symbole sélectionné'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>"contained too many errors; parsing aborted."</ORIGINAL>
+         <TRANSLATION>"contient trop d'erreurs ; analyse annulée."</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'Copies'</ORIGINAL>
+         <TRANSLATION>'Copies'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'Copy'</ORIGINAL>
+         <TRANSLATION>'Copier'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'Copy to Clipboard'</ORIGINAL>
+         <TRANSLATION>'Copier dans le presse-papiers'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'Count'</ORIGINAL>
+         <TRANSLATION>'Nbre'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'Create &amp;Closed Figure'</ORIGINAL>
+         <TRANSLATION>'Créer &amp;Fermer une Forme'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'Create &amp;Open Figure'</ORIGINAL>
+         <TRANSLATION>'Créer &amp;Ouvrir une Forme'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'Create a new group'</ORIGINAL>
+         <TRANSLATION>'Créer un nouveau groupe'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'Create Array'</ORIGINAL>
+         <TRANSLATION>'Créer une Série'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>"Create Array %u x %u"</ORIGINAL>
+         <TRANSLATION>"Créer une série %u x %u"</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'Crosshair on by default'</ORIGINAL>
+         <TRANSLATION>'Equerres affichées par défaut'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'Cu&amp;t'</ORIGINAL>
+         <TRANSLATION>'&amp;Couper'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>"Cubits"</ORIGINAL>
+         <TRANSLATION>"Coudées"</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'Curve'</ORIGINAL>
+         <TRANSLATION>'Courbe'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'Curved Text'</ORIGINAL>
+         <TRANSLATION>'Texte incurvé'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'Cut'</ORIGINAL>
+         <TRANSLATION>'Couper'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>"Days by foot"</ORIGINAL>
+         <TRANSLATION>"Jours de marche"</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>"Days by foot on rugged terrain"</ORIGINAL>
+         <TRANSLATION>"Jours de marche en terrain accidenté"</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>"Days by foot on rugged terrain, burdened"</ORIGINAL>
+         <TRANSLATION>"Jours de marche en terrain accidenté, avec charge"</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>"Days by foot, burdened"</ORIGINAL>
+         <TRANSLATION>"Jours de marche avec charge"</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>"Days by horse"</ORIGINAL>
+         <TRANSLATION>"Jours de cheval"</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>"Days by oared galley"</ORIGINAL>
+         <TRANSLATION>"Jours de voyage en galère à rames"</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>"Days by sailed galley"</ORIGINAL>
+         <TRANSLATION>"Jours de voyage en galère à voiles"</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>"Days by wagon"</ORIGINAL>
+         <TRANSLATION>"Jours de voyage en chariot"</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>"Days by war horse"</ORIGINAL>
+         <TRANSLATION>"Jours de cheval de guerre"</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>"De&amp;lete"</ORIGINAL>
+         <TRANSLATION>"Effa&amp;cer"</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>"Decompose"</ORIGINAL>
+         <TRANSLATION>"Décomposer"</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'Decreasing'</ORIGINAL>
+         <TRANSLATION>'Décroissant'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'default'</ORIGINAL>
+         <TRANSLATION>'par défaut'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>"Default printer"</ORIGINAL>
+         <TRANSLATION>"Imprimante par défaut"</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'Define New Symbol'</ORIGINAL>
+         <TRANSLATION>'Définir un nouveau symbole'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'Define Selection as Symbol'</ORIGINAL>
+         <TRANSLATION>'Enregistrer la sélection comme symbole'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'Define selection on current map as new symbol'</ORIGINAL>
+         <TRANSLATION>'Enregistrer la sélection en cours comme un nouveau Symbole'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'Degrees'</ORIGINAL>
+         <TRANSLATION>'Degrés'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'Del &amp;Group'</ORIGINAL>
+         <TRANSLATION>'Effacer &amp;Groupe'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'Delete'</ORIGINAL>
+         <TRANSLATION>'Effacer'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'Delete a group'</ORIGINAL>
+         <TRANSLATION>'Effacer un groupe'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>"Delete Group"</ORIGINAL>
+         <TRANSLATION>"Effacement de groupe"</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>"Delete Overlay"</ORIGINAL>
+         <TRANSLATION>"Effacer Calque"</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'Delete selected symbol'</ORIGINAL>
+         <TRANSLATION>'Effacer le symbole sélectionné'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>"Delete Symbol"</ORIGINAL>
+         <TRANSLATION>"Effacement de symbole"</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>"Delete the \"%s\" overlay?"</ORIGINAL>
+         <TRANSLATION>"Effacer le calque \"%s\" ?"</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>"Delete View"</ORIGINAL>
+         <TRANSLATION>"Effacer la vue"</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'Design'</ORIGINAL>
+         <TRANSLATION>'Brouillon'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>Designed and Written by Andrew J. Gryc</ORIGINAL>
+         <TRANSLATION>Concu et écrit par Andrew J. Gryc, traduit par A. DINIMANT et V.CALLIES</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'Diamond Grid'</ORIGINAL>
+         <TRANSLATION>'Quadrillage diagonal'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'Diamond Placement'</ORIGINAL>
+         <TRANSLATION>'En losange'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>"Display a saved view"</ORIGINAL>
+         <TRANSLATION>"Afficher une vue enregistrée"</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'Distances for marked segments:'</ORIGINAL>
+         <TRANSLATION>'Distance entre les repères :'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>"Do you want to delete the %s group and all symbols in it?"</ORIGINAL>
+         <TRANSLATION>"Voulez-vous effacer le groupe %s et tous les symboles qu'il contient ?"</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>"Do you want to delete the %s symbol from the %s group?"</ORIGINAL>
+         <TRANSLATION>"Voulez-vous effacer le symbole %s du groupe %s ?"</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>"does not exist."</ORIGINAL>
+         <TRANSLATION>"n''existe pas."</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>"Door open"</ORIGINAL>
+         <TRANSLATION>"Imprimante ouverte"</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'Drawing'</ORIGINAL>
+         <TRANSLATION>'Dessins'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'E&amp;xit'</ORIGINAL>
+         <TRANSLATION>'&amp;Quitter'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'Edit'</ORIGINAL>
+         <TRANSLATION>'Edition'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'Edit &amp;Drawing'</ORIGINAL>
+         <TRANSLATION>'Modifier le &amp;dessin'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'Edit symbol attributes: Name, Group, Comments, Favorites'</ORIGINAL>
+         <TRANSLATION>'Modifier les attributs du symbole: Nom, Groupe, Commentaires, Favoris'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'Edit the symbol'#39's drawn representation'</ORIGINAL>
+         <TRANSLATION>'Modifier le dessin du symbole'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'Enter Number of Sides:'</ORIGINAL>
+         <TRANSLATION>'Entrez le nombre de cotés:'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>"Error: Expecting chunk missing. Cannot load file."</ORIGINAL>
+         <TRANSLATION>"Erreur : un fragment attendu manque. Impossible de charger le fichier."</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>"Error: file contains unknown chunk id!  Cannot load file."</ORIGINAL>
+         <TRANSLATION>"Erreur : le fichier contient un numéro de fragment inconnu. Impossible de charger le fichier."</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'Every'</ORIGINAL>
+         <TRANSLATION>'Tous les'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>"Existing Map has changed"</ORIGINAL>
+         <TRANSLATION>"La carte existante a changé"</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>"Failed to open %s"</ORIGINAL>
+         <TRANSLATION>"Echec de l''ouverture de %s"</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>"Failed to save %s"</ORIGINAL>
+         <TRANSLATION>"Echec de l''enregistrement de %s"</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>"Failure to combine objects"</ORIGINAL>
+         <TRANSLATION>"Echec de la combinaison d'objets"</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>"Failure to convert objects"</ORIGINAL>
+         <TRANSLATION>"Echec de la conversion d'objets"</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>"Fathoms"</ORIGINAL>
+         <TRANSLATION>"Brasses"</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>"Feet"</ORIGINAL>
+         <TRANSLATION>"Pieds"</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>"File already exists"</ORIGINAL>
+         <TRANSLATION>"Le fichier existe déjà"</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'Fill Color'</ORIGINAL>
+         <TRANSLATION>'Couleur de remplissage'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'Fill Pattern'</ORIGINAL>
+         <TRANSLATION>'Motif de remplissage'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'Flip Selection'</ORIGINAL>
+         <TRANSLATION>'Retourner la sélection'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'Font Name'</ORIGINAL>
+         <TRANSLATION>'Nom de la Police'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>"Font Name Change"</ORIGINAL>
+         <TRANSLATION>"Changer la police"</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'Font Size'</ORIGINAL>
+         <TRANSLATION>'Taille de la Police'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>"Font Size Change"</ORIGINAL>
+         <TRANSLATION>"Changer la taille des caractères"</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>"Found =&gt; with no prior production label (left hand side)"</ORIGINAL>
+         <TRANSLATION>"Instruction =&gt; trouvée, sans un label le précédent (du coté gauche)"</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'Fractal'</ORIGINAL>
+         <TRANSLATION>'Fractales'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'Fractal Curve'</ORIGINAL>
+         <TRANSLATION>'Courbe fractale'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'Fractal Freehand'</ORIGINAL>
+         <TRANSLATION>'Fractale à main levée'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'Fractal Line'</ORIGINAL>
+         <TRANSLATION>'Ligne fractale'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'Fractal PolyCurve'</ORIGINAL>
+         <TRANSLATION>'Courbe fractale brisée'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'Fractal Polyline'</ORIGINAL>
+         <TRANSLATION>'Ligne fractale brisée'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'Fractal Settings'</ORIGINAL>
+         <TRANSLATION>'Réglages des fractales'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'Freehand'</ORIGINAL>
+         <TRANSLATION>'A main levée'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>"Furlongs"</ORIGINAL>
+         <TRANSLATION>"Yards (Furlongs)"</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'G&amp;raph Paper'</ORIGINAL>
+         <TRANSLATION>'G&amp;rille de Fond'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'General'</ORIGINAL>
+         <TRANSLATION>'Génerale'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'Generate Names'</ORIGINAL>
+         <TRANSLATION>'Générer des noms'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'Geographic'</ORIGINAL>
+         <TRANSLATION>'Géographie'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'Glue'</ORIGINAL>
+         <TRANSLATION>'Colle'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'Graph Paper'</ORIGINAL>
+         <TRANSLATION>'Grille de fond'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'Grid &amp;&amp; Snap'</ORIGINAL>
+         <TRANSLATION>'Grilles &amp;&amp; Aimantation'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'Grid &amp;Units'</ORIGINAL>
+         <TRANSLATION>'Grille &amp;Unités'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'Grid Color'</ORIGINAL>
+         <TRANSLATION>'Couleur de la grille'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'Grid Resize'</ORIGINAL>
+         <TRANSLATION>'Taille de la grille'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'Grid Size'</ORIGINAL>
+         <TRANSLATION>'Taille de la grille'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'Group'</ORIGINAL>
+         <TRANSLATION>'Grouper'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'Group of selected symbol'</ORIGINAL>
+         <TRANSLATION>'Groupe du symbole sélectionné'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'Half-Diamond Grid'</ORIGINAL>
+         <TRANSLATION>'Losanges'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'Height'</ORIGINAL>
+         <TRANSLATION>'Hauteur'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'Hex Grid'</ORIGINAL>
+         <TRANSLATION>'Hexagones'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>"hexes"</ORIGINAL>
+         <TRANSLATION>"hexagones"</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'Horizontal'</ORIGINAL>
+         <TRANSLATION>'Horizontal'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'Icon Placement'</ORIGINAL>
+         <TRANSLATION>'Disposition des icônes'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'Icon Settings'</ORIGINAL>
+         <TRANSLATION>'Réglages d''icônes'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'Icon Size'</ORIGINAL>
+         <TRANSLATION>'Taille des icônes'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'Icon Spread'</ORIGINAL>
+         <TRANSLATION>'Ecartement des icônes'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>"Failed Undo Record"</ORIGINAL>
+         <TRANSLATION>"Impossible de rétablir l'état"</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>"Inches"</ORIGINAL>
+         <TRANSLATION>"Pouces"</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'Increasing'</ORIGINAL>
+         <TRANSLATION>'Croissant'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'Insert File'</ORIGINAL>
+         <TRANSLATION>'Insérer un Fichier'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>"Insert of %s"</ORIGINAL>
+         <TRANSLATION>"Insertion de %s"</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'Insert selected symbol into map'</ORIGINAL>
+         <TRANSLATION>'Insérer le symbole sélectionné dans la carte'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>"Invisible Overlay"</ORIGINAL>
+         <TRANSLATION>"Calque invisible"</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'Italic'</ORIGINAL>
+         <TRANSLATION>'Italique'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'Jog'</ORIGINAL>
+         <TRANSLATION>'Secousse'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>"Kilometers"</ORIGINAL>
+         <TRANSLATION>"Kilomètres"</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>"Leagues"</ORIGINAL>
+         <TRANSLATION>"Lieues"</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'Left'</ORIGINAL>
+         <TRANSLATION>'à Gauche'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'Legend'</ORIGINAL>
+         <TRANSLATION>'Légende'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>"Light years"</ORIGINAL>
+         <TRANSLATION>"Années-lumières"</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'Line'</ORIGINAL>
+         <TRANSLATION>'Ligne'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'Main Color'</ORIGINAL>
+         <TRANSLATION>'Couleur principale'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'Map Settings'</ORIGINAL>
+         <TRANSLATION>'Réglages de la Carte'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'Maximum Levels of &amp;Undo'</ORIGINAL>
+         <TRANSLATION>'Nombre maximum d'' &amp;Annulations'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'Measurement'</ORIGINAL>
+         <TRANSLATION>'Mesurer des distances'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'Measurement String'</ORIGINAL>
+         <TRANSLATION>'Fil de mesure'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>"Meters"</ORIGINAL>
+         <TRANSLATION>"Mètres"</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>"Miles"</ORIGINAL>
+         <TRANSLATION>"Milles"</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'Move'</ORIGINAL>
+         <TRANSLATION>'Déplacer'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>"Move Handle"</ORIGINAL>
+         <TRANSLATION>"Déplacer la poignée"</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>"Move Selection"</ORIGINAL>
+         <TRANSLATION>"Déplacer la Sélection"</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'N&amp;o Change'</ORIGINAL>
+         <TRANSLATION>'N&amp;o Change'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'Name of selected symbol'</ORIGINAL>
+         <TRANSLATION>'Nom du symbole sélectionné'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'Name of View?'</ORIGINAL>
+         <TRANSLATION>'Nom de la Vue ?'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'Narrowest'</ORIGINAL>
+         <TRANSLATION>'Au plus étroit'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>"Nautical Miles"</ORIGINAL>
+         <TRANSLATION>"Milles nautiques"</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'New icon si&amp;ze is relative to zoom level'</ORIGINAL>
+         <TRANSLATION>'La taille des nouvelles &amp;icônes est relative au zoom'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'New text size is &amp;relative to zoom level'</ORIGINAL>
+         <TRANSLATION>'La taille des nouveaux textes est &amp;relative au zoom'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'No Change'</ORIGINAL>
+         <TRANSLATION>'Sans changt'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'No Grid'</ORIGINAL>
+         <TRANSLATION>'Pas de grille'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>"No toner"</ORIGINAL>
+         <TRANSLATION>"Pas de cartouche d'encre"</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>"Not available"</ORIGINAL>
+         <TRANSLATION>"Occupée"</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>"NOTE"</ORIGINAL>
+         <TRANSLATION>"NOTE"</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'Notes'</ORIGINAL>
+         <TRANSLATION>'Notes'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'Number of &amp;copies'</ORIGINAL>
+         <TRANSLATION>'Nombre of &amp;copies'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'Objects'</ORIGINAL>
+         <TRANSLATION>'Objets'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>"Objects to be combined are different types."</ORIGINAL>
+         <TRANSLATION>"Les objets à combiner sont de types différents."</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>"Offline"</ORIGINAL>
+         <TRANSLATION>"Non connectée"</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'Only 255 overlays are allowed'</ORIGINAL>
+         <TRANSLATION>'255 calques maximum'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>"Out of paper"</ORIGINAL>
+         <TRANSLATION>"Plus de papier"</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>"Output bin full"</ORIGINAL>
+         <TRANSLATION>"Bac de sortie plein"</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>"Overlay limit"</ORIGINAL>
+         <TRANSLATION>"Limite du nombre de calques"</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'Overlay List'</ORIGINAL>
+         <TRANSLATION>'Liste des calques'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'P&amp;lacement'</ORIGINAL>
+         <TRANSLATION>'P&amp;lacement'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'P&amp;roperties...'</ORIGINAL>
+         <TRANSLATION>'P&amp;ropriétés...'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'Pan'</ORIGINAL>
+         <TRANSLATION>'Déplacement'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>"Paper jam"</ORIGINAL>
+         <TRANSLATION>"Bourrage papier"</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>"Parsecs"</ORIGINAL>
+         <TRANSLATION>"Parsecs"</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'Paste'</ORIGINAL>
+         <TRANSLATION>'Coller'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'Paste from Clipboard'</ORIGINAL>
+         <TRANSLATION>'Coller depuis le presse-papiers'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>"Paused"</ORIGINAL>
+         <TRANSLATION>"Suspendue"</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'Per Map Settings'</ORIGINAL>
+         <TRANSLATION>'Paramétrages de la Carte'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'Per View Settings'</ORIGINAL>
+         <TRANSLATION>'Réglages de la Vue'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'Perimeter Points'</ORIGINAL>
+         <TRANSLATION>'Points du périmètre'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'Picture of selected symbol'</ORIGINAL>
+         <TRANSLATION>'Image du symbole sélectionné'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'Place Push Pin'</ORIGINAL>
+         <TRANSLATION>'Planter une punaise'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'Please enter a name for the new group.'</ORIGINAL>
+         <TRANSLATION>'Entrez un nom pour le nouveau groupe créé.'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'Please wait, loading...'</ORIGINAL>
+         <TRANSLATION>'Veuillez patienter pendant le chargement...'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'Polar Grid'</ORIGINAL>
+         <TRANSLATION>'Polaire'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'Political'</ORIGINAL>
+         <TRANSLATION>'Politique'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'PolyCurve'</ORIGINAL>
+         <TRANSLATION>'Courbe brisée'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'Polygon'</ORIGINAL>
+         <TRANSLATION>'Polygone'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'Polyline'</ORIGINAL>
+         <TRANSLATION>'Ligne brisée'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'Positive values are counter-clockwise; negative values are clockwise.'</ORIGINAL>
+         <TRANSLATION>'Les valeurs positives vont dans le sens contraire des aiguilles d''une montre; les valeurs négatives dans le sens des aiguilles.'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>"Power save"</ORIGINAL>
+         <TRANSLATION>"En veille"</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'Print'</ORIGINAL>
+         <TRANSLATION>'Imprimer'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'Print icons as polygons'</ORIGINAL>
+         <TRANSLATION>'Imprimer les icônes en tant que polygones'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'Print region'</ORIGINAL>
+         <TRANSLATION>'Zone d''impression'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'Printer'</ORIGINAL>
+         <TRANSLATION>'Imprimante'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>"Probability ends with unknown character"</ORIGINAL>
+         <TRANSLATION>"La probabilité se termine par un caractère inconnu"</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>"Probability is missing ]"</ORIGINAL>
+         <TRANSLATION>"La probabilité n'a pas de ]"</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>"probability totals greater than 100%"</ORIGINAL>
+         <TRANSLATION>"Le total des probabilités est supérieur à 100%"</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>"probability totals less than 100%"</ORIGINAL>
+         <TRANSLATION>"Le total des probabilités est inférieur à 100%"</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'Properties'</ORIGINAL>
+         <TRANSLATION>'Propriétés'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'Push Pins'</ORIGINAL>
+         <TRANSLATION>'Punaises'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'QA Testing and Creative Consultation by John W. Hicks III'</ORIGINAL>
+         <TRANSLATION>'Tests et conseils par John W. Hicks III'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'Racial'</ORIGINAL>
+         <TRANSLATION>'Peuples'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'Random Placement'</ORIGINAL>
+         <TRANSLATION>'Aléatoire'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'Re&amp;verse Line Direction'</ORIGINAL>
+         <TRANSLATION>'In&amp;verser le sens de la ligne'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'Read.Me Contents'</ORIGINAL>
+         <TRANSLATION>'Lire le fichier Lisezmoi.doc'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>"readme.doc"</ORIGINAL>
+         <TRANSLATION>"lisezmoi.doc"</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>"Ready"</ORIGINAL>
+         <TRANSLATION>"Prête"</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'Rectangle'</ORIGINAL>
+         <TRANSLATION>'Rectangle'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'Redo'</ORIGINAL>
+         <TRANSLATION>'Rétablir'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'Redo %s'</ORIGINAL>
+         <TRANSLATION>'Rétablir %s'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>"Remove all objects within the \"%s\" overlay?"</ORIGINAL>
+         <TRANSLATION>"Effacer tous les objets du calque \"%s\" ?"</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'Remove Grid'</ORIGINAL>
+         <TRANSLATION>'Effacer la grille'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'Repaint'</ORIGINAL>
+         <TRANSLATION>'Rafraichir'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'Replacement Overlay'</ORIGINAL>
+         <TRANSLATION>'Remplacement du calque'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>"Reverse Line Direction"</ORIGINAL>
+         <TRANSLATION>"Inverser le sens de la ligne"</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'Revert ALL symbols to saved versions'</ORIGINAL>
+         <TRANSLATION>'Revenir à la version précédemment enregistrée de TOUS les symboles'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>"Revert to Saved"</ORIGINAL>
+         <TRANSLATION>"Revenir à la version enregistrée"</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'Right'</ORIGINAL>
+         <TRANSLATION>'à Droite'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>"Rods"</ORIGINAL>
+         <TRANSLATION>"Perches"</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'Rosette Appearance'</ORIGINAL>
+         <TRANSLATION>'Apparence de la rosace'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'Rosette Chart Grid'</ORIGINAL>
+         <TRANSLATION>'Rosace'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'Rosette Chart Lines'</ORIGINAL>
+         <TRANSLATION>'Rosace'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'Rotate'</ORIGINAL>
+         <TRANSLATION>'Rotation'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>"Rotate %g°"</ORIGINAL>
+         <TRANSLATION>"Pivoter de %g°"</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'Rotate 45°'</ORIGINAL>
+         <TRANSLATION>'Rotation 45°'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'Rotate 90°'</ORIGINAL>
+         <TRANSLATION>'Rotation 90°'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>"Rotate Selection"</ORIGINAL>
+         <TRANSLATION>"Faire pivoter la sélection"</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'Rotated Hex Grid'</ORIGINAL>
+         <TRANSLATION>'Hexagones (axe N-S)'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'Roughness'</ORIGINAL>
+         <TRANSLATION>'Rugosité'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'Ruler'</ORIGINAL>
+         <TRANSLATION>'Règle'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'S&amp;ettings...'</ORIGINAL>
+         <TRANSLATION>'P&amp;éférences...'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'S&amp;hape'</ORIGINAL>
+         <TRANSLATION>'&amp;Forme'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'Save'</ORIGINAL>
+         <TRANSLATION>'Enregistrer'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'Save &amp;As...'</ORIGINAL>
+         <TRANSLATION>'En&amp;registrer sous'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'Save all names'</ORIGINAL>
+         <TRANSLATION>'Enregistrer tous les noms'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'Save all symbols'</ORIGINAL>
+         <TRANSLATION>'Enregistrer tous les symboles'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>"Save current map? Changes include:"</ORIGINAL>
+         <TRANSLATION>"Enregistrer la carte en cours ? Les modifications sont :"</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'Save Map'</ORIGINAL>
+         <TRANSLATION>'Enregistrer la carte'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>"Save View"</ORIGINAL>
+         <TRANSLATION>"Enregistrer la Vue"</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'Scale'</ORIGINAL>
+         <TRANSLATION>'Echelle'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'Scale Selection'</ORIGINAL>
+         <TRANSLATION>'Echelle de la sélection'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'Scalpel'</ORIGINAL>
+         <TRANSLATION>'Scalpel'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>"Scalpel Delete Node"</ORIGINAL>
+         <TRANSLATION>"Scalpel - effacer les liens"</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>"Scalpel Separate Node"</ORIGINAL>
+         <TRANSLATION>"Scalpel - couper les liens"</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'Scatter'</ORIGINAL>
+         <TRANSLATION>'Eparpillé'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'Se&amp;lect All'</ORIGINAL>
+         <TRANSLATION>'&amp;Sélectionner tout'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'Secondary Grid Size'</ORIGINAL>
+         <TRANSLATION>'Taille de la grille secondaire'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'Secret'</ORIGINAL>
+         <TRANSLATION>'Secret'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'Seed'</ORIGINAL>
+         <TRANSLATION>'Génératrice'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'Select'</ORIGINAL>
+         <TRANSLATION>'Selection'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'Select &amp;None'</ORIGINAL>
+         <TRANSLATION>'&amp;Annuler la sélection'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'Select a new overlay for all objects within the deleted overlay.'</ORIGINAL>
+         <TRANSLATION>'Selectionnez un nouveau calque pour accueillir les objets du calque effacé.'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'Select Name Rule File'</ORIGINAL>
+         <TRANSLATION>'Choisir un nom de fichier pour les règles'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'Select None'</ORIGINAL>
+         <TRANSLATION>'Tout déselectionner'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'Selection'</ORIGINAL>
+         <TRANSLATION>'Sélection'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'Selection Tool'</ORIGINAL>
+         <TRANSLATION>'Outil de Sélection'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'Send to &amp;Back'</ORIGINAL>
+         <TRANSLATION>'A&amp;rrière-plan'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'Send To Back'</ORIGINAL>
+         <TRANSLATION>'Arrière-plan'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'Settings'</ORIGINAL>
+         <TRANSLATION>'Réglages'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'Settlement'</ORIGINAL>
+         <TRANSLATION>'Peuplement'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'Shortest'</ORIGINAL>
+         <TRANSLATION>'Au plus petit'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'Show &amp;All Objects'</ORIGINAL>
+         <TRANSLATION>'Afficher &amp;tous les objets'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'Show Symbol in &amp;Favorites'</ORIGINAL>
+         <TRANSLATION>'Mettre le symbole parmi les favoris'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'Single Icon'</ORIGINAL>
+         <TRANSLATION>'Icône unique'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'Skew'</ORIGINAL>
+         <TRANSLATION>'Incliner'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'Skew Selection'</ORIGINAL>
+         <TRANSLATION>'Incliner la sélection'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'Spacing'</ORIGINAL>
+         <TRANSLATION>'Ecartement'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'Square Grid'</ORIGINAL>
+         <TRANSLATION>'Quadrillage'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'Square Placement'</ORIGINAL>
+         <TRANSLATION>'En carré'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>"squares"</ORIGINAL>
+         <TRANSLATION>"carrés"</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>"Stadia"</ORIGINAL>
+         <TRANSLATION>"Stades"</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'Status'</ORIGINAL>
+         <TRANSLATION>'Statut'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>"Stretch Selection"</ORIGINAL>
+         <TRANSLATION>"Etirer la sélection"</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'Suppress this menu and use &amp;Shift for Closed Figures'</ORIGINAL>
+         <TRANSLATION>'Supprimer ce menu et utiliser &amp;Maj pour fermer les Formes'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'Symbol &amp;Library'</ORIGINAL>
+         <TRANSLATION>'&amp;Bibliothèque de symboles'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'Symbol Library'</ORIGINAL>
+         <TRANSLATION>'Bibliothèque de symboles'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'Symbols in library'</ORIGINAL>
+         <TRANSLATION>'Symboles dans la bibliothèque'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'Tallest'</ORIGINAL>
+         <TRANSLATION>'Au plus haut'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'Text'</ORIGINAL>
+         <TRANSLATION>'Texte'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'Text Outline Color'</ORIGINAL>
+         <TRANSLATION>'Couleur des contours de texte'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'Text Toolbar'</ORIGINAL>
+         <TRANSLATION>'Barre d''outil Texte'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>"This action requires AutoREALM to reload itself.\r\nYour current work will be saved into a temporary file,\r\nand you will lose the ability to undo.  Continue?"</ORIGINAL>
+         <TRANSLATION>"Cette action nécessite qu'AutoREALM se recharge.\r\nVotre travail en cours sera enregistré dans un fichier temporaire,\r\net vous ne pourrez plus Annuler. Continuer ?"</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'Tiling'</ORIGINAL>
+         <TRANSLATION>'Carrelage'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'Toggle Design Grid'</ORIGINAL>
+         <TRANSLATION>'Grille magnétique'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'Toggle Gravity Snap'</ORIGINAL>
+         <TRANSLATION>'Aimanter les objets'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'Toggle Grid Snap'</ORIGINAL>
+         <TRANSLATION>'Aimanter la grille magnétique'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'Toggle Overlay Tags'</ORIGINAL>
+         <TRANSLATION>'Etiquettes de calque'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>"Toner low"</ORIGINAL>
+         <TRANSLATION>"Cartouche d''encre presque vide"</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'Tool&amp;bar'</ORIGINAL>
+         <TRANSLATION>'Barres d''outils'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'Topographic'</ORIGINAL>
+         <TRANSLATION>'Topographie'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'Tra&amp;nsform'</ORIGINAL>
+         <TRANSLATION>'Tra&amp;nsformer'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'Transform'</ORIGINAL>
+         <TRANSLATION>'Transformer'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'Treasure'</ORIGINAL>
+         <TRANSLATION>'Trésors'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'Triangle Grid'</ORIGINAL>
+         <TRANSLATION>'Triangles'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>"triangles"</ORIGINAL>
+         <TRANSLATION>"triangles"</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'Type'</ORIGINAL>
+         <TRANSLATION>'Type'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'Underline'</ORIGINAL>
+         <TRANSLATION>'Souligné'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'Undo'</ORIGINAL>
+         <TRANSLATION>'Annuler'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'Undo %s'</ORIGINAL>
+         <TRANSLATION>'Annuler %s'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'Ungroup'</ORIGINAL>
+         <TRANSLATION>'Dissocier'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'Units'</ORIGINAL>
+         <TRANSLATION>'Unités'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>"Unknown server"</ORIGINAL>
+         <TRANSLATION>"Serveur inconnu"</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>"Unmatched \"\" quotes"</ORIGINAL>
+         <TRANSLATION>"Nombre impair de guillemets \"\""</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>"Unmatched [] brackets"</ORIGINAL>
+         <TRANSLATION>"Nombre impair de crochets []"</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>"Unmatched {} braces"</ORIGINAL>
+         <TRANSLATION>"Nombre impair d''accolades {}"</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'Use draft display when &amp;panning'</ORIGINAL>
+         <TRANSLATION>'Défilement rapide'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'Vertical'</ORIGINAL>
+         <TRANSLATION>'Vertical'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'Visual Overlay &amp;Display :'</ORIGINAL>
+         <TRANSLATION>'Afficher les &amp;Calques :'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>"WARNING: This will lose all changes to the symbol library.  Continue?"</ORIGINAL>
+         <TRANSLATION>"ATTENTION : Vous allez perdre toutes les modifications de la bibliothèque de symboles. Continuer ? "</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>"Warning: you have just added an object to a invisible overlay.\r\nThe overlay will be made visible."</ORIGINAL>
+         <TRANSLATION>"Attention : vous venez d''ajouter un objet à un calque invisible.\r\nLe calque va devenir visible."</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'Where'</ORIGINAL>
+         <TRANSLATION>'Où'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'Widest'</ORIGINAL>
+         <TRANSLATION>'Au plus large'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'Width'</ORIGINAL>
+         <TRANSLATION>'Largeur'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>"Yards"</ORIGINAL>
+         <TRANSLATION>"Yards"</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>"You are trying to select items in a frozen overlay.\r\nTry unfreezing an overlay (for example, in this case, \"%s\"\r\nby clicking on the overlay's gray checkbox.\r\n\r\nIf you no longer wish to see this message, click \"Ignore\",\r\notherwise, click \"OK\"."</ORIGINAL>
+         <TRANSLATION>"Vous essayez de sélectionner des objets sur un calque figé\r\n(en l'occurence \"%s\"). Essayez de l'activer,\r\nen cliquant sur la case grisée du calque.\r\n\r\nSi vous ne souhaitez plus voir ce message, cliquez sur \"Ignorer\",\r\nsinon, cliquez sur \"OK\""</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>"You can not display a push pin until it has been placed.\r\nRight-click on the map and select \"Place Push Pin\"."</ORIGINAL>
+         <TRANSLATION>"Impossible d'afficher une punaise avant qu'elle ne soit placée\r\nFaites un clic droit sur la carte et choisissez \"Planter une punaise.\""</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>"You must select a group for this symbol"</ORIGINAL>
+         <TRANSLATION>"Vous devez choisir un groupe pour ce symbole"</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>"Your changes to favorites will not take place until you restart AutoREALM."</ORIGINAL>
+         <TRANSLATION>"Vos modifications de préférences ne rentreront en vigueur qu''après le redémarrage d''AutoREALM"</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'Zoom'</ORIGINAL>
+         <TRANSLATION>'Zoom'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'Zoom &amp;In'</ORIGINAL>
+         <TRANSLATION>'Zoom A&amp;vant'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'Zoom &amp;Out'</ORIGINAL>
+         <TRANSLATION>'Zoom A&amp;rrière'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>"Font Bold"</ORIGINAL>
+         <TRANSLATION>"Caractères en Gras"</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>"Font Italic"</ORIGINAL>
+         <TRANSLATION>"Caractères en Italique"</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>"Font Underline"</ORIGINAL>
+         <TRANSLATION>"Caractères en Souligné"</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>"Align Text Left"</ORIGINAL>
+         <TRANSLATION>"Alignement du Texte sur la Gauche"</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>"Align Text Center"</ORIGINAL>
+         <TRANSLATION>"Alignement du Texte au Centre"</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>"Align Text Right"</ORIGINAL>
+         <TRANSLATION>"Alignement du Texte sur la Droite"</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>"Text Changes"</ORIGINAL>
+         <TRANSLATION>"Effets sur le Texte"</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>"Don&amp;e"</ORIGINAL>
+         <TRANSLATION>"T&amp;erminé"</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>"Cance&amp;l"</ORIGINAL>
+         <TRANSLATION>"Annu&amp;ler"</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>"%d x %d Map"</ORIGINAL>
+         <TRANSLATION>"Carte %d x %d"</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>"%s - EDITING SYMBOL %s"</ORIGINAL>
+         <TRANSLATION>"%s - MODIFICATION DU SYMBOLE %s"</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>"%s already exists.  Overwrite?"</ORIGINAL>
+         <TRANSLATION>"%s existe déjà. L'écraser ?"</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>"/cm"</ORIGINAL>
+         <TRANSLATION>"/cm"</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>"A symbol cannot be defined without any groups.  Please create some groups in the symbol library and try again."</ORIGINAL>
+         <TRANSLATION>"Un symbol ne peut être défini sans groupe. Merci d'en créer un et de tenter à nouveau l'opération."</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>"/inch"</ORIGINAL>
+         <TRANSLATION>"/pouce"</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>"Error"</ORIGINAL>
+         <TRANSLATION>"Erreur"</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>"Out of memory"</ORIGINAL>
+         <TRANSLATION>"Mémoire épuisée"</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>"Paper problem"</ORIGINAL>
+         <TRANSLATION>"Problème de papier"</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>"Save current map?  Changes include:"</ORIGINAL>
+         <TRANSLATION>"Enregistrer la carte en cours ?  Changements faits :"</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>"default"</ORIGINAL>
+         <TRANSLATION>"automatique"</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>"Remove Grid"</ORIGINAL>
+         <TRANSLATION>"Effacer la grille"</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>"Grid Resize"</ORIGINAL>
+         <TRANSLATION>"Taille de la grille"</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>"Only %d overlays are allowed"</ORIGINAL>
+         <TRANSLATION>"Seulement %d calques sont possible"</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>"Warning"</ORIGINAL>
+         <TRANSLATION>"Attention"</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>"Send To Back"</ORIGINAL>
+         <TRANSLATION>"Arrière-plan"</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>"Delete"</ORIGINAL>
+         <TRANSLATION>"Effacer"</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>"Ungroup"</ORIGINAL>
+         <TRANSLATION>"Dissocier"</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>"Group"</ORIGINAL>
+         <TRANSLATION>"Grouper"</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>"Paste"</ORIGINAL>
+         <TRANSLATION>"Coller"</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>"Glue"</ORIGINAL>
+         <TRANSLATION>"Colle"</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'Flip'</ORIGINAL>
+         <TRANSLATION>'Retourner'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>'Align'</ORIGINAL>
+         <TRANSLATION>'Alignement'</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+   <PACKAGE>
+      <STRING>
+         <ORIGINAL>"Error: file ended prematurely!  Cannot load file."</ORIGINAL>
+         <TRANSLATION>"Erreur: le fichier se tremine prématurément !  Impossible de l'ouvrir."</TRANSLATION>
+      </STRING>
+   </PACKAGE>
+</TTABLE>

@@ -1,0 +1,570 @@
+<?xml version='1.0' encoding='utf-8'?>
+<?xml-stylesheet type="text/css" href="AstroML.css" ?>
+<astrogation 
+     xmlns="http://www.farfuture.net/"
+     xmlns:xsi="http://www.w3.org/2000/10/XMLSchema-instance"
+     xmlns:xh="http://www.w3.org/1999/xhtml">
+<!--
+  The Traveller game in all forms is owned by Far Future Enterprises. Copyright 
+  1977 - 1998 Far Future Enterprises. Traveller is a registered trademark of Far
+  Future Enterprises. Far Future permits web sites and fanzines for this game, 
+  provided it contains this notice, that Far Future is notified, and subject to
+  a withdrawal of permission on 90 days notice. The contents of this site are 
+  for personal, non-commercial use only. Any use of Far Future Enterprises's 
+  copyrighted material or trademarks anywhere on this web site and its files 
+  should not be viewed as a challenge to those copyrights or trademarks. In 
+  addition, any program/articles/file on this site cannot be republished or 
+  distributed without the consent of the author who contributed it.
+-->
+	<reference>
+		<provider id="canon" desc="Standard (canon) data for all systems" name="Canon"/>
+    </reference>
+    <mapping>
+        <group id="sm.0000" desc="marches" provider="canon" type="sector">
+            <name>The Spinward Marches</name>
+            <location type="group" group="sm.0000" x="1" y="1">0101</location>
+        </group>
+        <group id="sm.regina" desc="regina" provider="canon" parent="sm.0000" type="subsector">
+            <name>Regina</name>
+            <location type="group" group="sm.0000" x="2" y="1">0201</location>
+        </group>
+        <link id="link.0000" desc="link 1" provider="canon" >
+            <location type="subsector" group="sm.regina" x="1" y="5">0105</location>
+            <location type="subsector" group="sm.regina" x="1" y="6">0106</location>
+        </link>
+        <system id="sm.regina_1705">
+            <name>Efate</name>
+            <location type="subsector" group="sm.regina" x="1" y="5">0105</location>
+            <UWP><port>A</port><size>6</size><atmosphere>4</atmosphere><hydrograph>6</hydrograph><population>9</population><government>3</government><lawlevel>0</lawlevel><technology>D</technology></UWP>
+            <bases>N</bases>
+            <tradeCodes>Hi In</tradeCodes>
+            <remarks/>
+            <zone/>
+            <PBG><multiplier>8</multiplier><belts>1</belts><giants>0</giants></PBG>
+            <polity>Im</polity>
+            <star><spectrum>K</spectrum><modifier>4</modifier><luminosity>V</luminosity></star>
+            <comment><xh:html><xh:body><xh:pre>Efate         <xh:strong>1705</xh:strong> A646930-D  B Hi In              810 Im K4 V</xh:pre></xh:body></xh:html></comment>
+        </system>
+        <system id="sm.regina_1706">
+            <name>Alell</name>
+            <location type="subsector" group="sm.regina" x="1" y="6">0106</location>
+            <UWP><port>B</port><size>4</size><atmosphere>6</atmosphere><hydrograph>7</hydrograph><population>8</population><government>9</government><lawlevel>C</lawlevel><technology>A</technology></UWP>
+            <bases/>
+            <tradeCodes>Ri</tradeCodes>
+            <remarks/>
+            <zone/>
+            <PBG><multiplier>4</multiplier><belts>1</belts><giants>0</giants></PBG>
+            <polity>Im</polity>
+            <star><spectrum>M</spectrum><modifier>7</modifier><luminosity>V</luminosity></star>
+            <star><spectrum>M</spectrum><modifier>7</modifier><luminosity>D</luminosity></star>
+            <comment>Alell         1706 B46789C-A    Ri                 410 Im M7 V M7 D</comment>
+        </system>
+        <system id="sm.regina_1802">
+            <name>Yres</name>
+            <location type="subsector" group="sm.regina" x="2" y="2">0202</location>
+            <UWP><port>B</port><size>A</size><atmosphere>C</atmosphere><hydrograph>6</hydrograph><population>7</population><government>7</government><lawlevel>3</lawlevel><technology>7</technology></UWP>
+            <bases> </bases>
+            <tradeCodes>Fl</tradeCodes>
+            <remarks></remarks>
+            <zone> </zone>
+            <PBG><multiplier>3</multiplier><belts>3</belts><giants>5</giants></PBG>
+            <polity>Im</polity>
+            <star><spectrum>G</spectrum><modifier>5</modifier><luminosity>V</luminosity></star>
+            <comment>Yres          1802 BAC6773-7    Fl                 335 Im G5 V</comment>
+        </system>
+        <system id="sm.regina_1803">
+            <name>Menorb</name>
+            <location type="subsector" group="sm.regina" x="2" y="3">0203</location>
+            <UWP><port>C</port><size>6</size><atmosphere>5</atmosphere><hydrograph>2</hydrograph><population>9</population><government>9</government><lawlevel>8</lawlevel><technology>7</technology></UWP>
+            <bases> </bases>
+            <tradeCodes>Hi Po</tradeCodes>
+            <remarks></remarks>
+            <zone> </zone>
+            <PBG><multiplier>3</multiplier><belts>1</belts><giants>0</giants></PBG>
+            <polity>Im</polity>
+            <star><spectrum>M</spectrum><modifier>5</modifier><luminosity>II</luminosity></star>
+            <comment>Menorb        1803 C652998-7    Hi Po              310 Im M5 II</comment>
+        </system>
+        <system id="sm.regina_1805">
+            <name>Uakye</name>
+            <location type="subsector" group="sm.regina" x="2" y="5">0205</location>
+            <UWP><port>B</port><size>4</size><atmosphere>3</atmosphere><hydrograph>9</hydrograph><population>5</population><government>9</government><lawlevel>8</lawlevel><technology>D</technology></UWP>
+            <bases> </bases>
+            <tradeCodes>Ni</tradeCodes>
+            <remarks></remarks>
+            <zone> </zone>
+            <PBG><multiplier>3</multiplier><belts>2</belts><giants>0</giants></PBG>
+            <polity>Im</polity>
+            <star><spectrum>M</spectrum><modifier>9</modifier><luminosity>V</luminosity></star>
+            <comment>Uakye         1805 B439598-D    Ni                 320 Im M9 V</comment>
+        </system>
+        <system id="sm.regina_1806">
+            <name>Whanga</name>
+            <location type="subsector" group="sm.regina" x="2" y="6">0206</location>
+            <UWP><port>E</port><size>6</size><atmosphere>7</atmosphere><hydrograph>6</hydrograph><population>1</population><government>2</government><lawlevel>6</lawlevel><technology>7</technology></UWP>
+            <bases> </bases>
+            <tradeCodes>Lo Ni</tradeCodes>
+            <remarks></remarks>
+            <zone> </zone>
+            <PBG><multiplier>2</multiplier><belts>2</belts><giants>4</giants></PBG>
+            <polity>Im</polity>
+            <star><spectrum>A</spectrum><modifier>1</modifier><luminosity>V</luminosity></star>
+            <star><spectrum>M</spectrum><modifier>1</modifier><luminosity>D</luminosity></star>
+            <comment>Whanga        1806 E676126-7    Lo Ni              224 Im A1 V M1 D</comment>            
+        </system>
+        <system id="sm.regina_1807">
+            <name>Knorbes</name>
+            <location type="subsector" group="sm.regina" x="2" y="7">0207</location>
+            <UWP><port>E</port><size>8</size><atmosphere>8</atmosphere><hydrograph>8</hydrograph><population>7</population><government>8</government><lawlevel>7</lawlevel><technology>2</technology></UWP>
+            <bases> </bases>
+            <tradeCodes>Ag Ri</tradeCodes>
+            <remarks></remarks>
+            <zone> </zone>
+            <PBG><multiplier>8</multiplier><belts>3</belts><giants>4</giants></PBG>
+            <polity>Im</polity>
+            <star><spectrum>G</spectrum><modifier>3</modifier><luminosity>V</luminosity></star>
+            <comment>Knorbes       1807 E888787-2    Ag Ri              834 Im G3 V</comment>
+        </system>
+        <system id="sm.regina_1808">
+            <name>Forboldn</name>
+            <location type="subsector" group="sm.regina" x="2" y="8">0208</location>
+            <UWP><port>E</port><size>8</size><atmosphere>9</atmosphere><hydrograph>3</hydrograph><population>6</population><government>1</government><lawlevel>4</lawlevel><technology>4</technology></UWP>
+            <bases></bases>
+            <tradeCodes>Ni</tradeCodes>
+            <remarks></remarks>
+            <zone></zone>
+            <PBG><multiplier>3</multiplier><belts>1</belts><giants>2</giants></PBG>
+            <polity>Im</polity>
+            <star><spectrum>G</spectrum><modifier>0</modifier><luminosity>V</luminosity></star>
+            <comment>Forboldn      1808 E893614-4    Ni                 312 Im G0 V</comment>
+        </system>
+        <system id="sm.regina_1809">
+            <name>Ruie</name>
+            <location type="subsector" group="sm.regina" x="2" y="9">0209</location>
+            <UWP><port>C</port><size>7</size><atmosphere>7</atmosphere><hydrograph>6</hydrograph><population>9</population><government>9</government><lawlevel>7</lawlevel><technology>7</technology></UWP>
+            <bases></bases>
+            <tradeCodes>Hi In</tradeCodes>
+            <remarks></remarks>
+            <zone>A</zone>
+            <PBG><multiplier>7</multiplier><belts>0</belts><giants>1</giants></PBG>
+            <polity>Na</polity>
+            <star><spectrum>M</spectrum><modifier>3</modifier><luminosity>V</luminosity></star>
+            <comment>Ruie          1809 C776977-7    Hi In           A  701 Na M3 V</comment>
+        </system>
+        <system id="sm.regina_1810">
+            <name>Jenghe</name>
+            <location type="subsector" group="sm.regina" x="2" y="10">0210</location>
+            <UWP><port>C</port><size>7</size><atmosphere>9</atmosphere><hydrograph>9</hydrograph><population>6</population><government>6</government><lawlevel>3</lawlevel><technology>9</technology></UWP>
+            <bases>S</bases>
+            <tradeCodes>Ni</tradeCodes>
+            <remarks></remarks>
+            <zone></zone>
+            <PBG><multiplier>3</multiplier><belts>2</belts><giants>3</giants></PBG>
+            <polity>Im</polity>
+            <star><spectrum>M</spectrum><modifier>0</modifier><luminosity>V</luminosity></star>
+            <comment>Jenghe        1810 C799663-9  S Ni                 323 Im M0 V</comment>
+        </system>
+        <system id="sm.regina_1903">
+            <name>Pixie</name>
+            <location type="subsector" group="sm.regina" x="3" y="3">0303</location>
+            <UWP><port>A</port><size>1</size><atmosphere>0</atmosphere><hydrograph>0</hydrograph><population>1</population><government>0</government><lawlevel>3</lawlevel><technology>D</technology></UWP>
+            <bases>N</bases>
+            <tradeCodes>Lo Ni Va</tradeCodes>
+            <remarks></remarks>
+            <zone></zone>
+            <PBG><multiplier>9</multiplier><belts>0</belts><giants>1</giants></PBG>
+            <polity>Im</polity>
+            <star><spectrum>M</spectrum><modifier>1</modifier><luminosity>V</luminosity></star>
+            <star><spectrum>M</spectrum><modifier>0</modifier><luminosity>D</luminosity></star>
+            <comment>Pixie         1903 A100103-D  N Lo Ni Va           901 Im M1 V M0 D</comment>
+        </system>
+        <system id="sm.regina_1904">
+            <name>Boughene</name>
+            <location type="subsector" group="sm.regina" x="3" y="4">0304</location>
+            <UWP><port>A</port><size>8</size><atmosphere>B</atmosphere><hydrograph>3</hydrograph><population>5</population><government>3</government><lawlevel>1</lawlevel><technology>D</technology></UWP>
+            <bases>S</bases>
+            <tradeCodes>Ni Fl</tradeCodes>
+            <remarks></remarks>
+            <zone></zone>
+            <PBG><multiplier>6</multiplier><belts>0</belts><giants>1</giants></PBG>
+            <polity>Im</polity>
+            <star><spectrum>M</spectrum><modifier>7</modifier><luminosity>V</luminosity></star>
+            <comment>Boughene      1904 A8B3531-D  S Ni Fl              601 Im M7 V</comment>
+        </system>
+        <system id="sm.regina_1909">
+            <name>Henfry</name>
+            <location type="subsector" group="sm.regina" x="3" y="9">0309</location>
+            <UWP><port>C</port><size>2</size><atmosphere>0</atmosphere><hydrograph>0</hydrograph><population>4</population><government>2</government><lawlevel>3</lawlevel><technology>7</technology></UWP>
+            <bases>S</bases>
+            <tradeCodes>Ni Va</tradeCodes>
+            <remarks></remarks>
+            <zone></zone>
+            <PBG><multiplier>3</multiplier><belts>2</belts><giants>0</giants></PBG>
+            <polity>Im</polity>
+            <star><spectrum>K</spectrum><modifier>6</modifier><luminosity>II</luminosity></star>
+            <star><spectrum>M</spectrum><modifier>6</modifier><luminosity>D</luminosity></star>
+            <comment>Hefry         1909 C200423-7  S Ni Va              320 Im K6 II M6 D</comment>
+        </system>
+        <system id="sm.regina_1910">
+            <name>Regina</name>
+            <location type="subsector" group="sm.regina" x="3" y="10">0310</location>
+            <UWP><port>A</port><size>7</size><atmosphere>8</atmosphere><hydrograph>8</hydrograph><population>8</population><government>9</government><lawlevel>9</lawlevel><technology>A</technology></UWP>
+            <bases>A</bases>
+            <tradeCodes>Ri</tradeCodes>
+            <remarks>Cp</remarks>
+            <zone></zone>
+            <PBG><multiplier>7</multiplier><belts>0</belts><giants>3</giants></PBG>
+            <polity>Im</polity>
+            <star>
+                <name>Lusor</name>
+                <spectrum>F</spectrum><modifier>7</modifier><luminosity>V</luminosity>
+                <orbit orbitNo="0" moons="0" type="planet">
+                    <name>Clement</name>
+                    <UWP><port>Y</port><size>1</size><atmosphere>0</atmosphere><hydrograph>0</hydrograph><population>0</population><government>0</government><lawlevel>0</lawlevel><technology>0</technology></UWP>
+                </orbit>
+                <orbit orbitNo="1" type="planet">
+                    <name>Ausun</name>
+                    <UWP><port>Y</port><size>3</size><atmosphere>0</atmosphere><hydrograph>0</hydrograph><population>1</population><government>6</government><lawlevel>9</lawlevel><technology>9</technology></UWP>
+                </orbit>
+                <orbit orbitNo="2" moons="2" type="gasgiant" size="1">
+                    <name>Burgund</name>
+                    <moon orbit="3.0">
+                        <name>Cent</name>
+                        <UMP><port>Y</port><size>4</size><atmosphere>0</atmosphere><hydrograph>0</hydrograph><population>3</population><government>6</government><lawlevel>7</lawlevel><technology>9</technology></UMP>
+                    </moon>
+                    <moon orbit="7.0">
+                        <name>Thermidor</name>
+                        <UMP><port>Y</port><size>5</size><atmosphere>6</atmosphere><hydrograph>0</hydrograph><population>0</population><government>0</government><lawlevel>0</lawlevel><technology>0</technology></UMP>
+                    </moon>
+                </orbit>
+                <orbit orbitNo="3" moons="1" type="planet">
+                    <name>Olybrius</name>
+                    <UWP><port>F</port><size>7</size><atmosphere>5</atmosphere><hydrograph>0</hydrograph><population>2</population><government>2</government><lawlevel>A</lawlevel><technology>9</technology></UWP>
+                    <moon orbit="25.0">
+                        <name>Alise</name>
+                        <UMP><port>Y</port><size>2</size><atmosphere>0</atmosphere><hydrograph>0</hydrograph><population>1</population><government>6</government><lawlevel>C</lawlevel><technology>9</technology></UMP>
+                    </moon>
+                </orbit>
+                <orbit orbitNo="4" moons="5" type="gasgiant" size="2">
+                    <name>Assiniboia</name>
+                    <moon orbit="3.0">
+                        <name>Redes</name>
+                        <UMP><port>F</port><size>5</size><atmosphere>9</atmosphere><hydrograph>5</hydrograph><population>2</population><government>6</government><lawlevel>9</lawlevel><technology>9</technology></UMP>
+                    </moon>
+                    <moon orbit="6.0">
+                        <name>Printemps</name>
+                        <UMP><port>F</port><size>2</size><atmosphere>0</atmosphere><hydrograph>0</hydrograph><population>3</population><government>6</government><lawlevel>C</lawlevel><technology>A</technology></UMP>
+                    </moon>
+                    <moon orbit="7.0">
+                        <name>Brumaire</name>
+                        <UMP><port>F</port><size>5</size><atmosphere>6</atmosphere><hydrograph>4</hydrograph><population>6</population><government>6</government><lawlevel>9</lawlevel><technology>9</technology></UMP>
+                    </moon>
+                    <moon orbit="30">
+                        <name>Harcourt</name>
+                        <UMP><port>H</port><size>4</size><atmosphere>3</atmosphere><hydrograph>5</hydrograph><population>5</population><government>6</government><lawlevel>C</lawlevel><technology>A</technology></UMP>
+                    </moon>
+                    <moon orbit="55">
+                        <name>Regina</name>
+                        <UMP><port>A</port><size>7</size><atmosphere>8</atmosphere><hydrograph>8</hydrograph><population>8</population><government>9</government><lawlevel>9</lawlevel><technology>A</technology></UMP>
+                    </moon>
+                </orbit>
+            </star>
+            <star>
+                <name>Speck</name>
+                <spectrum>M</spectrum><modifier>8</modifier><luminosity>D</luminosity>
+            </star>
+            <star>
+                <name>Darida</name>
+                <spectrum>M</spectrum><modifier>6</modifier><luminosity>V</luminosity>
+                <orbit orbitNo="0" type="planet">
+                    <name>Augur</name>
+                    <UWP><port>Y</port><size>S</size><atmosphere>0</atmosphere><hydrograph>0</hydrograph><population>0</population><government>0</government><lawlevel>0</lawlevel><technology>0</technology></UWP>
+                </orbit>
+                <orbit orbitNo="1" moons="3" type="planet">
+                    <name>Kirunda</name>
+                    <UWP><port>Y</port><size>2</size><atmosphere>1</atmosphere><hydrograph>0</hydrograph><population>0</population><government>0</government><lawlevel>0</lawlevel><technology>0</technology></UWP>
+                    <moon orbit="8">
+                        <name>Irkirka</name>
+                        <UMP><port>Y</port><size>S</size><atmosphere>0</atmosphere><hydrograph>0</hydrograph><population>0</population><government>0</government><lawlevel>0</lawlevel><technology>0</technology></UMP>
+                    </moon>
+                    <moon orbit="11">
+                        <name>Arkurer</name>
+                        <UMP><port>H</port><size>S</size><atmosphere>0</atmosphere><hydrograph>0</hydrograph><population>1</population><government>3</government><lawlevel>7</lawlevel><technology>9</technology></UMP>
+                    </moon>
+                    <moon orbit="13">
+                        <name>Irgurkar</name>
+                        <UMP><port>Y</port><size>1</size><atmosphere>0</atmosphere><hydrograph>0</hydrograph><population>4</population><government>6</government><lawlevel>A</lawlevel><technology>A</technology></UMP>
+                    </moon>
+                </orbit>
+                <orbit orbitNo="2" moons="6" type="gasgiant" size="1">
+                    <name>Elazair</name>
+                    <moon orbit="3">
+                        <name>Lashir</name>
+                        <UMP><port>Y</port><size>S</size><atmosphere>0</atmosphere><hydrograph>0</hydrograph><population>0</population><government>0</government><lawlevel>0</lawlevel><technology>0</technology></UMP>
+                    </moon>
+                    <moon orbit="8.0">
+                        <name>Diuur Imar</name>
+                        <UMP><port>G</port><size>2</size><atmosphere>0</atmosphere><hydrograph>0</hydrograph><population>2</population><government>6</government><lawlevel>9</lawlevel><technology>9</technology></UMP>
+                    </moon>
+                    <moon orbit="9.0">
+                        <name>Shamardae</name>
+                        <UMP><port>Y</port><size>5</size><atmosphere>0</atmosphere><hydrograph>0</hydrograph><population>0</population><government>0</government><lawlevel>0</lawlevel><technology>0</technology></UMP>
+                    </moon>
+                    <moon orbit="20">
+                        <name>Arpan</name>
+                        <UMP><port>Y</port><size>2</size><atmosphere>0</atmosphere><hydrograph>0</hydrograph><population>0</population><government>0</government><lawlevel>0</lawlevel><technology>0</technology></UMP>
+                    </moon>
+                    <moon orbit="50">
+                        <name>Edaku</name>
+                        <UMP><port>Y</port><size>2</size><atmosphere>1</atmosphere><hydrograph>0</hydrograph><population>0</population><government>0</government><lawlevel>0</lawlevel><technology>0</technology></UMP>
+                    </moon>
+                    <moon orbit="125">
+                        <name>Gagamshir</name>
+                        <UMP><port>F</port><size>5</size><atmosphere>3</atmosphere><hydrograph>4</hydrograph><population>3</population><government>2</government><lawlevel>8</lawlevel><technology>A</technology></UMP>
+                    </moon>
+                </orbit>
+            </star>
+            <comment>Regina        1910 A788899-C  A Ri Cp              703 Im F7 V M8 D M6 V</comment>
+        </system>
+        <system id="sm.regina_2005">
+            <name>Feri</name>
+            <location type="subsector" group="sm.regina" x="4" y="5">0405</location>
+            <UWP><port>B</port><size>3</size><atmosphere>8</atmosphere><hydrograph>4</hydrograph><population>8</population><government>7</government><lawlevel>9</lawlevel><technology>B</technology></UWP>
+            <bases>S</bases>
+            <tradeCodes>Ri</tradeCodes>
+            <remarks></remarks>
+            <zone></zone>
+            <PBG><multiplier>6</multiplier><belts>2</belts><giants>0</giants></PBG>
+            <polity>Im</polity>
+            <star><spectrum>G</spectrum><modifier>4</modifier><luminosity>V</luminosity></star>
+            <star><spectrum>M</spectrum><modifier>3</modifier><luminosity>D</luminosity></star>
+            <comment>Feri          2005 B384879-B  S Ri                 620 Im G4 V M3 D</comment>
+        </system>
+        <system id="sm.regina_2007">
+            <name>Roup</name>
+            <location type="subsector" group="sm.regina" x="4" y="7">0407</location>
+            <UWP><port>C</port><size>7</size><atmosphere>7</atmosphere><hydrograph>A</hydrograph><population>9</population><government>A</government><lawlevel>9</lawlevel><technology>7</technology></UWP>
+            <bases>S</bases>
+            <tradeCodes>Hi In Wa</tradeCodes>
+            <remarks></remarks>
+            <zone>A</zone>
+            <PBG><multiplier>3</multiplier><belts>2</belts><giants>3</giants></PBG>
+            <polity>Im</polity>
+            <star><spectrum>F</spectrum><modifier>9</modifier><luminosity>V</luminosity></star>
+            <comment>Roup          2007 C77A9A9-7  S Hi In Wa        A  323 Im F9 V</comment>
+        </system>
+        <system id="sm.regina_2106">
+            <name>Pscias</name>
+            <location type="subsector" group="sm.regina" x="5" y="6">0506</location>
+            <UWP><port>X</port><size>3</size><atmosphere>5</atmosphere><hydrograph>5</hydrograph><population>4</population><government>2</government><lawlevel>3</lawlevel><technology>1</technology></UWP>
+            <bases></bases>
+            <tradeCodes>Ni</tradeCodes>
+            <remarks></remarks>
+            <zone>R</zone>
+            <PBG><multiplier>5</multiplier><belts>0</belts><giants>1</giants></PBG>
+            <polity>Im</polity>
+            <star><spectrum>M</spectrum><modifier>5</modifier><luminosity>IV</luminosity></star>
+            <comment>Pscias        2106 X355423-1    Ni              R  501 Im M5 VI</comment>            
+        </system>
+        <system id="sm.regina_2110">
+            <name>Yori</name>
+            <location type="subsector" group="sm.regina" x="5" y="10">0510</location>
+            <UWP><port>C</port><size>3</size><atmosphere>6</atmosphere><hydrograph>0</hydrograph><population>7</population><government>5</government><lawlevel>7</lawlevel><technology>A</technology></UWP>
+            <bases></bases>
+            <tradeCodes>Ri De</tradeCodes>
+            <remarks></remarks>
+            <zone></zone>
+            <PBG><multiplier>7</multiplier><belts>1</belts><giants>3</giants></PBG>
+            <polity>Im</polity>
+            <star><spectrum>F</spectrum><modifier>1</modifier><luminosity>V</luminosity></star>
+            <comment>Yori          2110 C360757-A    Ri De              713 Im F1 V</comment>            
+        </system>
+        <system id="sm.regina_2201">
+            <name>Tentus</name>
+            <location type="subsector" group="sm.regina" x="6" y="1">0601</location>
+            <UWP><port>C</port><size>9</size><atmosphere>7</atmosphere><hydrograph>9</hydrograph><population>5</population><government>0</government><lawlevel>0</lawlevel><technology>A</technology></UWP>
+            <bases>S</bases>
+            <tradeCodes>Ni</tradeCodes>
+            <remarks></remarks>
+            <zone></zone>
+            <PBG><multiplier>9</multiplier><belts>2</belts><giants>0</giants></PBG>
+            <polity>Im</polity>
+            <star><spectrum>M</spectrum><modifier>2</modifier><luminosity>V</luminosity></star>
+            <comment>Tentus        2201 C979500-A  S Ni                 920 Im M2 V</comment>            
+        </system>
+        <system id="sm.regina_2202">
+            <name>Kinorb</name>
+            <location type="subsector" group="sm.regina" x="6" y="2">0602</location>
+            <UWP><port>A</port><size>6</size><atmosphere>6</atmosphere><hydrograph>3</hydrograph><population>6</population><government>5</government><lawlevel>9</lawlevel><technology>8</technology></UWP>
+            <bases></bases>
+            <tradeCodes>Ni Ri</tradeCodes>
+            <remarks></remarks>
+            <zone></zone>
+            <PBG><multiplier>6</multiplier><belts>2</belts><giants>2</giants></PBG>
+            <polity>Im</polity>
+            <star><spectrum>M</spectrum><modifier>7</modifier><luminosity>V</luminosity></star>
+            <comment>Kinorb        2202 A663659-8    Ni Ri              622 Im M7 V</comment>            
+        </system>
+        <system id="sm.regina_2204">
+            <name>Beck's World</name>
+            <location type="subsector" group="sm.regina" x="6" y="4">0604</location>
+            <UWP><port>D</port><size>8</size><atmosphere>8</atmosphere><hydrograph>3</hydrograph><population>4</population><government>9</government><lawlevel>D</lawlevel><technology>4</technology></UWP>
+            <bases></bases>
+            <tradeCodes>Ni</tradeCodes>
+            <remarks></remarks>
+            <zone></zone>
+            <PBG><multiplier>7</multiplier><belts>0</belts><giants>1</giants></PBG>
+            <polity>Im</polity>
+            <star><spectrum>M</spectrum><modifier>0</modifier><luminosity>V</luminosity></star>
+            <star><spectrum>M</spectrum><modifier>2</modifier><luminosity>D</luminosity></star>
+            <comment>Beck's World  2204 D88349D-4    Ni                 701 Im M0 V M2 D</comment>            
+        </system>
+        <system id="sm.regina_2205">
+            <name>Enope</name>
+            <location type="subsector" group="sm.regina" x="6" y="5">0605</location>
+            <UWP><port>C</port><size>4</size><atmosphere>1</atmosphere><hydrograph>1</hydrograph><population>9</population><government>8</government><lawlevel>8</lawlevel><technology>6</technology></UWP>
+            <bases></bases>
+            <tradeCodes>Hi In Na</tradeCodes>
+            <remarks></remarks>
+            <zone></zone>
+            <PBG><multiplier>6</multiplier><belts>0</belts><giants>0</giants></PBG>
+            <polity>Im</polity>
+            <star><spectrum>M</spectrum><modifier>4</modifier><luminosity>V</luminosity></star>
+            <star><spectrum>M</spectrum><modifier>5</modifier><luminosity>D</luminosity></star>
+            <comment>Enope         2205 C411988-6    Hi In Na           600 Im M4 V M5 D</comment>            
+        </system>
+        <system id="sm.regina_2207">
+            <name>Wochiers</name>
+            <location type="subsector" group="sm.regina" x="6" y="7">0607</location>
+            <UWP><port>E</port><size>A</size><atmosphere>C</atmosphere><hydrograph>2</hydrograph><population>8</population><government>C</government><lawlevel>C</lawlevel><technology>9</technology></UWP>
+            <bases></bases>
+            <tradeCodes>Fl</tradeCodes>
+            <remarks></remarks>
+            <zone></zone>
+            <PBG><multiplier>7</multiplier><belts>0</belts><giants>3</giants></PBG>
+            <polity>Im</polity>
+            <star><spectrum>F</spectrum><modifier>0</modifier><luminosity>V</luminosity></star>
+            <comment>Wochiers      2207 EAC28CC-9    Fl                 703 Im F0 V</comment>            
+        </system>
+        <system id="sm.regina_2303">
+            <name>Yorbund</name>
+            <location type="subsector" group="sm.regina" x="7" y="3">0703</location>
+            <UWP><port>C</port><size>7</size><atmosphere>C</atmosphere><hydrograph>6</hydrograph><population>5</population><government>0</government><lawlevel>3</lawlevel><technology>7</technology></UWP>
+            <bases></bases>
+            <tradeCodes>Ni Fl</tradeCodes>
+            <remarks></remarks>
+            <zone></zone>
+            <PBG><multiplier>2</multiplier><belts>2</belts><giants>0</giants></PBG>
+            <polity>Im</polity>
+            <star><spectrum>M</spectrum><modifier>8</modifier><luminosity>VI</luminosity></star>
+            <comment>Yorbund       2303 C7C6503-7    Ni Fl              220 Im M8 VI</comment>            
+        </system>
+        <system id="sm.regina_2306">
+            <name>Shionthy</name>
+            <location type="subsector" group="sm.regina" x="7" y="6">0706</location>
+            <UWP><port>X</port><size>0</size><atmosphere>0</atmosphere><hydrograph>0</hydrograph><population>7</population><government>4</government><lawlevel>2</lawlevel><technology>8</technology></UWP>
+            <bases></bases>
+            <tradeCodes>Na As</tradeCodes>
+            <remarks></remarks>
+            <zone>R</zone>
+            <PBG><multiplier>7</multiplier><belts>1</belts><giants>4</giants></PBG>
+            <polity>Im</polity>
+            <star><spectrum>M</spectrum><modifier>4</modifier><luminosity>V</luminosity></star>
+            <comment>Shionthy      2306 X000742-8    Na As           R  714 Im M4 V</comment>
+        </system>
+        <system id="sm.regina_2308">
+            <name>Algine</name>
+            <location type="subsector" group="sm.regina" x="7" y="8">0708</location>
+            <UWP><port>X</port><size>7</size><atmosphere>6</atmosphere><hydrograph>6</hydrograph><population>9</population><government>7</government><lawlevel>7</lawlevel><technology>4</technology></UWP>
+            <bases></bases>
+            <tradeCodes>Hi</tradeCodes>
+            <remarks></remarks>
+            <zone>R</zone>
+            <PBG><multiplier>7</multiplier><belts>2</belts><giants>3</giants></PBG>
+            <polity>Im</polity>
+            <star><spectrum>M</spectrum><modifier>9</modifier><luminosity>VI</luminosity></star>
+            <comment>Algine        2308 X766977-4    Hi              R  723 Im M9 VI</comment>            
+        </system>
+        <system id="sm.regina_2309">
+            <name>Yurst</name>
+            <location type="subsector" group="sm.regina" x="7" y="9">0709</location>
+            <UWP><port>E</port><size>7</size><atmosphere>B</atmosphere><hydrograph>4</hydrograph><population>6</population><government>4</government><lawlevel>3</lawlevel><technology>5</technology></UWP>
+            <bases></bases>
+            <tradeCodes>Ni Fl</tradeCodes>
+            <remarks></remarks>
+            <zone></zone>
+            <PBG><multiplier>8</multiplier><belts>2</belts><giants>4</giants></PBG>
+            <polity>Im</polity>
+            <star><spectrum>K</spectrum><modifier>9</modifier><luminosity>V</luminosity></star>
+            <comment>Yurst         2309 E7B4643-5    Ni Fl              824 Im K9 V</comment>            
+        </system>
+        <system id="sm.regina_2402">
+            <name>Heya</name>
+            <location type="subsector" group="sm.regina" x="8" y="2">0802</location>
+            <UWP><port>B</port><size>6</size><atmosphere>8</atmosphere><hydrograph>7</hydrograph><population>7</population><government>5</government><lawlevel>4</lawlevel><technology>5</technology></UWP>
+            <bases></bases>
+            <tradeCodes>Ag Ri</tradeCodes>
+            <remarks></remarks>
+            <zone></zone>
+            <PBG><multiplier>7</multiplier><belts>3</belts><giants>4</giants></PBG>
+            <polity>Im</polity>
+            <star><spectrum>K</spectrum><modifier>6</modifier><luminosity>III</luminosity></star>
+            <star><spectrum>M</spectrum><modifier>8</modifier><luminosity>D</luminosity></star>
+            <comment>Heya          2402 B687745-5    Ag Ri              734 Im K6 III M8 D</comment>            
+        </system>
+        <system id="sm.regina_2405">
+            <name>Keng</name>
+            <location type="subsector" group="sm.regina" x="8" y="5">0805</location>
+            <UWP><port>E</port><size>2</size><atmosphere>7</atmosphere><hydrograph>1</hydrograph><population>8</population><government>C</government><lawlevel>A</lawlevel><technology>3</technology></UWP>
+            <bases></bases>
+            <tradeCodes></tradeCodes>
+            <remarks></remarks>
+            <zone></zone>
+            <PBG><multiplier>8</multiplier><belts>1</belts><giants>2</giants></PBG>
+            <polity>Im</polity>
+            <star><spectrum>G</spectrum><modifier>5</modifier><luminosity>III</luminosity></star>
+            <star><spectrum>M</spectrum><modifier>9</modifier><luminosity>D</luminosity></star>
+            <comment>Keng          2405 E2718CA-3                       812 Im G5 III M9 D</comment>            
+        </system>
+        <system id="sm.regina_2406">
+            <name>Moughas</name>
+            <location type="subsector" group="sm.regina" x="8" y="6">0806</location>
+            <UWP><port>C</port><size>A</size><atmosphere>5</atmosphere><hydrograph>A</hydrograph><population>5</population><government>8</government><lawlevel>8</lawlevel><technology>B</technology></UWP>
+            <bases></bases>
+            <tradeCodes>Ni Wa</tradeCodes>
+            <remarks></remarks>
+            <zone></zone>
+            <PBG><multiplier>8</multiplier><belts>0</belts><giants>1</giants></PBG>
+            <polity>Im</polity>
+            <star><spectrum>M</spectrum><modifier>9</modifier><luminosity>V</luminosity></star>
+            <star><spectrum>M</spectrum><modifier>9</modifier><luminosity>D</luminosity></star>
+            <comment>Moughas       2406 CA5A588-B    Ni Wa              801 Im M9 V M9 D</comment>            
+        </system>
+        <system id="sm.regina_2408">
+            <name>Rethe</name>
+            <location type="subsector" group="sm.regina" x="8" y="8">0808</location>
+            <UWP><port>E</port><size>2</size><atmosphere>3</atmosphere><hydrograph>0</hydrograph><population>A</population><government>A</government><lawlevel>8</lawlevel><technology>8</technology></UWP>
+            <bases></bases>
+            <tradeCodes>Hi Na Po De</tradeCodes>
+            <remarks></remarks>
+            <zone></zone>
+            <PBG><multiplier>3</multiplier><belts>2</belts><giants>3</giants></PBG>
+            <polity>Im</polity>
+            <star><spectrum>G</spectrum><modifier>7</modifier><luminosity>V</luminosity></star>
+            <comment>Rethe         2408 E230AA8-8    Hi Na Po De        323 Im G7 V</comment>            
+        </system>
+        <system id="sm.regina_2410">
+            <name>Inthe</name>
+            <location type="subsector" group="sm.regina" x="8" y="10">0810</location>
+            <UWP><port>B</port><size>5</size><atmosphere>7</atmosphere><hydrograph>5</hydrograph><population>7</population><government>7</government><lawlevel>6</lawlevel><technology>9</technology></UWP>
+            <bases>A</bases>
+            <tradeCodes>Ag</tradeCodes>
+            <remarks></remarks>
+            <zone></zone>
+            <PBG><multiplier>4</multiplier><belts>2</belts><giants>3</giants></PBG>
+            <polity>Im</polity>
+            <star><spectrum>F</spectrum><modifier>8</modifier><luminosity>V</luminosity></star>
+            <comment>Inthe         2410 B575776-9  A Ag                 423 Im F8 V</comment>            
+        </system>
+    </mapping>
+</astrogation>

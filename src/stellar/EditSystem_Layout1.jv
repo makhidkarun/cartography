@@ -1,0 +1,802 @@
+package com.softstart.Stellar;
+import java.awt.*;
+import java.awt.event.*;
+import javax.swing.*;
+import javax.swing.text.PlainDocument;
+import javax.swing.border.BevelBorder;
+import javax.swing.border.EtchedBorder;
+import java.util.ListIterator;
+
+public class EditSystem extends JDialog 
+{
+    /* This panel componenets */
+    private JTextField worldName = new JTextField();
+    private JButton bOK = new JButton();
+    private JButton bCancel = new JButton();
+
+    private JLabel jLabel9 = new JLabel(); /* Name text box header */
+    private JLabel jLabel11 = new JLabel(); /* Comments box header */
+
+    private JLabel jLabel10 = new JLabel(); /* UWP panel header */
+    private JLabel jLabel12 = new JLabel(); /* Location panel header */
+    private JLabel jLabel15 = new JLabel(); /* Contents panel header */
+    private JLabel jLabel22 = new JLabel(); /* Stellar Details panel header */
+    private JLabel jLabel35 = new JLabel(); /* Remarks panel header */
+
+    /* Universal World Profile panel */
+    private JPanel jUWP = new JPanel();
+    /* JPanel jUWP components */    
+    private JComboTable starport = new JComboTable();
+    private JComboTable worldSize = new JComboTable();
+    private JComboTable atmosphere = new JComboTable();
+    private JComboTable hydrographic = new JComboTable();
+    private JComboTable population = new JComboTable();
+    private JComboTable government = new JComboTable();
+    private JComboTable lawLevel = new JComboTable();    
+    private JComboTable techLevel = new JComboTable();    
+
+    private JLabel jLabel1 = new JLabel(); /* starport */
+    private JLabel jLabel2 = new JLabel(); /* Size */
+    private JLabel jLabel3 = new JLabel(); /* Atmosphere */
+    private JLabel jLabel4 = new JLabel(); /* Hydrographic */
+    private JLabel jLabel5 = new JLabel(); /* Population */
+    private JLabel jLabel6 = new JLabel(); /* Government */
+    private JLabel jLabel7 = new JLabel(); /* Law Level */
+    private JLabel jLabel8 = new JLabel(); /* Tech Level */
+    
+    
+    /* Hex location panel */
+    private JPanel location = new JPanel();
+    /* Location panel components */
+    private JComboBox groupName = new JComboBox();
+    private JTextField hexLocation = new JTextField();
+    private JLabel jLabel13 = new JLabel(); /* Sector/Subsector */
+    private JLabel jLabel14 = new JLabel(); /* Hex location */
+
+    /* Contents panel */
+    private JPanel contents = new JPanel();
+    private JComboTable bases = new JComboTable();
+    private JComboTable travelZone = new JComboTable();
+    private JComboTable allegiance = new JComboTable();
+    private JSpinner popMul = new JSpinner(new SpinnerNumberModel(0,0,9,1));
+    private JSpinner belts = new  JSpinner(new SpinnerNumberModel(0,0,6,1));
+    private JSpinner giants = new JSpinner(new SpinnerNumberModel(0,0,6,1));
+
+    private JLabel jLabel16 = new JLabel(); /* Bases */
+    private JLabel jLabel17 = new JLabel(); /* Travel Zone */
+    private JLabel jLabel18 = new JLabel(); /* Allegiance */
+    private JLabel jLabel19 = new JLabel(); /* Pop Mul */
+    private JLabel jLabel20 = new JLabel(); /* Belts */
+    private JLabel jLabel21 = new JLabel(); /* Giants */
+
+    /* Stellar Details panel */
+    private JCheckBox primary = new JCheckBox();
+    private JPanel stellarDetails = new JPanel();
+    private JComboBox primarySpectrum = new JComboBox();
+    private JSpinner primaryModifier = new JSpinner(new SpinnerNumberModel(0,0,9,1));
+    private JComboTable primaryLuminosity = new JComboTable();
+    private JComboBox companionSpectrum = new JComboBox();
+    private JSpinner companionModifier = new JSpinner(new SpinnerNumberModel(0,0,9,1));
+    private JComboTable companionLuminosity = new JComboTable();
+    private JComboBox tertiarySpectrum = new JComboBox();
+    private JSpinner tertiaryModifier = new JSpinner (new SpinnerNumberModel(0,0,9,1));
+    private JComboTable tertiaryLuminosity = new JComboTable();
+    private JCheckBox companion = new JCheckBox();
+    private JCheckBox tertiary = new JCheckBox();
+
+    private JLabel jLabel26 = new JLabel();
+    private JLabel jLabel27 = new JLabel();
+    private JLabel jLabel28 = new JLabel();
+    private JLabel jLabel29 = new JLabel();
+    private JLabel jLabel30 = new JLabel();
+    private JLabel jLabel31 = new JLabel();
+    private JLabel jLabel32 = new JLabel();
+    private JLabel jLabel33 = new JLabel();
+    private JLabel jLabel34 = new JLabel();
+
+    /* Remarks panel */
+    private JPanel remarks = new JPanel();
+    private JTextArea tradeCodes = new JTextArea();
+    private JComboTable remark1 = new JComboTable();
+    private JComboTable remark2 = new JComboTable();
+    private JComboTable remark3 = new JComboTable();
+    private JComboTable remark4 = new JComboTable();
+
+    private JLabel jLabel36 = new JLabel();
+    private JLabel jLabel24 = new JLabel();
+    private JLabel jLabel25 = new JLabel();
+    private JLabel jLabel37 = new JLabel();
+    private JLabel jLabel38 = new JLabel();
+
+    private StarSystem data;
+    private UWP system; 
+    private JScrollPane commentPanel = new JScrollPane();
+    private JTextArea comments = new JTextArea();
+    
+    public EditSystem()
+    {
+        this(null, "", true);
+    }
+
+    public EditSystem(Frame parent, String title, boolean modal)
+    {
+        super(parent, title, modal);
+        try
+        {
+            jbInit();
+        }
+        catch(Exception e)
+        {
+            e.printStackTrace();
+        }
+
+    }
+
+    private void jbInit() throws Exception
+    {
+        /* Setup component on this pane */
+        this.setSize(new Dimension(565, 727));
+        this.getContentPane().setLayout(null);
+        this.setTitle("Edit System");
+
+        jLabel9.setText("Name");
+        jLabel9.setBounds(new Rectangle(25, 5, 65, 16));
+        jLabel9.setLabelFor (worldName);
+        worldName.setBounds(new Rectangle(25, 20, 185, 20));
+
+        jLabel11.setText("Comments");
+        jLabel11.setBounds(new Rectangle(15, 605, 60, 16));
+        jLabel11.setLabelFor (commentPanel);
+        comments.setDocument(new PlainDocument());
+        comments.setLineWrap(true);
+        comments.setWrapStyleWord(true);
+        comments.setTabSize(4);
+        
+        bOK.setText("OK");
+        bOK.setBounds(new Rectangle(460, 20, 80, 30));
+        bOK.addActionListener(new ActionListener()
+            {
+                public void actionPerformed(ActionEvent e)
+                {
+                    bOK_actionPerformed(e);
+                }
+            });
+        
+        bCancel.setText("Cancel");
+        bCancel.setBounds(new Rectangle(460, 55, 80, 30));
+        bCancel.addActionListener(new ActionListener()
+            {
+                public void actionPerformed(ActionEvent e)
+                {
+                    bCancel_actionPerformed(e);
+                }
+            });
+        
+        /* Setup the jUWP pane */
+        jUWP.setBounds(new Rectangle(15, 55, 205, 410));
+        jUWP.setBorder(BorderFactory.createEtchedBorder(EtchedBorder.LOWERED));
+        jUWP.setLayout(null);
+
+        jLabel10.setText(" UWP: A000000-8");
+        jLabel10.setBounds(new Rectangle(25, 45, 95, 15));
+        jLabel10.setOpaque(true);
+        jLabel10.setHorizontalAlignment(SwingConstants.LEFT);
+
+        /* Setup components on the jWUP pane */
+        jLabel1.setText("Starport");
+        jLabel1.setBounds(new Rectangle(10, 10, 65, 15));
+        jLabel1.setLabelFor(starport);
+        jLabel2.setText("Size");
+        jLabel2.setBounds(new Rectangle(10, 60, 65, 15));
+        jLabel2.setLabelFor(worldSize);
+        jLabel3.setText("Atmosphere");
+        jLabel3.setBounds(new Rectangle(10, 110, 65, 15));
+        jLabel3.setLabelFor(atmosphere);
+        jLabel4.setText("Hydrographic");
+        jLabel4.setBounds(new Rectangle(10, 160, 65, 15));
+        jLabel4.setLabelFor(hydrographic);
+        jLabel5.setText("Population");
+        jLabel5.setBounds(new Rectangle(10, 210, 65, 15));
+        jLabel5.setLabelFor(population);
+        jLabel6.setText("Government");
+        jLabel6.setBounds(new Rectangle(10, 260, 65, 15));
+        jLabel6.setLabelFor(government);
+        jLabel7.setText("Law Level");
+        jLabel7.setBounds(new Rectangle(10, 310, 65, 15));
+        jLabel7.setLabelFor(lawLevel);
+        jLabel8.setText("Tech Level");
+        jLabel8.setBounds(new Rectangle(10, 360, 65, 15));
+        jLabel8.setLabelFor(techLevel);
+        
+        starport.setBounds(new Rectangle    (10, 30, 185, 20));
+        starport.addActionListener(new ActionListener()
+        {
+            public void actionPerformed(ActionEvent e)
+            {
+                system.setPort(starport.getSelectedItem().toString().charAt(0));
+                jLabel10.setText ("UWP: " + system.toString());
+            }
+        });
+        worldSize.setBounds(new Rectangle   (10, 80, 185, 20));
+        atmosphere.setBounds(new Rectangle  (10, 130, 185, 20));
+        hydrographic.setBounds(new Rectangle(10, 180, 185, 20));
+        population.setBounds(new Rectangle  (10, 230, 185, 20));
+        government.setBounds(new Rectangle  (10, 280, 185, 20));
+        lawLevel.setBounds(new  Rectangle   (10, 330, 185, 20));
+        techLevel.setBounds(new Rectangle   (10, 380, 185, 20));
+        
+        /* Setup the location pane */
+        location.setBounds(new Rectangle(230, 20, 205, 115));
+        location.setBorder(BorderFactory.createEtchedBorder(EtchedBorder.LOWERED));
+        location.setLayout(null);
+        
+        jLabel12.setText("Location");
+        jLabel12.setBounds(new Rectangle(235, 10, 55, 20));
+        jLabel12.setHorizontalAlignment(SwingConstants.CENTER);
+        jLabel12.setOpaque(true);
+
+        /* Setup components on the location pane */        
+        groupName.setBounds(new Rectangle (10,30,185, 20));
+        groupName.addItem(new String("Spinward Marches"));
+        hexLocation.setBounds(new Rectangle(10, 85, 75, 20));
+        jLabel13.setText("Sector / Subsector");
+        jLabel13.setBounds(new Rectangle(10, 15, 100, 15));
+
+        jLabel14.setText("Hex Location");
+        jLabel14.setBounds(new Rectangle(10, 65, 75, 15));
+
+        /* Setup content pane */
+        contents.setBounds(new Rectangle(230, 150, 205, 210));
+        contents.setBorder(BorderFactory.createEtchedBorder(EtchedBorder.LOWERED));
+        contents.setLayout(null);
+        jLabel16.setText("Bases");
+        jLabel16.setBounds(new Rectangle(10, 10, 100, 15));
+        jLabel17.setText("Travel Zone");
+        jLabel17.setBounds(new Rectangle(10, 60, 100, 15));
+        jLabel18.setText("Allegiance");
+        jLabel18.setBounds(new Rectangle(10, 110, 100, 15));
+
+        jLabel19.setText("Pop Mul");
+        jLabel19.setBounds(new Rectangle(10, 160, 40, 15));
+        jLabel20.setText("Belts");
+        jLabel20.setBounds(new Rectangle(60, 160, 40, 15));
+        jLabel21.setText("Giants");
+        jLabel21.setBounds(new Rectangle(110, 160, 40, 15));
+        popMul.setBounds(new Rectangle(10, 180, 40, 20));
+        belts.setBounds(new Rectangle(60, 180, 40, 20));
+        giants.setBounds(new Rectangle(110, 180, 40, 20));
+        
+        bases.setBounds(new Rectangle(10, 30, 185, 20));
+        travelZone.setBounds(new Rectangle(10, 80, 185, 20));
+        allegiance.setBounds(new Rectangle(10, 130, 185, 20));
+        
+        jLabel15.setText("System Contents");
+        jLabel15.setBounds(new Rectangle(235, 145, 95, 15));
+        jLabel15.setHorizontalAlignment(SwingConstants.CENTER);
+        jLabel15.setOpaque(true);
+
+        /* setup Stellar Details pane */
+        stellarDetails.setBounds(new Rectangle(230, 375, 310, 230));
+        stellarDetails.setBorder(BorderFactory.createEtchedBorder(EtchedBorder.LOWERED));
+        stellarDetails.setLayout(null);
+
+        jLabel22.setText("Stellar Details");
+        jLabel22.setBounds(new Rectangle(235, 370, 80, 16));
+        jLabel22.setHorizontalAlignment(SwingConstants.CENTER);
+        jLabel22.setOpaque(true);
+
+        jLabel26.setText("Spectrum");
+        jLabel26.setBounds(new Rectangle(10, 35, 90, 16));
+        jLabel27.setText("Modifier");
+        jLabel27.setBounds(new Rectangle(110, 35, 90, 16));
+        jLabel28.setText("Luminosity");
+        jLabel28.setBounds(new Rectangle(210, 35, 90, 16));
+        primary.setText("Primary");
+        primary.setBounds(new Rectangle(10, 15, 90, 24));
+        primary.addActionListener(new ActionListener()
+            {
+                public void actionPerformed(ActionEvent e)
+                {
+                    primary_actionPerformed(e);
+                }
+            });
+
+        primarySpectrum.setBounds(new Rectangle(10, 55, 90, 20));
+        primaryModifier.setBounds(new Rectangle(110, 55, 90, 20));
+        primaryLuminosity.setBounds(new Rectangle(210, 55, 90, 20));
+        companion.setText("Companion");
+        companion.setBounds(new Rectangle(10, 80, 90, 24));
+        companion.addActionListener(new ActionListener()
+            {
+                public void actionPerformed(ActionEvent e)
+                {
+                    companion_actionPerformed(e);
+                }
+            });
+        jLabel29.setText("Spectrum");
+        jLabel29.setBounds(new Rectangle(10, 105, 90, 16));
+        jLabel30.setText("Modifier");
+        jLabel30.setBounds(new Rectangle(110, 105, 90, 16));
+        jLabel31.setText("Luminosity");
+        jLabel31.setBounds(new Rectangle(210, 105, 90, 16));
+        companionSpectrum.setBounds(new Rectangle(10, 125, 90, 20));
+        companionModifier.setBounds(new Rectangle(110, 125, 90, 20));
+        companionLuminosity.setBounds(new Rectangle(210, 125, 90, 20));
+        tertiary.setText("Tertiary");
+        tertiary.setBounds(new Rectangle(10, 150, 90, 24));
+        tertiary.addActionListener(new ActionListener()
+            {
+                public void actionPerformed(ActionEvent e)
+                {
+                    tertiary_actionPerformed(e);
+                }
+            });
+        jLabel32.setText("Spectrum");
+        jLabel32.setBounds(new Rectangle(10, 175, 90, 16));
+        jLabel33.setText("Modifier");
+        jLabel33.setBounds(new Rectangle(110, 175, 90, 16));
+        jLabel34.setText("Luminosity");
+        jLabel34.setBounds(new Rectangle(210, 175, 90, 16));
+        tertiarySpectrum.setBounds(new Rectangle(10, 195, 90, 20));
+        tertiaryModifier.setBounds(new Rectangle(110, 195, 90, 20));
+        tertiaryLuminosity.setBounds(new Rectangle(210, 195, 90, 20));
+        
+        /* Setup Remarks pane */
+        remarks.setBounds(new Rectangle(15, 480, 205, 125));
+        remarks.setBorder(BorderFactory.createEtchedBorder(EtchedBorder.LOWERED));
+        remarks.setLayout(null);
+        jLabel36.setText("Trade Codes:");
+        jLabel36.setBounds(new Rectangle(10, 12, 70, 15));
+        tradeCodes.setText("Na De Ba");
+        tradeCodes.setBounds(new Rectangle(80, 10, 115, 20));
+        tradeCodes.setEditable(false);
+        tradeCodes.setBackground(new Color(212, 208, 200));
+        jLabel24.setText("Remark 1");
+        jLabel24.setBounds(new Rectangle(10, 30, 80, 16));
+        jLabel25.setText("Remark 2");
+        jLabel25.setBounds(new Rectangle(105, 30, 80, 16));
+        remark1.setBounds(new Rectangle(10, 50, 90, 20));
+        remark2.setBounds(new Rectangle(105, 50, 90, 20));
+        jLabel37.setText("Remark 3");
+        jLabel37.setBounds(new Rectangle(10, 80, 90, 16));
+        jLabel38.setText("Remark 4");
+        jLabel38.setBounds(new Rectangle(105, 80, 90, 16));
+        remark3.setBounds(new Rectangle(10, 100, 90, 20));
+        remark4.setBounds(new Rectangle(105, 100, 90, 20));
+        commentPanel.setBounds(new Rectangle(15, 620, 525, 75));
+        commentPanel.setAutoscrolls(true);
+        
+        jLabel35.setText("Remarks");
+        jLabel35.setBounds(new Rectangle(20, 475, 60, 16));
+        jLabel35.setHorizontalAlignment(SwingConstants.CENTER);
+        jLabel35.setOpaque(true);
+
+        
+        /* Add components to the proper pane */
+        /* Add to jUWP panel */
+        jUWP.add(jLabel1, null);
+        jUWP.add(jLabel2, null);
+        jUWP.add(jLabel3, null);
+        jUWP.add(jLabel4, null);
+        jUWP.add(jLabel5, null);
+        jUWP.add(jLabel6, null);
+        jUWP.add(jLabel7, null);
+        jUWP.add(jLabel8, null);
+        jUWP.add(starport, null);
+        jUWP.add(worldSize, null);
+        jUWP.add(atmosphere, null);
+        jUWP.add(hydrographic, null);
+        jUWP.add(population, null);
+        jUWP.add(government, null);
+        jUWP.add(lawLevel, null);
+        jUWP.add(techLevel, null);
+
+        /* Add to location panel */
+        location.add(jLabel14, null);
+        location.add(jLabel13, null);
+        location.add(hexLocation, null);
+        location.add(groupName, null);
+
+        /* Add to contents panel */
+        contents.add(giants, null);
+        contents.add(belts, null);
+        contents.add(popMul, null);
+        contents.add(jLabel21, null);
+        contents.add(jLabel20, null);
+        contents.add(jLabel19, null);
+        contents.add(jLabel18, null);
+        contents.add(jLabel17, null);
+        contents.add(jLabel16, null);
+        contents.add(allegiance, null);
+        contents.add(travelZone, null);
+        contents.add(bases, null);
+
+        /* Add to stellar details panel */
+        stellarDetails.add(primary, null);
+        stellarDetails.add(tertiary, null);
+        stellarDetails.add(companion, null);
+        stellarDetails.add(tertiaryLuminosity, null);
+        stellarDetails.add(tertiaryModifier, null);
+        stellarDetails.add(tertiarySpectrum, null);
+        stellarDetails.add(jLabel34, null);
+        stellarDetails.add(jLabel33, null);
+        stellarDetails.add(jLabel32, null);
+        stellarDetails.add(companionLuminosity, null);
+        stellarDetails.add(companionModifier, null);
+        stellarDetails.add(companionSpectrum, null);
+        stellarDetails.add(jLabel31, null);
+        stellarDetails.add(jLabel30, null);
+        stellarDetails.add(jLabel29, null);
+        stellarDetails.add(primaryLuminosity, null);
+        stellarDetails.add(primaryModifier, null);
+        stellarDetails.add(primarySpectrum, null);
+        stellarDetails.add(jLabel28, null);
+        stellarDetails.add(jLabel27, null);
+        stellarDetails.add(jLabel26, null);
+
+        /* add to remakrs panel */
+        remarks.add(remark4, null);
+        remarks.add(remark3, null);
+        remarks.add(jLabel38, null);
+        remarks.add(jLabel37, null);
+        remarks.add(remark2, null);
+        remarks.add(remark1, null);
+        remarks.add(jLabel25, null);
+        remarks.add(jLabel24, null);
+        remarks.add(tradeCodes, null);
+        remarks.add(jLabel36, null);
+        commentPanel.getViewport().add(comments, null);
+
+        /* Add to this panel */
+        this.getContentPane().add(commentPanel, null);
+        this.getContentPane().add(jLabel35, null);
+        this.getContentPane().add(remarks, null);
+        this.getContentPane().add(jLabel22, null);
+        this.getContentPane().add(stellarDetails, null);
+        this.getContentPane().add(jLabel15, null);
+        this.getContentPane().add(contents, null);
+        this.getContentPane().add(jLabel12, null);
+        this.getContentPane().add(jLabel11, null);
+        this.getContentPane().add(jLabel9, null);
+        this.getContentPane().add(worldName, null);
+        this.getContentPane().add(bCancel, null);
+        this.getContentPane().add(bOK, null);
+        this.getContentPane().add(jLabel10, null);
+        this.getContentPane().add(jUWP, null);
+        this.getContentPane().add(location, null);
+    }
+
+    public void loadReference (References refData)
+    {
+        clearReference();
+        addReference (refData);
+    }
+
+    public void clearReference ()
+    {
+        starport.removeAllItems();
+        worldSize.removeAllItems();
+        atmosphere.removeAllItems();
+        hydrographic.removeAllItems();
+        population.removeAllItems();
+        government.removeAllItems();
+        lawLevel.removeAllItems();
+        techLevel.removeAllItems();
+        bases.removeAllItems();
+        travelZone.removeAllItems();
+        allegiance.removeAllItems();
+        remark1.removeAllItems();
+        remark2.removeAllItems();
+        remark3.removeAllItems();
+        remark4.removeAllItems();
+        primarySpectrum.removeAllItems();
+        companionSpectrum.removeAllItems();
+        tertiarySpectrum.removeAllItems();
+        primaryLuminosity.removeAllItems();
+        companionLuminosity.removeAllItems();
+        tertiaryLuminosity.removeAllItems();
+        
+    }
+    public void addReference (References refData)
+    {
+        TableRecord currentData;
+        ListIterator i,j; 
+        Object o;
+
+        i = refData.tablesIterator();
+        while (i.hasNext())
+        {
+            currentData = (TableRecord)(i.next());
+            j = currentData.iterator();
+            if (currentData.getKey().endsWith ("ports"))
+            {
+                starport.addItems(currentData.iterator());
+            }
+            else if (currentData.getKey().endsWith ("size"))
+            {
+                worldSize.addItems(currentData.iterator());
+            }
+            else if (currentData.getKey().endsWith ("atmosphere"))
+            {
+                atmosphere.addItems(currentData.iterator());
+            }
+            else if (currentData.getKey().endsWith("hydrograph"))
+            {
+                hydrographic.addItems(currentData.iterator());
+            }
+            else if (currentData.getKey().endsWith("population"))
+            {
+                population.addItems(currentData.iterator());
+            }
+            else if (currentData.getKey().endsWith("government"))
+            {
+                government.addItems(currentData.iterator());
+            }
+            else if (currentData.getKey().endsWith ("lawlevel"))
+            {
+                lawLevel.addItems(currentData.iterator());
+            }
+            else if (currentData.getKey().endsWith ("technology"))
+            {
+                techLevel.addItems(currentData.iterator());
+            }
+            else if (currentData.getKey().endsWith ("bases"))
+            {
+                bases.addItem(new String (" "));
+                bases.addItems(currentData.iterator());
+            }
+            else if (currentData.getKey().endsWith ("zone"))
+            {
+                travelZone.addItem(new String (" "));
+                travelZone.addItems(currentData.iterator());
+            }
+            else if (currentData.getKey().endsWith("polities"))
+            {
+                allegiance.addItems(currentData.iterator());
+            }
+            else if (currentData.getKey().endsWith("remarks"))
+            {
+                o = new String (" ");
+                remark1.addItem(o);
+                remark2.addItem(o);
+                remark3.addItem(o);
+                remark4.addItem(o);
+                remark1.addItems(currentData.iterator());
+                remark2.addItems(currentData.iterator());
+                remark3.addItems(currentData.iterator());
+                remark4.addItems(currentData.iterator());
+            }
+            else if (currentData.getKey().endsWith("spectrum"))
+            {
+                while (j.hasNext())
+                {
+                    o = j.next();
+                    primarySpectrum.addItem(o);
+                    companionSpectrum.addItem(o);
+                    tertiarySpectrum.addItem(o);
+                }
+            }
+            else if (currentData.getKey().endsWith("luminosity"))
+            {
+                while (j.hasNext())
+                {
+                    o = j.next();
+                    primaryLuminosity.addItem(o);
+                    companionLuminosity.addItem(o);
+                    tertiaryLuminosity.addItem(o);
+                }
+            }
+        }
+    }
+
+    public void setSystem (StarSystem data)
+    {
+        int i;
+        TableRowRecord x; 
+        this.data = data; 
+        this.system = new UWP(this.data.getPlanet());
+        
+        /* set values */
+        worldName.setText(data.name);
+        hexLocation.setText(data.getHex().toString());
+        comments.setText(data.comment);
+        
+        /* set UWP  */
+        jLabel10.setText(" UWP: " + system.toString());
+        starport.selectWithKeyChar(data.getPlanet().getPort());
+        worldSize.selectWithKeyChar(data.getPlanet().getSize());
+        atmosphere.selectWithKeyChar(data.getPlanet().getAtmosphere());
+        hydrographic.selectWithKeyChar(data.getPlanet().getHydrograph());
+        population.selectWithKeyChar(data.getPlanet().getPopulation());
+        government.selectWithKeyChar(data.getPlanet().getGovernment());
+        lawLevel.selectWithKeyChar(data.getPlanet().getLawlevel());
+        techLevel.selectWithKeyChar(data.getPlanet().getTechnology());
+
+        /* Set Other Information */
+        bases.selectWithKeyChar(data.getBase());
+        travelZone.selectWithKeyChar(data.getZone());
+        allegiance.setSelectedItem(data.getPolity());
+
+        popMul.setValue(new Integer(data.multiplier));
+        belts.setValue(new Integer(data.getBelts()));
+        giants.setValue(new Integer(data.giants));
+
+        /* Stellar data */
+        if (data.hasPrimary())
+        {
+            primary.setSelected(true);
+            primarySpectrum.selectWithKeyChar(data.primarySpectrum);
+            primarySpectrum.setEnabled(true);
+            primaryModifier.setValue(new Integer(Character.getNumericValue(data.primaryModifier)));
+            primaryModifier.setEnabled(true);
+            primaryLuminosity.setSelectedItem(data.primaryLuminosity);
+            primaryLuminosity.setEnabled(true);
+        }
+        else
+        {
+            primary.setSelected(false);
+            primarySpectrum.setEnabled(false);
+            primaryModifier.setEnabled(false);
+            primaryLuminosity.setEnabled(false);
+        }
+        
+        if (data.hasCompanion())
+        {
+            companion.setSelected(true);
+            companionSpectrum.selectWithKeyChar(data.companionSpectrum);
+            companionSpectrum.setEnabled(true);
+            companionModifier.setValue(new Integer(Character.getNumericValue(data.companionModifier)));
+            companionModifier.setEnabled(true);
+            companionLuminosity.setSelectedItem(data.companionLuminosity);
+            companionLuminosity.setEnabled(true);
+        }
+        else
+        {
+            companion.setSelected(false);
+            companionSpectrum.setEnabled(false);
+            companionModifier.setEnabled(false);
+            companionLuminosity.setEnabled(false);
+        }
+
+        if (data.hasTertiary())
+        {
+            tertiary.setSelected(true);
+            tertiarySpectrum.selectWithKeyChar(data.tertiarySpectrum);
+            tertiarySpectrum.setEnabled(true);
+            tertiaryModifier.setValue(new Integer(Character.getNumericValue(data.tertiaryModifier)));
+            tertiaryModifier.setEnabled(true);
+            tertiaryLuminosity.setSelectedItem(data.tertiaryLuminosity);
+            tertiaryLuminosity.setEnabled(true);
+            
+        }
+        else
+        {
+            tertiary.setSelected(false);
+            tertiarySpectrum.setEnabled(false);
+            tertiaryModifier.setEnabled(false);
+            tertiaryLuminosity.setEnabled(false);
+        }
+    }
+
+    private void bCancel_actionPerformed(ActionEvent e)
+    {
+        this.setVisible(false);
+    }
+
+    private void bOK_actionPerformed(ActionEvent e)
+    {
+        this.setVisible(false);
+        /* copy data from this to StarSystem.data */
+        data.name = worldName.getText();
+        data.getHex().hex = hexLocation.getText();
+        data.getHex().convertHextoID();
+        data.comment = comments.getText();
+
+        data.getPlanet().setPort(starport.getSelectedItem().toString().charAt(0));
+        data.getPlanet().setSize(worldSize.getSelectedItem().toString().charAt(0));
+        data.getPlanet().setAtmosphere(atmosphere.getSelectedItem().toString().charAt(0));
+        data.getPlanet().setHydrograph(hydrographic.getSelectedItem().toString().charAt(0));
+        data.getPlanet().setPopulation(population.getSelectedItem().toString().charAt(0));
+        data.getPlanet().setGovernment(government.getSelectedItem().toString().charAt(0));
+        data.getPlanet().setLawlevel(lawLevel.getSelectedItem().toString().charAt(0));
+        data.getPlanet().setTechnology(techLevel.getSelectedItem().toString().charAt(0));
+        data.setBase(bases.getSelectedItem().toString().charAt(0));
+        data.setZone(travelZone.getSelectedItem().toString().charAt(0));
+        data.setPolity(((TableRowRecord)(allegiance.getSelectedItem())).getCode());
+        data.multiplier = ((Integer)(popMul.getValue())).intValue();
+        data.setBelts(((Integer)(belts.getValue())).intValue());
+        data.setGiants(((Integer)(giants.getValue())).intValue());
+
+
+        data.primarySpectrum = primarySpectrum.getSelectedItem().toString().charAt(0);
+        data.primaryModifier = primaryModifier.getValue().toString().charAt(0);
+        data.primaryLuminosity = ((TableRowRecord)primaryLuminosity.getSelectedItem()).getKey();
+
+        if(primary.isSelected())
+        {
+            data.primarySpectrum = primarySpectrum.getSelectedItem().toString().charAt(0);
+            data.primaryModifier = primaryModifier.getValue().toString().charAt(0);
+            data.primaryLuminosity = ((TableRowRecord)primaryLuminosity.getSelectedItem()).getKey();
+        }
+        else
+        {
+            data.primarySpectrum = '\0';
+            data.primarySpectrum = '\0';
+            data.primaryLuminosity = null;
+        }
+        
+        if (companion.isSelected())
+        {
+            data.companionSpectrum = companionSpectrum.getSelectedItem().toString().charAt(0);
+            data.companionModifier = companionModifier.getValue().toString().charAt(0);
+            data.companionLuminosity = ((TableRowRecord)companionLuminosity.getSelectedItem()).getKey();
+        }
+        else
+        {
+            data.companionSpectrum = '\0';
+            data.companionModifier = '\0';
+            data.companionLuminosity = null;
+        }
+
+        if (tertiary.isSelected())
+        {
+            data.tertiarySpectrum = tertiarySpectrum.getSelectedItem().toString().charAt(0);
+            data.tertiaryModifier = companionModifier.getValue().toString().charAt(0);
+            data.tertiaryLuminosity = ((TableRowRecord)tertiaryLuminosity.getSelectedItem()).getKey();
+        }
+        else
+        {
+            data.tertiarySpectrum = '\0';
+            data.tertiaryModifier = '\0';
+            data.tertiaryLuminosity = null;
+        }
+    }
+
+    private void companion_actionPerformed(ActionEvent e)
+    {
+        if (companion.isSelected())
+        {
+            companionSpectrum.setEnabled(true);
+            companionModifier.setEnabled(true);
+            companionLuminosity.setEnabled(true);
+        }
+        else
+        {
+            companionSpectrum.setEnabled(false);
+            companionModifier.setEnabled(false);
+            companionLuminosity.setEnabled(false);
+        }
+    }
+
+    private void tertiary_actionPerformed(ActionEvent e)
+    {
+        if (tertiary.isSelected())
+        {
+            tertiarySpectrum.setEnabled(true);
+            tertiaryModifier.setEnabled(true);
+            tertiaryLuminosity.setEnabled(true);
+        }
+        else
+        {
+            tertiarySpectrum.setEnabled(false);
+            tertiaryModifier.setEnabled(false);
+            tertiaryLuminosity.setEnabled(false);
+        }
+    }
+
+    private void primary_actionPerformed(ActionEvent e)
+    {
+        if (primary.isSelected())
+        {
+            primarySpectrum.setEnabled(true);
+            primaryModifier.setEnabled(true);
+            primaryLuminosity.setEnabled(true);
+        }
+        else
+        {
+            primarySpectrum.setEnabled(false);
+            primaryModifier.setEnabled(false);
+            primaryLuminosity.setEnabled(false);
+        }
+    }
+}

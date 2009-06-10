@@ -1,0 +1,599 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<astrogation xmlns:xsi="http://www.w3.org/2001/XMLSchema" xmlns="http://www.farfuture.net/">
+    <reference>
+        <provider id="canon" desc="Standard (canon) data for all systems" name="Canon"/>
+        <provider id="gal" desc="Galactic 2.4 by Jim Vassilakos" name="Galactic 2.4"/>
+    </reference>
+    <mapping>
+        <group id="mara.0000" desc="Maranantha-Alkahest" provider="gal" type="sector">
+            <name>Maranantha-Alkahest</name>
+            <location type="group" group="mara.0000" x="1" y="1">0101</location>
+            <extent x="0" y="0"/>
+        </group>
+        <group id="mara.0016" desc="Hlantae" provider="gal" type="subsector">
+            <name>Hlantae</name>
+            <location type="group" group="mara.0016" x="4" y="4">0404</location>
+            <extent x="0" y="0"/>
+        </group>
+        <link id="links.0" desc="Galactic Link" provider="gal">
+            <location type="sector" group="mara.0000" x="25" y="31">2531</location>
+            <location type="sector" group="mara.0000" x="24" y="30">2430</location>
+        </link>
+        <link id="links.1" desc="Galactic Link" provider="gal">
+            <location type="sector" group="mara.0000" x="25" y="31">2531</location>
+            <location type="sector" group="mara.0000" x="26" y="29">2629</location>
+        </link>
+        <link id="links.2" desc="Galactic Link" provider="gal">
+            <location type="sector" group="mara.0000" x="25" y="31">2531</location>
+            <location type="sector" group="mara.0000" x="25" y="32">2532</location>
+        </link>
+        <link id="links.3" desc="Galactic Link" provider="gal">
+            <location type="sector" group="mara.0000" x="32" y="36">3236</location>
+            <location type="sector" group="mara.0000" x="32" y="33">3233</location>
+        </link>
+        <link id="links.4" desc="Galactic Link" provider="gal">
+            <location type="sector" group="mara.0000" x="32" y="33">3233</location>
+            <location type="sector" group="mara.0000" x="31" y="32">3132</location>
+        </link>
+        <link id="links.5" desc="Galactic Link" provider="gal">
+            <location type="sector" group="mara.0000" x="31" y="32">3132</location>
+            <location type="sector" group="mara.0000" x="29" y="32">2932</location>
+        </link>
+        <link id="links.6" desc="Galactic Link" provider="gal">
+            <location type="sector" group="mara.0000" x="29" y="32">2932</location>
+            <location type="sector" group="mara.0000" x="29" y="31">2931</location>
+        </link>
+        <link id="links.7" desc="Galactic Link" provider="gal">
+            <location type="sector" group="mara.0000" x="29" y="31">2931</location>
+            <location type="sector" group="mara.0000" x="30" y="30">3030</location>
+        </link>
+        <link id="links.8" desc="Galactic Link" provider="gal">
+            <location type="sector" group="mara.0000" x="31" y="32">3132</location>
+            <location type="sector" group="mara.0000" x="32" y="30">3230</location>
+        </link>
+        <link id="links.9" desc="Galactic Link" provider="gal">
+            <location type="sector" group="mara.0000" x="32" y="33">3233</location>
+            <location type="sector" group="mara.0000" x="2" y="33">0233</location>
+        </link>
+        <link id="links.10" desc="Galactic Link" provider="gal">
+            <location type="sector" group="mara.0000" x="32" y="36">3236</location>
+            <location type="sector" group="mara.0000" x="1" y="36">0136</location>
+        </link>
+        <link id="links.11" desc="Galactic Link" provider="gal">
+            <location type="sector" group="mara.0000" x="29" y="38">2938</location>
+            <location type="sector" group="mara.0000" x="28" y="36">2836</location>
+        </link>
+        <link id="links.12" desc="Galactic Link" provider="gal">
+            <location type="sector" group="mara.0000" x="28" y="36">2836</location>
+            <location type="sector" group="mara.0000" x="27" y="37">2737</location>
+        </link>
+        <system id="mara.0000_2531">
+            <name>N'Komi</name>
+            <location type="sector" group="mara.0000" x="25" y="31" date="001-1106">2531</location>
+            <UWP>
+                <port>B</port>
+                <size>5</size>
+                <atmosphere>2</atmosphere>
+                <hydrograph>7</hydrograph>
+                <population>2</population>
+                <government>2</government>
+                <lawlevel>0</lawlevel>
+                <technology>B</technology>
+            </UWP>
+            <bases></bases>
+            <tradeCodes>Na Ni</tradeCodes>
+            <remarks></remarks>
+            <zone></zone>
+            <PBG>
+                <multiplier>2</multiplier>
+                <belts>0</belts>
+                <giants>3</giants>
+            </PBG>
+            <polity>Kc</polity>
+        </system>
+        <system id="mara.0000_2532">
+            <name>N'Dende</name>
+            <location type="sector" group="mara.0000" x="25" y="32">2532</location>
+            <UWP>
+                <port>C</port>
+                <size>5</size>
+                <atmosphere>2</atmosphere>
+                <hydrograph>6</hydrograph>
+                <population>5</population>
+                <government>7</government>
+                <lawlevel>9</lawlevel>
+                <technology>7</technology>
+            </UWP>
+            <bases></bases>
+            <tradeCodes>Na Ni</tradeCodes>
+            <remarks></remarks>
+            <zone></zone>
+            <PBG>
+                <multiplier>7</multiplier>
+                <belts>1</belts>
+                <giants>4</giants>
+            </PBG>
+            <polity>Kc</polity>
+        </system>
+        <system id="mara.0000_2534">
+            <name>Tagab</name>
+            <location type="sector" group="mara.0000" x="25" y="34">2534</location>
+            <UWP>
+                <port>D</port>
+                <size>6</size>
+                <atmosphere>9</atmosphere>
+                <hydrograph>9</hydrograph>
+                <population>3</population>
+                <government>6</government>
+                <lawlevel>6</lawlevel>
+                <technology>6</technology>
+            </UWP>
+            <bases></bases>
+            <tradeCodes>Ni</tradeCodes>
+            <remarks></remarks>
+            <zone></zone>
+            <PBG>
+                <multiplier>8</multiplier>
+                <belts>0</belts>
+                <giants>0</giants>
+            </PBG>
+            <polity>Na</polity>
+        </system>
+        <system id="mara.0000_2639">
+            <name>449-866</name>
+            <location type="sector" group="mara.0000" x="26" y="39">2639</location>
+            <UWP>
+                <port>X</port>
+                <size>4</size>
+                <atmosphere>1</atmosphere>
+                <hydrograph>0</hydrograph>
+                <population>0</population>
+                <government>0</government>
+                <lawlevel>0</lawlevel>
+                <technology>-</technology>
+            </UWP>
+            <bases></bases>
+            <tradeCodes></tradeCodes>
+            <remarks></remarks>
+            <zone></zone>
+            <PBG>
+                <multiplier>7</multiplier>
+                <belts>2</belts>
+                <giants>3</giants>
+            </PBG>
+            <polity>Na</polity>
+        </system>
+        <system id="mara.0000_2736">
+            <name>Matun</name>
+            <location type="sector" group="mara.0000" x="27" y="36">2736</location>
+            <UWP>
+                <port>D</port>
+                <size>5</size>
+                <atmosphere>2</atmosphere>
+                <hydrograph>4</hydrograph>
+                <population>6</population>
+                <government>A</government>
+                <lawlevel>9</lawlevel>
+                <technology>1</technology>
+            </UWP>
+            <bases></bases>
+            <tradeCodes>Na Ni</tradeCodes>
+            <remarks></remarks>
+            <zone>A</zone>
+            <PBG>
+                <multiplier>5</multiplier>
+                <belts>1</belts>
+                <giants>0</giants>
+            </PBG>
+            <polity>Na</polity>
+        </system>
+        <system id="mara.0000_2737">
+            <name>Girishk</name>
+            <location type="sector" group="mara.0000" x="27" y="37">2737</location>
+            <UWP>
+                <port>B</port>
+                <size>8</size>
+                <atmosphere>8</atmosphere>
+                <hydrograph>8</hydrograph>
+                <population>8</population>
+                <government>7</government>
+                <lawlevel>9</lawlevel>
+                <technology>A</technology>
+            </UWP>
+            <bases></bases>
+            <tradeCodes></tradeCodes>
+            <remarks></remarks>
+            <zone></zone>
+            <PBG>
+                <multiplier>9</multiplier>
+                <belts>1</belts>
+                <giants>4</giants>
+            </PBG>
+            <polity>Na</polity>
+        </system>
+        <system id="mara.0000_2833">
+            <name>Takhta</name>
+            <location type="sector" group="mara.0000" x="28" y="33">2833</location>
+            <UWP>
+                <port>C</port>
+                <size>2</size>
+                <atmosphere>2</atmosphere>
+                <hydrograph>2</hydrograph>
+                <population>2</population>
+                <government>0</government>
+                <lawlevel>2</lawlevel>
+                <technology>8</technology>
+            </UWP>
+            <bases></bases>
+            <tradeCodes>Na Ni Po</tradeCodes>
+            <remarks></remarks>
+            <zone></zone>
+            <PBG>
+                <multiplier>5</multiplier>
+                <belts>2</belts>
+                <giants>3</giants>
+            </PBG>
+            <polity>Na</polity>
+        </system>
+        <system id="mara.0000_2834">
+            <name>Rustak</name>
+            <location type="sector" group="mara.0000" x="28" y="34">2834</location>
+            <UWP>
+                <port>E</port>
+                <size>5</size>
+                <atmosphere>6</atmosphere>
+                <hydrograph>1</hydrograph>
+                <population>3</population>
+                <government>0</government>
+                <lawlevel>2</lawlevel>
+                <technology>4</technology>
+            </UWP>
+            <bases></bases>
+            <tradeCodes>Ni De</tradeCodes>
+            <remarks></remarks>
+            <zone></zone>
+            <PBG>
+                <multiplier>3</multiplier>
+                <belts>1</belts>
+                <giants>4</giants>
+            </PBG>
+            <polity>Na</polity>
+        </system>
+        <system id="mara.0000_2836">
+            <name>Jurm</name>
+            <location type="sector" group="mara.0000" x="28" y="36">2836</location>
+            <UWP>
+                <port>C</port>
+                <size>5</size>
+                <atmosphere>4</atmosphere>
+                <hydrograph>9</hydrograph>
+                <population>5</population>
+                <government>6</government>
+                <lawlevel>0</lawlevel>
+                <technology>5</technology>
+            </UWP>
+            <bases></bases>
+            <tradeCodes>Ni</tradeCodes>
+            <remarks></remarks>
+            <zone></zone>
+            <PBG>
+                <multiplier>1</multiplier>
+                <belts>1</belts>
+                <giants>0</giants>
+            </PBG>
+            <polity>Na</polity>
+        </system>
+        <system id="mara.0000_2837">
+            <name>Zebak</name>
+            <location type="sector" group="mara.0000" x="28" y="37">2837</location>
+            <UWP>
+                <port>D</port>
+                <size>7</size>
+                <atmosphere>5</atmosphere>
+                <hydrograph>A</hydrograph>
+                <population>4</population>
+                <government>8</government>
+                <lawlevel>3</lawlevel>
+                <technology>6</technology>
+            </UWP>
+            <bases></bases>
+            <tradeCodes>Ni Wa</tradeCodes>
+            <remarks></remarks>
+            <zone></zone>
+            <PBG>
+                <multiplier>3</multiplier>
+                <belts>2</belts>
+                <giants>2</giants>
+            </PBG>
+            <polity>Na</polity>
+        </system>
+        <system id="mara.0000_2931">
+            <name>Tg'Ngno</name>
+            <location type="sector" group="mara.0000" x="29" y="31">2931</location>
+            <UWP>
+                <port>C</port>
+                <size>8</size>
+                <atmosphere>A</atmosphere>
+                <hydrograph>3</hydrograph>
+                <population>5</population>
+                <government>1</government>
+                <lawlevel>5</lawlevel>
+                <technology>A</technology>
+            </UWP>
+            <bases></bases>
+            <tradeCodes>Ni</tradeCodes>
+            <remarks></remarks>
+            <zone></zone>
+            <PBG>
+                <multiplier>3</multiplier>
+                <belts>1</belts>
+                <giants>0</giants>
+            </PBG>
+            <polity>Tq</polity>
+        </system>
+        <system id="mara.0000_2932">
+            <name>Tg'Talak</name>
+            <location type="sector" group="mara.0000" x="29" y="32">2932</location>
+            <UWP>
+                <port>C</port>
+                <size>6</size>
+                <atmosphere>3</atmosphere>
+                <hydrograph>8</hydrograph>
+                <population>5</population>
+                <government>4</government>
+                <lawlevel>4</lawlevel>
+                <technology>A</technology>
+            </UWP>
+            <bases></bases>
+            <tradeCodes>Na Ni</tradeCodes>
+            <remarks></remarks>
+            <zone></zone>
+            <PBG>
+                <multiplier>8</multiplier>
+                <belts>2</belts>
+                <giants>0</giants>
+            </PBG>
+            <polity>Tq</polity>
+        </system>
+        <system id="mara.0000_2938">
+            <name>Taliqan</name>
+            <location type="sector" group="mara.0000" x="29" y="38">2938</location>
+            <UWP>
+                <port>B</port>
+                <size>5</size>
+                <atmosphere>5</atmosphere>
+                <hydrograph>4</hydrograph>
+                <population>5</population>
+                <government>6</government>
+                <lawlevel>6</lawlevel>
+                <technology>A</technology>
+            </UWP>
+            <bases></bases>
+            <tradeCodes>Ag Ni</tradeCodes>
+            <remarks></remarks>
+            <zone></zone>
+            <PBG>
+                <multiplier>3</multiplier>
+                <belts>1</belts>
+                <giants>1</giants>
+            </PBG>
+            <polity>Na</polity>
+        </system>
+        <system id="mara.0000_2940">
+            <name>Doshi</name>
+            <location type="sector" group="mara.0000" x="29" y="40">2940</location>
+            <UWP>
+                <port>C</port>
+                <size>5</size>
+                <atmosphere>5</atmosphere>
+                <hydrograph>7</hydrograph>
+                <population>5</population>
+                <government>4</government>
+                <lawlevel>9</lawlevel>
+                <technology>4</technology>
+            </UWP>
+            <bases></bases>
+            <tradeCodes>Ag Ni</tradeCodes>
+            <remarks></remarks>
+            <zone></zone>
+            <PBG>
+                <multiplier>2</multiplier>
+                <belts>1</belts>
+                <giants>1</giants>
+            </PBG>
+            <polity>Na</polity>
+        </system>
+        <system id="mara.0000_3033">
+            <name>Tg'Dori</name>
+            <location type="sector" group="mara.0000" x="30" y="33">3033</location>
+            <UWP>
+                <port>E</port>
+                <size>7</size>
+                <atmosphere>4</atmosphere>
+                <hydrograph>A</hydrograph>
+                <population>2</population>
+                <government>7</government>
+                <lawlevel>4</lawlevel>
+                <technology>6</technology>
+            </UWP>
+            <bases></bases>
+            <tradeCodes>Ni Wa</tradeCodes>
+            <remarks></remarks>
+            <zone></zone>
+            <PBG>
+                <multiplier>9</multiplier>
+                <belts>1</belts>
+                <giants>0</giants>
+            </PBG>
+            <polity>Tq</polity>
+        </system>
+        <system id="mara.0000_3035">
+            <name>Andkhui</name>
+            <location type="sector" group="mara.0000" x="30" y="35">3035</location>
+            <UWP>
+                <port>D</port>
+                <size>3</size>
+                <atmosphere>6</atmosphere>
+                <hydrograph>3</hydrograph>
+                <population>5</population>
+                <government>9</government>
+                <lawlevel>8</lawlevel>
+                <technology>3</technology>
+            </UWP>
+            <bases></bases>
+            <tradeCodes>Ni</tradeCodes>
+            <remarks></remarks>
+            <zone></zone>
+            <PBG>
+                <multiplier>4</multiplier>
+                <belts>3</belts>
+                <giants>2</giants>
+            </PBG>
+            <polity>Na</polity>
+        </system>
+        <system id="mara.0000_3132">
+            <name>Tg'Dosso</name>
+            <location type="sector" group="mara.0000" x="31" y="32">3132</location>
+            <UWP>
+                <port>A</port>
+                <size>5</size>
+                <atmosphere>6</atmosphere>
+                <hydrograph>9</hydrograph>
+                <population>7</population>
+                <government>3</government>
+                <lawlevel>5</lawlevel>
+                <technology>E</technology>
+            </UWP>
+            <bases>N</bases>
+            <tradeCodes></tradeCodes>
+            <remarks></remarks>
+            <zone></zone>
+            <PBG>
+                <multiplier>5</multiplier>
+                <belts>1</belts>
+                <giants>1</giants>
+            </PBG>
+            <polity>Tq</polity>
+        </system>
+        <system id="mara.0000_3135">
+            <name>Tg'Gaya</name>
+            <location type="sector" group="mara.0000" x="31" y="35">3135</location>
+            <UWP>
+                <port>E</port>
+                <size>7</size>
+                <atmosphere>4</atmosphere>
+                <hydrograph>7</hydrograph>
+                <population>4</population>
+                <government>8</government>
+                <lawlevel>0</lawlevel>
+                <technology>7</technology>
+            </UWP>
+            <bases></bases>
+            <tradeCodes>Ni</tradeCodes>
+            <remarks></remarks>
+            <zone></zone>
+            <PBG>
+                <multiplier>1</multiplier>
+                <belts>1</belts>
+                <giants>1</giants>
+            </PBG>
+            <polity>Tq</polity>
+        </system>
+        <system id="mara.0000_3233">
+            <name>Tg'Nioro</name>
+            <location type="sector" group="mara.0000" x="32" y="33">3233</location>
+            <UWP>
+                <port>B</port>
+                <size>A</size>
+                <atmosphere>6</atmosphere>
+                <hydrograph>A</hydrograph>
+                <population>7</population>
+                <government>7</government>
+                <lawlevel>7</lawlevel>
+                <technology>8</technology>
+            </UWP>
+            <bases></bases>
+            <tradeCodes>Ri Wa</tradeCodes>
+            <remarks></remarks>
+            <zone></zone>
+            <PBG>
+                <multiplier>2</multiplier>
+                <belts>1</belts>
+                <giants>0</giants>
+            </PBG>
+            <polity>Tq</polity>
+        </system>
+        <system id="mara.0000_3234">
+            <name>Tg'Nara</name>
+            <location type="sector" group="mara.0000" x="32" y="34">3234</location>
+            <UWP>
+                <port>C</port>
+                <size>5</size>
+                <atmosphere>4</atmosphere>
+                <hydrograph>4</hydrograph>
+                <population>9</population>
+                <government>A</government>
+                <lawlevel>9</lawlevel>
+                <technology>A</technology>
+            </UWP>
+            <bases></bases>
+            <tradeCodes>In</tradeCodes>
+            <remarks></remarks>
+            <zone></zone>
+            <PBG>
+                <multiplier>7</multiplier>
+                <belts>2</belts>
+                <giants>3</giants>
+            </PBG>
+            <polity>Tq</polity>
+        </system>
+        <system id="mara.0000_3236">
+            <name>Pb'Birnin</name>
+            <location type="sector" group="mara.0000" x="32" y="36">3236</location>
+            <UWP>
+                <port>C</port>
+                <size>6</size>
+                <atmosphere>8</atmosphere>
+                <hydrograph>7</hydrograph>
+                <population>5</population>
+                <government>5</government>
+                <lawlevel>7</lawlevel>
+                <technology>8</technology>
+            </UWP>
+            <bases></bases>
+            <tradeCodes>Ag Ni</tradeCodes>
+            <remarks></remarks>
+            <zone></zone>
+            <PBG>
+                <multiplier>7</multiplier>
+                <belts>1</belts>
+                <giants>0</giants>
+            </PBG>
+            <polity>Tq</polity>
+        </system>
+        <system id="mara.0000_3240">
+            <name>Termez</name>
+            <location type="sector" group="mara.0000" x="32" y="40">3240</location>
+            <UWP>
+                <port>X</port>
+                <size>2</size>
+                <atmosphere>0</atmosphere>
+                <hydrograph>0</hydrograph>
+                <population>0</population>
+                <government>0</government>
+                <lawlevel>0</lawlevel>
+                <technology>-</technology>
+            </UWP>
+            <bases></bases>
+            <tradeCodes></tradeCodes>
+            <remarks></remarks>
+            <zone></zone>
+            <PBG>
+                <multiplier>9</multiplier>
+                <belts>2</belts>
+                <giants>1</giants>
+            </PBG>
+            <polity>Na</polity>
+        </system>
+    </mapping>
+</astrogation>
