@@ -1,5 +1,5 @@
 /*
- * $Id: EditGroups.java,v 1.7 2008/10/28 16:22:15 tjoneslo Exp $
+ * $Id$
  * Copyright 2006 by Softstart Services Inc. 
  */
 

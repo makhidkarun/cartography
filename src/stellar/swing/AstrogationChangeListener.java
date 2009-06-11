@@ -1,5 +1,5 @@
 /*
- * $Id: AstrogationChangeListener.java,v 1.6 2008/11/10 15:11:49 tjoneslo Exp $
+ * $Id$
  * Copyright 2005 Softstart Services, Inc. All rights reserved. 
  */
 package stellar.swing;

@@ -1,5 +1,5 @@
 /*
- * $Id: AppDefaults.java,v 1.4 2006/05/02 19:49:20 tjoneslo Exp $
+ * $Id$
  * Copyright 2005 Softstart Services, Inc. All rights reserved. 
  */
 
@@ -18,7 +18,7 @@ import javax.swing.UIDefaults;
  * attached, which means the code it copyrighted by Hans Muller and is not
  * copyable. 
  * 
- * @version $Id: AppDefaults.java,v 1.4 2006/05/02 19:49:20 tjoneslo Exp $
+ * @version $Id$
  */
 public class AppDefaults extends UIDefaults {
 

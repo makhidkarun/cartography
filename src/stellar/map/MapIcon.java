@@ -1,5 +1,5 @@
 /*
- *  $Id: MapIcon.java,v 1.11 2008/12/12 17:43:32 tjoneslo Exp $
+ *  $Id$
  *  Copyright 2006 by Softstart Services Inc. 
  */
 package stellar.map;
@@ -61,7 +61,7 @@ import javax.swing.event.ChangeEvent;
  * subsector at the current scale. 
  * 
  * @version $Revision: 1.11 $
- * @author  $Author: tjoneslo $
+ * @author  $Author$
  */
 public abstract class MapIcon implements Icon, AstrogationChangeListener
 {

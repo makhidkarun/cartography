@@ -1,5 +1,5 @@
 /*
- * $Id: Resources.java,v 1.8 2008/11/03 22:06:06 tjoneslo Exp $
+ * $Id$
  * Copyright 2005 Softstart Services, Inc. All rights reserved. 
  */
 package stellar.io;

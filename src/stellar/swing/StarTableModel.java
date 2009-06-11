@@ -1,5 +1,5 @@
 package stellar.swing;
-/* $Id: StarTableModel.java,v 1.6 2008/12/12 17:47:13 tjoneslo Exp $ */
+/* $Id$ */
 import stellar.data.Astrogation;
 import stellar.data.StarSystem;
 import javax.swing.event.ChangeEvent;

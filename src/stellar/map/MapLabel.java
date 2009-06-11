@@ -1,5 +1,5 @@
 /*
- * $Id: MapLabel.java,v 1.8 2008/12/15 16:13:05 tjoneslo Exp $
+ * $Id$
  * Copyright 2006 by Softstart Services Inc. 
  */
 
@@ -30,7 +30,7 @@ import java.awt.event.MouseEvent;
  * and ctrl-pgup/ctrl-pgdn (for left/right) trigger the latter. 
  * 
  * @version $Revision: 1.8 $
- * @author $Author: tjoneslo $
+ * @author $Author$
  */
 public class MapLabel extends JLabel implements Scrollable, MouseMotionListener, 
         PropertyChangeListener

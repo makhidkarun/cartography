@@ -1,5 +1,5 @@
 /*
- * $Id: Command.java,v 1.6 2008/11/03 22:20:59 tjoneslo Exp $
+ * $Id$
  * Copyright 2005 Softstart Services, Inc. All rights reserved. 
  */
 

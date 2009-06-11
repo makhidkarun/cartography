@@ -1,5 +1,5 @@
 /*
- * $Id: ColorTableCellRenderer.java,v 1.4 2006/05/02 19:49:26 tjoneslo Exp $
+ * $Id$
  * Copyright 2005 Softstart Services, Inc. All rights reserved. 
  */
 package stellar.swing;
@@ -17,7 +17,7 @@ import javax.swing.table.DefaultTableCellRenderer;
  * and the text the RGB value of the color. 
  * 
  * @author Thomas Jones-Low
- * @version $Id: ColorTableCellRenderer.java,v 1.4 2006/05/02 19:49:26 tjoneslo Exp $
+ * @version $Id$
  */
 public class ColorTableCellRenderer extends DefaultTableCellRenderer 
 {

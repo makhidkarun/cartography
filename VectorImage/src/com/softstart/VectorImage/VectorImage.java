@@ -14,7 +14,7 @@ import javax.swing.Icon;
  * This class is not abstract because the image is (or should be )created in 
  * the constructor, rather than created during the drawing process. 
  * 
- * @version $Id: VectorImage.java,v 1.5 2008/11/03 22:28:00 tjoneslo Exp $
+ * @version $Id$
  * @author Thomas Jones-Low
  */
 public class VectorImage implements Paint, Stroke, Shape, Icon

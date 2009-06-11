@@ -6,7 +6,7 @@ import java.util.ArrayList;
  * inhabited and uninhabited planets.
  * 
  * @version $Revision: 1.4 $
- * @author $Author: tjoneslo $
+ * @author $Author$
  */
 public class Planet 
 {

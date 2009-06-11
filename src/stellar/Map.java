@@ -41,7 +41,7 @@ import javax.swing.event.ChangeEvent;
  * Map is the core map of the cartogrphy program. It hold the menu bar, toolbar, 
  * the basic map display and table on the scroll pane. 
  * <p>
- * $Id: Map.java,v 1.14 2008/12/29 19:40:03 tjoneslo Exp $
+ * $Id$
  * @version $Revision: 1.14 $
  * 
  */

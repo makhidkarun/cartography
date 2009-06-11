@@ -62,7 +62,7 @@ import org.jibx.runtime.JiBXException;
  * @see MapToolbar
  * @see com.softstart.stellar.io.AppDefaults
  * @see com.softstart.stellar.swing.Command
- * @version $Id: MapCommands.java,v 1.9 2008/12/29 19:40:46 tjoneslo Exp $
+ * @version $Id$
  */
 public class MapCommands
 {

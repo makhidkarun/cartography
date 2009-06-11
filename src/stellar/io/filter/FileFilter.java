@@ -7,7 +7,7 @@ import java.io.File;
  * for the specific type of file. 
  * 
  * @version $Revision: 1.3 $
- * @author $Author: tjoneslo $
+ * @author $Author$
  */
 public class FileFilter extends javax.swing.filechooser.FileFilter 
 {

@@ -1,5 +1,5 @@
 /*
- * $Id: MapScale.java,v 1.1 2008/11/03 22:09:55 tjoneslo Exp $
+ * $Id$
  */
 package stellar.map;
 
@@ -11,7 +11,7 @@ import java.util.Map;
  * MapScale is an enumeration of Scales (sizes) of the map. Currently there are
  * 5 scales (numbered 1 through 5). 
  * @version $Revision: 1.1 $
- * @author $Author: tjoneslo $
+ * @author $Author$
  */
 public enum MapScale
 {

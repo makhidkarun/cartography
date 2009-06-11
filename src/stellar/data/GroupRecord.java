@@ -20,7 +20,7 @@ import javax.swing.tree.TreeNode;
  * groups, but none of garunteed to be there. 
  * 
  * @version $Revision: 1.7 $
- * @author $Author: tjoneslo $
+ * @author $Author$
 */
 public class GroupRecord extends Record implements MutableTreeNode 
 {

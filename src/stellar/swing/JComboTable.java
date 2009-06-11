@@ -1,5 +1,5 @@
 /*
- * $Id: JComboTable.java,v 1.4 2008/11/03 22:21:34 tjoneslo Exp $
+ * $Id$
  * Copyright 2005 Softstart Services, Inc. All rights reserved. 
  */
 
@@ -16,7 +16,7 @@ import javax.swing.JComboBox;
  * @see java.util.ListIterator
  * @see javax.swing.JComboBox
  * @author Thomas Jones-Low
- * @version $Id: JComboTable.java,v 1.4 2008/11/03 22:21:34 tjoneslo Exp $
+ * @version $Id$
  */
 public class JComboTable extends JComboBox 
 {

@@ -3,7 +3,7 @@ package stellar.data;
 /**
  * An enum for the types of group records
  * @version $Revision: 1.2 $
- * @author  $Author: tjoneslo $
+ * @author  $Author$
  */
 public enum GroupType
 {

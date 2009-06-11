@@ -1,5 +1,5 @@
 /*
- * $Id: HexID.java,v 1.5 2008/10/28 15:55:19 tjoneslo Exp $
+ * $Id$
  * Copyright 2006 Softstart Services Inc.
  */
 package stellar.data;
@@ -14,7 +14,7 @@ package stellar.data;
  * There are places where <code>HexID</code> is used as a <code>Point</code>, a 
  * true x/y location. 
  * @version $Revision: 1.5 $
- * @author $Author: tjoneslo $
+ * @author $Author$
  */
 public class HexID 
 {

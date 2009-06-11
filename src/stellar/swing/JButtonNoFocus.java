@@ -1,5 +1,5 @@
 /*
- * $Id: JButtonNoFocus.java,v 1.6 2008/11/10 15:25:47 tjoneslo Exp $
+ * $Id$
  * Copyright 2005 Softstart Services, Inc. All rights reserved. 
  */
 package stellar.swing;
@@ -13,7 +13,7 @@ import javax.swing.JButton;
  * having to call explicitly <code>setRequestFocusEnabled(false)</code> for 
  * every toobar button. 
  * @author Thomas Jones-Low
- * @version $Id: JButtonNoFocus.java,v 1.6 2008/11/10 15:25:47 tjoneslo Exp $
+ * @version $Id$
  */
 public class JButtonNoFocus extends JButton
 {

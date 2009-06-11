@@ -19,7 +19,7 @@ import org.jibx.runtime.JiBXException;
  * for this classes five collections.
  * @see References
  * @see TableRecord
- * @version $Id: Astrogation.java,v 1.7 2008/12/29 19:35:41 tjoneslo Exp $
+ * @version $Id$
  */
 public class Astrogation 
 {

@@ -39,7 +39,7 @@ import org.jibx.runtime.JiBXException;
  * Items in brackets are optional
  * Name may have more than one word, meaning it has multiple tokens
  * 
- * @version $Id: SectorTextReader.java,v 1.11 2009/01/22 16:06:24 tjoneslo Exp $
+ * @version $Id$
  */
 
 public abstract class SectorTextReader implements AstrogationFileReader

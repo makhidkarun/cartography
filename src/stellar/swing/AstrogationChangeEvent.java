@@ -1,5 +1,5 @@
 /*
- * $Id: AstrogationChangeEvent.java,v 1.4 2008/12/15 16:01:48 tjoneslo Exp $
+ * $Id$
  * Copyright 2005 Softstart Services, Inc. All rights reserved. 
  */
 package stellar.swing;
@@ -10,7 +10,7 @@ import stellar.data.Astrogation;
  * A change event specific to changes to the Astrogation data structure. 
  * 
  * @author Thomas Jones-Low
- * @version $Id: AstrogationChangeEvent.java,v 1.4 2008/12/15 16:01:48 tjoneslo Exp $
+ * @version $Id$
  */
 public class AstrogationChangeEvent extends ChangeEvent
 {

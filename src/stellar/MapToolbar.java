@@ -17,7 +17,7 @@ import javax.swing.JToolBar;
  * @see AppDefaults
  * @see MapCommands
  * @see com.softstart.stellar.swing.Command
- * @version $Id: MapToolbar.java,v 1.10 2008/11/03 22:25:12 tjoneslo Exp $
+ * @version $Id$
  */
 public class MapToolbar extends JToolBar
 {

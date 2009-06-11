@@ -1,5 +1,5 @@
 /*
- * $Id: GalSARReader.java,v 1.9 2009/01/22 16:04:57 tjoneslo Exp $
+ * $Id$
  * Copyright 2005 Softstart Services, Inc. All rights reserved. 
  */
 
@@ -129,7 +129,7 @@ import org.jibx.runtime.JiBXException;
  * currently ignored, though conversion to HTML should not be difficult. 
  * 
  * @version $Revision: 1.9 $
- * @author $Author: tjoneslo $
+ * @author $Author$
  */
 public class GalSARReader implements AstrogationFileReader
 {

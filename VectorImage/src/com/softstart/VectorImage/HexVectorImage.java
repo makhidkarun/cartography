@@ -6,7 +6,7 @@ import java.awt.BasicStroke;
 /**
  * HexVectorImage draw a hexagon as a vector image. 
  * 
- * @version $Id: HexVectorImage.java,v 1.4 2008/11/03 22:27:17 tjoneslo Exp $
+ * @version $Id$
  * @author Thomas Jones-Low
  */
 public class HexVectorImage extends VectorImage 

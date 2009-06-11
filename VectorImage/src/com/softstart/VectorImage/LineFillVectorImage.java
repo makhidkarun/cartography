@@ -12,7 +12,7 @@ import java.awt.Rectangle;
  * vector image shape. You can use vertical, horizontal lines, angled lines, or
  * crossed lines. 
  * 
- * @version $Id: LineFillVectorImage.java,v 1.4 2008/11/03 22:27:32 tjoneslo Exp $
+ * @version $Id$
  * @author Thomas Jones-Low
  */
 
