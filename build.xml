@@ -10,12 +10,12 @@
    <property name="xmlpull.home" value="C:\Java\xpp3-1.1.3.4-RC3" />
    <property name="itext.home" value="C:\Java\iText2.1.3" />
    <property name="ekit.home" value="C:\Java\ekit" />
-   <property name="vectorimage.home" value="C:\thom\projects\cartography\VectorImage" />
+   <property name="vectorimage.home" value="C:\thom\projects\cartography\trunk\VectorImage" />
    <property name="project.home" value="C:\thom\projects\cartography" />
    <property name="forms.home" value="C:\java\jgoodies\forms-1.2.0" />
    <property name="looks.home" value="C:\Java\jgoodies\looks-2.1.4" />
    <property name="binding.home" value="C:\Java\jgoodies\binding2.0.4" />
-   <property name="jfont.home" value="C:\thom\projects\cartography\deploy" />
+   <property name="jfont.home" value="C:\thom\projects\cartography\trunk\deploy" />
    
    <!--Set the output directories-->
    <property name="compile.outdir" value="classes"/>
