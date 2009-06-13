@@ -33,7 +33,7 @@ public class Resources
     private static final String iconPath = "/resources/icons/";
     private static final String resourcesPath = "/resources/";
     
-    public static final InputStream getPrefrences()
+    public static final InputStream getPreferences()
     {
         return getURLStream(resourcesPath + "prefsOrig.xml");
     }

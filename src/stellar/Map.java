@@ -64,11 +64,6 @@ public class Map extends JFrame implements AstrogationChangeListener,
     private JTable mapTable;
     private StarTableModel mapTableModel;
 
-    //private EditSystem dialogEditSystem;
-    private EditOptions dialogEditOptions = EditOptions.getInstance ();
-    //private EditViewOptions dialogEditViewOptions = EditViewOptions.getInstance();
-    //private ViewTableData dialogViewTables;
-
     private JScrollPane mapScrollPanel = new JScrollPane ();
 
     private MapMenu menuBar;
@@ -344,14 +339,14 @@ public class Map extends JFrame implements AstrogationChangeListener,
 
     private void this_componentResized (ComponentEvent e)
     {
-        dialogEditOptions.setAppWidth (e.getComponent ().getWidth ());
-        dialogEditOptions.setAppHeight (e.getComponent ().getHeight ());
+        MapPreferences.getInstance().setAppHeight(e.getComponent().getHeight());
+        MapPreferences.getInstance().setAppWidth(e.getComponent().getWidth());
     }
 
     private void this_componentMoved (ComponentEvent e)
     {
-        dialogEditOptions.setAppX (e.getComponent ().getLocation ().x);
-        dialogEditOptions.setAppY (e.getComponent ().getLocation ().y);
+        MapPreferences.getInstance().setAppX(e.getComponent().getLocation().x);
+        MapPreferences.getInstance().setAppY(e.getComponent().getLocation().y);
     }
 
 }

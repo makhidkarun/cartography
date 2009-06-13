@@ -37,20 +37,22 @@ import org.jibx.runtime.JiBXException;
 import javax.swing.JSpinner;
 import java.awt.event.FocusEvent;
 
+import stellar.MapPreferences;
+
 /**
- * The EditGroups dialog allows users to create, view and edit the groups of 
+ * The EditGroups dialog allows users to create, view and edit the groups of
  * stars in the map. Traveller defines a set of groups: domain, sector, quadrant,
- * and subsectors, each nested within each other. Cartrogrpher adds a generic 
- * "group" group to allow users to define their own groups as needed. 
+ * and subsectors, each nested within each other. Cartrogrpher adds a generic
+ * "group" group to allow users to define their own groups as needed.
  * <BR>
- * TODO: 
+ * TODO:
  * <UL>
- * <LI>The New/Update button combination does not work. It's confusing and 
+ * <LI>The New/Update button combination does not work. It's confusing and
  * implemented wrong here. We need to have the valueChanges()/bOKActionPerformed()
- * do the Update and make the update button go away. 
- * <LI>The New button really needs to actually finish the creation of the new group 
- * and put it entirely  in the list. 
- * <LI>Need a delete button to remove groups. 
+ * do the Update and make the update button go away.
+ * <LI>The New button really needs to actually finish the creation of the new group
+ * and put it entirely  in the list.
+ * <LI>Need a delete button to remove groups.
  * </UL>
  */
 public class EditGroups extends JDialog implements TreeSelectionListener
@@ -199,7 +201,7 @@ public class EditGroups extends JDialog implements TreeSelectionListener
         squareMap.setMapData(data);
         squareMap.setScale(MapScale.SCALE_5);
         squareMap.setSize(4,4);
-        squareMap.setLayout(MapScale.SCALE_5, EditOptions.getInstance().getScaleLayout(MapScale.SCALE_5));
+        squareMap.setLayout(MapScale.SCALE_5, MapPreferences.getInstance().getScaleLayout(MapScale.SCALE_5));
         squareMap.setLevel(GroupType.DOMAIN);
         map = new MapLabel (squareMap);
         groupLocation.addFocusListener(new java.awt.event.FocusAdapter()
@@ -277,7 +279,7 @@ public class EditGroups extends JDialog implements TreeSelectionListener
         groupLocation.setText("");
         commentPanel.newDocument();
         GroupRecord g = new GroupRecord();
-        g.setProvider (EditOptions.getInstance().getUserProvider());
+        g.setProvider (MapPreferences.getInstance().getUserData());
         if (groupTree == null) {}
         else
         {
@@ -291,7 +293,7 @@ public class EditGroups extends JDialog implements TreeSelectionListener
         if (groupTree == null)
         {
             g = new GroupRecord();
-            g.setProvider(EditOptions.getInstance().getUserProvider());
+            g.setProvider(MapPreferences.getInstance().getUserData());
         }
         else
         {
@@ -323,7 +325,7 @@ public class EditGroups extends JDialog implements TreeSelectionListener
         {
             try
             {
-                data = new Astrogation (EditOptions.getInstance().getExternalRefsFileName());
+                data = new Astrogation (MapPreferences.getInstance().getExternalRefsFileName());
             }
             catch (IOException ex) { ex.printStackTrace(); }
             catch (JiBXException ex) { ex.printStackTrace(); } 

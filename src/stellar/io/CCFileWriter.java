@@ -22,6 +22,8 @@ import java.io.File;
 import java.io.FileWriter;
 import java.util.Iterator;
 
+import stellar.MapPreferences;
+
 public class CCFileWriter 
 {
     private String filename;
@@ -464,7 +466,7 @@ public class CCFileWriter
     
     private void outputSystems () throws IOException
     {
-        HexLayout layout = EditOptions.getInstance().getScaleLayout(MapScale.SCALE_3);
+        HexLayout layout = MapPreferences.getInstance().getScaleLayout(MapScale.SCALE_3);
         HexLinePanel currentItem;
         
         for (Iterator i = data.getSystems(); i.hasNext();)

@@ -19,12 +19,15 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import org.jibx.runtime.JiBXException;
+
+import stellar.MapPreferences;
+
 /**
  * This abstract class reads the generally defined formatted text used for
  * Traveller sector data. There are a number of variants to this data, so this
- * class is abstract, but contains the state machine for reading the base data. 
+ * class is abstract, but contains the state machine for reading the base data.
  * Sub-classes will define how to read through the header and extract any useful
- * information. 
+ * information.
  * <p>
  * The tokens retrieved are:<br>
  * <pre>
@@ -38,7 +41,7 @@ import org.jibx.runtime.JiBXException;
 </pre>
  * Items in brackets are optional
  * Name may have more than one word, meaning it has multiple tokens
- * 
+ *
  * @version $Id$
  */
 
@@ -121,7 +124,7 @@ public abstract class SectorTextReader implements AstrogationFileReader
     {
         Reader r = openInputFile();
 
-        if (data == null) data = new Astrogation(EditOptions.getInstance().getExternalRefsFileName());
+        if (data == null) data = new Astrogation(MapPreferences.getInstance().getExternalRefsFileName());
         parser = new StreamTokenizer(r);
         parser.eolIsSignificant(true);
         parser.wordChars('\'', '\'');

@@ -7,7 +7,7 @@ package stellar.map.layout;
  * 
  * @see HexOptions
  * @author Thomas Jones-Low
- * @version $Revision: 1.1 $
+ * @version $Id$
  */
 public enum HexOptionsProperties
 {

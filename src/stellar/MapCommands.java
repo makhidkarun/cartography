@@ -200,7 +200,7 @@ public class MapCommands
         Astrogation starData = null;
         JFileChooser chooser = new JFileChooser ();
         chooser.setDialogTitle (Resources.getString ("map.openTitle"));
-        chooser.setCurrentDirectory (new File (EditOptions.getInstance ().getWorkingDirName ()));
+        chooser.setCurrentDirectory (new File (MapPreferences.getInstance().getWorkingDir()));
         chooser.addChoosableFileFilter (new SARFileFilter ());
         chooser.addChoosableFileFilter (new SECFileFilter ());
         chooser.addChoosableFileFilter (new WBSFileFilter ());
@@ -268,8 +268,8 @@ public class MapCommands
             starData = data.getAstrogation ();
             display.setCursor (Cursor.getDefaultCursor ());
             //statusBar.setText("Rendering Map...");
-            EditOptions.getInstance ().setCurrentFileName (file.getAbsolutePath ());
-            EditOptions.getInstance ().setWorkingDirName (file.getParent ());
+            MapPreferences.getInstance ().setCurrentFile(file.getAbsolutePath());
+            MapPreferences.getInstance ().setWorkingDir(file.getParent ());
             if (starData != null)
             {
                 setAstrogrationData (starData);
@@ -282,7 +282,7 @@ public class MapCommands
 
     public void fileSave (ActionEvent e)
     {
-        String outputFile = EditOptions.getInstance ().getCurrentFileName ();
+        String outputFile = MapPreferences.getInstance ().getCurrentFile ();
         if (outputFile == null)
         {
             fileSaveAs (e);
@@ -293,7 +293,7 @@ public class MapCommands
             /* replace the file name with an xml file name */
             outputFile = 
                     outputFile.substring (0, outputFile.length () - 4) + ".xml";
-            EditOptions.getInstance ().setCurrentFileName (outputFile);
+            MapPreferences.getInstance ().setCurrentFile (outputFile);
         }
         AccessXMLFile data = new AccessXMLFile (outputFile);
         data.setAstrogation (map.getMapData ());
@@ -320,7 +320,7 @@ public class MapCommands
     {
         JFileChooser chooser = new JFileChooser ();
         chooser.setDialogTitle (Resources.getString ("map.saveTitle"));
-        chooser.setCurrentDirectory (new File (EditOptions.getInstance ().getWorkingDirName ()));
+        chooser.setCurrentDirectory (new File (MapPreferences.getInstance ().getWorkingDir ()));
         chooser.addChoosableFileFilter (new JPEGFileFilter ());
         chooser.addChoosableFileFilter (new PDFFileFilter ());
         chooser.addChoosableFileFilter (new CXMLFileFilter ());
@@ -330,8 +330,8 @@ public class MapCommands
         if (option == JFileChooser.APPROVE_OPTION)
         {
             File file = chooser.getSelectedFile ();
-            EditOptions.getInstance ().setWorkingDirName (file.getParent ());
-            EditOptions.getInstance ().setCurrentFileName (file.getAbsolutePath ());
+            MapPreferences.getInstance ().setWorkingDir(file.getParent ());
+            MapPreferences.getInstance ().setCurrentFile (file.getAbsolutePath ());
 
             if (chooser.getFileFilter () instanceof JPEGFileFilter)
             {
@@ -381,7 +381,7 @@ public class MapCommands
 
     public void fileExit (ActionEvent e)
     {
-        EditOptions.getInstance ().savePreferences ();
+        MapPreferences.getInstance ().savePreferences ();
         System.exit (0);
     }
 
@@ -586,7 +586,7 @@ public class MapCommands
     {
         try
         {
-            starData.loadGlobalReferences (EditOptions.getInstance ().getExternalRefsFileName ());
+            starData.loadGlobalReferences (MapPreferences.getInstance ().getExternalRefsFileName ());
         } catch (IOException ex)
         {
             JOptionPane.showMessageDialog (display, ex.getMessage (), Resources.getString ("map.IOExceptionTitle"), 

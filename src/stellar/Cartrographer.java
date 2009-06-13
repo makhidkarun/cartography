@@ -17,12 +17,13 @@ public class Cartrographer
 {
     public Cartrographer ()
     {
+        MapPreferences prefs = MapPreferences.getInstance();
         Frame frame = new Map ();
-        EditOptions options = EditOptions.getInstance ();
+        //EditOptions options = EditOptions.getInstance ();
 
         Dimension frameSize = 
-            new Dimension (options.getAppWidth (), options.getAppHeight ());
-        Point location = new Point (options.getAppX (), options.getAppY ());
+            new Dimension (prefs.getAppWidth (), prefs.getAppHeight ());
+        Point location = new Point (prefs.getAppX (), prefs.getAppY ());
         Dimension screenSize = Toolkit.getDefaultToolkit ().getScreenSize ();
         if (location.x < 0 || location.x > screenSize.width)
         {

@@ -30,36 +30,38 @@ import java.util.*;
 
 import javax.swing.event.ChangeEvent;
 
+import stellar.MapPreferences;
+
 /**
- * MapIcon is a Icon (graphic image) on which the (generic) map is drawn. The 
+ * MapIcon is a Icon (graphic image) on which the (generic) map is drawn. The
  * Icon itself is kept in offscreenImage, a BufferedImage, as a offscreen buffer.
  * The abstract method drawAll() will (should) draw the graphics on this offscreen
- * image. The data for this display comes from the Astrogation data. 
- * 
+ * image. The data for this display comes from the Astrogation data.
+ *
  * To use this, add the MapIcon as the Icon to a JLabel. Keep in mind this image
  * can be quite large, and you may need to put your JLabel in a JScrollPane to
- * keep your map a reasonable display size. 
- * 
- * MapIcon supports 5 scales, which are the size of the elements drawn on the map. 
+ * keep your map a reasonable display size.
+ *
+ * MapIcon supports 5 scales, which are the size of the elements drawn on the map.
  * SCALE_1 repesents the smallest elements, up to SCALE_5 which represents the
  * largest elements. The zoomIn() moves the scale to the next larger scale,
- * zoomOut() moves to the next smaller scale. 
- * 
- * MapIcon supports levels (via getLevel() and setLevel()), which selects the 
- * group type to use for the map. In addition to the GroupRecord Domain, Sector, 
+ * zoomOut() moves to the next smaller scale.
+ *
+ * MapIcon supports levels (via getLevel() and setLevel()), which selects the
+ * group type to use for the map. In addition to the GroupRecord Domain, Sector,
  * Quadrant, Subsector, MapIcon adds System level (the default). By selecting a
- * level, MapIcon should display the map at that level. For example, selecting 
+ * level, MapIcon should display the map at that level. For example, selecting
  * a level of Subsector should display a map of subsectors from the Astrogation data.
- * 
- * MapIcon supports scope (via setScope()), which selects a limitation to the 
+ *
+ * MapIcon supports scope (via setScope()), which selects a limitation to the
  * number of map elements (systems, etc) displayed. The Scope can be set to any of
  * the GroupRecord indexes, or to ALL, which is eveything in the Astrogation
- * data. By default, setting the scope also set the map size in terms of map 
- * elements and if you want a different size, you will need to explicitly override 
+ * data. By default, setting the scope also set the map size in terms of map
+ * elements and if you want a different size, you will need to explicitly override
  * it. For example, if you set the scope to subsector, the map will display all
- * of the systems in the subsector, with a map size based upon the size of a 
- * subsector at the current scale. 
- * 
+ * of the systems in the subsector, with a map size based upon the size of a
+ * subsector at the current scale.
+ *
  * @version $Revision: 1.11 $
  * @author  $Author$
  */
@@ -102,11 +104,11 @@ public abstract class MapIcon implements Icon, AstrogationChangeListener
     {
         if (set)
         {
-            setLayout (MapScale.SCALE_5, EditOptions.getInstance().getScaleLayout(MapScale.SCALE_5));
-            setLayout (MapScale.SCALE_4, EditOptions.getInstance().getScaleLayout(MapScale.SCALE_4));
-            setLayout (MapScale.SCALE_3, EditOptions.getInstance().getScaleLayout(MapScale.SCALE_3));
-            setLayout (MapScale.SCALE_2, EditOptions.getInstance().getScaleLayout(MapScale.SCALE_2));
-            setLayout (MapScale.SCALE_1, EditOptions.getInstance().getScaleLayout(MapScale.SCALE_1));
+            setLayout (MapScale.SCALE_5, MapPreferences.getInstance().getScaleLayout(MapScale.SCALE_5));
+            setLayout (MapScale.SCALE_4, MapPreferences.getInstance().getScaleLayout(MapScale.SCALE_4));
+            setLayout (MapScale.SCALE_3, MapPreferences.getInstance().getScaleLayout(MapScale.SCALE_3));
+            setLayout (MapScale.SCALE_2, MapPreferences.getInstance().getScaleLayout(MapScale.SCALE_2));
+            setLayout (MapScale.SCALE_1, MapPreferences.getInstance().getScaleLayout(MapScale.SCALE_1));
             scale = MapScale.SCALE_3;
         }
     }

@@ -10,7 +10,7 @@ import java.util.Map;
 /**
  * MapScale is an enumeration of Scales (sizes) of the map. Currently there are
  * 5 scales (numbered 1 through 5). 
- * @version $Revision: 1.1 $
+ * @version $Id$
  * @author $Author$
  */
 public enum MapScale

@@ -32,56 +32,59 @@ import javax.swing.text.html.HTMLDocument;
 import javax.swing.text.html.HTMLEditorKit;
 import javax.swing.text.html.HTMLEditorKit.ParserCallback;
 import org.jibx.runtime.JiBXException;
+
+import stellar.MapPreferences;
+
 /**
- * Galactic Sector Archive reader. Galactic is an older DOS based Traveller 
+ * Galactic Sector Archive reader. Galactic is an older DOS based Traveller
  * mapping program. While in use, Galactic keeps all of it's data is fixed format
  * files layed out in a specific directory structure. In order to allow people
  * to transport this around Galactic has the option of creating an archive. This
- * archive is either on a sector by sector basis or of the full data set. 
+ * archive is either on a sector by sector basis or of the full data set.
  * <P>
- * The Sector archive is kept in a .SAR (Sector Archive) file, which is  
+ * The Sector archive is kept in a .SAR (Sector Archive) file, which is
  * a PKZip file with a non-standard name. Galactic ships with an old freeware
- * version of PKZip used to access these SAR files. 
+ * version of PKZip used to access these SAR files.
  * <P>
  * This class uses the <code>java.util.zip</code> package to access a SAR file
- * and read the fixed structure and files into a new <code>Astrogation</code>. 
+ * and read the fixed structure and files into a new <code>Astrogation</code>.
  * This is a one-way conversion, there is no way (currently) to create or update
  * the Galactic SAR files with new data.
  * <P>
  * The Galactic SAR file structure is as follows:
  * <P>
- * <strong>GALS\[GALAXY]\[SECTOR]</strong>: By default all files are preceeded 
- * by this directory. The GALS directory is where Galactic keeps the data 
+ * <strong>GALS\[GALAXY]\[SECTOR]</strong>: By default all files are preceeded
+ * by this directory. The GALS directory is where Galactic keeps the data
  * for all the Galaxies. Each Galaxy (a set of data files) is then divided into
  * Sectors. By convention the SAR file name and the [SECTOR] name should be the
- * same, and this code assumes this is true. 
+ * same, and this code assumes this is true.
  * <P>
- * <strong>[SECTOR].DAT</strong>: This file contains several types of data 
+ * <strong>[SECTOR].DAT</strong>: This file contains several types of data
  * about to the sector. <br>
  * Line 1: Full display name of the sector.<br>
  * Line 3-18: Subsector information. These are fixed format records
  * <br><PRE>X: [NAME]                    [Filename]        [flag]</PRE>
- * where X is the single letter subsctor identifier (A-P). [NAME] is the 
- * full name of the subsector. [Filename] is the name of the subsector data 
- * file (see below). [flag] is an optional single letter code of 'm' or 'f', 
+ * where X is the single letter subsctor identifier (A-P). [NAME] is the
+ * full name of the subsector. [Filename] is the name of the subsector data
+ * file (see below). [flag] is an optional single letter code of 'm' or 'f',
  * indicating additional information about the subsector.<br>
  * Line 20: Base information. This section starts with a line "Bases:". The
  * base information has the following information format:
  * <br><PRE>X = [NAME]</PRE>
  * where X is a single letter code for the base which may be a space, and [NAME]
  * is the full name of the base type. This information is loaded into the local
- * references file. There may be no information in this section. This section is 
+ * references file. There may be no information in this section. This section is
  * terminated by a blank line. <br>
  * Line 22: Allegiance information. This section starts with a line "Allegiance:".
  * The allegiance information has the following information format:
  * <br><pre>CC NN = [NAME]</pre>
- * where CC is a two digit color number. This color number is converted to a 
- * Stellar color number via the gal.color table in the global references data. 
- * NN is a two character allegiance code. Many of these codes are already in 
- * the global reference file, but users may have created their own. [NAME] is 
+ * where CC is a two digit color number. This color number is converted to a
+ * Stellar color number via the gal.color table in the global references data.
+ * NN is a two character allegiance code. Many of these codes are already in
+ * the global reference file, but users may have created their own. [NAME] is
  * the full name of the allegiance. This information is loaded into the local
- * reference information. There may be no information in this section. This 
- * section is terminated by a blank line. 
+ * reference information. There may be no information in this section. This
+ * section is terminated by a blank line.
  * <P>
  * <strong>UWP.DAT</strong>: This is an optional file which contains the text
  * meanings of the UWP values in the data files. This class ignores this file.
@@ -91,43 +94,43 @@ import org.jibx.runtime.JiBXException;
  * comments field for the sector.
  * <P>
  * <strong>TMP.TMP</strong>: This is a temporary file generated by the Galactic
- * when it creates the SAR file about where the SAR file came from. This file 
+ * when it creates the SAR file about where the SAR file came from. This file
  * contains four lines:
  * <br>line 1: the version of galactic generating the SAR file. Usually 2.4
  * <br>line 2: the galaxy of this sar file, same as the [GALAXY] in the path.
  * <br>line 3: the sector of this sar file, same as the [SECTOR] in the path.
  * <br>line 4: The [GALAXY].LST entry. This line contains a sector short name,
- * sector full name, an x,y location and a color code (A-P). 
- * <br> This file is currently ignored. 
+ * sector full name, an x,y location and a color code (A-P).
+ * <br> This file is currently ignored.
  * <P>
  * <strong>[SECTOR].SEC</strong>: An optional Sector file. Since this may be out
- * of date, it is ignored. 
+ * of date, it is ignored.
  * <p>
  * <strong>MAP\SUB_A.DAT</strong>: The subsector data files. The default names
  * for these files is SUB_X.DAT, where X is the subsector letter, but they may
  * have any valid name. These names are specified in the [SECTOR].DAT file above.
- * These files are read by the {@link GalDATReader}. 
+ * These files are read by the {@link GalDATReader}.
  * <p>
  * <strong>SYS\S0101.SYS</strong>: The SYS directory holds the system files, each
  * file contains a formated file with the list of planets and stars in a system.
- * None of these files are currently used. 
+ * None of these files are currently used.
  * <p>
- * <strong>LOC\P0101.TXT</strong>: The LOC directory holds either subsector or 
- * planet comment files, each file is a text file with comments about the 
+ * <strong>LOC\P0101.TXT</strong>: The LOC directory holds either subsector or
+ * planet comment files, each file is a text file with comments about the
  * subsector or specific world. These files are read into the comments field of
- * the subsector <code>GroupRecord</code> or <code>StarSystem</code>. 
+ * the subsector <code>GroupRecord</code> or <code>StarSystem</code>.
  * <p>
  * <strong>HEX\P0101.HEX</strong>: the HEX directory holds planetary hex maps
  * from a maping subsystem within Galactic. These files are currently ignored.
  * <p>
- * <strong>GEN\[SECTOR].MNU</strong>: The GEN directory holds additional 
+ * <strong>GEN\[SECTOR].MNU</strong>: The GEN directory holds additional
  * information about the sector. These are all text files and currently ignored.
  * <p>
  * <strong>*.MNU</strong>: These are menu files, and may appear in any directory.
  * Menu system is a crude text only hypertext system included with Galactic. The
- * Menu files are a set of formatted links to other files. All MNU files are 
- * currently ignored, though conversion to HTML should not be difficult. 
- * 
+ * Menu files are a set of formatted links to other files. All MNU files are
+ * currently ignored, though conversion to HTML should not be difficult.
+ *
  * @version $Revision: 1.9 $
  * @author $Author$
  */
@@ -172,7 +175,7 @@ public class GalSARReader implements AstrogationFileReader
     public void read () throws FileNotFoundException, IOException, 
     SECFileStateMachineException, JiBXException
     {
-        data = new Astrogation(EditOptions.getInstance().getExternalRefsFileName());
+        data = new Astrogation(MapPreferences.getInstance().getExternalRefsFileName());
         String galaxy, sectorName, pathName, dirName;
         ZipEntry entry;
 

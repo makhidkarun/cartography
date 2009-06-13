@@ -26,6 +26,8 @@ import java.util.*;
 
 import javax.swing.text.StyleConstants;
 
+import stellar.MapPreferences;
+
 public class DrawHexLayout //implements DisplayOptions 
 {
     private HexLayout layout;
@@ -114,7 +116,7 @@ public class DrawHexLayout //implements DisplayOptions
         /* StarSystem may be null for drawing the legend for some maps */
         /* @see HexLegend.drawLegend() */
         //if (s == null) s = options.getMapData().getSystem(0);
-        if (s == null) s = EditOptions.getInstance().getMapData().getSystem(0);
+        if (s == null) s = MapPreferences.getInstance().getMapData().getSystem(0);
 
         if (getTravelZone()) drawZone (s, centerLine, g2);
         

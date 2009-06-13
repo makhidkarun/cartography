@@ -19,7 +19,7 @@ import java.util.prefs.Preferences;
  * the options or lines will be propigated upward to listeners.
  *
  * @author Thomas Jones-Low
- * @version $Revision$
+ * @version $Id$
  */
 public class HexLayout implements PropertyChangeListener
 {

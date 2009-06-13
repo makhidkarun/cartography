@@ -22,6 +22,8 @@ import javax.swing.event.*;
 
 import org.jibx.runtime.*;
 
+import stellar.MapPreferences;
+
 
 public class ViewTableData extends JDialog implements AstrogationChangeListener
 {
@@ -219,7 +221,7 @@ public class ViewTableData extends JDialog implements AstrogationChangeListener
     {
         if (data.getGlobalReferences() == null) return;
         Astrogation refData = new Astrogation (data.getGlobalReferences());
-        File file = new File (EditOptions.getInstance().getWorkingDirName());
+        File file = new File (MapPreferences.getInstance().getWorkingDir());
         JFileChooser chooser = new JFileChooser();
         chooser.setDialogTitle("Save global reference data");
         chooser.setCurrentDirectory(file);
@@ -227,8 +229,8 @@ public class ViewTableData extends JDialog implements AstrogationChangeListener
         if (option == JFileChooser.APPROVE_OPTION)
         {
             file = chooser.getSelectedFile();
-            EditOptions.getInstance().setWorkingDirName(file.getParent());
-            EditOptions.getInstance().setCurrentFileName(file.getAbsolutePath());
+            MapPreferences.getInstance().setWorkingDir(file.getParent());
+            MapPreferences.getInstance().setCurrentFile(file.getAbsolutePath());
             String outputFile = file.getAbsolutePath();
             if (!outputFile.endsWith("xml"))
             {
@@ -269,7 +271,7 @@ public class ViewTableData extends JDialog implements AstrogationChangeListener
         if (e.getKeyCode() == KeyEvent.VK_INSERT)
         {
             TableRowRecord row = new TableRowRecord();
-            ProviderRecord user = EditOptions.getInstance().getUserProvider();
+            ProviderRecord user = MapPreferences.getInstance().getUserData();
             row.setProvider(user);
             tableModel.insertRow (tableData.getSelectedRow()+1, row);
             if (bSwitchMode.getText().equals("Local"))
@@ -407,7 +409,7 @@ public class ViewTableData extends JDialog implements AstrogationChangeListener
     private void bNewTable_actionPerformed(ActionEvent e)
     {
         TableRecord table = new TableRecord();
-        table.setProvider(EditOptions.getInstance().getUserProvider());
+        table.setProvider(MapPreferences.getInstance().getUserData());
         //table.setKey();
         //table.setValue();
         if (bSwitchMode.getText().equals("Local"))
