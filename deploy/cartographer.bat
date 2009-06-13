@@ -22,7 +22,7 @@ echo   to the installation directory of java.
 echo.
 
 :checkJikes
-"%_JAVACMD%" -classpath "%LOCALCLASSPATH%" com.softstart.stellar.Cartrographer 
+"%_JAVACMD%" -classpath "%LOCALCLASSPATH%" stellar.Cartrographer 
 
 set LOCALCLASSPATH=
 set _JAVACMD=
