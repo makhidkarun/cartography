@@ -46,18 +46,20 @@ import javax.swing.*;
 
 import stellar.MapPreferences;
 
+import stellar.io.filter.XMLFileFilter;
+
 /**
- * EditOptions dialog sets the options for the Stellar Cartographer program. 
- * Mostly this for setting the Map options. There are 5 scales, and for each 
- * scale, there is a set of 1 to 5 lines of options that go onto each hex. 
- * 
+ * EditOptions dialog sets the options for the Stellar Cartographer program.
+ * Mostly this for setting the Map options. There are 5 scales, and for each
+ * scale, there is a set of 1 to 5 lines of options that go onto each hex.
+ *
  * The EditOptions has 5 tabs (one for each scale), that shows the map as it is
- * currently, and allows the user to make changes and see the results in a small 
- * map. 
- * 
- * All of the data is kept in the @see stellar.MapPreferences , where is it 
- * stored in the Properties backing store for the application. 
- * 
+ * currently, and allows the user to make changes and see the results in a small
+ * map.
+ *
+ * All of the data is kept in the @see stellar.MapPreferences , where is it
+ * stored in the Properties backing store for the application.
+ *
  * @author Thomas Jones-Low
  * @version $Id$
  */
@@ -549,33 +551,39 @@ public class EditOptions extends JDialog //implements PropertyChangeListener
 
     private void bExportPrefs_actionPerformed(ActionEvent e)
     {
-        Preferences userPrefs;
-        File output;
-        FileOutputStream os;
-
-        userPrefs = Preferences.userNodeForPackage(this.getClass());
-        output = new File(prefs.getWorkingDir() + File.separator + "prefs.xml");
-
-        try
+        JFileChooser chooser = new JFileChooser ();
+        chooser.setDialogTitle (Resources.getString ("map.openTitle"));
+        chooser.addChoosableFileFilter (new XMLFileFilter ());
+        int option = chooser.showOpenDialog (this);
+        if (option == JFileChooser.APPROVE_OPTION)
         {
-            os = new FileOutputStream(output);
-            userPrefs = Preferences.userRoot();
-            userPrefs.exportSubtree(os);
-            os.close();
-        } catch (FileNotFoundException ex)
-        {
-            ex.printStackTrace();
-        } catch (IOException ex)
-        {
-        } catch (BackingStoreException ex)
-        {
-            ex.printStackTrace();
+            prefs.exportPreferences(chooser.getSelectedFile().getAbsolutePath());
         }
     }
 
     private void bRestorePrefs_actionPerformed(ActionEvent e)
     {
-        prefs.restorePreferences(true);
+        JFileChooser chooser = new JFileChooser ();
+        chooser.setDialogTitle (Resources.getString ("map.openTitle"));
+        chooser.addChoosableFileFilter (new XMLFileFilter ());
+        int option = chooser.showOpenDialog (this);
+        if (option == JFileChooser.APPROVE_OPTION)
+        {
+            try
+            {
+                prefs.restorePreferences(chooser.getSelectedFile().getAbsolutePath(), true);
+            }
+            catch (FileNotFoundException ex)
+            {
+                JOptionPane.showMessageDialog (this, ex.getMessage (), Resources.getString ("map.NoFileTitle"), 
+                                               JOptionPane.ERROR_MESSAGE);
+            } 
+            catch (IOException ex)
+            {
+                JOptionPane.showMessageDialog (this, ex.getMessage (), Resources.getString ("map.IOExceptionTitle"), 
+                                               JOptionPane.ERROR_MESSAGE);
+            }
+        }
     }
    
     public static void main(String[] args)

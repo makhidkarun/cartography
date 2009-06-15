@@ -237,6 +237,7 @@ public class MapCommands
             }
             if (data == null)
             {
+                display.setCursor (Cursor.getDefaultCursor ());
                 JOptionPane.showMessageDialog (display, 
                                                "Unrecognized data file. No data loaded", Resources.getString ("map.NoFileTitle"), 
                                                JOptionPane.ERROR_MESSAGE);

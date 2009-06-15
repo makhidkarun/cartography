@@ -396,7 +396,7 @@
             </hash>
             <url n="jarURL" path="deploy/Stellar.jar"/>
             <value n="platformType" v="JEE"/>
-            <value n="platformVersion" v="1.5"/>
+            <value n="platformVersion" v="1.4"/>
             <value n="profileClass" v="oracle.jdeveloper.deploy.jar.ClientProfile"/>
             <value n="profileName" v="Stellar"/>
          </hash>

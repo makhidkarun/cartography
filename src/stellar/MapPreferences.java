@@ -1,10 +1,14 @@
 package stellar;
 
+import java.awt.event.ActionEvent;
+
 import java.beans.PropertyChangeListener;
 import java.beans.PropertyChangeSupport;
 
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.io.IOException;
 
 import java.io.InputStream;
@@ -41,13 +45,16 @@ public class MapPreferences
     private static MapPreferences _instance;
 
     /* Application parameter values */
-    private String workingDir;
+    private String workingDir = System.getProperty("user.dir");
     private String currentFile;
-    private int appWidth, appHeight, appX, appY;
+    private int appWidth = 200;
+    private int appHeight = 300;
+    private int appX = 80;
+    private int  appY = 80;
     private ProviderRecord userData;
 
-    private String userName;
-    private String description;
+    private String userName = "User";
+    private String description = "Independent User Modification";
     private String emailAddress;
     private String website;
 
@@ -88,12 +95,20 @@ public class MapPreferences
         propertyChangeSupport.removePropertyChangeListener(l);
     }
 
-    public void restorePreferences (boolean load)
+    public void restorePreferences (String filename, boolean load) throws FileNotFoundException, IOException
     {
         Preferences userPrefs;
         InputStream is;
 
-        is = Resources.getPreferences();
+        if (filename == null)
+            is = Resources.getPreferences();
+        else
+        {
+                is = new FileInputStream (new File (filename));
+        }
+        
+        if (is == null) throw new FileNotFoundException ("Prefs file not found");
+        
         userPrefs = Preferences.userNodeForPackage(this.getClass());
 
         try
@@ -103,20 +118,11 @@ public class MapPreferences
             is.close();
             userPrefs.flush();
         }
-        catch (FileNotFoundException ex)
-        {
-            ex.printStackTrace();
-        }
         catch (BackingStoreException ex)
         {
             // Means we can't load the preferences from prefsOrig.xml into
             // the backing store. We don't care. Either the prefsOrig.xml
             // is corrupt or we have bigger problems. 
-        }
-        catch (IOException ex)
-        {
-            // Here reading the prefsOrig.xml from the resources file has failed
-            // for one reason or another. 
         }
         catch (InvalidPreferencesFormatException ex)
         {
@@ -135,21 +141,30 @@ public class MapPreferences
         Preferences userPrefs, layoutPrefs;
     
         userPrefs = Preferences.userNodeForPackage(this.getClass());
-
-        try {
-        if (!userPrefs.nodeExists(MapPreferencesProperties.LOADED.name()))
+        if (!userPrefs.getBoolean(MapPreferencesProperties.LOADED.name(), false))
         {
-            restorePreferences(false);
-            loaded = true;
+            try {
+                    restorePreferences(null, false);
+                    loaded = true;
+            }
+            catch (FileNotFoundException ex)
+            {
+                //This means the prefsOrig.xml file isn't in the resources area of 
+                // of the Jar file. This may mean a corrupt jar file. 
+                // This is also a development error, trying to recreate the prefsOrig.xml
+                // after something significant has changed. 
+                ex.printStackTrace();
+            }
+            catch (IOException ex)
+            {
+                // this means the prefsOrig.xml file can't be read from the resources
+                // in the Jar file. This may mean corrupt jar file. 
+                // Or this is a development error, but it should never happen. 
+                ex.printStackTrace();
+            }
         }
-        }
-        catch (BackingStoreException ex)
+        try 
         {
-            // There's something wrong with the Backing store, should never (or
-            // rarely ever) happen. 
-            // TODO: How to handle this error?
-            ex.printStackTrace();
-        }
         appWidth = userPrefs.getInt(MapPreferencesProperties.APP_WIDTH.name(), 200);
         appHeight = userPrefs.getInt(MapPreferencesProperties.APP_HEIGHT.name(), 300);
         appX = userPrefs.getInt(MapPreferencesProperties.XPOS.name(), 80);
@@ -158,6 +173,7 @@ public class MapPreferences
     
         programImportReferences = userPrefs.getBoolean(MapPreferencesProperties.IMPORT_EXTERNAL_REFS.name(), true);
         externalRefsFileName = userPrefs.get(MapPreferencesProperties.REFERENCE_FILE.name(), null);
+        if (externalRefsFileName != null && externalRefsFileName.length() == 0) externalRefsFileName = null;
     
         userName = userPrefs.get(MapPreferencesProperties.USER_NAME.name(), "user");
         description = userPrefs.get(MapPreferencesProperties.DESCRIPTION.name(),
@@ -173,13 +189,25 @@ public class MapPreferences
     
         workingDir =
                 userPrefs.get(MapPreferencesProperties.WORKING_DIR.name(), System.getProperty("user.dir"));
-    
+
+        currentFile = userPrefs.get (MapPreferencesProperties.CURRENT_FILE.name(), 
+                                     null);
+        if (currentFile != null && currentFile.length() == 0) currentFile = null;
+            
         layoutPrefs = userPrefs.node (MapPreferencesProperties.LAYOUT.name());
         scaleOptions.get(MapScale.SCALE_1).load(layoutPrefs);
         scaleOptions.get(MapScale.SCALE_2).load(layoutPrefs);
         scaleOptions.get(MapScale.SCALE_3).load(layoutPrefs);
         scaleOptions.get(MapScale.SCALE_4).load(layoutPrefs);
         scaleOptions.get(MapScale.SCALE_5).load(layoutPrefs);
+        }
+        catch (IllegalStateException ex)
+        {
+            // This occurs during the development process when the Preferences
+            // haven't been set up correctly and the prefsOrig.xml is broken as
+            // well. Here we want to rely upon the default values until we can 
+            // restore the prefsOrig.xml to a useable state. 
+        }
     }    
     private void loadPrefsForHexLine(Preferences layoutPrefs,
                                      HexLinePanel line)
@@ -200,15 +228,18 @@ public class MapPreferences
                               true);
         userPrefs.putBoolean(MapPreferencesProperties.IMPORT_EXTERNAL_REFS.name(),
                              programImportReferences);
-        userPrefs.put(MapPreferencesProperties.REFERENCE_FILE.name(), externalRefsFileName);
-        if (currentFile == null)
-            currentFile = "";
-        userPrefs.put(MapPreferencesProperties.CURRENT_FILE.name(), currentFile);
+        userPrefs.put(MapPreferencesProperties.REFERENCE_FILE.name(), 
+                      (externalRefsFileName==null ? "" : externalRefsFileName));
+
+        userPrefs.put(MapPreferencesProperties.CURRENT_FILE.name(), 
+                      (currentFile==null ? "" : currentFile));
 
         userPrefs.put(MapPreferencesProperties.USER_NAME.name(), userName);
         userPrefs.put(MapPreferencesProperties.DESCRIPTION.name(), description);
-        userPrefs.put(MapPreferencesProperties.EMAIL_ADDRESS.name(), emailAddress);
-        userPrefs.put(MapPreferencesProperties.WEBSITE.name(), website);
+        userPrefs.put(MapPreferencesProperties.EMAIL_ADDRESS.name(), 
+                      (emailAddress == null ? "" : emailAddress));
+        userPrefs.put(MapPreferencesProperties.WEBSITE.name(), 
+                      (website == null ? "" : website));
 
         userPrefs.put(MapPreferencesProperties.WORKING_DIR.name(), workingDir);
         userPrefs.putInt(MapPreferencesProperties.APP_WIDTH.name(), appWidth);
@@ -223,6 +254,34 @@ public class MapPreferences
         scaleOptions.get(MapScale.SCALE_4).save(layoutPrefs);
         scaleOptions.get(MapScale.SCALE_5).save(layoutPrefs);
     }
+
+    public void exportPreferences(String filename)
+    {
+        Preferences userPrefs;
+        File output;
+        FileOutputStream os;
+
+        userPrefs = Preferences.userNodeForPackage(this.getClass());
+        output = new File(filename);
+
+        try
+        {
+            os = new FileOutputStream(output);
+            //userPrefs = Preferences.userRoot();
+            userPrefs.exportSubtree(os);
+            os.close();
+        } catch (FileNotFoundException ex)
+        {
+            ex.printStackTrace();
+        } catch (IOException ex)
+        {
+        } catch (BackingStoreException ex)
+        {
+            ex.printStackTrace();
+        }
+    }
+
+
 
     public HexLayout getScaleLayout(MapScale level)
     {
