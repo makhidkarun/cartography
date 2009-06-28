@@ -159,17 +159,18 @@ public class EditOptions extends JDialog //implements PropertyChangeListener
 
         this.getContentPane().setLayout(borderLayout1);
         this.setModal(true);
-        this.setTitle("Edit Options");
+        this.setTitle(Resources.getString("eo.title"));
 
 
         /* Buttons */
         jButtonPanel.addOKActionListener(new OKActionListener());
         jButtonPanel.addCancelActionListener(new CancelActionListener());
 
-        bApply.setText("Apply");
+        bApply.setText(Resources.getString("eo.applyButton.Name"));
         bApply.setEnabled(false);
 
-        bExportPrefs.setText("Export");
+        bExportPrefs.setText(Resources.getString("eo.exportButton.Name"));
+        bExportPrefs.setToolTipText(Resources.getString("eo.exportButton.ShortDescription"));
         bExportPrefs.addActionListener(new ActionListener()
             {
                 public void actionPerformed(ActionEvent e)
@@ -178,8 +179,8 @@ public class EditOptions extends JDialog //implements PropertyChangeListener
                 }
             });
 
-        bRestorePrefs.setText("Restore");
-        bRestorePrefs.setToolTipText("Restore preferences");
+        bRestorePrefs.setText(Resources.getString("eo.restoreButton.Name"));
+        bRestorePrefs.setToolTipText(Resources.getString("eo.restoreButton.ShortDescription"));
         bRestorePrefs.addActionListener(new ActionListener()
             {
                 public void actionPerformed(ActionEvent e)
@@ -194,15 +195,15 @@ public class EditOptions extends JDialog //implements PropertyChangeListener
 
         /* Program  Tab*/
         program.setLayout(gridBagLayout1);
-        programImportReferences.setText("Import External References");
+        programImportReferences.setText(Resources.getString("eo.importRefs.Name"));
         programImportReferences.setSelected(true);
-        programImportReferences.setToolTipText("Import already defined references on startup");
+        programImportReferences.setToolTipText(Resources.getString("eo.importRefs.ShortDescription"));
         externalRefsFileName.setColumns(20);
 
-        jLabel1.setText("User Name");
+        jLabel1.setText(Resources.getString("eo.username"));
         userName.setText("userName");
         userName.setColumns(25);
-        userName.setToolTipText("Your name, used to identify any new maps and data created");
+        userName.setToolTipText(Resources.getString("eo.username.ShortDescription"));
         jLabel2.setText("Description");
         description.setText("Description");
         description.setColumns(25);
