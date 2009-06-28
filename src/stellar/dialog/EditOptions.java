@@ -97,7 +97,6 @@ public class EditOptions extends JDialog //implements PropertyChangeListener
     private BorderLayout scale5CardLayout = new BorderLayout();
 
     private Map <MapScale, HexOptionPanel> scalePanel= new EnumMap <MapScale, HexOptionPanel> (MapScale.class);
-    //private Map <MapScale, DrawHexLayout> layout = new EnumMap <MapScale, DrawHexLayout> (MapScale.class);
 
     private JPanel scale1HexLines = new JPanel();
     private JPanel scale2HexLines = new JPanel();
@@ -114,25 +113,6 @@ public class EditOptions extends JDialog //implements PropertyChangeListener
     private BorderLayout borderLayout2 = new BorderLayout();
     private GridBagLayout gridBagLayout1 = new GridBagLayout();
 
-    //private HexLinePanel scale1Line1; // = new HexLinePanel();
-
-    //private HexLinePanel scale2Line2; // = new HexLinePanel();
-    //private HexLinePanel scale2Line1; // = new HexLinePanel();
-
-    //private HexLinePanel scale3Line1; // = new HexLinePanel();
-    //private HexLinePanel scale3Line2; // = new HexLinePanel();
-    //private HexLinePanel scale3Line3; // = new HexLinePanel();
-
-    //private HexLinePanel scale4Line1; // = new HexLinePanel();
-    //private HexLinePanel scale4Line2; // = new HexLinePanel();
-    //private HexLinePanel scale4Line3; // = new HexLinePanel();
-    //private HexLinePanel scale4Line4; // = new HexLinePanel();
-
-    //private HexLinePanel scale5Line1; // = new HexLinePanel();
-    //private HexLinePanel scale5Line2; // = new HexLinePanel();
-    //private HexLinePanel scale5Line3; // = new HexLinePanel();
-    //private HexLinePanel scale5Line4; // = new HexLinePanel();
-    //private HexLinePanel scale5Line5; // = new HexLinePanel();
     private JLabel jLabel1 = new JLabel();
     private JTextField userName = new JTextField();
     private JLabel jLabel2 = new JLabel();
@@ -201,12 +181,6 @@ public class EditOptions extends JDialog //implements PropertyChangeListener
     {
         ScaleActionListener l;
         
-        //layout.put (MapScale.SCALE_1, new DrawHexLayout (1, MapScale.SCALE_1));
-        //layout.put (MapScale.SCALE_2, new DrawHexLayout (2, MapScale.SCALE_2));
-        //layout.put (MapScale.SCALE_3, new DrawHexLayout (3, MapScale.SCALE_3));
-        //layout.put (MapScale.SCALE_4, new DrawHexLayout (4, MapScale.SCALE_4));
-        //layout.put (MapScale.SCALE_5, new DrawHexLayout (5, MapScale.SCALE_5));
-
         borderLayout1.setHgap(5);
         scale1CardLayout.setHgap(5);
         scale1CardLayout.setVgap(5);
@@ -250,13 +224,10 @@ public class EditOptions extends JDialog //implements PropertyChangeListener
         jButtonPanel.add(bRestorePrefs);
         jButtonPanel.add(bExportPrefs);
         jButtonPanel.add(bApply);
-        //jButtonPanel.add(bApply, new GridBagConstraints(0, 2, 1, 1, 0.0, 0.0, GridBagConstraints.CENTER, GridBagConstraints.HORIZONTAL, new Insets(5, 0, 0, 0), 0, 0));
-        //jButtonPanel.add(bExportPrefs, new GridBagConstraints(0, 3, 1, 1, 0.0, 0.0, GridBagConstraints.CENTER, GridBagConstraints.HORIZONTAL, new Insets(5, 0, 0, 0), 0, 0));
-        //jButtonPanel.add(bRestorePrefs, new GridBagConstraints(0, 4, 1, 1, 0.0, 1.0, GridBagConstraints.NORTH, GridBagConstraints.HORIZONTAL, new Insets(5, 0, 0, 0), 0, 0));
 
         /* Map Scale 1 Layout */
        
-        scalePanel.put (MapScale.SCALE_1, new HexOptionPanel(prefs.getScaleLayout(MapScale.SCALE_1).getOptions()));
+        scalePanel.put (MapScale.SCALE_1, new HexOptionPanel(prefs.getScaleLayout(MapScale.SCALE_1)));
 
         scalePanel.get(MapScale.SCALE_1).setHexLayout(MapScale.SCALE_1, prefs.getScaleLayout(MapScale.SCALE_1));
         scalePanel.get(MapScale.SCALE_1).setMapData(prefs.getMapData());
@@ -279,16 +250,11 @@ public class EditOptions extends JDialog //implements PropertyChangeListener
         mapScale1.add(scalePanel.get(MapScale.SCALE_1), BorderLayout.EAST);
 
         /* MapScale 2 Layout */
-        scalePanel.put (MapScale.SCALE_2, new HexOptionPanel (prefs.getScaleLayout(MapScale.SCALE_2).getOptions()));
+        scalePanel.put (MapScale.SCALE_2, new HexOptionPanel (prefs.getScaleLayout(MapScale.SCALE_2)));
         scalePanel.get(MapScale.SCALE_2).setHexLayout (MapScale.SCALE_2, prefs.getScaleLayout(MapScale.SCALE_2));
         scalePanel.get(MapScale.SCALE_2).setMapData(prefs.getMapData());
         scalePanel.get(MapScale.SCALE_2).setMapScale (MapScale.SCALE_2);
         scalePanel.get(MapScale.SCALE_2).setMapScope (MapScope.QUADRANT);
-        
-        //scale2Line1 = new HexLinePanel (scaleOptions.get(MapScale.SCALE_2).getLine(1));
-        //scale2Line2 = new HexLinePanel (scaleOptions.get(MapScale.SCALE_2).getLine(2));
-
-        //layout.get(MapScale.SCALE_2).setOptions(scaleOptions.get(MapScale.SCALE_2));
 
         scale2HexLines.setLayout(scale2LinesLayout);
         scale2HexLines.setBorder(BorderFactory.createBevelBorder(BevelBorder.LOWERED));
@@ -308,7 +274,7 @@ public class EditOptions extends JDialog //implements PropertyChangeListener
         mapScale2.add(scalePanel.get(MapScale.SCALE_2), BorderLayout.EAST);
 
         /* Scale 3 Map Layout */
-        scalePanel.put (MapScale.SCALE_3, new HexOptionPanel(prefs.getScaleLayout(MapScale.SCALE_3).getOptions()));
+        scalePanel.put (MapScale.SCALE_3, new HexOptionPanel(prefs.getScaleLayout(MapScale.SCALE_3)));
         scalePanel.get(MapScale.SCALE_3).setHexLayout (MapScale.SCALE_3, prefs.getScaleLayout(MapScale.SCALE_3));
         scalePanel.get(MapScale.SCALE_3).setMapData(prefs.getMapData());
         scalePanel.get(MapScale.SCALE_3).setMapScale(MapScale.SCALE_3);
@@ -340,7 +306,7 @@ public class EditOptions extends JDialog //implements PropertyChangeListener
         mapScale3.add(scalePanel.get(MapScale.SCALE_3), BorderLayout.EAST);
 
         /* Scale 4 Map Layout */
-        scalePanel.put (MapScale.SCALE_4, new HexOptionPanel (prefs.getScaleLayout(MapScale.SCALE_4).getOptions()));
+        scalePanel.put (MapScale.SCALE_4, new HexOptionPanel (prefs.getScaleLayout(MapScale.SCALE_4)));
         scalePanel.get(MapScale.SCALE_4).setHexLayout (MapScale.SCALE_4, prefs.getScaleLayout(MapScale.SCALE_4));
         scalePanel.get(MapScale.SCALE_4).setMapData (prefs.getMapData());
         scalePanel.get(MapScale.SCALE_4).setMapScale (MapScale.SCALE_4);
@@ -378,7 +344,7 @@ public class EditOptions extends JDialog //implements PropertyChangeListener
         mapScale4.add(scalePanel.get(MapScale.SCALE_4), BorderLayout.EAST);
 
         /* Scale 5 Map Layout */
-        scalePanel.put(MapScale.SCALE_5, new HexOptionPanel (prefs.getScaleLayout(MapScale.SCALE_5).getOptions()));
+        scalePanel.put(MapScale.SCALE_5, new HexOptionPanel (prefs.getScaleLayout(MapScale.SCALE_5)));
         scalePanel.get(MapScale.SCALE_5).setHexLayout (MapScale.SCALE_5, prefs.getScaleLayout(MapScale.SCALE_5));
         scalePanel.get(MapScale.SCALE_5).setMapData(prefs.getMapData());
         scalePanel.get(MapScale.SCALE_5).setMapScale (MapScale.SCALE_5);
@@ -512,7 +478,7 @@ public class EditOptions extends JDialog //implements PropertyChangeListener
         jTabbedPane1.addTab("Map Scale 4", mapScale4);
         jTabbedPane1.addTab("Map Scale 3", mapScale3);
         mapScale2.add(scale2HexLines, BorderLayout.CENTER);
-        jTabbedPane1.addTab("mapScale2", mapScale2);
+        jTabbedPane1.addTab("Map Scale 2", mapScale2);
         jTabbedPane1.addTab("Map Scale 1", mapScale1);
 
         this.getContentPane().add(jButtonPanel, BorderLayout.SOUTH);

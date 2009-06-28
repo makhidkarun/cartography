@@ -1,5 +1,10 @@
 package stellar.dialog;
 
+import com.jgoodies.forms.builder.PanelBuilder;
+import com.jgoodies.forms.factories.Borders;
+import com.jgoodies.forms.layout.CellConstraints;
+import com.jgoodies.forms.layout.FormLayout;
+
 import stellar.map.layout.HexLine;
 
 import stellar.map.layout.HexLineProperties;
@@ -24,6 +29,8 @@ import java.awt.event.ActionEvent;
 import java.beans.PropertyChangeEvent;
 import java.beans.PropertyChangeListener;
 
+import stellar.io.Resources;
+
 public class HexLinePanel extends JPanel implements PropertyChangeListener
 {
     private HexLine line;
@@ -36,13 +43,7 @@ public class HexLinePanel extends JPanel implements PropertyChangeListener
     private JComboBox longChoice = new JComboBox();
     private JComboBox shortChoice3 = new JComboBox();
     
-    
-    private GridBagLayout gb = new GridBagLayout();
-    private GridBagConstraints gbc = new GridBagConstraints();
     private ButtonGroup optionGroup = new ButtonGroup();
-    
-    //private int lineNumber;
-    private boolean twoShort = false;
 
     public HexLinePanel ()
     {
@@ -75,36 +76,37 @@ public class HexLinePanel extends JPanel implements PropertyChangeListener
 
     private void jbInit() throws Exception
     {
-        this.setLayout(gb);
-        //this.setSize(new Dimension(510, 55));
-        //this.setBounds(new Rectangle(10, 10, 510, 55));
-        //this.setBounds(new Rectangle(10, 10, 435, 50));
-        lineName.setText("Line  ");
+        
+        FormLayout formLayout1 = new FormLayout("right:pref, $rgap, 4*(pref, $rgap)",
+                                                 "pref, $rgap, pref");
+        PanelBuilder builder = new PanelBuilder (formLayout1, this);
+        CellConstraints cc = new CellConstraints();
+        builder.setBorder(Borders.DLU4_BORDER);
 
-        longOption.setText("Long");
-        shortOption.setText("Short");
+        lineName.setText(Resources.getString("eo.hl.line") + " " + 
+                         String.valueOf(line.getLineNumber()));
 
-        //longChoice.i
-        //longChoice.setActionCommand("longOptionChanged");
-        //shortChoice1.setActionCommand("short1OptionChanged");
-        //shortChoice2.setActionCommand("short2OptionChanged");
-        //shortChoice3.setActionCommand("short3OptionChanged");
+        longOption.setText(Resources.getString("eo.hl.long"));
+        shortOption.setText(Resources.getString("eo.hl.short"));
 
         optionGroup.add(longOption);
         optionGroup.add(shortOption);
 
-
-        longOption.setSelected(true);
+        if (line.isLongSelected())
+            longOption.setSelected(true);
+        else
+            shortOption.setSelected(true);
+        
         longChoice.setModel(new DefaultComboBoxModel (LongLineList.values()));
-        longChoice.setSelectedIndex(0);
+        longChoice.setSelectedItem(line.getLongItem());
 
         shortChoice1.setModel(new DefaultComboBoxModel (ShortLineList.values()));
         shortChoice2.setModel(new DefaultComboBoxModel (ShortLineList.values()));
         shortChoice3.setModel(new DefaultComboBoxModel (ShortLineList.values()));
 
-        shortChoice1.setSelectedIndex(0);
-        shortChoice2.setSelectedIndex(0);
-        shortChoice3.setSelectedIndex(0);
+        shortChoice1.setSelectedItem(line.getShortItem1());
+        shortChoice2.setSelectedItem(line.getShortItem2());
+        shortChoice3.setSelectedItem(line.getShortItem3());
         
         longChoice.addActionListener(new ActionListener ()
             {
@@ -145,39 +147,25 @@ public class HexLinePanel extends JPanel implements PropertyChangeListener
                      line.setLongSelected(longOption.isSelected());
                  }
              });
-        this.add(lineName, new GridBagConstraints(0, 0, 1, 2, 0.0, 0.0, GridBagConstraints.WEST, GridBagConstraints.NONE, new Insets(0, 4, 0, 4), 0, 0));
-        this.add(longOption, new GridBagConstraints(1, 0, 1, 1, 0.0, 0.0, GridBagConstraints.CENTER, GridBagConstraints.NONE, new Insets(0, 0, 5, 0), 0, 0));
-        this.add(longChoice, new GridBagConstraints(2, 0, GridBagConstraints.RELATIVE, 1, 0.0, 0.0, GridBagConstraints.WEST, GridBagConstraints.NONE, new Insets(0, 0, 5, 0), 0, 0));
-        this.add(shortOption, new GridBagConstraints(1, 1, 1, 1, 0.0, 0.0, GridBagConstraints.CENTER, GridBagConstraints.NONE, new Insets(0, 0, 0, 0), 0, 0));
-        this.add(shortChoice1, new GridBagConstraints(2, 1, 1, 1, 0.0, 0.0, GridBagConstraints.WEST, GridBagConstraints.NONE, new Insets(0, 0, 0, 5), 0, 0));
-        this.add(shortChoice2, new GridBagConstraints(3, 1, 1, 1, 0.0, 0.0, GridBagConstraints.WEST, GridBagConstraints.NONE, new Insets(0, 0, 0, 5), 0, 0));
-        this.add(shortChoice3, new GridBagConstraints(4, 1, 1, 1, 0.0, 0.0, GridBagConstraints.CENTER, GridBagConstraints.NONE, new Insets(0, 0, 0, 5), 0, 0));
+        shortOption.addActionListener(new ActionListener()
+              {
+                  public void actionPerformed(ActionEvent e)
+                  {
+                      line.setLongSelected(longOption.isSelected());
+                  }
+              });
+        
+        builder.add (lineName, cc.xywh (1, 1, 1, 3));
+        builder.add (longOption, cc.xy(3,1));
+        builder.add (shortOption, cc.xy(3,3));
+        builder.add (longChoice, cc.xyw(5,1, 3));
+        builder.add (shortChoice1, cc.xy(5,3));
+        builder.add (shortChoice2, cc.xy(7,3));
+        if (line.isThreeShortItems())
+            builder.add (shortChoice3, cc.xy(9, 3));
         this.setSize(this.getPreferredSize());        
     }
     
-    public void addActionListener (ActionListener a)
-    {
-        longOption.addActionListener(a);
-        shortOption.addActionListener(a);
-        longChoice.addActionListener(a);
-        shortChoice1.addActionListener(a);
-        shortChoice2.addActionListener(a);
-        shortChoice3.addActionListener(a);
-    }
-
-    public void setLineNumber (int lineNumber)
-    {
-        line.setLineNumber(lineNumber);
-        lineName.setText ("Line " + String.valueOf(lineNumber));
-        //this.lineNumber = lineNumber;
-    }
-
-    public void setTwoShortItems ()
-    {
-        this.twoShort = true;
-        this.remove(shortChoice3);
-    }
-
     public void setLongOption (boolean setOption)
     {
         if (setOption) longOption.setSelected(true); else shortOption.setSelected(true);
@@ -190,17 +178,11 @@ public class HexLinePanel extends JPanel implements PropertyChangeListener
     
     public boolean isLongItem() { return longOption.isSelected(); }
     public boolean isShortItem() { return shortOption.isSelected(); }
-    public boolean isTwoShortItems() { return shortOption.isSelected() && twoShort; } 
 
     public LongLineList getLongItem() { return (LongLineList)longChoice.getSelectedItem(); }
-    //public String getLongItem() { return (String)longChoice.getSelectedItem(); }
     public ShortLineList getShortItem1() { return (ShortLineList)shortChoice1.getSelectedItem(); }
     public ShortLineList getShortItem2() { return (ShortLineList)shortChoice2.getSelectedItem(); }
     public ShortLineList getShortItem3() { return (ShortLineList)shortChoice3.getSelectedItem(); }
-    //public LongLineList getLongIndex() { return longChoice.getSelectedIndex(); }
-    //public int getShort1Index() { return shortChoice1.getSelectedIndex(); } 
-    //public int getShort2Index() { return shortChoice2.getSelectedIndex(); } 
-    //public int getShort3Index() { return shortChoice3.getSelectedIndex(); } 
     
     public void propertyChange (PropertyChangeEvent e)
     {

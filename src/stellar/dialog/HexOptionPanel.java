@@ -29,6 +29,8 @@ import javax.swing.*;
 
 import say.swing.*;
 
+import stellar.io.Resources;
+
 /**
  * HexOptionPanel displays the hex options for the user to change as needed.
  * This is the UI component to the {@link HexOptions} data component. Usually this
@@ -41,9 +43,9 @@ import say.swing.*;
  */
 public class HexOptionPanel extends JPanel implements PropertyChangeListener
 {
-    private HexOptions options;
+    private HexLayout layout;
     private MapLabel hexLabel;
-    private HexIcons hexMap = new HexIcons(false);
+    private HexIcons hexMap = new HexIcons(true);
     private JPanel mapPane = new JPanel();
     private BorderLayout borderLayout = new BorderLayout();
 
@@ -61,10 +63,10 @@ public class HexOptionPanel extends JPanel implements PropertyChangeListener
     private Color backgroundColor = Color.WHITE;
     private Color foregroundColor = Color.BLACK;
 
-    public HexOptionPanel(HexOptions options)
+    public HexOptionPanel(HexLayout layout)
     {
-        this.options = options;
-        options.addPropertyChangeListener(this);
+        this.layout = layout;
+        layout.getOptions().addPropertyChangeListener(this);
         try
         {
             jbInit();
@@ -73,11 +75,13 @@ public class HexOptionPanel extends JPanel implements PropertyChangeListener
         {
             e.printStackTrace();
         }
-        options.addPropertyChangeListener(hexLabel);        
+        layout.addPropertyChangeListener(hexLabel);        
     }
     
     private void jbInit() throws Exception
     {
+        HexOptions options = layout.getOptions();
+        
         FormLayout formLayout1 = new FormLayout("pref, $rgap, fill:p:grow, $rgap, pref",
                                                 "7*(pref, $rgap)");
         
@@ -104,7 +108,9 @@ public class HexOptionPanel extends JPanel implements PropertyChangeListener
                                                 bFontChooser_actionPerformed(e);
                                             }
                                         });
-        builder.addLabel("Font: Unknown", cc.xyw(1,3,3)).setFocusable(false);
+        builder.addLabel(Resources.getString("eo.hop.font"), cc.xyw(1,3,3)).setFocusable(false);
+        setFontLabelTitle((JLabel)this.getComponent(1));
+        
         builder.add (bFontChooser, cc.xy(5,3));
 
         bBackgroundColorChooser.setText("...");
@@ -114,18 +120,20 @@ public class HexOptionPanel extends JPanel implements PropertyChangeListener
                 {
                     bBackgroundColorChooser_actionPerformed(e);
                 }
-            });        
-        builder.addLabel ("Background Color", cc.xyw(1,5,3)).setFocusable(false);
+            }); 
+        builder.addLabel (Resources.getString("eo.hop.backColor"), cc.xyw(1,5,3)).setFocusable(false);
         builder.add (bBackgroundColorChooser, cc.xy(5,5));
 
-        optShowBorders.setText("Show Borders");
+        optShowBorders.setText(Resources.getString("eo.hop.showBorder"));
         optShowBorders.addActionListener(new ActionListener()
                                          {
                                              public void actionPerformed (ActionEvent e)
                                              {
-                                                 options.setShowBorders(optShowBorders.isSelected());
+                                                 layout.getOptions().setShowBorders(optShowBorders.isSelected());
                                              }
                                          });
+        optShowBorders.setSelected(options.isShowBorders());
+        
         bBorderColorChooser.setText("...");
         bBorderColorChooser.addActionListener(new ActionListener()
             {
@@ -134,39 +142,43 @@ public class HexOptionPanel extends JPanel implements PropertyChangeListener
                     bBorderColorChooser_actionPerformed(e);
                 }
             });
+
         builder.add (optShowBorders, cc.xyw(1,7,3));
         builder.add (bBorderColorChooser, cc.xy(5,7));
 
-        optJumpRoutes.setText("Show Jump Routes");
+        optJumpRoutes.setText(Resources.getString("eo.hop.showRoutes"));
+        optJumpRoutes.setSelected(options.isShowJumpRoutes());
         optJumpRoutes.addActionListener( new ActionListener()
                                          {
                                              public void actionPerformed (ActionEvent e)
                                              {
-                                                 options.setShowJumpRoutes(optJumpRoutes.isSelected());
+                                                 layout.getOptions().setShowJumpRoutes(optJumpRoutes.isSelected());
                                              }
                                          });
         builder.add (optJumpRoutes, cc.xyw(1,9,5));
 
-        optTravelZones.setText("Show Travel Zones");
+        optTravelZones.setText(Resources.getString("eo.hop.showZones"));
+        optTravelZones.setSelected(options.isShowTravelZones());
         optTravelZones.addActionListener(new ActionListener()
                                          {
                                              public void actionPerformed (ActionEvent e)
                                              {
-                                                 options.setShowTravelZones(optTravelZones.isSelected());
+                                                 layout.getOptions().setShowTravelZones(optTravelZones.isSelected());
                                              }
                                          });
         builder.add (optTravelZones, cc.xyw (1,11,5));
 
         hexFillChoice.setModel(new DefaultComboBoxModel (LocationIDType.values()));
-        hexFillChoice.setToolTipText("Set Hex IDs in hexes");
+        hexFillChoice.setSelectedItem(options.getLocationID());
+        hexFillChoice.setToolTipText(Resources.getString("eo.hop.showIDs"));
         hexFillChoice.addActionListener(new ActionListener()
                                         {
                                             public void actionPerformed(ActionEvent e)
                                             {
-                                                options.setLocationID((LocationIDType)hexFillChoice.getSelectedItem());
+                                                layout.getOptions().setLocationID((LocationIDType)hexFillChoice.getSelectedItem());
                                             }
                                         });
-        builder.addLabel("Set Hex IDs", cc.xy(1,13)).setFocusable(false);
+        builder.addLabel(Resources.getString("eo.hop.setIDs"), cc.xy(1,13)).setFocusable(false);
         builder.add (hexFillChoice, cc.xyw(3,13,3));
         //this.setSize(this.getPreferredSize());
     }
@@ -181,6 +193,7 @@ public class HexOptionPanel extends JPanel implements PropertyChangeListener
  
     public void propertyChange (PropertyChangeEvent e)
     {
+        HexOptions options = layout.getOptions();
         if (e.getPropertyName() == HexOptionsProperties.LOCATION_ID.toString())
         {
             hexFillChoice.setSelectedItem(options.getLocationID());
@@ -200,23 +213,35 @@ public class HexOptionPanel extends JPanel implements PropertyChangeListener
         else if (e.getPropertyName() == HexOptionsProperties.FONT_NAME.toString())
         {
             JLabel label = (JLabel)this.getComponent(1);
-            //label.setFont(options.getDisplayFont());
-            label.setText("Font: " + options.getDisplayFont().getName() + " [" 
-                                 + options.getDisplayFont().getSize() + "]");
-            if (label.getText().length() > 16)
-            {
-                label.setText(label.getText().substring(0,16)+"...");
-            }
+            setFontLabelTitle((JLabel)this.getComponent(1));
         }
         hexLabel.redrawMap();
     }
     
+    private void setFontLabelTitle (JLabel label)
+    {
+        Font display = layout.getOptions().getDisplayFont();
+        if (display == null)
+        {
+            label.setText (Resources.getString("eo.hop.font") + "Unknown");
+        }
+        else
+        {
+            label.setText (Resources.getString("eo.hop.font") + display.getName() + " ["
+                           + display.getSize() + "]");
+        }
+        if (label.getText().length() > 16)
+        {
+            label.setText(label.getText().substring(0, 16) + "...");
+        }
+    }
+    
     private void bBorderColorChooser_actionPerformed(ActionEvent e)
     {
-        borderColor = JColorChooser.showDialog(this, "Select Allegiances border color", borderColor);
+        borderColor = JColorChooser.showDialog(this, Resources.getString("eo.hop.allegianceColorTitle"), borderColor);
         if (borderColor != null)
         {
-            options.setBorderColor(borderColor);
+            layout.getOptions().setBorderColor(borderColor);
             bBorderColorChooser.setBackground(borderColor);
         }
     }
@@ -224,12 +249,12 @@ public class HexOptionPanel extends JPanel implements PropertyChangeListener
     private void bBackgroundColorChooser_actionPerformed(ActionEvent e)
     {
         Color color;
-        color = JColorChooser.showDialog(this, "Select map background color", backgroundColor);
+        color = JColorChooser.showDialog(this, Resources.getString("eo.hop.mapColorTitle"), backgroundColor);
         if (color != null)
         {
-            options.setBackgroundColor(color);
+            layout.getOptions().setBackgroundColor(color);
             bBackgroundColorChooser.setBackground(color);
-            bBackgroundColorChooser.setForeground(options.getForegroundColor());
+            bBackgroundColorChooser.setForeground(layout.getOptions().getForegroundColor());
             
         }
     }
@@ -237,11 +262,11 @@ public class HexOptionPanel extends JPanel implements PropertyChangeListener
     private void bFontChooser_actionPerformed(ActionEvent e)
     {
         JFontChooser fontDialog = new JFontChooser ();
-        fontDialog.setSelectedFont(options.getDisplayFont());
+        fontDialog.setSelectedFont(layout.getOptions().getDisplayFont());
         int result = fontDialog.showDialog(this);
         if (result == JFontChooser.OK_OPTION)
         {
-            options.setDisplayFont(fontDialog.getSelectedFont());
+            layout.getOptions().setDisplayFont(fontDialog.getSelectedFont());
         }
     }
 }

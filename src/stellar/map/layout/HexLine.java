@@ -5,7 +5,19 @@ import java.beans.PropertyChangeSupport;
 
 import java.util.prefs.Preferences;
 
-
+/**
+ * This is a Java Bean-like object used to store the setting of a single
+ * hex layout line. 
+ * There are between one and five for each hex scale (scaleID = number of lines),
+ * these are numbered 1 to 5, from top to bottom. 
+ * 
+ * On most hexes, the top (number 1) and bottom line use shorter (two short item)
+ * rows, rather than the longer three short times. This is to account for the 
+ * smaller space available at the top or bottom of the hexes. 
+ * 
+ * @author Thomas Jones-Low
+ * @version $Id$
+ */
 public class HexLine
 {
     LongLineList longItem;
@@ -50,7 +62,7 @@ public class HexLine
 
     public void setLongSelected(boolean longSelected)
     {
-        boolean oldLongSelected = longSelected;
+        boolean oldLongSelected = this.longSelected;
         this.longSelected = longSelected;
         propertyChangeSupport.firePropertyChange(HexLineProperties.ISLONG.toString(), oldLongSelected, longSelected);
     }
@@ -73,7 +85,7 @@ public class HexLine
 
     public void setShortItem1(ShortLineList shortItem1)
     {
-        ShortLineList oldShortItem1 = shortItem1;
+        ShortLineList oldShortItem1 = this.shortItem1;
         this.shortItem1 = shortItem1;
         propertyChangeSupport.firePropertyChange(HexLineProperties.SHORT_OPTION1.toString(), oldShortItem1, shortItem1);
     }
@@ -85,7 +97,7 @@ public class HexLine
 
     public void setShortItem2(ShortLineList shortItem2)
     {
-        ShortLineList oldShortItem2 = shortItem2;
+        ShortLineList oldShortItem2 = this.shortItem2;
         this.shortItem2 = shortItem2;
         propertyChangeSupport.firePropertyChange(HexLineProperties.SHORT_OPTION2.toString(), oldShortItem2, shortItem2);
     }
@@ -98,7 +110,7 @@ public class HexLine
 
     public void setShortItem3(ShortLineList shortItem3)
     {
-        ShortLineList oldShortItem3 = shortItem3;
+        ShortLineList oldShortItem3 = this.shortItem3;
         this.shortItem3 = shortItem3;
         propertyChangeSupport.firePropertyChange(HexLineProperties.SHORT_OPTION3.toString(), oldShortItem3, shortItem3);
     }
@@ -114,7 +126,7 @@ public class HexLine
         
         int index;
         setLongSelected(node.getBoolean(HexLineProperties.ISLONG.toString(), true));
-        setThreeShortItems(node.getBoolean (HexLineProperties.ISTHREESHORT.toString(), true));
+        //setThreeShortItems(node.getBoolean (HexLineProperties.ISTHREESHORT.toString(), true));
         
         index = node.getInt(HexLineProperties.LONG_OPTION.toString(), 0);
         setLongItem (LongLineList.values()[index]);
@@ -145,7 +157,8 @@ public class HexLine
     {
         boolean oldThreeShortItems = threeShortItems;
         this.threeShortItems = threeShortItems;
-        propertyChangeSupport.firePropertyChange("ThreeShortItems", oldThreeShortItems, threeShortItems);
+        propertyChangeSupport.firePropertyChange(HexLineProperties.ISTHREESHORT.toString(), 
+                                                 oldThreeShortItems, threeShortItems);
     }
 
     public boolean isThreeShortItems()

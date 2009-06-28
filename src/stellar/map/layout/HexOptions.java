@@ -17,7 +17,7 @@ import java.util.prefs.*;
  * kept (read/stored) in the user Preferences.
  * 
  * @author Thomas Jones-Low
- * @version $Revision: 1.1 $
+ * @version $Id$
  */
 public class HexOptions
 {
