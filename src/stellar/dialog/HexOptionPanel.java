@@ -89,8 +89,7 @@ public class HexOptionPanel extends JPanel implements PropertyChangeListener
         CellConstraints cc = new CellConstraints();
         builder.setBorder(Borders.DLU4_BORDER);
         
-        hexMap.setScale(MapScale.SCALE_3); 
-        hexMap.setSize(1,1);
+        hexMap.setLayout(layout.getScale(), layout);
         hexLabel = new MapLabel (hexMap);
         
         mapPane.setBorder(BorderFactory.createBevelBorder(BevelBorder.LOWERED));

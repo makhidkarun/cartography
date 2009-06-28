@@ -479,8 +479,8 @@ public class MapPreferences
         GroupRecord g = new GroupRecord();
         g.setType(GroupType.SUBSECTOR);
         g.setKey("EditOptions.1");
-        g.setExtentX(5);
-        g.setExtentY(5);
+        g.setExtentX(1);
+        g.setExtentY(1);
         g.addSystem(one);
         g.setLocation(hex);
         mapData.addGroup(g);
@@ -488,15 +488,6 @@ public class MapPreferences
         g = new GroupRecord();
         g.setType(GroupType.QUADRANT);
         g.setKey("EditOptions.2");
-        g.setExtentX(3);
-        g.setExtentY(3);
-        g.addSystem(one);
-        g.setLocation(hex);
-        mapData.addGroup(g);
-
-        g = new GroupRecord();
-        g.setType(GroupType.SECTOR);
-        g.setKey("EditOptions.3");
         g.setExtentX(2);
         g.setExtentY(2);
         g.addSystem(one);
@@ -504,10 +495,19 @@ public class MapPreferences
         mapData.addGroup(g);
 
         g = new GroupRecord();
+        g.setType(GroupType.SECTOR);
+        g.setKey("EditOptions.3");
+        g.setExtentX(3);
+        g.setExtentY(3);
+        g.addSystem(one);
+        g.setLocation(hex);
+        mapData.addGroup(g);
+
+        g = new GroupRecord();
         g.setType(GroupType.DOMAIN);
         g.setKey("EditOptions.4");
-        g.setExtentX(1);
-        g.setExtentY(1);
+        g.setExtentX(5);
+        g.setExtentY(5);
         g.addSystem(one);
         g.setLocation(hex);
         mapData.addGroup(g);

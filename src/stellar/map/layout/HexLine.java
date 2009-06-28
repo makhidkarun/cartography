@@ -73,7 +73,7 @@ public class HexLine
     }
     public void setLongItem(LongLineList longItem)
     {
-        LongLineList oldLongItem = longItem;
+        LongLineList oldLongItem = this.longItem;
         this.longItem = longItem;
         propertyChangeSupport.firePropertyChange(HexLineProperties.LONG_OPTION.toString(), oldLongItem, longItem);
     }

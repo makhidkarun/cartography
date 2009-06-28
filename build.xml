@@ -165,16 +165,18 @@
          <include name="stellar/swing/AstrogationChangeListener.java" />
          
          <!-- UI Dialogs -->
+         <include name="stellar/dialog/EditOptions.java"/>
+         <include name="stellar/dialog/HexLinePanel.java"/>
+         <include name="stellar/dialog/HexOptionPanel.java" />
+         <include name="stellar/dialog/HexLayoutPanel.java" />
+         
          <include name="stellar/dialog/EditSystem.java" />
          <include name="stellar/dialog/EditViewOptions.java"/>
-         <include name="stellar/dialog/EditOptions.java"/>
          <include name="stellar/dialog/EditGroups.java"/>
          <include name="stellar/dialog/EditLink.java" />
          <include name="stellar/dialog/ViewTableData.java" />
          <include name="stellar/dialog/CopyTableData.java" />
 
-         <include name="stellar/dialog/HexLinePanel.java"/>
-         <include name="stellar/dialog/HexOptionPanel.java" />
          <include name="stellar/dialog/Map_AboutBoxPanel1.java" />
          <include name="stellar/dialog/GroupLayoutPanel.java" />
          <include name="stellar/dialog/ButtonPanel.java" />
