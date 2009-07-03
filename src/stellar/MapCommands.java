@@ -516,14 +516,17 @@ public class MapCommands
     {
         GroupRecord g = map.getGroupData ();
         Astrogation data = map.getMapData ();
-        HexID h = new HexID (g.getLocation ().toString ());
-        //h.convertHextoID();
-        h.x -= 1;
-        g = data.getGroup (h, g.getType ());
-        if (g != null)
-            map.setGroup (g);
-        propertyChange = refreshMap;
-        firePropertyChanged ();
+        if (g != null && data != null)
+        {
+            HexID h = new HexID (g.getLocation ().toString ());
+            //h.convertHextoID();
+            h.x -= 1;
+            g = data.getGroup (h, g.getType ());
+            if (g != null)
+                map.setGroup (g);
+            propertyChange = refreshMap;
+            firePropertyChanged ();
+        }
     }
 
     public void viewShiftUp (ActionEvent e)
