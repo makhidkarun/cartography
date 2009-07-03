@@ -201,7 +201,7 @@ public class EditGroups extends JDialog implements TreeSelectionListener
         squareMap.setMapData(data);
         squareMap.setScale(MapScale.SCALE_5);
         squareMap.setSize(4,4);
-        squareMap.setLayout(MapScale.SCALE_5, MapPreferences.getInstance().getScaleLayout(MapScale.SCALE_5));
+        squareMap.setLayout(MapPreferences.getInstance().getScaleLayout(MapScale.SCALE_5));
         squareMap.setLevel(GroupType.DOMAIN);
         map = new MapLabel (squareMap);
         groupLocation.addFocusListener(new java.awt.event.FocusAdapter()

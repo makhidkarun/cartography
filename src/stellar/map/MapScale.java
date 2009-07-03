@@ -1,6 +1,3 @@
-/*
- * $Id$
- */
 package stellar.map;
 
 import java.util.EnumSet;
