@@ -16,9 +16,12 @@ import java.awt.geom.AffineTransform;
 import java.awt.geom.Point2D;
 import javax.swing.text.StyleConstants;
 
+import stellar.map.layout.HexLayout;
+
 public class HexLegend //implements DisplayOptions 
 {
-    DrawHexLayout layout;
+    private DrawHexLayout drawLayout;
+    private HexLayout layout; 
     private HexVectorImage hexOutline = new HexVectorImage();
     private MarkerVectorImage system = new MarkerVectorImage();
     private double fontHeight;
@@ -27,7 +30,8 @@ public class HexLegend //implements DisplayOptions
     
     public HexLegend(DrawHexLayout layout)
     {
-        this.layout = layout;
+        this.drawLayout = layout;
+        this.layout = drawLayout.getLayout();
     }
 
     public void setScale (int hexScale)
@@ -47,29 +51,29 @@ public class HexLegend //implements DisplayOptions
     
     public Dimension getLegendSize (Graphics2D g2)
     {
-        fontHeight = layout.getFontHeight (g2);
+        fontHeight = drawLayout.getFontHeight (g2);
         Dimension size = new Dimension ();
         size.height = hexOutline.getIconHeight();
         size.width = hexOutline.getIconWidth();
         
         // increase the height if the top or bottom items are being used
-        if (layout.getItemCount() == 5 || layout.getItemCount () == 4 || layout.getItemCount() == 3)
+        if (layout.getLineCount() == 5 || layout.getLineCount () == 4 || layout.getLineCount() == 3)
         {
-            if (layout.getItem(0).isLongSelected() && 
-                layout.getItem(0).getLongItem() != LongLineList.NONE)
+            if (layout.getLine(0).isLongSelected() && 
+                layout.getLine(0).getLongItem() != LongLineList.NONE)
             {
                 size.height += (fontHeight * 4) - ysize;
             }
-            if ((!layout.getItem(0).isThreeShortItems()) &&
-                layout.getItem(0).getShortItem1() != ShortLineList.NONE || 
-                layout.getItem(0).getShortItem2() != ShortLineList.NONE)
+            if ((!layout.getLine(0).isThreeShortItems()) &&
+                layout.getLine(0).getShortItem1() != ShortLineList.NONE || 
+                layout.getLine(0).getShortItem2() != ShortLineList.NONE)
             {
                 size.height += (fontHeight * 4) - ysize;
             }
-            if (layout.getItemCount() == 5)
+            if (layout.getLineCount() == 5)
             {
-                if (layout.getItem(4).isLongSelected() && 
-                    layout.getItem(4).getLongItem() != LongLineList.NONE)
+                if (layout.getLine(4).isLongSelected() && 
+                    layout.getLine(4).getLongItem() != LongLineList.NONE)
                 {
                     size.height += fontHeight * 4 - ysize;
                 }
@@ -95,7 +99,7 @@ public class HexLegend //implements DisplayOptions
      */
     public void drawLegend (Point2D start, Graphics2D g2)
     {
-        fontHeight = layout.getFontHeight(g2);
+        fontHeight = drawLayout.getFontHeight(g2);
         Point2D.Double center = new Point2D.Double ();
         center.x = start.getX() - xsize * 2;
         center.y = start.getY();
@@ -105,37 +109,37 @@ public class HexLegend //implements DisplayOptions
         g2.translate(-center.x, -center.y);
         center.x = start.getX();
         center.y = start.getY() + ysize;
-        layout.drawLayout(null, center, g2);
+        drawLayout.drawLayout(null, center, g2);
                 
-        if (layout.getItemCount() == 5)
+        if (layout.getLineCount() == 5)
         {
-            drawLegendAB(layout.getItem(0), start, g2);
-            drawLegendCDE (layout.getItem(1), start, g2);
-            drawLegendFGH (layout.getItem(2), start, g2);
-            drawLegendIJK (layout.getItem(3), start, g2);
-            drawLegendLM (layout.getItem(4), start, g2);
+            drawLegendAB(layout.getLine(0), start, g2);
+            drawLegendCDE (layout.getLine(1), start, g2);
+            drawLegendFGH (layout.getLine(2), start, g2);
+            drawLegendIJK (layout.getLine(3), start, g2);
+            drawLegendLM (layout.getLine(4), start, g2);
         }
-        else if (layout.getItemCount() == 4)
+        else if (layout.getLineCount() == 4)
         {
-            drawLegendAB(layout.getItem(0), start, g2);
-            drawLegendCDE (layout.getItem(1), start, g2);
-            drawLegendFGH (layout.getItem(2), start, g2);
-            drawLegendLM (layout.getItem(3), start, g2);
+            drawLegendAB(layout.getLine(0), start, g2);
+            drawLegendCDE (layout.getLine(1), start, g2);
+            drawLegendFGH (layout.getLine(2), start, g2);
+            drawLegendLM (layout.getLine(3), start, g2);
         }
-        else if (layout.getItemCount() == 3)
+        else if (layout.getLineCount() == 3)
         {
-            drawLegendAB(layout.getItem(0), start, g2);
-            drawLegendCDE (layout.getItem(1), start, g2);
-            drawLegendLM (layout.getItem(2), start, g2);
+            drawLegendAB(layout.getLine(0), start, g2);
+            drawLegendCDE (layout.getLine(1), start, g2);
+            drawLegendLM (layout.getLine(2), start, g2);
         }
-        else if (layout.getItemCount() == 2)
+        else if (layout.getLineCount() == 2)
         {
-            drawLegendCDE (layout.getItem(0), start, g2);
-            drawLegendIJK (layout.getItem(1), start, g2);
+            drawLegendCDE (layout.getLine(0), start, g2);
+            drawLegendIJK (layout.getLine(1), start, g2);
         }
-        else if (layout.getItemCount() == 1)
+        else if (layout.getLineCount() == 1)
         {
-            drawLegendCDE (layout.getItem(0), start, g2);
+            drawLegendCDE (layout.getLine(0), start, g2);
         }
     }
     
@@ -149,7 +153,7 @@ public class HexLegend //implements DisplayOptions
             if(drawItem.getLongItem() != LongLineList.NONE)
             {
                 center.x = start.getX();
-                layout.drawString(drawItem.getLongItem().toString(), StyleConstants.ALIGN_CENTER, center, g2);
+                drawLayout.drawString(drawItem.getLongItem().toString(), StyleConstants.ALIGN_CENTER, center, g2);
                 g2.drawLine ((int)center.x, (int)(center.y+fontHeight+1), 
                             (int)center.x, (int)(center.y + (fontHeight * 3) - 1));
             }
@@ -159,14 +163,14 @@ public class HexLegend //implements DisplayOptions
             if (drawItem.getShortItem1() != ShortLineList.NONE)
             {
                 center.x = start.getX() - (xsize * 0.5);
-                layout.drawString(drawItem.getShortItem1().toString(), StyleConstants.ALIGN_LEFT, center, g2);
+                drawLayout.drawString(drawItem.getShortItem1().toString(), StyleConstants.ALIGN_LEFT, center, g2);
                 g2.drawLine ((int)(center.x - xsize), (int)(center.y+fontHeight+1), 
                             (int)(center.x - (xsize * 0.5)), (int)(start.getY() - 1));
             }
             if (drawItem.getShortItem2() != ShortLineList.NONE)
             {
                 center.x = start.getX() + (xsize * 0.5);
-                layout.drawString(drawItem.getShortItem2().toString(), StyleConstants.ALIGN_RIGHT, center, g2);
+                drawLayout.drawString(drawItem.getShortItem2().toString(), StyleConstants.ALIGN_RIGHT, center, g2);
                 g2.drawLine ((int)(center.x + xsize), (int)(center.y+fontHeight+1), 
                             (int)(center.x + (xsize * 0.5)), (int)(start.getY() - 1));
             }
@@ -178,7 +182,7 @@ public class HexLegend //implements DisplayOptions
         Point2D.Double center = new Point2D.Double ();
         double yHeight = 1.0; 
         
-        switch (layout.getItemCount())
+        switch (layout.getLineCount())
         {
             case 1: yHeight = 0.5; break;
             case 2: yHeight = 1.0; break;
@@ -193,7 +197,7 @@ public class HexLegend //implements DisplayOptions
             {
                 center.x = start.getX() - xsize * 2;
                 center.y = start.getY() + ysize - (fontHeight * 2);
-                layout.drawString (drawItem.getLongItem().toString(), StyleConstants.ALIGN_LEFT, center, g2);
+                drawLayout.drawString (drawItem.getLongItem().toString(), StyleConstants.ALIGN_LEFT, center, g2);
                 g2.drawLine ((int)(center.x + 1), (int)(center.y + fontHeight), 
                             (int)(center.x + xsize - 2), (int) (start.getY() - 1 + ysize - (fontHeight * (yHeight - 0.5))));
             }
@@ -204,7 +208,7 @@ public class HexLegend //implements DisplayOptions
             {
                 center.x = start.getX() - xsize * 2;
                 center.y = start.getY() + ysize - (fontHeight * 2);
-                layout.drawString (drawItem.getShortItem1().toString(), StyleConstants.ALIGN_LEFT, center, g2);
+                drawLayout.drawString (drawItem.getShortItem1().toString(), StyleConstants.ALIGN_LEFT, center, g2);
                 g2.drawLine ((int)(center.x + 1), (int)(center.y + fontHeight), 
                             (int)(center.x + xsize - 2), (int)(start.getY() - 1 + ysize - (fontHeight * (yHeight - 0.5))));
             }
@@ -212,7 +216,7 @@ public class HexLegend //implements DisplayOptions
             {
                 center.x = start.getX() - xsize * 1.5;
                 center.y = start.getY() + ysize - (fontHeight * 3);
-                layout.drawString (drawItem.getShortItem2().toString(), StyleConstants.ALIGN_LEFT, center, g2);
+                drawLayout.drawString (drawItem.getShortItem2().toString(), StyleConstants.ALIGN_LEFT, center, g2);
                 g2.drawLine ((int)(center.x + 1), (int)(center.y + fontHeight), 
                             (int)(center.x + xsize + 1), (int) (start.getY() - 1 + ysize - (fontHeight * (yHeight - 0.5))));
             }
@@ -220,7 +224,7 @@ public class HexLegend //implements DisplayOptions
             {
                 center.x = start.getX() + xsize * 1.5;
                 center.y = start.getY() + ysize - (fontHeight * 3);
-                layout.drawString (drawItem.getShortItem3().toString(), StyleConstants.ALIGN_RIGHT, center, g2);
+                drawLayout.drawString (drawItem.getShortItem3().toString(), StyleConstants.ALIGN_RIGHT, center, g2);
                 g2.drawLine ((int) (center.x -1), (int)(center.y + fontHeight),
                             (int) (start.getX() + xsize + 1), (int)(start.getY() - 1 + ysize - (fontHeight * (yHeight - 0.5))));
             }
@@ -232,7 +236,7 @@ public class HexLegend //implements DisplayOptions
         Point2D.Double center = new Point2D.Double ();
         double yHeight = 1.0; 
         
-        switch (layout.getItemCount())
+        switch (layout.getLineCount())
         {
             case 1: yHeight = 0.5; break;
             case 2: yHeight = 1.0; break;
@@ -247,7 +251,7 @@ public class HexLegend //implements DisplayOptions
             {
                 center.x = start.getX() - 2 * xsize - 1; 
                 center.y = start.getY() + ysize;
-                layout.drawString (drawItem.getLongItem().toString(), StyleConstants.ALIGN_LEFT, center, g2);
+                drawLayout.drawString (drawItem.getLongItem().toString(), StyleConstants.ALIGN_LEFT, center, g2);
             }
         }
         else
@@ -257,14 +261,14 @@ public class HexLegend //implements DisplayOptions
             {
                 center.x = start.getX() - 2 * xsize - 1;
                 center.y = start.getY() + ysize;
-                layout.drawString (drawItem.getShortItem1().toString(), StyleConstants.ALIGN_LEFT, center, g2);
+                drawLayout.drawString (drawItem.getShortItem1().toString(), StyleConstants.ALIGN_LEFT, center, g2);
             }
             /* Draw G */
             if (drawItem.getShortItem2() != ShortLineList.NONE) 
             {
                 center.x = start.getX() + xsize * 2;
                 center.y = start.getY() + ysize - (fontHeight * 2);
-                layout.drawString (drawItem.getShortItem2().toString(), StyleConstants.ALIGN_RIGHT, center, g2);
+                drawLayout.drawString (drawItem.getShortItem2().toString(), StyleConstants.ALIGN_RIGHT, center, g2);
                 g2.drawLine ((int)(center.x - 1), (int)(center.y + fontHeight), 
                             (int)(center.x - xsize - 1), (int)(start.getY() + ysize - (fontHeight * (yHeight - 0.5))));
             }
@@ -273,7 +277,7 @@ public class HexLegend //implements DisplayOptions
             {
                 center.x = start.getX() + 2 * xsize + 1;
                 center.y = start.getY() + ysize;
-                layout.drawString (drawItem.getShortItem3().toString(), StyleConstants.ALIGN_RIGHT, center, g2);
+                drawLayout.drawString (drawItem.getShortItem3().toString(), StyleConstants.ALIGN_RIGHT, center, g2);
             }
         }
     }
@@ -282,7 +286,7 @@ public class HexLegend //implements DisplayOptions
         Point2D.Double center = new Point2D.Double ();
         double yHeight = 1.0; 
         
-        switch (layout.getItemCount())
+        switch (layout.getLineCount())
         {
             case 2: yHeight = 0.75; break;
             case 5: yHeight = 0.25; break;
@@ -294,7 +298,7 @@ public class HexLegend //implements DisplayOptions
             {
                 center.x = start.getX() - xsize * 2;
                 center.y = start.getY() + ysize + (fontHeight);
-                layout.drawString (drawItem.getLongItem().toString(), StyleConstants.ALIGN_LEFT, center, g2);
+                drawLayout.drawString (drawItem.getLongItem().toString(), StyleConstants.ALIGN_LEFT, center, g2);
                 g2.drawLine ((int)(center.x + 1), (int)(center.y + fontHeight * 0.5), 
                             (int)(center.x + xsize - 2), (int) (center.y - fontHeight * (yHeight-0.5)));
             }
@@ -305,7 +309,7 @@ public class HexLegend //implements DisplayOptions
             {
                 center.x = start.getX() - xsize * 2;
                 center.y = start.getY() + ysize + (fontHeight);
-                layout.drawString (drawItem.getShortItem1().toString(), StyleConstants.ALIGN_LEFT, center, g2);
+                drawLayout.drawString (drawItem.getShortItem1().toString(), StyleConstants.ALIGN_LEFT, center, g2);
                 g2.drawLine ((int)(center.x + 1), (int)(center.y + fontHeight * 0.5), 
                             (int)(center.x + xsize - 2), (int) (center.y - fontHeight * (yHeight-0.5)));
             }
@@ -313,7 +317,7 @@ public class HexLegend //implements DisplayOptions
             {
                 center.x = start.getX() + xsize * 2;
                 center.y = start.getY() + ysize + (fontHeight);
-                layout.drawString (drawItem.getShortItem2().toString(), StyleConstants.ALIGN_RIGHT, center, g2);
+                drawLayout.drawString (drawItem.getShortItem2().toString(), StyleConstants.ALIGN_RIGHT, center, g2);
                 g2.drawLine ((int)(center.x), (int)(center.y + fontHeight * 0.5), 
                             (int)(center.x - xsize * 1.5), (int) (center.y - fontHeight * (yHeight-0.5)));
             }
@@ -321,7 +325,7 @@ public class HexLegend //implements DisplayOptions
             {
                 center.x = start.getX() + xsize * 1.5;
                 center.y = start.getY() + ysize + fontHeight * 2;
-                layout.drawString (drawItem.getShortItem3().toString(), StyleConstants.ALIGN_RIGHT, center, g2);
+                drawLayout.drawString (drawItem.getShortItem3().toString(), StyleConstants.ALIGN_RIGHT, center, g2);
                 g2.drawLine ((int)(start.getX() + xsize * 2), (int)(center.y + fontHeight * 0.5),
                             (int)(center.x), (int)(center.y - fontHeight * (1 + yHeight - 0.5)));
             }
@@ -336,7 +340,7 @@ public class HexLegend //implements DisplayOptions
             if(drawItem.getLongItem() != LongLineList.NONE)
             {
                 center.x = start.getX();
-                layout.drawString(drawItem.getLongItem().toString(), StyleConstants.ALIGN_CENTER, center, g2);
+                drawLayout.drawString(drawItem.getLongItem().toString(), StyleConstants.ALIGN_CENTER, center, g2);
                 g2.drawLine ((int)center.x, (int)(center.y + 1), 
                             (int)center.x, (int)(center.y - 1));
             }
@@ -346,14 +350,14 @@ public class HexLegend //implements DisplayOptions
             if (drawItem.getShortItem1() != ShortLineList.NONE)
             {
                 center.x = start.getX() - (xsize * 0.5);
-                layout.drawString(drawItem.getShortItem1().toString(), StyleConstants.ALIGN_LEFT, center, g2);
+                drawLayout.drawString(drawItem.getShortItem1().toString(), StyleConstants.ALIGN_LEFT, center, g2);
                 g2.drawLine ((int)(center.x - xsize), (int)(center.y + 1), 
                             (int)(center.x - (xsize * 0.5)), (int)(center.y - 1));
             }
             if (drawItem.getShortItem2() != ShortLineList.NONE)
             {
                 center.x = start.getX() + (xsize * 0.5);
-                layout.drawString(drawItem.getShortItem2().toString(), StyleConstants.ALIGN_RIGHT, center, g2);
+                drawLayout.drawString(drawItem.getShortItem2().toString(), StyleConstants.ALIGN_RIGHT, center, g2);
                 g2.drawLine ((int)(center.x + xsize), (int)(center.y + 1), 
                             (int)(center.x + (xsize * 0.5)), (int)(center.y - 1));
             }
@@ -374,7 +378,7 @@ public class HexLegend //implements DisplayOptions
             center.y = start.getY() + (system.getBounds2D().getWidth() * 1.5 * i);
             system.drawMarker(t.getRecord(i).getColor(), center, g2);
             center.x += (system.getBounds2D().getWidth() * 1.5);
-            layout.drawString (t.getRecord(i).getValue(), StyleConstants.ALIGN_RIGHT, center, g2);
+            drawLayout.drawString (t.getRecord(i).getValue(), StyleConstants.ALIGN_RIGHT, center, g2);
         }
         return t.size();
     }
@@ -414,9 +418,9 @@ public class HexLegend //implements DisplayOptions
             center.y = start.getY() + (system.getBounds2D().getWidth() * 1.5 * i);
             system.drawMarker(t.getRecord(i).getColor(), center, g2);
             center.x += (system.getBounds2D().getWidth()) + fontHeight;
-            layout.drawString (t.getRecord(i).getCode(), StyleConstants.ALIGN_LEFT, center, g2);
+            drawLayout.drawString (t.getRecord(i).getCode(), StyleConstants.ALIGN_LEFT, center, g2);
             center.x += fontHeight;
-            layout.drawString (t.getRecord(i).getValue(), StyleConstants.ALIGN_RIGHT, center, g2);
+            drawLayout.drawString (t.getRecord(i).getValue(), StyleConstants.ALIGN_RIGHT, center, g2);
         }
         return t.size();
     }
@@ -431,9 +435,9 @@ public class HexLegend //implements DisplayOptions
         {
             center.x = start.getX();
             center.y = start.getY() + (fontHeight * i) ;
-            layout.drawString (t.getRecord(i).getCode(), StyleConstants.ALIGN_LEFT, center, g2);
+            drawLayout.drawString (t.getRecord(i).getCode(), StyleConstants.ALIGN_LEFT, center, g2);
             center.x += fontHeight;
-            layout.drawString(t.getRecord(i).getValue(), StyleConstants.ALIGN_RIGHT, center, g2);
+            drawLayout.drawString(t.getRecord(i).getValue(), StyleConstants.ALIGN_RIGHT, center, g2);
         }
     }
 }
