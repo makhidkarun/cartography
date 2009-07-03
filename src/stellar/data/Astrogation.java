@@ -156,22 +156,16 @@ public class Astrogation
     public StarSystem getSystem (HexID xy)
     {
         if (systems == null) return null;
-        for (int i = 0; i < systems.size(); i++)
-        {
-            if (((StarSystem)systems.get(i)).getLocation().equals(xy))
-            return ((StarSystem)systems.get(i));
-        }
+        for (StarSystem s : systems)
+            if (s.getLocation().equals(xy)) return s;
         return null;
     }
     
     public GroupRecord getGroup (HexID xy, GroupType level)
     {
         if (groupList == null) return null;
-        for (int i = 0; i < groupList.size(); i++)
-        {
-            GroupRecord g = groupList.get(i);
+        for (GroupRecord g : groupList)
             if (g.getType() == level && g.getLocation().equals(xy)) return g;
-        }
         return null;
     }
 
@@ -185,11 +179,8 @@ public class Astrogation
     public boolean isGroupPresent (GroupType scope)
     {
         if (groupList == null) return false;
-        for (int i = 0; i < groupList.size(); i++)
-        {
-            GroupRecord g = groupList.get(i);
+        for (GroupRecord g : groupList)
             if (g.getType() == scope) return true;
-        }
         return false;
     }
     
@@ -245,17 +236,15 @@ public class Astrogation
         /*
          * loop through the groups and find the systems in each group.
          */
-        for (int i = 0; i < groupList.size(); i++)
+        for (GroupRecord g : groupList)
         {
-            GroupRecord g = groupList.get(i);
             /*
              * Look through all the systems to find the ones in this group
              */
             if (systems != null)
             {
-                for (int j = 0; j < systems.size(); j++)
+                for (StarSystem s : systems)
                 {
-                    StarSystem s = (StarSystem)systems.get(j);
                     if (g.inGroup(s.getLocation())) g.addSystem(s);
                 }
             }
@@ -289,12 +278,8 @@ public class Astrogation
         if (links == null || links.isEmpty()) return;
         linkRecords = references.getTable(TableRecordKey.LINKS);
         if (linkRecords == null || linkRecords.isEmpty()) return;
-        for (Iterator j = links.iterator(); j.hasNext(); )
-        {
-            Links l = (Links)j.next();
-            l.setLinkType (linkRecords.getRecord (l.getLinkTypeName()));
-        }
-        
+        for (Links l : links)
+            l.setLinkType(linkRecords.getRecord(l.getLinkTypeName()));
     }
     /**
      * JiBX unmarsalling post processing method. JiBX automatically calls this
