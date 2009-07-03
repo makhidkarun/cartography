@@ -1,7 +1,3 @@
-/*
- *  $Id$
- *  Copyright 2006 by Softstart Services Inc. 
- */
 package stellar.map;
 import stellar.dialog.EditOptions;
 import stellar.swing.AstrogationChangeListener;
@@ -91,7 +87,8 @@ public abstract class MapIcon implements Icon, AstrogationChangeListener
     Dimension mapOffset = new Dimension (offsetRows, offsetCols);
 
     // Layout for the five scales of hexes/squares
-    protected Map <MapScale, HexLayout> layouts = new EnumMap<MapScale, HexLayout> (MapScale.class);
+    protected HexLayout layout;
+    //protected Map <MapScale, HexLayout> layouts = new EnumMap<MapScale, HexLayout> (MapScale.class);
     protected DrawHexLayout drawLayout;
     
     protected abstract void drawAll();
@@ -102,15 +99,7 @@ public abstract class MapIcon implements Icon, AstrogationChangeListener
     
     public MapIcon (boolean set)
     {
-        if (set)
-        {
-            setLayout (MapScale.SCALE_5, MapPreferences.getInstance().getScaleLayout(MapScale.SCALE_5));
-            setLayout (MapScale.SCALE_4, MapPreferences.getInstance().getScaleLayout(MapScale.SCALE_4));
-            setLayout (MapScale.SCALE_3, MapPreferences.getInstance().getScaleLayout(MapScale.SCALE_3));
-            setLayout (MapScale.SCALE_2, MapPreferences.getInstance().getScaleLayout(MapScale.SCALE_2));
-            setLayout (MapScale.SCALE_1, MapPreferences.getInstance().getScaleLayout(MapScale.SCALE_1));
-            scale = MapScale.SCALE_3;
-        }
+        setLayout (MapPreferences.getInstance().getScaleLayout(scale));
     }
     
     public void setMapOffset (int rows, int cols)
@@ -191,7 +180,6 @@ public abstract class MapIcon implements Icon, AstrogationChangeListener
     public void zoomOut ()
     {
         setScale (MapScale.previous (scale));
-        //setScale (scale - 1);
     }
 
     /**
@@ -201,7 +189,6 @@ public abstract class MapIcon implements Icon, AstrogationChangeListener
     public void zoomIn()
     {
         setScale (MapScale.next(scale));
-        //setScale (scale + 1);
     }
 
     /**
@@ -212,7 +199,7 @@ public abstract class MapIcon implements Icon, AstrogationChangeListener
         scaleChanged = true;
         this.scale = scale;
         calcMapSize (mapRows, mapCols);
-        drawLayout = new DrawHexLayout (getLayout());
+        setLayout (MapPreferences.getInstance().getScaleLayout(scale));
     }
     
     /**
@@ -382,14 +369,18 @@ public abstract class MapIcon implements Icon, AstrogationChangeListener
      * @param scale The scale to set for the layout
      * @param layout The HexLayout to use for this map scale. 
      */
-    public void setLayout (MapScale scale, HexLayout layout)
+    public void setLayout (HexLayout layout)
     {
-        layouts.put (scale, layout);
-        layout.setScale(scale);
-        //layouts[scale.ordinal()] = layout; layout.setScale(scale);
+        this.layout = layout; 
+        drawLayout = new DrawHexLayout (this.layout);
+        this.scale = layout.getScale();
     }
 
-    public HexLayout getLayout () { return layouts.get(scale); }
+    /**
+     * Get current layout 
+     * @return current layout
+     */
+    public HexLayout getLayout () { return layout; }
     
     public GroupType getLevel()
     {

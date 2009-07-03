@@ -39,7 +39,20 @@ import stellar.io.Resources;
 import stellar.map.MapScale;
 import stellar.map.layout.HexLayout;
 import stellar.map.layout.HexLineProperties;
-
+/**
+ * MapPreferences is a collection of data about the users preferences for the
+ * entire Stellar cartographer programs. This stores the data in the Java 
+ * preferences data store. 
+ * 
+ * This is a singleton, there should be only one of these in the entire program.
+ * 
+ * This supports PropertyChange events for these specific properties, and all of
+ * the additional sub classes. Subscribe to this property change events and you
+ * will get all of the user changes to their preferences. 
+ * 
+ * @author Thomas Jones-Low
+ * @version $Id$
+ */
 public class MapPreferences
 {
     private static MapPreferences _instance;

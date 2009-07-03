@@ -78,13 +78,6 @@ public class HexLayout implements PropertyChangeListener
     public HexLine    getLine (int index) { return lines.get(index); }
     public int        getLineCount () { return lines.size(); }
 
-    public void setScale(MapScale scale)
-    {
-        MapScale oldScale = scale;
-        this.scale = scale;
-        propertyChangeSupport.firePropertyChange("Scale", oldScale, scale);
-    }
-
     public MapScale getScale()
     {
         return scale;

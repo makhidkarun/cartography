@@ -28,8 +28,23 @@ import javax.swing.text.StyleConstants;
 
 import stellar.MapPreferences;
 
+/**
+ * DrawHexLayout is the implementation of the hex drawing. This is the place that
+ * actually draws the hexes on the image that becomes the map. This uses the 
+ * current stellar.map.layout.HexLayout to determine the settings required for
+ * for each hex drawn. 
+ * 
+ * The core of the processing is #drawLayout which draws the stellar.map.data.StarSystem
+ * information on the image, at the location specifed, using the presupplied 
+ * HexLayout. 
+ * @author Thomas Jones-Low
+ * @version $Id$
+ */
 public class DrawHexLayout //implements DisplayOptions 
 {
+    /**
+     * Layout of the data items in the hex
+     */
     private HexLayout layout;
     //private ArrayList <HexLinePanel> drawItems; 
     //private HexOptions options;
@@ -46,15 +61,10 @@ public class DrawHexLayout //implements DisplayOptions
     private LineFillVectorImage hexFill; 
     private HexVectorImage hexOutline = new HexVectorImage();
 
-    public DrawHexLayout (int lineItems, MapScale scale)
-    {
-        layout = new HexLayout (lineItems, scale);
-    }
-    
     public DrawHexLayout (DrawHexLayout oldLayout)
     {
         layout =new HexLayout (oldLayout.layout);
-        setScale (oldLayout.layout.getScale());
+        setScale (layout.getScale());
     }
     
     public DrawHexLayout (HexLayout layout)
@@ -63,19 +73,27 @@ public class DrawHexLayout //implements DisplayOptions
         setScale (layout.getScale());
     }
 
-    public int getItemCount () { return layout.getLineCount(); } 
-    public HexLine getItem (int index) { return layout.getLine(index); }
-
-    public void setScale (MapScale hexScale)
+    public void setLayout(HexLayout layout)
     {
-        layout.setScale(hexScale);
+        this.layout = layout;
+        setScale (layout.getScale());
+    }
+
+    public HexLayout getLayout()
+    {
+        return layout;
+    }
+
+    private void setScale (MapScale hexScale)
+    {
         setScale (HexIcons.XSTART[layout.getScaleOrdinal()], HexIcons.YSTART[layout.getScaleOrdinal()]);
     }
     
     public void setScale (double xsize, double ysize)
     {
-        this.xsize = (int)xsize;
-        this.ysize = (int)ysize;
+        this.xsize = HexIcons.XSTART[layout.getScaleOrdinal()];
+        this.ysize = HexIcons.YSTART[layout.getScaleOrdinal()];
+        
         AffineTransform at = AffineTransform.getScaleInstance(xsize/(float)HexIcons.XSTART[MapScale.SCALE_3.ordinal()], 
                     ysize/(float)HexIcons.YSTART[MapScale.SCALE_3.ordinal()]);
 
@@ -462,14 +480,4 @@ public class DrawHexLayout //implements DisplayOptions
         return layout.isShortIndexUsed (ShortLineList.ZONE_CODE) || getTravelZone();
     }
 
-    public void setLayout(HexLayout layout)
-    {
-        this.layout = layout;
-        setScale (layout.getScale());
-    }
-
-    public HexLayout getLayout()
-    {
-        return layout;
-    }
 }
