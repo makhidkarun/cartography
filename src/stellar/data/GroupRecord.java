@@ -17,9 +17,9 @@ import javax.swing.tree.TreeNode;
  * Record of star system groups. This is kept as a tree:
  * subsectror->quadrant->sector->domain. There is a generic group as well for 
  * non-standard grouping of systems. The tree may contain one or more of the
- * groups, but none of garunteed to be there. 
+ * groups, but none of guaranteed to be there. 
  * 
- * @version $Revision: 1.7 $
+ * @version $Id$
  * @author $Author$
 */
 public class GroupRecord extends Record implements MutableTreeNode 
