@@ -38,8 +38,8 @@ public class Map_AboutBoxPanel1 extends JPanel
         this.setBorder(border3);
         labelTitle.setText("Traveller Stellar Cartrographer");
         labelAuthor.setText("Thomas Jones-Low");
-        labelCopyright.setText("Copyright 2004, Softstart Services, Inc.");
-        labelCompany.setText("<html>The Traveller game in all forms is owned by Far Future Enterprises. <br> Copyright 1977 - 1998 Far Future Enterprises. </html>");
+        labelCopyright.setText("Copyright 2009");
+        labelCompany.setText("<html>The Traveller game in all forms is owned by Far Future Enterprises. <br> Copyright 1977 - 2009 Far Future Enterprises. </html>");
         this.add(labelTitle, null);
         this.add (labelAuthor, null);
         this.add(labelCopyright, null);
