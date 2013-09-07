@@ -1,0 +1,27 @@
+#summary Format of the variable trade codes to allow parsing.
+#labels Phase-Design
+All of the versions of Traveller have provided a set of "Trade Classifications", a short-hand two character notation attached to each world. These collect a set of UWP values that may be interesting to people visiting the world for trade purposes. 
+
+Stellar Cartographer should be able to generate the entire list of these trade classifications from the UWP, rather than saving them to the XML/database file. 
+
+The trick here is the formulas used for the trade classifications has changes between versions, and even by user. So Stellar Cartography needs a way to allow the user to enter the formula to figure out if a UWP generates a given trade classification. 
+
+The format of this formula is as follows: 
+
+{{{CODE: value[,value]+[, CODE: value[,value]+ ]+}}}
+
+where CODE is a three or four letter short code for the UWP element:
+  * port - Starport
+  * size - planet size
+  * atm  - atmosphere
+  * hyd  - hydrographics
+  * pop  - population
+  * gov  - government type
+  * law  - law level
+  * tech - tech level
+
+value is one following formats. These use the UWP codes assigned to the CODE, and assumes that the code values in numeric (or alphabetic) order. 
+  * N :: a single value
+  * N+ :: a single value or larger (higher on the UWP scale)
+  * N- :: a single value or smaller (lower on the UWP scale)
+  * N-N :: a range of values, inclusive
