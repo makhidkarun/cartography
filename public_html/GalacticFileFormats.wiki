@@ -1,0 +1,100 @@
+#summary file format for Galactic Traveller mapping software.
+
+Galactic is a popular DOS based Traveller mapping system using simple graphics and text menus to present a map which scales from empire to planet. Galactic does not use one file to represent it's data, but uses a directory tree with a number of individual text files for each part. 
+
+As a DOS program, all the files and directories are in upper case, and are 8 characters or less in length, with the files having a 3 character extension. 
+
+All of the files are dos format text files, readable by notepad or any text editor. Galactic was written without a great deal of error handling, and expects its files to be in the places, and with the formats presented, or it will fail in unexpected and interesting ways. 
+
+Galactic also offers the option to perform an import or export to a .sar or .gar file. Some of the Traveller fan sites who have created their own galactic data offer downloads of either a .sar or .gar file. The .gar stands for "Galaxy Archive" and .sar is for "Sector Archive". These files Zip files created by PKZIP, a copy of which is included with Galactic.
+
+The directory layout and file format described here are for Galactic 2.4c, the latest version. 
+
+The Galactic install directory contains the GAL.EXE (main executable), along with a number of directories: 
+
+<dt>.\HELP\`*` <dd>A collection of help files and tutorials. These documents explain the use and operation of Galactic and it's sub programs. 
+
+<dt>.\SUB\`*` <dd>This directory contains a number of subroutines specific to Galactic. Includes here are the executable for these sub-programs and their source code. The source for the main executable is in the root directory (GAL.BAS). Galactic was written in QuickBASIC 4.5. 
+
+<dt>.\XTRA\`*` <dd>A collection of external utilities used by Galactic for processing. It includes the PKZIP program and the LS.exe used for the help system. 
+
+The important data is all kept in the GALS directory:
+
+<dt>.\GALS\`*` <dd> List of Galaxies accessible in Galactic
+<dt>.\GALS\gal.lst <dd> File contains list of galaxies which shows up in the initial galaxy menu for galactic. On read, the first two lines are skipped, then each line has a directory name (8 characters) followed by a display name, which starts in column 13 and extends to the end of line. 
+<dt>.\GALS\where.dat <dd> File contains one line, the directory name of the last accessed galaxy. This is updated when you exit Galactic. 
+
+Each Galaxy is kept in it's own directory.
+
+<dt>.\GALS\CLASSIC\`*` <dd> List of sectors in the CLASSIC galaxy. 
+<dt>.\GALS\CLASSIC\CLASSIC.lst <dd> A complete list of sectors included in this galaxy. Galactic skips the first two lines, then reads each format line as 
+   * Directory Name : Sector display name : X coordinate  : Y Coordinate: Color
+   * X and Y coordinate are relative to an arbitrary origin and may be negative. 
+   * Color character is a letter from A - P and translates into a color as follows
+{{{
+    A  Black    E  Red       I  Dark Grey     M  Light Red
+    B  Blue     F  Magenta   J  Light Blue    N  Light Magenta
+    C  Green    G  Brown     K  Light Green   O  Light Yellow
+    D  Cyan     H  White     L  Light Cyan    P  Bright White
+}}}
+  * Default colors are "L" (light cyan) for sector that are developed (which have world write-ups, etc). "K" (light green) has been used for sectors that have been generated but not developed (the sector data exists, but there are no world write-ups). "I" (dark grey) has been used for sectors that do not exist except in name (no data has been generated for them).
+<dt>.\GALS\CLASSIC\UWP.dat <dd> This is a mapping file for the UWP codes to text displayed for each UWP. This is a copy of the file .\DATA\UWP.DAT (See which for format information). 
+<dt>.\GALS\CLASSIC\WHERE.DAT <dd> The last accessed sector in this galaxy, updated when you exit galactic. It contains two lines, an X value on line 1 and a Y value on line 2. 
+<dt>.\GALS\CLASSIC\TMP.TMP <dd> A temporary file holding data in the .GAR file about the galaxy. On dearchive these items are appended to the .\GALS\gal.lst and this file deleted. 
+  * version
+  * galaxy dir name
+  * Galaxy display Name
+
+Each sector is given its own directory as well. Usually sector names are longer than 8 characters so the sectors are abbreviated in some way. 
+
+<dt>.\GALS\CLASSIC\SPINMAR\`*` <dd> Data for the sector
+<dt>.\GALS\CLASSIC\SPINMAR\SPINMAR.DAT <dd> List of subsectors and perhaps some auxiliary data. File format is as follows: 
+   * first line is the name of the sector (skipped)
+   * second line is blank (skipped)
+   * lines 3 through 18 are the subsector information. each line is formatted as follows: 
+     * Subsector letter (A-P) : display name : data file name : f/m flag
+     * The f/m flag indicates there is either a file (f) or menu (m) in the LOC directory to describe the subsector. 
+   * line 19 is blank (skipped)
+   * line 20 has the text "Bases:" 
+   * line 21 and following has a one letter base code, an equals sign with a space on either side, and a display name. The base code list ends with a blank line. 
+   * A line containing "Allegiance:"
+   * The allegiance code information. Each line has the format of a two digit color code (01 to 16), a space, a two character [[Allegiance Code]], an equals sign with a space on either side, and a display name. The allegiance list ends with a blank line, or the end of the file. 
+<dt>.\GALS\CLASSIC\SPINMAR\UWP.DAT<dd> added data for the galaxy UWP.DAT file. Same format.
+<dt>.\GALS\CLASSIC\SPINMAR\CREDITS.TXT <dd> A text file containing additional data about the sector. Usually includes the credits of who originally created the data and other people who added data to it. Unformatted text file.  
+<dt>.\GALS\CLASSIC\SPINMAR\TMP.TMP <dd> a temporary file holding data in the .SAR file about the sector. On dearchive these items are appended to the proper files and this file is deleted.
+  *  version
+  * galaxy directory name
+  * sector directory name
+  * galaxy sector list entry line (see CLASSIC.lst)
+
+<dt>.\GALS\CLASSIC\SPINMAR\GEN\`*` <dd> This directory contains a collection of text files and MENU files (See .\HELP\MENU.TXT for a description of the menu files) for the sector information. The default file for this directory is "SECTOR.MNU", and Galactic looks for this file 
+
+<dt>.\GALS\CLASSIC\SPINMAR\HEX\`*` <dd> This directory contains world hex maps generated by the hexworld program. Hexworld is a quick & dirty mapping program that will allow you to draw out the major continents and oceans of your world with a minimum of time and effort. The grid is based on the typical icosahedral projection of twenty interlocking triangles which is common to many game systems. Each of these is, in turn, divided into hexagons. The program uses 490 of these hexes, and the width of a single hex is approximately 1/35th of the world's circumference. You can place up to forty "locations" on your world and attach text or menu files as you deem appropriate.
+
+<dt>.\GALS\CLASSIC\SPINMAR\HEX\P1209.HEX <dd> The world map files. These must be named P[HEX NUMBER].HEX to enable galactic to find them. The are formatted as follows. 
+   * Line one is the world name
+   * line 2 through 8 are 70 characters, each representing one hex on the world map, for a total of 480 hexes. Each character is A-P from the color map above. 
+   * line 9 has the text "Start at hex 000", where the 3 digit code is the starting hex for the cursor. 
+   * line 10 and following have map location information. Each line is formatted as a hex id, a space, a name displayed on the screen, followed by an optional colon and a file or menu name. 
+   * Hex ids for the HEX files are numbers from 1 to 490, starting with the left most hex in the icosahedral at the equator, following the line of hexes down, and to the right. At the bottom it wraps to the next line of hexes. Hex 490 is the right most hex on the map. 
+
+<dt>.\GALS\CLASSIC\SPINMAR\LOC\`*` <dd> A collection of text files and menus for each specific world. The base file name for each world must be named P[HEXID].txt (for files) or P[HEXID].MNU (for menu files). See .\HELP\MENU.TXT for a description of the menu files.
+  The LOC directory also contains the files for the subsector write-ups. (See SPINMAR.DAT above). The program looks for a file named either SUB-[X].TXT or SUB-[X].MNU, where X is the subsctor letter code (A-P). 
+    
+<dt>.\GALS\CLASSIC\SPINMAR\MAP\`*` <dd> Directory contains the subsector data files and a default menu file. 
+<dt>.\GALS\CLASSIC\SPINMAR\MAP\DATA.MNU <dd> Default menu file for looking at the subsector data files. See .\HELP\MENU.TXT for a description of the menu files.
+<dt>.\GALS\CLASSIC\SPINMAR\MAP\SUB_A.DAT <dd> The Subsector data files. By default they are named SUB`_``N`.DAT, but may have any names, the list is in the SPINMAR.DAT file. The file is formatted as follows: 
+  * First line is "@SUB-SECTOR: `name` SECTOR: `sector name`
+  * Any following lines starting with a "#" is a comment and skipped.
+  * Any following line starting with a "$" is a trade route line, and is formatted:
+    * `[HEX 1] [HEX 2] [X DIR] [Y DIR] [COLOR]`
+    * Hex 1 and hex 2 are sector hex numbers (e.g. 0101 or 3240)
+    * X and Y dirs are for trade routes which lead out of the subsector, usually these are 0 and 0 for internal only lines. 
+    * Color is a color number (1 - 16) for the color of the line. 
+  * The basic data is fixed formatted to the following format: 
+    * Name : Location : UWP : Base : Notes `Trade codes` : Zone : PBG : Allegiance : LRX : Data Flag 
+    * Most of these follow the standard Sector File Format information. 
+    * The LRX code is for Life, Resources, and Exports code. These are described in ./HELP/EXTEND.TXT
+    *  The data flag will be either f or m if there is a entry in the LOC directory for this world. The data flag will have an x if there is a map in the MAP directory for this world. 
+
+<dt>.\GALS\CLASSIC\SPINMAR\SYS\`*` <dd> system maps. Default file is S`hexid`.sys, see help\sysmap\sysdata.txt for system map data file format. May also contain menus and text file additions or links to world maps.
