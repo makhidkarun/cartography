@@ -1,0 +1,9 @@
+Reading through a few papers on the nature of Brown Dwarf stars, I found the following information:
+
+Hydrogen Burning (fusion) limit: 0.075 solar masses
+Lithium Burning limit: 0.06 solar masses
+Deuterium Burning limit: 0.012 solar masses
+
+Brown dwarf stars, once formed, then burn through their entire supply of Deuterium in 4-50 million years (smaller take longer). Once their fuel supply is gone, they gradually cool. 
+
+Wikipedia's [http://en.wikipedia.org/wiki/Brown_dwarfs Brown Dwarf] page.  
