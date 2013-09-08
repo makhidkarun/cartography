@@ -33,6 +33,11 @@ import stellar.io.Resources;
 
 public class HexLinePanel extends JPanel implements PropertyChangeListener
 {
+    /**
+     * 
+     */
+    private static final long serialVersionUID = 1L;
+
     private HexLine line;
 
     private JLabel lineName = new JLabel();

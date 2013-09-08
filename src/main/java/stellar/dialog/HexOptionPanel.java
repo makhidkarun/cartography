@@ -27,7 +27,7 @@ import java.beans.*;
 
 import javax.swing.*;
 
-import say.swing.*;
+//import say.swing.*;
 
 import stellar.io.Resources;
 

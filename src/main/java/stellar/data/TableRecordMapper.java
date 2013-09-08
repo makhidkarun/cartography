@@ -50,7 +50,14 @@ public class TableRecordMapper implements IMarshaller, IUnmarshaller, IAliasable
         
     }
 
+    @Override
     public boolean isPresent (IUnmarshallingContext ctx)
+    {
+        return false;
+    }
+    
+    @Override
+    public boolean isExtension (String ext)
     {
         return false;
     }

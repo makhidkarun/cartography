@@ -3,7 +3,6 @@ package stellar.data;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Iterator;
-import java.util.ListIterator;
 
 public class TableRecord extends Record implements Collection<TableRowRecord>
 {

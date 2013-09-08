@@ -38,7 +38,7 @@ import javax.swing.border.EtchedBorder;
 import javax.swing.event.ChangeEvent;
 
 /**
- * Map is the core map of the cartogrphy program. It hold the menu bar, toolbar, 
+ * Map is the core map of the cartography program. It hold the menu bar, toolbar, 
  * the basic map display and table on the scroll pane. 
  * <p>
  * $Id$
