@@ -28,10 +28,10 @@ public class Resources
     // This string is also used by the menu and toolbar to load names and icons
     // for the menu/toolbar items, and create the action handlers all in one go.
     // see swing.Command, MapCommands and io.AppDefaults
-    public static final String rbWindows = "resources.WinGui";
+    public static final String rbWindows = "WinGui";
 
-    private static final String iconPath = "/resources/icons/";
-    private static final String resourcesPath = "/resources/";
+    private static final String iconPath = "/icons/";
+    private static final String resourcesPath = "/";
     
     public static final InputStream getPreferences()
     {

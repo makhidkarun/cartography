@@ -1,6 +1,6 @@
 package stellar;
 
-import com.lowagie.text.DocumentException;
+import com.itextpdf.text.DocumentException;
 
 import stellar.data.Astrogation;
 import stellar.io.AstrogationFileReader;

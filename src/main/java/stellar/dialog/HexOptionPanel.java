@@ -27,7 +27,7 @@ import java.beans.*;
 
 import javax.swing.*;
 
-//import say.swing.*;
+import say.swing.JFontChooser;
 
 import stellar.io.Resources;
 
@@ -87,7 +87,7 @@ public class HexOptionPanel extends JPanel implements PropertyChangeListener
         
         PanelBuilder builder = new PanelBuilder (formLayout1, this);
         CellConstraints cc = new CellConstraints();
-        builder.setBorder(Borders.DLU4_BORDER);
+        builder.border(Borders.DLU4);
         
         hexMap.setLayout(layout);
         hexLabel = new MapLabel (hexMap);

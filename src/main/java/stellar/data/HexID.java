@@ -63,7 +63,7 @@ public class HexID
         return hex;
     }
 
-    private void convertHextoID()
+    public void convertHextoID()
     {
         if (hex == null)
         {

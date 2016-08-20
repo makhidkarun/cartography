@@ -77,6 +77,10 @@ public class HTMLListMapper implements IMarshaller, IUnmarshaller, IAliasable
     public boolean isExtension(int index) {
         return false;
     }
+    
+    public boolean isExtension (String name) {
+        return false;
+    }
 
     /* (non-Javadoc)
      * @see org.jibx.runtime.IUnmarshaller#isPresent(org.jibx.runtime.IUnmarshallingContext)

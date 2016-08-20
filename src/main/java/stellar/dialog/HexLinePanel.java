@@ -86,7 +86,7 @@ public class HexLinePanel extends JPanel implements PropertyChangeListener
                                                  "pref, $rgap, pref");
         PanelBuilder builder = new PanelBuilder (formLayout1, this);
         CellConstraints cc = new CellConstraints();
-        builder.setBorder(Borders.DLU4_BORDER);
+        builder.border(Borders.DLU4);
 
         lineName.setText(Resources.getString("eo.hl.line") + " " + 
                          String.valueOf(line.getLineNumber()));

@@ -120,7 +120,7 @@ public class MapPreferences
                 is = new FileInputStream (new File (filename));
         }
         
-        if (is == null) throw new FileNotFoundException ("Prefs file not found");
+        if (is == null) throw new FileNotFoundException ("Prefs file not found: " + filename);
         
         userPrefs = Preferences.userNodeForPackage(this.getClass());
 

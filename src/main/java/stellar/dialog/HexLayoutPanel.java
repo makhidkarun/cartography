@@ -2,7 +2,7 @@ package stellar.dialog;
 
 import com.jgoodies.forms.builder.PanelBuilder;
 import com.jgoodies.forms.factories.Borders;
-import com.jgoodies.forms.factories.FormFactory;
+import com.jgoodies.forms.layout.FormSpecs;
 import com.jgoodies.forms.layout.CellConstraints;
 import com.jgoodies.forms.layout.FormLayout;
 
@@ -55,7 +55,7 @@ public class HexLayoutPanel extends JPanel
         FormLayout formLayout1 = new FormLayout("fill:pref, $rgap, pref");
         PanelBuilder builder = new PanelBuilder (formLayout1, hexLines);
         CellConstraints cc = new CellConstraints();
-        builder.setBorder(BorderFactory.createBevelBorder(BevelBorder.LOWERED));
+        builder.border(BorderFactory.createBevelBorder(BevelBorder.LOWERED));
        
         int lines = prefs.getScaleLayout(scale).getLineCount();
         
@@ -63,8 +63,8 @@ public class HexLayoutPanel extends JPanel
         
         for (int i = 0; i < lines; i++)
         {
-            builder.appendRow(FormFactory.PREF_ROWSPEC);
-            builder.appendRow(FormFactory.RELATED_GAP_ROWSPEC);
+            builder.appendRow(FormSpecs.PREF_ROWSPEC);
+            builder.appendRow(FormSpecs.RELATED_GAP_ROWSPEC);
             builder.add (new HexLinePanel (prefs.getScaleLayout(scale).getLine(i)),
                         cc.xy(1, i * 2 + 2));
         }

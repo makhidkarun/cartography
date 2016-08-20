@@ -19,4 +19,19 @@ to generate the trade maps. But none of the existing Traveller mapping
 programs (Galactic, Heaven & Earth, Astrogator, Universe) will let me enter,
 queuy, and map the data as I need it. So on to Traveller Stellar Cartography.
 
+This project is maven run, even though there is some ant project files still
+around.
+
+To build the project run:
+
+mvn package
+
+To run the project:
+
+java -jar target/cartography-1.0-SNAPSHOT-jar-with-dependencies.jar
+
+There are many known failures, obvious bugs, crashes, NPEs, and other bad thing. 
+Pull requests welcome. 
+
+
 
